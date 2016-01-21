@@ -1,0 +1,14 @@
+{
+  "name": "hsl-gl-map-style",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hsl-gl-map-v8.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "devDependencies": {
+    "fontmachine": "^0.1.1",
+    "spritezero-cli": "^1.0.2"
+  }
+}

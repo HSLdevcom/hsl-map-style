@@ -1,0 +1,79 @@
+{
+  "icon-parliament": {
+    "width": 48,
+    "height": 48,
+    "x": 0,
+    "y": 0,
+    "pixelRatio": 3
+  },
+  "icon-place-of-worship": {
+    "width": 48,
+    "height": 48,
+    "x": 48,
+    "y": 0,
+    "pixelRatio": 3
+  },
+  "icon-cemetary": {
+    "width": 48,
+    "height": 48,
+    "x": 0,
+    "y": 48,
+    "pixelRatio": 3
+  },
+  "icon-hospital": {
+    "width": 48,
+    "height": 48,
+    "x": 48,
+    "y": 48,
+    "pixelRatio": 3
+  },
+  "icon-park": {
+    "width": 48,
+    "height": 48,
+    "x": 96,
+    "y": 0,
+    "pixelRatio": 3
+  },
+  "icon-amusement-park": {
+    "width": 48,
+    "height": 48,
+    "x": 96,
+    "y": 48,
+    "pixelRatio": 3
+  },
+  "icon-retail": {
+    "width": 48,
+    "height": 48,
+    "x": 0,
+    "y": 96,
+    "pixelRatio": 3
+  },
+  "icon-school": {
+    "width": 48,
+    "height": 48,
+    "x": 48,
+    "y": 96,
+    "pixelRatio": 3
+  },
+  "icon-sport": {
+    "width": 48,
+    "height": 48,
+    "x": 96,
+    "y": 96,
+    "pixelRatio": 3
+  },
+  "icon-theatre": {
+    "width": 48,
+    "height": 48,
+    "x": 144,
+    "y": 0,
+    "pixelRatio": 3
+  },
+  "icon-wetland": {
+    "width": 48,
+    "height": 48,
+    "x": 144,
+    "y": 48,
+    "pixelRatio": 3
+  }
+}
