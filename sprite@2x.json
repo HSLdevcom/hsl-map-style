@@ -1,5 +1,5 @@
 {
-  "icon-parliament": {
+  "icon-park": {
     "width": 32,
     "height": 32,
     "x": 0,
@@ -13,67 +13,95 @@
     "y": 0,
     "pixelRatio": 2
   },
-  "icon-cemetary": {
+  "icon-rail-station": {
     "width": 32,
     "height": 32,
     "x": 0,
+    "y": 32,
+    "pixelRatio": 2
+  },
+  "icon-bus-station": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 32,
+    "pixelRatio": 2
+  },
+  "icon-amusement_park": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "icon-cemetary": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
     "y": 32,
     "pixelRatio": 2
   },
   "icon-hospital": {
     "width": 32,
     "height": 32,
+    "x": 0,
+    "y": 64,
+    "pixelRatio": 2
+  },
+  "icon-aerodrome": {
+    "width": 32,
+    "height": 32,
     "x": 32,
-    "y": 32,
+    "y": 64,
     "pixelRatio": 2
   },
-  "icon-park": {
+  "icon-parliament": {
     "width": 32,
     "height": 32,
     "x": 64,
-    "y": 0,
-    "pixelRatio": 2
-  },
-  "icon-amusement-park": {
-    "width": 32,
-    "height": 32,
-    "x": 64,
-    "y": 32,
+    "y": 64,
     "pixelRatio": 2
   },
   "icon-retail": {
     "width": 32,
     "height": 32,
-    "x": 0,
-    "y": 64,
+    "x": 96,
+    "y": 0,
     "pixelRatio": 2
   },
   "icon-school": {
     "width": 32,
     "height": 32,
-    "x": 32,
-    "y": 64,
+    "x": 96,
+    "y": 32,
     "pixelRatio": 2
   },
   "icon-sport": {
     "width": 32,
     "height": 32,
-    "x": 64,
+    "x": 96,
     "y": 64,
+    "pixelRatio": 2
+  },
+  "icon-subway-station": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 96,
     "pixelRatio": 2
   },
   "icon-theatre": {
     "width": 32,
     "height": 32,
-    "x": 96,
-    "y": 0,
+    "x": 32,
+    "y": 96,
     "pixelRatio": 2
   },
   "icon-wetland": {
     "width": 32,
     "height": 32,
-    "x": 96,
-    "y": 32,
+    "x": 64,
+    "y": 96,
     "pixelRatio": 2
   }
 }

@@ -64,19 +64,22 @@
             "source-layer": "landuse"
         },
         {
-            "id": "landuse_park copy",
-            "type": "fill",
-            "source": "vector",
-            "source-layer": "landuse",
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
             "filter": [
                 "==",
                 "class",
                 "park"
             ],
+            "type": "fill",
+            "source": "vector",
+            "id": "landuse_park copy",
             "paint": {
                 "fill-color": "#dceacc"
             },
-            "interactive": true
+            "source-layer": "landuse"
         },
         {
             "id": "landuse_wood",
@@ -149,7 +152,7 @@
             "interactive": true
         },
         {
-            "id": "landuse_grass copy",
+            "id": "landuse_sand",
             "type": "fill",
             "source": "vector",
             "source-layer": "landuse",
@@ -207,6 +210,30 @@
             "paint": {
                 "fill-color": "rgba(205,224,182,1)",
                 "fill-outline-color": "rgba(172,199,139,1)"
+            },
+            "interactive": true
+        },
+        {
+            "id": "landuse_pitch_horseracing",
+            "type": "fill",
+            "source": "vector",
+            "source-layer": "landuse",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "pitch"
+                ],
+                [
+                    "==",
+                    "type",
+                    "horse_racing"
+                ]
+            ],
+            "paint": {
+                "fill-color": "#e0dfcc",
+                "fill-outline-color": "rgba(209,208,190,1)"
             },
             "interactive": true
         },
@@ -589,10 +616,50 @@
             "source-layer": "road"
         },
         {
-            "id": "building",
+            "id": "building_shadow",
             "type": "fill",
             "source": "vector",
             "source-layer": "building",
+            "paint": {
+                "fill-color": "#c2c3cc",
+                "fill-outline-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            13,
+                            "#dde1e9"
+                        ],
+                        [
+                            17,
+                            "rgba(194,195,204,1)"
+                        ]
+                    ]
+                },
+                "fill-opacity": 1,
+                "fill-translate": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            13,
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        [
+                            22,
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    ]
+                }
+            },
+            "interactive": true
+        },
+        {
+            "id": "building",
             "paint": {
                 "fill-color": "#d5d8e0",
                 "fill-outline-color": {
@@ -608,9 +675,14 @@
                         ]
                     ]
                 },
-                "fill-opacity": 1
+                "fill-opacity": 1,
+                "fill-translate": [
+                    0,
+                    0
+                ]
             },
-            "interactive": true
+            "interactive": true,
+            "ref": "building_shadow"
         },
         {
             "id": "tunnel_walk",
@@ -652,6 +724,49 @@
                 "line-opacity": 1
             },
             "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "major_rail"
+                ],
+                [
+                    "!=",
+                    "type",
+                    "subway"
+                ]
+            ],
+            "type": "line",
+            "source": "vector",
+            "id": "tunnel_major_rail",
+            "paint": {
+                "line-color": "#bbb",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            1
+                        ],
+                        [
+                            22,
+                            8
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    0.28,
+                    0.34
+                ]
+            },
+            "source-layer": "tunnel"
         },
         {
             "id": "tunnel_major",
@@ -749,7 +864,7 @@
                     0.28,
                     0.34
                 ],
-                "line-opacity": 1
+                "line-opacity": 0.5
             },
             "interactive": true
         },
@@ -887,6 +1002,115 @@
                 }
             },
             "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+              "visibility": "none"
+            },
+            "filter": [
+                "==",
+                "class",
+                "major_rail"
+            ],
+            "type": "line",
+            "source": "vector",
+            "id": "road_major_rail copy",
+            "paint": {
+                "line-color": "#8c54a2",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            1
+                        ],
+                        [
+                            22,
+                            8
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "none",
+                "line-cap": "round"
+            },
+            "filter": [
+                "==",
+                "class",
+                "major_rail"
+            ],
+            "type": "line",
+            "source": "vector",
+            "id": "road_major_rail_case",
+            "paint": {
+                "line-color": "#8c54a2",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            1.5
+                        ],
+                        [
+                            22,
+                            10
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "id": "road_major_rail_alt",
+            "paint": {
+                "line-color": "#8c54a2",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            1
+                        ],
+                        [
+                            22,
+                            8
+                        ]
+                    ]
+                }
+            },
+            "ref": "road_major_rail_case"
+        },
+        {
+            "interactive": true,
+            "id": "road_major_rail_alt copy",
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            1
+                        ],
+                        [
+                            22,
+                            8
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    3
+                ]
+            },
+            "ref": "road_major_rail_case"
         },
         {
             "interactive": true,
@@ -2608,6 +2832,286 @@
             "type": "symbol",
             "source": "vector",
             "id": "poi_label_hospital",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": false,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-subway-station",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "type",
+                        "Rail Station"
+                    ],
+                    [
+                        "==",
+                        "scalerank",
+                        2
+                    ]
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_subway-station",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": false,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-bus-station",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Bus Station"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_bus-station",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": false,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-rail-station",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 1.2,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "type",
+                        "Rail Station"
+                    ],
+                    [
+                        "==",
+                        "scalerank",
+                        1
+                    ]
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_railway-station",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -8.5
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": false,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-aerodrome",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "type",
+                        "Aerodrome"
+                    ],
+                    [
+                        "==",
+                        "scalerank",
+                        1
+                    ]
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_Aerodrome",
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
