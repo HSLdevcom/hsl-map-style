@@ -1,19 +1,19 @@
 {
-  "icon-park": {
+  "icon-rail-station": {
     "width": 48,
     "height": 48,
     "x": 0,
     "y": 0,
     "pixelRatio": 3
   },
-  "icon-place-of-worship": {
+  "icon-retail": {
     "width": 48,
     "height": 48,
     "x": 48,
     "y": 0,
     "pixelRatio": 3
   },
-  "icon-rail-station": {
+  "icon-school": {
     "width": 48,
     "height": 48,
     "x": 0,
@@ -34,73 +34,108 @@
     "y": 0,
     "pixelRatio": 3
   },
-  "icon-cemetary": {
+  "icon-sport": {
     "width": 48,
     "height": 48,
     "x": 96,
     "y": 48,
     "pixelRatio": 3
   },
-  "icon-hospital": {
+  "icon-lift": {
     "width": 48,
     "height": 48,
     "x": 0,
     "y": 96,
     "pixelRatio": 3
   },
-  "icon-aerodrome": {
+  "icon-cemetary": {
     "width": 48,
     "height": 48,
     "x": 48,
     "y": 96,
     "pixelRatio": 3
   },
-  "icon-parliament": {
+  "icon-hospital": {
     "width": 48,
     "height": 48,
     "x": 96,
     "y": 96,
     "pixelRatio": 3
   },
-  "icon-retail": {
+  "icon-subway-entrance": {
     "width": 48,
     "height": 48,
     "x": 144,
     "y": 0,
     "pixelRatio": 3
   },
-  "icon-school": {
+  "icon-aerodrome": {
     "width": 48,
     "height": 48,
     "x": 144,
     "y": 48,
     "pixelRatio": 3
   },
-  "icon-sport": {
+  "icon-parliament": {
     "width": 48,
     "height": 48,
     "x": 144,
     "y": 96,
     "pixelRatio": 3
   },
-  "icon-subway-station": {
+  "icon-park": {
     "width": 48,
     "height": 48,
     "x": 0,
     "y": 144,
     "pixelRatio": 3
   },
-  "icon-theatre": {
+  "icon-place-of-worship": {
     "width": 48,
     "height": 48,
     "x": 48,
     "y": 144,
     "pixelRatio": 3
   },
-  "icon-wetland": {
+  "icon-stairs": {
     "width": 48,
     "height": 48,
     "x": 96,
+    "y": 144,
+    "pixelRatio": 3
+  },
+  "icon-subway-station": {
+    "width": 48,
+    "height": 48,
+    "x": 144,
+    "y": 144,
+    "pixelRatio": 3
+  },
+  "icon-theatre": {
+    "width": 48,
+    "height": 48,
+    "x": 192,
+    "y": 0,
+    "pixelRatio": 3
+  },
+  "icon-ticket-machine": {
+    "width": 48,
+    "height": 48,
+    "x": 192,
+    "y": 48,
+    "pixelRatio": 3
+  },
+  "icon-tickets-sales-point": {
+    "width": 48,
+    "height": 48,
+    "x": 192,
+    "y": 96,
+    "pixelRatio": 3
+  },
+  "icon-wetland": {
+    "width": 48,
+    "height": 48,
+    "x": 192,
     "y": 144,
     "pixelRatio": 3
   }
