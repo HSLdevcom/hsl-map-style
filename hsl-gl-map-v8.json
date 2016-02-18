@@ -12,7 +12,7 @@
         "vector": {
             "url": "http://dev.digitransit.fi/hsl-vector-map/index.json",
             "type": "vector"
-        },
+        }
     },
     "sprite": "http://localhost:3000/sprite",
     "glyphs": "http://localhost:3000/fontstack/{fontstack}/{range}.pbf",
