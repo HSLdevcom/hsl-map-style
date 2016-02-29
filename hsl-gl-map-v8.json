@@ -12,7 +12,7 @@
         "vector": {
             "url": "http://dev.digitransit.fi/hsl-vector-map/index.json",
             "type": "vector"
-        },
+        }
     },
     "sprite": "http://localhost:3000/sprite",
     "glyphs": "http://localhost:3000/fontstack/{fontstack}/{range}.pbf",
@@ -29,11 +29,11 @@
                             "#d3e3bb"
                         ],
                         [
-                            10,
+                            7,
                             "#d3e3bb"
                         ],
                         [
-                            11,
+                            9,
                             "#f0f1f2"
                         ],
                         [
@@ -2322,6 +2322,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2395,6 +2396,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2476,6 +2478,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2553,6 +2556,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2631,6 +2635,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2707,6 +2712,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2786,7 +2792,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2850,7 +2856,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2914,7 +2920,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -2978,7 +2984,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3043,7 +3049,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3108,7 +3114,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3172,7 +3178,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3236,7 +3242,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3326,7 +3332,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3345,7 +3351,7 @@
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
+                "icon-allow-overlap": true,
                 "text-offset": {
                     "base": 1,
                     "stops": [
@@ -3417,7 +3423,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3481,7 +3487,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3570,7 +3576,7 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": false,
+                "text-optional": true,
                 "text-size": {
                     "stops": [
                         [
@@ -3727,7 +3733,7 @@
             "paint": {
                 "text-color": "#777",
                 "text-halo-color": "rgba(255,255,255,1.00)",
-                "text-halo-width": 1.5,
+                "text-halo-width": 1,
                 "text-halo-blur": 0
             },
             "source-layer": "place_label"
