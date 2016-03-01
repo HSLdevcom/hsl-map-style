@@ -16,6 +16,10 @@
         "stops": {
             "url": "http://dev.digitransit.fi/hsl-stop-map/index.json",
             "type": "vector"
+        },
+        "routes": {
+            "url": "http://dev.digitransit.fi/hsl-route-map/index.json",
+            "type": "vector"
         }
     },
     "sprite": "http://localhost:3000/sprite",
@@ -983,6 +987,16 @@
                         "!=",
                         "osm_id",
                         120809793
+                    ],
+                    [
+                        "!=",
+                        "osm_id",
+                        390067032
+                    ],
+                    [
+                        "!=",
+                        "osm_id",
+                        390067030
                     ]
                 ]
             ],
@@ -3889,6 +3903,80 @@
                 "icon-opacity": 1
             },
             "source-layer": "poi_label"
+        },
+        {
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "line-round-limit": 1
+            },
+            "type": "line",
+            "source": "routes",
+            "id": "routes case",
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            4
+                        ],
+                        [
+                            22,
+                            10
+                        ]
+                    ]
+                },
+                "line-blur": 0
+            },
+            "source-layer": "routes",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "id": "routes",
+            "paint": {
+                "line-color": "#007ac9",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            2
+                        ],
+                        [
+                            22,
+                            10
+                        ]
+                    ]
+                },
+                "line-blur": 0
+            },
+            "ref": "routes case"
+        },
+        {
+            "interactive": true,
+            "id": "routes copy",
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            0.25
+                        ],
+                        [
+                            22,
+                            3
+                        ]
+                    ]
+                },
+                "line-blur": 0,
+                "line-opacity": 0
+            },
+            "ref": "routes case"
         },
         {
             "interactive": true,
