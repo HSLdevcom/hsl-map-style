@@ -2844,6 +2844,64 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 8,
+                "text-font": [
+                    "Gotham Rounded Medium Italic"
+                ],
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 0.9,
+                "text-anchor": "bottom",
+                "text-field": "{name}"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "!in",
+                    "name",
+                    "Aleksanterinkatu",
+                    "Keskuskatu"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_sq",
+            "paint": {
+                "text-color": "#999",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
                 "text-optional": true,
                 "text-size": {
                     "stops": [
@@ -2983,64 +3041,6 @@
                 "icon-opacity": 1
             },
             "source-layer": "poi_label"
-        },
-        {
-            "interactive": true,
-            "minzoom": 5,
-            "layout": {
-                "text-size": {
-                    "stops": [
-                        [
-                            0,
-                            8
-                        ],
-                        [
-                            15,
-                            11
-                        ]
-                    ]
-                },
-                "text-max-width": 8,
-                "text-font": [
-                    "Gotham Rounded Medium Italic"
-                ],
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
-                "text-anchor": "bottom",
-                "text-field": "{name}"
-            },
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "$type",
-                    "Point"
-                ],
-                [
-                    "!in",
-                    "name",
-                    "Aleksanterinkatu",
-                    "Keskuskatu"
-                ]
-            ],
-            "type": "symbol",
-            "source": "vector",
-            "id": "poi_label_sq",
-            "paint": {
-                "text-color": "#999",
-                "text-halo-width": 1,
-                "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
-            },
-            "source-layer": "road_label"
         },
         {
             "interactive": true,
