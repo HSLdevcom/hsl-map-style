@@ -281,7 +281,10 @@
                 "fill-outline-color": "#007ac9",
                 "fill-opacity": 0.2
             },
-            "interactive": true
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            }
         },
         {
             "interactive": true,
@@ -1314,63 +1317,6 @@
         },
         {
             "interactive": true,
-            "layout": {
-                "icon-image": "icon_one-way",
-                "symbol-placement": "line",
-                "symbol-spacing": 100,
-                "icon-rotation-alignment": "map",
-                "icon-keep-upright": false,
-                "icon-size": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            15.4,
-                            0
-                        ],
-                        [
-                            15.5,
-                            0.25
-                        ],
-                        [
-                            22,
-                            1.5
-                        ]
-                    ]
-                }
-            },
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "$type",
-                    "LineString"
-                ],
-                [
-                    "all",
-                    [
-                        "in",
-                        "class",
-                        "motorway_link",
-                        "street",
-                        "street_limited",
-                        "service",
-                        "driveway"
-                    ],
-                    [
-                        "==",
-                        "oneway",
-                        1
-                    ]
-                ]
-            ],
-            "type": "symbol",
-            "source": "vector",
-            "id": "road_minor_one-way",
-            "paint": {},
-            "source-layer": "road"
-        },
-        {
-            "interactive": true,
             "id": "road_major",
             "paint": {
                 "line-color": "#fff",
@@ -2008,6 +1954,385 @@
             "source-layer": "admin"
         },
         {
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round",
+                "line-round-limit": 1
+            },
+            "type": "line",
+            "source": "routes",
+            "id": "routes case",
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            4
+                        ],
+                        [
+                            22,
+                            10
+                        ]
+                    ]
+                },
+                "line-blur": 0
+            },
+            "source-layer": "routes",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "id": "routes",
+            "paint": {
+                "line-color": "#007ac9",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            2
+                        ],
+                        [
+                            22,
+                            10
+                        ]
+                    ]
+                },
+                "line-blur": 0
+            },
+            "ref": "routes case"
+        },
+        {
+            "interactive": true,
+            "id": "routes copy",
+            "paint": {
+                "line-color": "#3395d4",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            0.5
+                        ],
+                        [
+                            22,
+                            3
+                        ]
+                    ]
+                },
+                "line-blur": 0,
+                "line-opacity": 1
+            },
+            "ref": "routes case"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "circle",
+            "source": "stops",
+            "id": "Stops case",
+            "paint": {
+                "circle-color": "#fff",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            11.9,
+                            0
+                        ],
+                        [
+                            12,
+                            1.5
+                        ],
+                        [
+                            22,
+                            26
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "stops"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "type",
+                "BUS"
+            ],
+            "type": "circle",
+            "source": "stops",
+            "id": "Stops_bus",
+            "paint": {
+                "circle-color": "#007ac9",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            11.9,
+                            0
+                        ],
+                        [
+                            12,
+                            1
+                        ],
+                        [
+                            22,
+                            24
+                        ]
+                    ]
+                },
+                "circle-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0.6
+                        ],
+                        [
+                            14,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "stops"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "type",
+                "TRAM"
+            ],
+            "type": "circle",
+            "source": "stops",
+            "id": "Stops_tram",
+            "paint": {
+                "circle-color": "#00985f",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            11.9,
+                            0
+                        ],
+                        [
+                            12,
+                            1
+                        ],
+                        [
+                            22,
+                            24
+                        ]
+                    ]
+                },
+                "circle-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0.6
+                        ],
+                        [
+                            14,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "stops"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "type",
+                "RAIL"
+            ],
+            "type": "circle",
+            "source": "stops",
+            "id": "Stops_rail",
+            "paint": {
+                "circle-color": "#8c54a2",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            11.9,
+                            0
+                        ],
+                        [
+                            12,
+                            1
+                        ],
+                        [
+                            22,
+                            24
+                        ]
+                    ]
+                },
+                "circle-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0.6
+                        ],
+                        [
+                            14,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "stops"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "type",
+                "SUBWAY"
+            ],
+            "type": "circle",
+            "source": "stops",
+            "id": "Stops_subway",
+            "paint": {
+                "circle-color": "#ff6319",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            11.9,
+                            0
+                        ],
+                        [
+                            12,
+                            1
+                        ],
+                        [
+                            22,
+                            24
+                        ]
+                    ]
+                },
+                "circle-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0.6
+                        ],
+                        [
+                            14,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "stops"
+        },
+        {
+            "id": "Stops_hub",
+            "paint": {
+                "circle-color": "#fff",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            14,
+                            0
+                        ],
+                        [
+                            14.1,
+                            1.5
+                        ],
+                        [
+                            22,
+                            12
+                        ]
+                    ]
+                }
+            },
+            "interactive": true,
+            "ref": "Stops case"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "icon_one-way",
+                "symbol-placement": "line",
+                "symbol-spacing": 100,
+                "icon-rotation-alignment": "map",
+                "icon-keep-upright": false,
+                "icon-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15.4,
+                            0
+                        ],
+                        [
+                            15.5,
+                            0.25
+                        ],
+                        [
+                            22,
+                            1.5
+                        ]
+                    ]
+                }
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "in",
+                        "class",
+                        "motorway_link",
+                        "street",
+                        "street_limited",
+                        "service",
+                        "driveway"
+                    ],
+                    [
+                        "==",
+                        "oneway",
+                        1
+                    ]
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "road_minor_one-way",
+            "paint": {},
+            "source-layer": "road"
+        },
+        {
             "interactive": true,
             "layout": {
                 "text-field": "{house_num}",
@@ -2140,6 +2465,67 @@
                         ]
                     ]
                 },
+                "icon-image": "icon-hotel",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "type",
+                    "Hotel",
+                    "Hostel",
+                    "Bed And Breakfast"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_hotel",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
                 "icon-image": "icon-theatre",
                 "text-font": [
                     "Gotham Rounded Medium"
@@ -2188,6 +2574,183 @@
             "type": "symbol",
             "source": "vector",
             "id": "poi_label_theatre",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "icon-image": "icon-concert-hall",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Concert Hall"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_concert-hall",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "icon-image": "icon-attraction",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Attraction"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_attraction",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "icon-image": "icon-sibelius",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "name",
+                    "Sibelius-monumentti"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_sibelius",
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
@@ -2420,6 +2983,64 @@
                 "icon-opacity": 1
             },
             "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 8,
+                "text-font": [
+                    "Gotham Rounded Medium Italic"
+                ],
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 0.9,
+                "text-anchor": "bottom",
+                "text-field": "{name}"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "!in",
+                    "name",
+                    "Aleksanterinkatu",
+                    "Keskuskatu"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "poi_label_sq",
+            "paint": {
+                "text-color": "#999",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "road_label"
         },
         {
             "interactive": true,
@@ -2838,7 +3459,7 @@
                 "icon-optional": false,
                 "icon-size": 1.5,
                 "text-anchor": "top",
-                "text-field": "{name}",
+                "text-field": "{facilityIds}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
@@ -3338,330 +3959,53 @@
             "source-layer": "poi_label"
         },
         {
+            "interactive": true,
             "layout": {
-                "line-cap": "round",
-                "line-join": "round"
-            },
-            "type": "line",
-            "source": "routes",
-            "id": "routes case",
-            "paint": {
-                "line-color": "#fff",
-                "line-width": {
-                    "base": 1,
+                "symbol-placement": "line",
+                "text-field": "{name}",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.1,
+                "text-size": {
+                    "base": 1.4,
                     "stops": [
                         [
                             10,
-                            4
+                            8
                         ],
                         [
-                            22,
-                            10
-                        ]
-                    ]
-                },
-                "line-blur": 0
-            },
-            "source-layer": "routes",
-            "interactive": true
-        },
-        {
-            "interactive": true,
-            "layout": {
-                "visibility": "visible",
-                "line-cap": "round",
-                "line-join": "round",
-                "line-round-limit": 1
-            },
-            "id": "routes",
-            "paint": {
-                "line-color": "#007ac9",
-                "line-width": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            10,
-                            2
-                        ],
-                        [
-                            22,
-                            10
-                        ]
-                    ]
-                },
-                "line-blur": 0
-            },
-            "ref": "routes case"
-        },
-        {
-            "interactive": true,
-            "id": "routes copy",
-            "paint": {
-                "line-color": "#3395d4",
-                "line-width": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            10,
-                            0.5
-                        ],
-                        [
-                            22,
-                            3
-                        ]
-                    ]
-                },
-                "line-blur": 0,
-                "line-opacity": 1
-            },
-            "ref": "routes case"
-        },
-        {
-            "interactive": true,
-            "layout": {
-                "visibility": "visible"
-            },
-            "type": "circle",
-            "source": "stops",
-            "id": "Stops case",
-            "paint": {
-                "circle-color": "#fff",
-                "circle-radius": {
-                    "base": 1.15,
-                    "stops": [
-                        [
-                            11.9,
-                            0
-                        ],
-                        [
-                            12,
-                            1.5
-                        ],
-                        [
-                            22,
-                            26
+                            20,
+                            14
                         ]
                     ]
                 }
             },
-            "source-layer": "stops"
-        },
-        {
-            "interactive": true,
-            "layout": {
-                "visibility": "visible"
-            },
+            "metadata": {},
             "filter": [
-                "==",
-                "type",
-                "BUS"
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "class",
+                    "street_limited",
+                    ""
+                ]
             ],
-            "type": "circle",
-            "source": "stops",
-            "id": "Stops_bus",
+            "type": "symbol",
+            "source": "vector",
+            "id": "road_minor_label",
             "paint": {
-                "circle-color": "#007ac9",
-                "circle-radius": {
-                    "base": 1.15,
-                    "stops": [
-                        [
-                            11.9,
-                            0
-                        ],
-                        [
-                            12,
-                            1
-                        ],
-                        [
-                            22,
-                            24
-                        ]
-                    ]
-                },
-                "circle-opacity": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            11,
-                            0.6
-                        ],
-                        [
-                            14,
-                            1
-                        ]
-                    ]
-                }
+                "text-color": "#666",
+                "text-halo-color": "rgba(255,255,255,0.75)",
+                "text-halo-width": 2
             },
-            "source-layer": "stops"
-        },
-        {
-            "interactive": true,
-            "layout": {
-                "visibility": "visible"
-            },
-            "filter": [
-                "==",
-                "type",
-                "TRAM"
-            ],
-            "type": "circle",
-            "source": "stops",
-            "id": "Stops_tram",
-            "paint": {
-                "circle-color": "#00985f",
-                "circle-radius": {
-                    "base": 1.15,
-                    "stops": [
-                        [
-                            11.9,
-                            0
-                        ],
-                        [
-                            12,
-                            1
-                        ],
-                        [
-                            22,
-                            24
-                        ]
-                    ]
-                },
-                "circle-opacity": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            11,
-                            0.6
-                        ],
-                        [
-                            14,
-                            1
-                        ]
-                    ]
-                }
-            },
-            "source-layer": "stops"
-        },
-        {
-            "interactive": true,
-            "layout": {
-                "visibility": "visible"
-            },
-            "filter": [
-                "==",
-                "type",
-                "RAIL"
-            ],
-            "type": "circle",
-            "source": "stops",
-            "id": "Stops_rail",
-            "paint": {
-                "circle-color": "#8c54a2",
-                "circle-radius": {
-                    "base": 1.15,
-                    "stops": [
-                        [
-                            11.9,
-                            0
-                        ],
-                        [
-                            12,
-                            1
-                        ],
-                        [
-                            22,
-                            24
-                        ]
-                    ]
-                },
-                "circle-opacity": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            11,
-                            0.6
-                        ],
-                        [
-                            14,
-                            1
-                        ]
-                    ]
-                }
-            },
-            "source-layer": "stops"
-        },
-        {
-            "interactive": true,
-            "layout": {
-                "visibility": "visible"
-            },
-            "filter": [
-                "==",
-                "type",
-                "SUBWAY"
-            ],
-            "type": "circle",
-            "source": "stops",
-            "id": "Stops_subway",
-            "paint": {
-                "circle-color": "#ff6319",
-                "circle-radius": {
-                    "base": 1.15,
-                    "stops": [
-                        [
-                            11.9,
-                            0
-                        ],
-                        [
-                            12,
-                            1
-                        ],
-                        [
-                            22,
-                            24
-                        ]
-                    ]
-                },
-                "circle-opacity": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            11,
-                            0.6
-                        ],
-                        [
-                            14,
-                            1
-                        ]
-                    ]
-                }
-            },
-            "source-layer": "stops"
-        },
-        {
-            "id": "Stops_hub",
-            "paint": {
-                "circle-color": "#fff",
-                "circle-radius": {
-                    "base": 1.15,
-                    "stops": [
-                        [
-                            14,
-                            0
-                        ],
-                        [
-                            14.1,
-                            1.5
-                        ],
-                        [
-                            22,
-                            12
-                        ]
-                    ]
-                }
-            },
-            "interactive": true,
-            "ref": "Stops case"
+            "source-layer": "road_label"
         },
         {
             "interactive": true,
