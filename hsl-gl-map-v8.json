@@ -3652,53 +3652,6 @@
                     ]
                 }
             },
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "$type",
-                    "LineString"
-                ],
-                [
-                    "in",
-                    "class",
-                    "motorway",
-                    "main",
-                    "street"
-                ]
-            ],
-            "type": "symbol",
-            "source": "vector",
-            "id": "road_major_label",
-            "paint": {
-                "text-color": "#666",
-                "text-halo-color": "rgba(255,255,255,0.75)",
-                "text-halo-width": 2
-            },
-            "source-layer": "road_label"
-        },
-        {
-            "interactive": true,
-            "minzoom": 8,
-            "layout": {
-                "text-field": "{name}",
-                "text-font": [
-                    "Gotham Rounded Book"
-                ],
-                "text-max-width": 6,
-                "text-size": {
-                    "stops": [
-                        [
-                            0,
-                            10
-                        ],
-                        [
-                            15,
-                            13
-                        ]
-                    ]
-                }
-            },
             "metadata": {},
             "filter": [
                 "all",
@@ -3744,6 +3697,53 @@
                         [
                             20,
                             14
+                        ]
+                    ]
+                }
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "class",
+                    "motorway",
+                    "main",
+                    "street"
+                ]
+            ],
+            "type": "symbol",
+            "source": "vector",
+            "id": "road_major_label",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-color": "rgba(255,255,255,0.75)",
+                "text-halo-width": 2
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 8,
+            "layout": {
+                "text-field": "{name}",
+                "text-font": [
+                    "Gotham Rounded Book"
+                ],
+                "text-max-width": 6,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            10
+                        ],
+                        [
+                            15,
+                            13
                         ]
                     ]
                 }
