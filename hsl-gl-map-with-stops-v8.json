@@ -26,7 +26,7 @@
             "type": "vector"
         },
         "ticket-sales": {
-            "url": "http://localhost:8001/hsl-ticket-sales-map/index.json",
+            "url": "http://dev.digitransit.fi/hsl-ticket-sales-map/index.json",
             "type": "vector"
         }
     },
