@@ -16,6 +16,10 @@
         "parkandride": {
             "url": "http://dev.digitransit.fi/hsl-parkandride-map/index.json",
             "type": "vector"
+        },
+        "ticket-sales": {
+            "url": "http://localhost:8001/hsl-ticket-sales-map/index.json",
+            "type": "vector"
         }
     },
     "sprite": "http://localhost:3000/sprite",
@@ -3229,6 +3233,200 @@
         },
         {
             "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-tickets-sales-point",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{NIMI}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "TYYPPI",
+                    "Myyntipiste",
+                    "R-kioski"
+                ]
+            ],
+            "type": "symbol",
+            "source": "ticket-sales",
+            "id": "poi_label_tickets-sales-point",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "ticket-sales"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-ticket-machine",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{NIMI}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "TYYPPI",
+                    "HSL Automaatti KL",
+                    "HSL Automaatti MNL"
+                ]
+            ],
+            "type": "symbol",
+            "source": "ticket-sales",
+            "id": "poi_label_ticket-machine",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "ticket-sales"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-service-point",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{NIMI}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "TYYPPI",
+                    "Palvelupiste"
+                ]
+            ],
+            "type": "symbol",
+            "source": "ticket-sales",
+            "id": "poi_label_service-point",
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            },
+            "source-layer": "ticket-sales"
+        },
+        {
+            "interactive": true,
             "minzoom": 5,
             "layout": {
                 "text-optional": true,
@@ -3321,45 +3519,8 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
-                "text-optional": true,
-                "text-size": {
-                    "stops": [
-                        [
-                            0,
-                            8
-                        ],
-                        [
-                            15,
-                            10
-                        ]
-                    ]
-                },
-                "text-allow-overlap": false,
                 "icon-image": "icon-subway-entrance",
-                "text-ignore-placement": false,
-                "text-font": [
-                    "Gotham Rounded Medium"
-                ],
                 "icon-allow-overlap": true,
-                "text-offset": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            15,
-                            [
-                                0,
-                                0.5
-                            ]
-                        ],
-                        [
-                            22,
-                            [
-                                0,
-                                3
-                            ]
-                        ]
-                    ]
-                },
                 "icon-optional": false,
                 "icon-size": {
                     "base": 1.15,
@@ -3374,9 +3535,6 @@
                         ]
                     ]
                 },
-                "text-anchor": "top",
-                "text-field": "{name}",
-                "text-max-width": 8,
                 "icon-ignore-placement": false
             },
             "filter": [
@@ -3396,10 +3554,6 @@
             "source": "vector",
             "id": "poi_label_subway-station_entrance",
             "paint": {
-                "text-color": "#666",
-                "text-halo-width": 1,
-                "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
                 "icon-translate": [
                     0,
                     -5.25
@@ -3652,7 +3806,6 @@
                     ]
                 }
             },
-            "metadata": {},
             "filter": [
                 "all",
                 [

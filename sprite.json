@@ -1,19 +1,19 @@
 {
-  "icon-hotel": {
+  "icon-stairs": {
     "width": 16,
     "height": 16,
     "x": 0,
     "y": 0,
     "pixelRatio": 1
   },
-  "icon-parliament": {
+  "icon-place-of-worship": {
     "width": 16,
     "height": 16,
     "x": 16,
     "y": 0,
     "pixelRatio": 1
   },
-  "icon-place-of-worship": {
+  "icon-rail-station": {
     "width": 16,
     "height": 16,
     "x": 0,
@@ -62,7 +62,7 @@
     "y": 32,
     "pixelRatio": 1
   },
-  "icon-sibelius": {
+  "icon-service-point": {
     "width": 16,
     "height": 16,
     "x": 48,
@@ -90,21 +90,21 @@
     "y": 48,
     "pixelRatio": 1
   },
-  "icon-aerodrome": {
+  "icon-hotel": {
     "width": 16,
     "height": 16,
     "x": 16,
     "y": 48,
     "pixelRatio": 1
   },
-  "icon-stairs": {
+  "icon-aerodrome": {
     "width": 16,
     "height": 16,
     "x": 32,
     "y": 48,
     "pixelRatio": 1
   },
-  "icon-park": {
+  "icon-parliament": {
     "width": 16,
     "height": 16,
     "x": 48,
@@ -118,14 +118,14 @@
     "y": 0,
     "pixelRatio": 1
   },
-  "icon-ticket-machine": {
+  "icon-park": {
     "width": 16,
     "height": 16,
     "x": 64,
     "y": 16,
     "pixelRatio": 1
   },
-  "icon-rail-station": {
+  "icon-ticket-machine": {
     "width": 16,
     "height": 16,
     "x": 64,
@@ -139,53 +139,60 @@
     "y": 48,
     "pixelRatio": 1
   },
-  "icon-sport": {
+  "icon-sibelius": {
     "width": 16,
     "height": 16,
     "x": 0,
     "y": 64,
     "pixelRatio": 1
   },
-  "icon-theatre": {
+  "icon-sport": {
     "width": 16,
     "height": 16,
     "x": 16,
     "y": 64,
     "pixelRatio": 1
   },
-  "icon-subway-station": {
+  "icon-theatre": {
     "width": 16,
     "height": 16,
     "x": 32,
     "y": 64,
     "pixelRatio": 1
   },
-  "icon-wetland": {
+  "icon-subway-station": {
     "width": 16,
     "height": 16,
     "x": 48,
     "y": 64,
     "pixelRatio": 1
   },
+  "icon-wetland": {
+    "width": 16,
+    "height": 16,
+    "x": 64,
+    "y": 64,
+    "pixelRatio": 1
+  },
   "icon-one-way": {
     "width": 16,
     "height": 11,
-    "x": 64,
-    "y": 64,
+    "x": 80,
+    "y": 0,
     "pixelRatio": 1
   },
   "icon-subway-entrance": {
     "width": 8,
     "height": 16,
     "x": 80,
-    "y": 0,
+    "y": 11,
     "pixelRatio": 1
   },
   "icon-park-and-ride": {
     "width": 16,
     "height": 8,
-    "x": 0,
-    "y": 80,
+    "x": 80,
+    "y": 27,
     "pixelRatio": 1
   }
 }
