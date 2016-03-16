@@ -2282,7 +2282,7 @@
         {
             "interactive": true,
             "layout": {
-                "icon-image": "icon_one-way",
+                "icon-image": "icon-one-way",
                 "symbol-placement": "line",
                 "symbol-spacing": 100,
                 "icon-rotation-alignment": "map",
