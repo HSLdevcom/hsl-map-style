@@ -2150,6 +2150,11 @@
                 },
                 "line-blur": 0
             },
+            "filter": [
+                "==",
+                "type",
+                "BUS"
+            ],
             "source-layer": "routes",
             "interactive": true,
             "metadata": {
