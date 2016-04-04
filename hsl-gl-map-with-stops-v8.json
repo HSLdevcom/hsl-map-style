@@ -1,11 +1,47 @@
 {
     "version": 8,
     "name": "HSL v1.1-alt1",
+    "metadata": {
+        "mapbox:groups": {
+            "1450343423144.6235": {
+                "name": "Group",
+                "default": true
+            },
+            "1452776685487.2012": {
+                "name": "POI-public",
+                "default": true
+            },
+            "1455204550197.1404": {
+                "name": "Stops",
+                "default": true
+            },
+            "1457010208438.9548": {
+                "name": "POI–public-transport",
+                "default": true
+            },
+            "1457010266398.4177": {
+                "name": "POI-citybikes",
+                "default": true
+            },
+            "1457010287588.8713": {
+                "name": "POI-park-and-ride",
+                "default": true
+            },
+            "1457010362398.355": {
+                "name": "POI-private-sector",
+                "default": true
+            },
+            "1457010660461.3042": {
+                "name": "Routes",
+                "default": true
+            }
+        }
+    },
     "center": [
-        24.929539951278286,
-        60.1707230330658
+        24.94016528761165,
+        60.170603754058675
     ],
-    "zoom": 16.19979469862115,
+    "zoom": 16.85025132704521,
     "bearing": 0,
     "pitch": 0,
     "sources": {
@@ -1985,10 +2021,16 @@
                 "line-blur": 0
             },
             "source-layer": "routes",
-            "interactive": true
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1457010660461.3042"
+            }
         },
         {
             "interactive": true,
+            "metadata": {
+                "mapbox:group": "1457010660461.3042"
+            },
             "id": "routes",
             "paint": {
                 "line-color": "#007ac9",
@@ -2011,6 +2053,9 @@
         },
         {
             "interactive": true,
+            "metadata": {
+                "mapbox:group": "1457010660461.3042"
+            },
             "id": "routes copy",
             "paint": {
                 "line-color": "#3395d4",
@@ -2060,12 +2105,18 @@
                     ]
                 }
             },
-            "source-layer": "stops"
+            "source-layer": "stops",
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
+            }
         },
         {
             "interactive": true,
             "layout": {
                 "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
             },
             "filter": [
                 "==",
@@ -2115,6 +2166,9 @@
             "layout": {
                 "visibility": "visible"
             },
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
+            },
             "filter": [
                 "==",
                 "type",
@@ -2163,6 +2217,9 @@
             "layout": {
                 "visibility": "visible"
             },
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
+            },
             "filter": [
                 "==",
                 "type",
@@ -2210,6 +2267,9 @@
             "interactive": true,
             "layout": {
                 "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
             },
             "filter": [
                 "==",
@@ -2277,6 +2337,9 @@
                 }
             },
             "interactive": true,
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
+            },
             "ref": "Stops case"
         },
         {
@@ -2400,6 +2463,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8
             },
+            "metadata": {
+                "mapbox:group": "1457010362398.355"
+            },
             "filter": [
                 "all",
                 [
@@ -2482,6 +2548,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8
             },
+            "metadata": {
+                "mapbox:group": "1457010362398.355"
+            },
             "filter": [
                 "all",
                 [
@@ -2542,6 +2611,9 @@
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
+            },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
             },
             "filter": [
                 "all",
@@ -2621,6 +2693,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8
             },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
             "filter": [
                 "all",
                 [
@@ -2679,6 +2754,9 @@
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
+            },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
             },
             "filter": [
                 "all",
@@ -2739,6 +2817,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8
             },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
             "filter": [
                 "all",
                 [
@@ -2795,6 +2876,9 @@
                 "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}"
+            },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
             },
             "filter": [
                 "all",
@@ -2872,6 +2956,9 @@
                 "text-anchor": "bottom",
                 "text-field": "{name}"
             },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
             "filter": [
                 "all",
                 [
@@ -2931,6 +3018,9 @@
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
+            },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
             },
             "filter": [
                 "all",
@@ -3017,6 +3107,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
             "filter": [
                 "all",
                 [
@@ -3080,6 +3173,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
             },
             "filter": [
                 "all",
@@ -3145,6 +3241,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
             "filter": [
                 "all",
                 [
@@ -3208,6 +3307,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
             },
             "filter": [
                 "all",
@@ -3275,6 +3377,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
             "filter": [
                 "all",
                 [
@@ -3338,6 +3443,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
             },
             "filter": [
                 "all",
@@ -3403,6 +3511,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
             "filter": [
                 "all",
                 [
@@ -3456,6 +3567,7 @@
                     "Gotham Rounded Medium"
                 ],
                 "icon-allow-overlap": false,
+                "visibility": "visible",
                 "text-offset": [
                     0,
                     0.5
@@ -3466,6 +3578,9 @@
                 "text-field": "{facilityIds}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1457010287588.8713"
             },
             "filter": [
                 "==",
@@ -3540,6 +3655,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1457010266398.4177"
+            },
             "filter": [
                 "==",
                 "$type",
@@ -3595,6 +3713,9 @@
                 "text-field": "{NIMI}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
             },
             "filter": [
                 "all",
@@ -3661,6 +3782,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
+            },
             "filter": [
                 "all",
                 [
@@ -3726,6 +3850,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
+            },
             "filter": [
                 "all",
                 [
@@ -3789,6 +3916,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
             },
             "maxzoom": 15,
             "filter": [
@@ -3907,6 +4037,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
+            },
             "filter": [
                 "all",
                 [
@@ -3971,6 +4104,9 @@
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
+            },
             "filter": [
                 "all",
                 [
@@ -4024,6 +4160,7 @@
                     "Gotham Rounded Medium"
                 ],
                 "icon-allow-overlap": false,
+                "visibility": "visible",
                 "text-offset": [
                     0,
                     0.5
@@ -4034,6 +4171,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
             },
             "filter": [
                 "all",
@@ -4123,6 +4263,9 @@
                 "text-field": "{name}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
             },
             "filter": [
                 "all",
