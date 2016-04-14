@@ -3,6 +3,10 @@
     "name": "HSL v1.1-alt1",
     "metadata": {
         "mapbox:groups": {
+            "1460634974533.995": {
+                "name": "Kuljettajan_ohje",
+                "default": false
+            },
             "1452776685487.2012": {
                 "name": "POI-public",
                 "default": true
@@ -53,6 +57,10 @@
             "url": "http://dev.digitransit.fi/hsl-route-map/index.json",
             "type": "vector"
         },
+        "citybike": {
+            "url": "http://dev.digitransit.fi/hsl-citybike-map/index.json",
+            "type": "vector"
+        },
         "parkandride": {
             "url": "http://dev.digitransit.fi/hsl-parkandride-map/index.json",
             "type": "vector"
@@ -60,6 +68,10 @@
         "ticket-sales": {
             "url": "http://dev.digitransit.fi/hsl-ticket-sales-map/index.json",
             "type": "vector"
+        },
+        "kuljettajaohjeet": {
+            "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuljettajaohjeet.json",
+            "type": "geojson"
         }
     },
     "sprite": "http://localhost:3000/sprite",
@@ -2136,7 +2148,7 @@
                     "stops": [
                         [
                             10,
-                            4
+                            2
                         ],
                         [
                             22,
@@ -2515,7 +2527,8 @@
                         "street",
                         "street_limited",
                         "service",
-                        "driveway"
+                        "driveway",
+                        "main"
                     ],
                     [
                         "==",
@@ -4429,6 +4442,146 @@
                 "icon-opacity": 1
             },
             "source-layer": "poi_label"
+        },
+        {
+            "id": "poi_taukotila",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1460634974533.995"
+            },
+            "source": "kuljettajaohjeet",
+            "source-layer": "taukotilat",
+            "minzoom": 8,
+            "interactive": true,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "Tyyppi",
+                    "taukotila"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-cafe",
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    0.8
+                ],
+                "icon-optional": false,
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{Nimi}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            }
+        },
+        {
+            "id": "poi_bajamaja",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1460634974533.995"
+            },
+            "source": "kuljettajaohjeet",
+            "source-layer": "taukotilat",
+            "minzoom": 8,
+            "interactive": true,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "Tyyppi",
+                    "vesi wc",
+                    "vesi-wc",
+                    "wc",
+                    "wc-tila"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-bajamaja",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": false,
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-optional": false,
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{facilityIds}",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            }
         },
         {
             "interactive": true,
