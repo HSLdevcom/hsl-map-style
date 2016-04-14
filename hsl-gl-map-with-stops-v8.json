@@ -3,10 +3,6 @@
     "name": "HSL v1.1-alt1",
     "metadata": {
         "mapbox:groups": {
-            "1450343423144.6235": {
-                "name": "Group",
-                "default": true
-            },
             "1452776685487.2012": {
                 "name": "POI-public",
                 "default": true
@@ -2480,7 +2476,7 @@
         {
             "interactive": true,
             "layout": {
-                "icon-image": "icon_one-way",
+                "icon-image": "icon-one-way",
                 "symbol-placement": "line",
                 "symbol-spacing": 100,
                 "icon-rotation-alignment": "map",
