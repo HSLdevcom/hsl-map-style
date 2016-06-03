@@ -2,15 +2,15 @@
 <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 8 16" enable-background="new 0 0 8 16" xml:space="preserve">
+	 viewBox="0 0 24 48" enable-background="new 0 0 24 48" xml:space="preserve">
 <g>
 	<g>
-		<path fill="#FF6319" d="M0.004,0.98c0-0.54,0.45-0.99,0.99-0.99h6c0.56,0,1.01,0.45,1.01,0.99v14.01c0,0.56-0.45,1.01-1.01,1.01
-			h-6c-0.54,0-0.99-0.45-0.99-1.01V0.98z"/>
+		<path fill="#FF6319" d="M0,2.968C0,1.349,1.35,0,2.97,0h18C22.65,0,24,1.349,24,2.968v42.004C24,46.651,22.65,48,20.97,48h-18
+			C1.35,48,0,46.651,0,44.972V2.968z"/>
 	</g>
 	<g>
-		<path fill="#FFFFFF" d="M2.855,1.584l1.178,3.465h0.014l1.115-3.465h1.559v5.038H5.685v-3.57H5.671l-1.235,3.57H3.582L2.347,3.087
-			H2.333v3.535H1.296V1.584H2.855z"/>
+		<path fill="#FFFFFF" d="M8.558,4.762l3.535,10.394h0.042L15.48,4.762h4.678v15.115h-3.112V9.165h-0.042L13.3,19.877h-2.561
+			L7.034,9.271H6.992v10.606H3.88V4.762H8.558z"/>
 	</g>
 </g>
 </svg>
