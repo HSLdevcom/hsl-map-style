@@ -33,10 +33,7 @@
             },
             "1452776685487.2012": {
                 "name": "POI-public",
-                "collapsed": false
-            },
-            "1450343423144.6235": {
-                "name": "Group"
+                "collapsed": true
             }
         }
     },
@@ -135,8 +132,8 @@
             "filter": [
                 "in",
                 "class",
-                "wood",
-                "scrub"
+                "scrub",
+                "wood"
             ],
             "paint": {
                 "fill-color": "rgba(208,227,184,1)"
@@ -164,6 +161,23 @@
             "paint": {
                 "fill-color": "rgba(207,219,193,1)",
                 "fill-outline-color": "rgba(187,199,175,1)"
+            }
+        },
+        {
+            "id": "landuse_aeroway",
+            "type": "fill",
+            "metadata": {},
+            "source": "vector",
+            "source-layer": "aeroway",
+            "interactive": true,
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "paint": {
+                "fill-color": "#e3e3e3",
+                "fill-outline-color": "#ccc"
             }
         },
         {
@@ -432,19 +446,7 @@
                         ]
                     ]
                 },
-                "line-opacity": {
-                    "base": 1,
-                    "stops": [
-                        [
-                            10,
-                            0
-                        ],
-                        [
-                            15,
-                            1
-                        ]
-                    ]
-                }
+                "line-opacity": 1
             }
         },
         {
@@ -463,8 +465,8 @@
                 [
                     "in",
                     "class",
-                    "river",
                     "canal",
+                    "river",
                     "stream"
                 ]
             ],
@@ -543,15 +545,15 @@
             "filter": [
                 "all",
                 [
+                    "==",
+                    "class",
+                    "land"
+                ],
+                [
                     "in",
                     "$type",
                     "Point",
                     "Polygon"
-                ],
-                [
-                    "==",
-                    "class",
-                    "land"
                 ]
             ],
             "paint": {
@@ -607,15 +609,15 @@
             "filter": [
                 "all",
                 [
-                    "in",
-                    "$type",
-                    "Polygon",
-                    "LineString"
-                ],
-                [
                     "==",
                     "class",
                     "cliff"
+                ],
+                [
+                    "in",
+                    "$type",
+                    "LineString",
+                    "Polygon"
                 ]
             ],
             "layout": {},
@@ -633,15 +635,15 @@
             "filter": [
                 "all",
                 [
+                    "==",
+                    "class",
+                    "rock"
+                ],
+                [
                     "in",
                     "$type",
                     "LineString",
                     "Polygon"
-                ],
-                [
-                    "==",
-                    "class",
-                    "rock"
                 ]
             ],
             "layout": {},
@@ -849,14 +851,14 @@
                 [
                     "all",
                     [
-                        "==",
-                        "class",
-                        "path"
-                    ],
-                    [
                         "!=",
                         "type",
                         "cycleway"
+                    ],
+                    [
+                        "==",
+                        "class",
+                        "path"
                     ],
                     [
                         "==",
@@ -893,6 +895,7 @@
         {
             "id": "tunnel_major_rail",
             "type": "line",
+            "metadata": {},
             "source": "vector",
             "source-layer": "road",
             "interactive": true,
@@ -900,18 +903,26 @@
                 "all",
                 [
                     "==",
-                    "class",
-                    "major_rail"
+                    "$type",
+                    "LineString"
                 ],
                 [
-                    "!=",
-                    "type",
-                    "subway"
-                ],
-                [
-                    "==",
-                    "structure",
-                    "tunnel"
+                    "all",
+                    [
+                        "!=",
+                        "type",
+                        "subway"
+                    ],
+                    [
+                        "==",
+                        "class",
+                        "major_rail"
+                    ],
+                    [
+                        "==",
+                        "structure",
+                        "tunnel"
+                    ]
                 ]
             ],
             "layout": {
@@ -920,21 +931,39 @@
             "paint": {
                 "line-color": "#bbb",
                 "line-width": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            6,
+                            0.25
+                        ],
+                        [
+                            20,
+                            4
+                        ]
+                    ]
+                },
+                "line-opacity": 1,
+                "line-gap-width": {
                     "base": 1,
                     "stops": [
                         [
-                            14,
+                            11.9,
+                            0
+                        ],
+                        [
+                            12,
                             1
                         ],
                         [
                             22,
-                            8
+                            6
                         ]
                     ]
                 },
                 "line-dasharray": [
-                    0.28,
-                    0.34
+                    10,
+                    3
                 ]
             }
         },
@@ -1085,10 +1114,10 @@
                     [
                         "in",
                         "class",
+                        "",
                         "street",
                         "street_limited",
-                        "tertiary",
-                        ""
+                        "tertiary"
                     ]
                 ]
             ],
@@ -1143,13 +1172,13 @@
                     "all",
                     [
                         "==",
-                        "structure",
-                        "tunnel"
+                        "class",
+                        "service"
                     ],
                     [
                         "==",
-                        "class",
-                        "service"
+                        "structure",
+                        "tunnel"
                     ]
                 ]
             ],
@@ -1209,23 +1238,13 @@
                     ],
                     [
                         "==",
-                        "type",
-                        "subway"
-                    ],
-                    [
-                        "!=",
-                        "osm_id",
-                        120809795
-                    ],
-                    [
-                        "!=",
-                        "osm_id",
-                        30133633
+                        "structure",
+                        "tunnel"
                     ],
                     [
                         "==",
-                        "structure",
-                        "tunnel"
+                        "type",
+                        "subway"
                     ]
                 ]
             ],
@@ -1233,7 +1252,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "line-color": "#ff6319",
+                "line-color": "#ccc",
                 "line-width": {
                     "base": 1.4,
                     "stops": [
@@ -1247,7 +1266,7 @@
                         ]
                     ]
                 },
-                "line-opacity": 0.5,
+                "line-opacity": 1,
                 "line-gap-width": {
                     "base": 1,
                     "stops": [
@@ -1280,6 +1299,11 @@
             "filter": [
                 "all",
                 [
+                    "!=",
+                    "structure",
+                    "tunnel"
+                ],
+                [
                     "==",
                     "class",
                     "major_rail"
@@ -1288,18 +1312,13 @@
                     "==",
                     "type",
                     "subway"
-                ],
-                [
-                    "!=",
-                    "structure",
-                    "tunnel"
                 ]
             ],
             "layout": {
                 "visibility": "visible"
             },
             "paint": {
-                "line-color": "#ff6319",
+                "line-color": "#bbb",
                 "line-width": {
                     "base": 1.4,
                     "stops": [
@@ -1310,6 +1329,73 @@
                         [
                             20,
                             20
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_subway_service",
+            "type": "line",
+            "metadata": {},
+            "source": "vector",
+            "source-layer": "road",
+            "interactive": true,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "minor_rail"
+                ],
+                [
+                    "==",
+                    "type",
+                    "subway"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#aaa",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15,
+                            0.5
+                        ],
+                        [
+                            22,
+                            4
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15,
+                            1
+                        ],
+                        [
+                            22,
+                            1
+                        ]
+                    ]
+                },
+                "line-gap-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            12
                         ]
                     ]
                 }
@@ -1330,25 +1416,20 @@
                 ],
                 [
                     "==",
-                    "type",
-                    "subway"
-                ],
-                [
-                    "!=",
-                    "osm_id",
-                    120809795
+                    "structure",
+                    "bridge"
                 ],
                 [
                     "==",
-                    "structure",
-                    "bridge"
+                    "type",
+                    "subway"
                 ]
             ],
             "layout": {
                 "visibility": "visible"
             },
             "paint": {
-                "line-color": "#ff6319",
+                "line-color": "#bbb",
                 "line-width": {
                     "base": 1.4,
                     "stops": [
@@ -1504,11 +1585,6 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "class",
-                    "major_rail"
-                ],
-                [
                     "!=",
                     "type",
                     "subway"
@@ -1518,6 +1594,11 @@
                     "structure",
                     "bridge",
                     "tunnel"
+                ],
+                [
+                    "==",
+                    "class",
+                    "major_rail"
                 ]
             ],
             "layout": {
@@ -1556,15 +1637,15 @@
                 [
                     "all",
                     [
-                        "==",
-                        "class",
-                        "path"
-                    ],
-                    [
                         "!in",
                         "structure",
                         "bridge",
                         "tunnel"
+                    ],
+                    [
+                        "==",
+                        "class",
+                        "path"
                     ]
                 ]
             ],
@@ -1610,9 +1691,10 @@
                 [
                     "all",
                     [
-                        "==",
-                        "class",
-                        "path"
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
                     ],
                     [
                         "!in",
@@ -1621,10 +1703,9 @@
                         "steps"
                     ],
                     [
-                        "!in",
-                        "structure",
-                        "bridge",
-                        "tunnel"
+                        "==",
+                        "class",
+                        "path"
                     ]
                 ]
             ],
@@ -1670,6 +1751,12 @@
                 [
                     "all",
                     [
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
+                    ],
+                    [
                         "==",
                         "class",
                         "path"
@@ -1678,12 +1765,6 @@
                         "==",
                         "type",
                         "steps"
-                    ],
-                    [
-                        "!in",
-                        "structure",
-                        "bridge",
-                        "tunnel"
                     ]
                 ]
             ],
@@ -1738,6 +1819,12 @@
                 [
                     "all",
                     [
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
+                    ],
+                    [
                         "==",
                         "class",
                         "path"
@@ -1746,12 +1833,6 @@
                         "==",
                         "type",
                         "steps"
-                    ],
-                    [
-                        "!in",
-                        "structure",
-                        "bridge",
-                        "tunnel"
                     ]
                 ]
             ],
@@ -1812,17 +1893,17 @@
                 [
                     "all",
                     [
-                        "in",
-                        "type",
-                        "path",
-                        "cycleway",
-                        "pedestrian",
-                        "track"
-                    ],
-                    [
                         "!=",
                         "structure",
                         "bridge"
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "cycleway",
+                        "path",
+                        "pedestrian",
+                        "track"
                     ]
                 ]
             ],
@@ -1921,16 +2002,16 @@
                 [
                     "all",
                     [
-                        "in",
-                        "class",
-                        "primary",
-                        "secondary"
-                    ],
-                    [
                         "!in",
                         "structure",
                         "bridge",
                         "tunnel"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "primary",
+                        "secondary"
                     ]
                 ]
             ],
@@ -1971,18 +2052,18 @@
                 [
                     "all",
                     [
-                        "in",
-                        "class",
-                        "street",
-                        "street_limited",
-                        "service",
-                        "tertiary"
-                    ],
-                    [
                         "!in",
                         "structure",
                         "bridge",
                         "tunnel"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "service",
+                        "street",
+                        "street_limited",
+                        "tertiary"
                     ]
                 ]
             ],
@@ -2023,6 +2104,7 @@
                 [
                     "in",
                     "type",
+                    "construction",
                     "construction:living_street",
                     "construction:motorway",
                     "construction:motorway_link",
@@ -2037,8 +2119,7 @@
                     "construction:tertiary_link",
                     "construction:trunk",
                     "construction:trunk_link",
-                    "construction:unclassified",
-                    "construction"
+                    "construction:unclassified"
                 ]
             ],
             "layout": {
@@ -2098,8 +2179,8 @@
                     [
                         "in",
                         "class",
-                        "motorway_link",
-                        "link"
+                        "link",
+                        "motorway_link"
                     ],
                     [
                         "in",
@@ -2146,14 +2227,14 @@
                 [
                     "all",
                     [
-                        "==",
-                        "class",
-                        "link"
-                    ],
-                    [
                         "!=",
                         "type",
                         "trunk_link"
+                    ],
+                    [
+                        "==",
+                        "class",
+                        "link"
                     ]
                 ]
             ],
@@ -2196,8 +2277,8 @@
                     [
                         "in",
                         "class",
-                        "motorway_link",
-                        "link"
+                        "link",
+                        "motorway_link"
                     ],
                     [
                         "in",
@@ -2256,14 +2337,14 @@
                 [
                     "all",
                     [
-                        "==",
-                        "class",
-                        "link"
-                    ],
-                    [
                         "!=",
                         "type",
                         "trunk_link"
+                    ],
+                    [
+                        "==",
+                        "class",
+                        "link"
                     ]
                 ]
             ],
@@ -2376,6 +2457,12 @@
             "filter": [
                 "all",
                 [
+                    "!in",
+                    "structure",
+                    "bridge",
+                    "tunnel"
+                ],
+                [
                     "==",
                     "class",
                     "minor_rail"
@@ -2384,12 +2471,6 @@
                     "==",
                     "type",
                     "tram"
-                ],
-                [
-                    "!in",
-                    "structure",
-                    "bridge",
-                    "tunnel"
                 ]
             ],
             "layout": {
@@ -2455,14 +2536,14 @@
                 [
                     "all",
                     [
-                        "==",
-                        "class",
-                        "major_rail"
-                    ],
-                    [
                         "!=",
                         "type",
                         "subway"
+                    ],
+                    [
+                        "==",
+                        "class",
+                        "major_rail"
                     ],
                     [
                         "==",
@@ -2531,14 +2612,14 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "class",
-                    "major_rail"
-                ],
-                [
                     "!=",
                     "type",
                     "subway"
+                ],
+                [
+                    "==",
+                    "class",
+                    "major_rail"
                 ],
                 [
                     "==",
@@ -2738,18 +2819,18 @@
                 [
                     "all",
                     [
-                        "in",
-                        "class",
-                        "street",
-                        "street_limited",
-                        "service",
-                        "driveway",
-                        "tertiary"
-                    ],
-                    [
                         "==",
                         "structure",
                         "bridge"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "driveway",
+                        "service",
+                        "street",
+                        "street_limited",
+                        "tertiary"
                     ]
                 ]
             ],
@@ -2799,15 +2880,15 @@
                 [
                     "all",
                     [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
                         "in",
                         "class",
                         "primary",
                         "secondary"
-                    ],
-                    [
-                        "==",
-                        "structure",
-                        "bridge"
                     ]
                 ]
             ],
@@ -2847,15 +2928,15 @@
                 [
                     "all",
                     [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
                         "in",
                         "class",
                         "motorway",
                         "trunk"
-                    ],
-                    [
-                        "==",
-                        "structure",
-                        "bridge"
                     ]
                 ]
             ],
@@ -2913,18 +2994,18 @@
                 [
                     "all",
                     [
-                        "in",
-                        "class",
-                        "street",
-                        "street_limited",
-                        "service",
-                        "driveway",
-                        "tertiary"
-                    ],
-                    [
                         "==",
                         "structure",
                         "bridge"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "driveway",
+                        "service",
+                        "street",
+                        "street_limited",
+                        "tertiary"
                     ]
                 ]
             ],
@@ -2965,15 +3046,15 @@
                 [
                     "all",
                     [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
                         "in",
                         "class",
                         "primary",
                         "secondary"
-                    ],
-                    [
-                        "==",
-                        "structure",
-                        "bridge"
                     ]
                 ]
             ],
@@ -3014,15 +3095,15 @@
                 [
                     "all",
                     [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
                         "in",
                         "class",
                         "motorway",
                         "trunk"
-                    ],
-                    [
-                        "==",
-                        "structure",
-                        "bridge"
                     ]
                 ]
             ],
@@ -3632,7 +3713,7 @@
             }
         },
         {
-            "id": "Stops_hub",
+            "id": "Stops_hub_old",
             "type": "circle",
             "metadata": {
                 "mapbox:group": "1455204550197.1404"
@@ -3665,7 +3746,7 @@
             }
         },
         {
-            "id": "Stops_hub copy",
+            "id": "Stops_hub",
             "metadata": {
                 "mapbox:group": "1455204550197.1404"
             },
@@ -3708,19 +3789,19 @@
                 [
                     "all",
                     [
-                        "in",
-                        "class",
-                        "motorway_link",
-                        "street",
-                        "street_limited",
-                        "service",
-                        "driveway",
-                        "main"
-                    ],
-                    [
                         "==",
                         "oneway",
                         1
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "driveway",
+                        "main",
+                        "motorway_link",
+                        "service",
+                        "street",
+                        "street_limited"
                     ]
                 ]
             ],
@@ -3805,36 +3886,36 @@
                     "all",
                     [
                         "in",
-                        "scalerank",
+                        "localrank",
                         1,
+                        11,
                         2,
                         3,
                         4
                     ],
                     [
                         "in",
-                        "localrank",
-                        1,
-                        2,
-                        3,
-                        4,
-                        11
+                        "name",
+                        "Forum",
+                        "Iso Omena",
+                        "Jumbo",
+                        "Kampinkeskus",
+                        "Kauppakeskus Itis",
+                        "Kauppakeskus Kaari",
+                        "Kauppakeskus Kluuvi",
+                        "Makkaratalo",
+                        "Sello",
+                        "Sokos",
+                        "Stockmann",
+                        "World Trade Center Helsinki"
                     ],
                     [
                         "in",
-                        "name",
-                        "Makkaratalo",
-                        "Kauppakeskus Kluuvi",
-                        "Stockmann",
-                        "Forum",
-                        "Sokos",
-                        "Kampinkeskus",
-                        "World Trade Center Helsinki",
-                        "Kauppakeskus Kaari",
-                        "Jumbo",
-                        "Sello",
-                        "Iso Omena",
-                        "Kauppakeskus Itis"
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
                     ]
                 ]
             ],
@@ -3960,9 +4041,9 @@
                 [
                     "in",
                     "type",
-                    "Hotel",
+                    "Bed And Breakfast",
                     "Hostel",
-                    "Bed And Breakfast"
+                    "Hotel"
                 ]
             ],
             "layout": {
@@ -4025,12 +4106,9 @@
                 [
                     "all",
                     [
-                        "in",
-                        "scalerank",
-                        1,
-                        2,
-                        3,
-                        4
+                        "==",
+                        "type",
+                        "Theatre"
                     ],
                     [
                         "in",
@@ -4041,9 +4119,12 @@
                         4
                     ],
                     [
-                        "==",
-                        "type",
-                        "Theatre"
+                        "in",
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
                     ]
                 ]
             ],
@@ -4170,16 +4251,78 @@
                 [
                     "all",
                     [
-                        "==",
-                        "type",
-                        "Attraction"
-                    ],
-                    [
                         "!in",
                         "scalerank",
                         1,
                         2
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "Attraction"
                     ]
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Book"
+                ],
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 0.9,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            }
+        },
+        {
+            "id": "poi_label_transportation",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "interactive": true,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Transportation"
                 ]
             ],
             "layout": {
@@ -4241,16 +4384,16 @@
                 [
                     "all",
                     [
-                        "==",
-                        "type",
-                        "Attraction"
-                    ],
-                    [
                         "!in",
                         "scalerank",
                         5,
                         4,
                         3
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "Attraction"
                     ]
                 ]
             ],
@@ -4377,12 +4520,9 @@
                 [
                     "all",
                     [
-                        "in",
-                        "scalerank",
-                        1,
-                        2,
-                        3,
-                        4
+                        "==",
+                        "type",
+                        "Park"
                     ],
                     [
                         "in",
@@ -4393,9 +4533,12 @@
                         4
                     ],
                     [
-                        "==",
-                        "type",
-                        "Park"
+                        "in",
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
                     ]
                 ]
             ],
@@ -4450,15 +4593,15 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "$type",
-                    "Point"
-                ],
-                [
                     "!in",
                     "name",
                     "Aleksanterinkatu",
                     "Keskuskatu"
+                ],
+                [
+                    "==",
+                    "$type",
+                    "Point"
                 ]
             ],
             "layout": {
@@ -4520,14 +4663,6 @@
                     "all",
                     [
                         "in",
-                        "scalerank",
-                        1,
-                        2,
-                        3,
-                        4
-                    ],
-                    [
-                        "in",
                         "localrank",
                         1,
                         2,
@@ -4536,10 +4671,18 @@
                     ],
                     [
                         "in",
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    [
+                        "in",
                         "type",
+                        "",
                         "Sports Centre",
-                        "Stadium",
-                        ""
+                        "Stadium"
                     ]
                 ]
             ],
@@ -4876,14 +5019,14 @@
                 [
                     "all",
                     [
-                        "==",
-                        "type",
-                        "Place Of Worship"
-                    ],
-                    [
                         "<",
                         "scalerank",
                         4
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "Place Of Worship"
                     ]
                 ]
             ],
@@ -5088,8 +5231,8 @@
                 [
                     "in",
                     "type",
-                    "Harbour",
                     "Ferry Terminal",
+                    "Harbour",
                     "Marina"
                 ]
             ],
@@ -5173,7 +5316,7 @@
                     0.5
                 ],
                 "icon-optional": false,
-                "icon-size": 1.5,
+                "icon-size": 1,
                 "text-anchor": "top",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
@@ -5611,16 +5754,16 @@
                     "stops": [
                         [
                             15,
-                            1
+                            0.3
                         ],
                         [
                             22,
-                            3
+                            1
                         ]
                     ]
                 },
                 "text-anchor": "top",
-                "text-field": "{name}",
+                "text-field": "",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
@@ -5724,14 +5867,16 @@
                 [
                     "all",
                     [
-                        "==",
-                        "network",
-                        "rail"
+                        "!=",
+                        "name",
+                        "Maisemajuna",
+                        "Pasilan autojuna-asema"
                     ],
                     [
                         "!=",
-                        "name",
-                        "Maisemajuna"
+                        "network",
+                        "entrance",
+                        "rail-metro"
                     ]
                 ]
             ],
@@ -5757,12 +5902,39 @@
                 ],
                 "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
+                "text-offset": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            12,
+                            [
+                                0,
+                                0.25
+                            ]
+                        ],
+                        [
+                            15,
+                            [
+                                0,
+                                0.5
+                            ]
+                        ]
+                    ]
+                },
                 "icon-optional": false,
-                "icon-size": 1.2,
+                "icon-size": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            12,
+                            0.6
+                        ],
+                        [
+                            15,
+                            1
+                        ]
+                    ]
+                },
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8,
@@ -5791,9 +5963,18 @@
             "minzoom": 5,
             "interactive": true,
             "filter": [
-                "==",
-                "$type",
-                "Point"
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    1,
+                    2
+                ]
             ],
             "layout": {
                 "text-optional": true,
@@ -6105,11 +6286,11 @@
                 [
                     "in",
                     "class",
-                    "street_limited",
-                    "tertiary",
-                    "street",
+                    "path",
                     "service",
-                    "path"
+                    "street",
+                    "street_limited",
+                    "tertiary"
                 ]
             ],
             "layout": {
@@ -6157,9 +6338,9 @@
                     "in",
                     "class",
                     "motorway",
-                    "trunk",
                     "primary",
-                    "secondary"
+                    "secondary",
+                    "trunk"
                 ]
             ],
             "layout": {
@@ -6207,11 +6388,11 @@
                 [
                     "in",
                     "type",
-                    "town",
-                    "village",
                     "hamlet",
+                    "neighbourhood",
                     "suburb",
-                    "neighbourhood"
+                    "town",
+                    "village"
                 ]
             ],
             "layout": {
