@@ -5873,10 +5873,9 @@
                         "Pasilan autojuna-asema"
                     ],
                     [
-                        "!=",
+                        "==",
                         "network",
-                        "entrance",
-                        "rail-metro"
+                        "rail"
                     ]
                 ]
             ],
