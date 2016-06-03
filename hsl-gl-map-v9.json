@@ -30,15 +30,15 @@
     "pitch": 0,
     "sources": {
         "vector": {
-            "url": "http://localhost:8001/hsl-vector-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-vector-map/index.json",
             "type": "vector"
         },
         "parkandride": {
-            "url": "http://dev.digitransit.fi/hsl-parkandride-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
             "type": "vector"
         },
         "ticket-sales": {
-            "url": "http://dev.digitransit.fi/hsl-ticket-sales-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-ticket-sales-map/index.json",
             "type": "vector"
         }
     },
