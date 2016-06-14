@@ -46,27 +46,27 @@
     "pitch": 0,
     "sources": {
         "vector": {
-            "url": "http://localhost:8001/hsl-vector-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-vector-map/index.json",
             "type": "vector"
         },
         "stops": {
-            "url": "http://dev.digitransit.fi/hsl-stop-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-stop-map/index.json",
             "type": "vector"
         },
         "routes": {
-            "url": "http://dev.digitransit.fi/hsl-route-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-route-map/index.json",
             "type": "vector"
         },
         "citybike": {
-            "url": "http://dev.digitransit.fi/hsl-citybike-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-citybike-map/index.json",
             "type": "vector"
         },
         "parkandride": {
-            "url": "http://dev.digitransit.fi/hsl-parkandride-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
             "type": "vector"
         },
         "ticket-sales": {
-            "url": "http://dev.digitransit.fi/hsl-ticket-sales-map/index.json",
+            "url": "http://api.digitransit.fi/map/v1/hsl-ticket-sales-map/index.json",
             "type": "vector"
         },
         "kuljettajaohjeet": {
@@ -74,7 +74,7 @@
             "type": "geojson"
         }
     },
-    "sprite": "http://localhost:8000/sprite",
+    "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
     "glyphs": "http://localhost:8000/fontstack/{fontstack}/{range}.pbf",
     "layers": [
         {
@@ -5867,7 +5867,7 @@
                 [
                     "all",
                     [
-                        "!=",
+                        "!in",
                         "name",
                         "Maisemajuna",
                         "Pasilan autojuna-asema"
