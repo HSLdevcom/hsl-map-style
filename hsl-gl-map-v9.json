@@ -4763,7 +4763,7 @@
                     "Gotham Rounded Medium"
                 ],
                 "icon-allow-overlap": false,
-                "visibility": "visible",
+                "visibility": "none",
                 "text-offset": [
                     0,
                     0.5
