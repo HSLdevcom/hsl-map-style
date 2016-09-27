@@ -42,7 +42,7 @@
             "type": "vector"
         }
     },
-    "sprite": "http://localhost:8000/sprite",
+    "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
     "glyphs": "http://localhost:8000/fontstack/{fontstack}/{range}.pbf",
     "layers": [
         {
