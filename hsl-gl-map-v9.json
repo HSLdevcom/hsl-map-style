@@ -5244,7 +5244,7 @@
                 [
                     "all",
                     [
-                        "!=",
+                        "!in",
                         "name",
                         "Maisemajuna",
                         "Pasilan autojuna-asema"
