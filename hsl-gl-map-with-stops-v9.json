@@ -166,7 +166,6 @@
         {
             "id": "landuse_aeroway",
             "type": "fill",
-            "metadata": {},
             "source": "vector",
             "source-layer": "aeroway",
             "interactive": true,
@@ -208,6 +207,21 @@
             ],
             "paint": {
                 "fill-color": "#f9f4d2"
+            }
+        },
+        {
+            "id": "landuse_hospital",
+            "type": "fill",
+            "source": "vector",
+            "source-layer": "landuse",
+            "interactive": true,
+            "filter": [
+                "==",
+                "class",
+                "hospital"
+            ],
+            "paint": {
+                "fill-color": "#fbe6e0"
             }
         },
         {
@@ -814,7 +828,7 @@
             "ref": "building_shadow",
             "interactive": true,
             "paint": {
-                "fill-color": "#d5d8e0",
+                "fill-color": "#e2e4e9",
                 "fill-outline-color": {
                     "base": 1,
                     "stops": [
@@ -895,7 +909,6 @@
         {
             "id": "tunnel_major_rail",
             "type": "line",
-            "metadata": {},
             "source": "vector",
             "source-layer": "road",
             "interactive": true,
@@ -1232,6 +1245,16 @@
                 [
                     "all",
                     [
+                        "!=",
+                        "osm_id",
+                        120809795
+                    ],
+                    [
+                        "!=",
+                        "osm_id",
+                        30133633
+                    ],
+                    [
                         "==",
                         "class",
                         "major_rail"
@@ -1337,12 +1360,16 @@
         {
             "id": "road_subway_service",
             "type": "line",
-            "metadata": {},
             "source": "vector",
             "source-layer": "road",
             "interactive": true,
             "filter": [
                 "all",
+                [
+                    "!=",
+                    "structure",
+                    "tunnel"
+                ],
                 [
                     "==",
                     "class",
@@ -1409,6 +1436,11 @@
             "interactive": true,
             "filter": [
                 "all",
+                [
+                    "!=",
+                    "osm_id",
+                    120809795
+                ],
                 [
                     "==",
                     "class",
@@ -1966,21 +1998,17 @@
                 "line-join": "round"
             },
             "paint": {
-                "line-color": "#ccc",
+                "line-color": "#f4d880",
                 "line-width": {
-                    "base": 1.55,
+                    "base": 1.75,
                     "stops": [
                         [
                             6,
                             1
                         ],
                         [
-                            15,
-                            10
-                        ],
-                        [
                             20,
-                            104
+                            114
                         ]
                     ]
                 }
@@ -2030,7 +2058,7 @@
                         ],
                         [
                             20,
-                            64
+                            84
                         ]
                     ]
                 }
@@ -2082,7 +2110,7 @@
                         ],
                         [
                             20,
-                            34
+                            54
                         ]
                     ]
                 }
@@ -2195,7 +2223,7 @@
                 "line-join": "round"
             },
             "paint": {
-                "line-color": "#ccc",
+                "line-color": "#f4d880",
                 "line-width": {
                     "base": 1.55,
                     "stops": [
@@ -2384,7 +2412,7 @@
                         ],
                         [
                             20,
-                            30
+                            50
                         ]
                     ]
                 }
@@ -2405,7 +2433,7 @@
                         ],
                         [
                             20,
-                            60
+                            80
                         ]
                     ]
                 }
@@ -2430,19 +2458,15 @@
                     ]
                 },
                 "line-width": {
-                    "base": 1.55,
+                    "base": 1.75,
                     "stops": [
                         [
                             6,
                             0.5
                         ],
                         [
-                            15,
-                            8
-                        ],
-                        [
                             20,
-                            100
+                            110
                         ]
                     ]
                 }
@@ -3358,6 +3382,50 @@
             "source": "stops",
             "source-layer": "stops",
             "interactive": true,
+            "filter": [
+                "!=",
+                "type",
+                "RAIL"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#fff",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            11.9,
+                            0
+                        ],
+                        [
+                            12,
+                            1.5
+                        ],
+                        [
+                            22,
+                            26
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "Stops case rail",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
+            },
+            "source": "stops",
+            "source-layer": "stops",
+            "minzoom": 15,
+            "interactive": true,
+            "filter": [
+                "==",
+                "type",
+                "RAIL"
+            ],
             "layout": {
                 "visibility": "visible"
             },
@@ -3571,21 +3639,11 @@
         },
         {
             "id": "Stops_rail",
-            "type": "circle",
             "metadata": {
                 "mapbox:group": "1455204550197.1404"
             },
-            "source": "stops",
-            "source-layer": "stops",
+            "ref": "Stops case rail",
             "interactive": true,
-            "filter": [
-                "==",
-                "type",
-                "RAIL"
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
             "paint": {
                 "circle-color": "#8c54a2",
                 "circle-radius": {
@@ -3752,6 +3810,46 @@
             },
             "ref": "Stops case",
             "interactive": true,
+            "paint": {
+                "circle-color": "#fff",
+                "circle-radius": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            14,
+                            0
+                        ],
+                        [
+                            14.1,
+                            2
+                        ],
+                        [
+                            22,
+                            20
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "Stops_hub_rail",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "1455204550197.1404"
+            },
+            "source": "stops",
+            "source-layer": "stops",
+            "minzoom": 15,
+            "interactive": true,
+            "filter": [
+                "in",
+                "type",
+                "",
+                "RAIL"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
             "paint": {
                 "circle-color": "#fff",
                 "circle-radius": {
@@ -4386,9 +4484,9 @@
                     [
                         "!in",
                         "scalerank",
-                        5,
+                        3,
                         4,
-                        3
+                        5
                     ],
                     [
                         "==",
@@ -5282,7 +5380,7 @@
             },
             "source": "parkandride",
             "source-layer": "hubs",
-            "minzoom": 13,
+            "minzoom": 14,
             "interactive": true,
             "filter": [
                 "==",
@@ -5373,6 +5471,7 @@
                     "Gotham Rounded Medium"
                 ],
                 "icon-allow-overlap": false,
+                "symbol-placement": "point",
                 "visibility": "visible",
                 "text-offset": [
                     0,
@@ -5393,7 +5492,6 @@
                     ]
                 },
                 "text-anchor": "top",
-                "text-field": "{Description}",
                 "text-max-width": 8,
                 "icon-ignore-placement": false
             },
@@ -5417,7 +5515,7 @@
             },
             "source": "ticket-sales",
             "source-layer": "ticket-sales",
-            "minzoom": 15,
+            "minzoom": 16,
             "interactive": true,
             "filter": [
                 "all",
@@ -5486,7 +5584,7 @@
             },
             "source": "ticket-sales",
             "source-layer": "ticket-sales",
-            "minzoom": 15,
+            "minzoom": 16,
             "interactive": true,
             "filter": [
                 "all",
@@ -5555,7 +5653,7 @@
             },
             "source": "ticket-sales",
             "source-layer": "ticket-sales",
-            "minzoom": 15,
+            "minzoom": 16,
             "interactive": true,
             "filter": [
                 "all",
@@ -5624,7 +5722,7 @@
             "source": "vector",
             "source-layer": "rail_station_label",
             "minzoom": 5,
-            "maxzoom": 15,
+            "maxzoom": 16,
             "interactive": true,
             "filter": [
                 "all",
@@ -5692,7 +5790,7 @@
             },
             "source": "vector",
             "source-layer": "rail_station_label",
-            "minzoom": 15,
+            "minzoom": 16,
             "interactive": true,
             "filter": [
                 "all",
@@ -6312,7 +6410,9 @@
                             14
                         ]
                     ]
-                }
+                },
+                "text-keep-upright": true,
+                "text-rotation-alignment": "map"
             },
             "paint": {
                 "text-color": "#666",
@@ -6362,7 +6462,8 @@
                             14
                         ]
                     ]
-                }
+                },
+                "text-rotation-alignment": "map"
             },
             "paint": {
                 "text-color": "#666",
