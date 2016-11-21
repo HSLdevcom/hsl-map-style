@@ -4576,15 +4576,35 @@
                         ]
                     ]
                 },
+                "icon-optional": false,
+                "icon-size": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            15,
+                            0.3
+                        ],
+                        [
+                            22,
+                            1
+                        ]
+                    ]
+                },
                 "text-anchor": "top",
                 "text-field": "",
-                "text-max-width": 8
+                "text-max-width": 8,
+                "icon-ignore-placement": false
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
             }
         },
         {
