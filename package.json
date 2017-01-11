@@ -11,5 +11,8 @@
     "fontmachine": "^0.1.1",
     "mapbox-gl": "^0.14.1",
     "spritezero-cli": "^1.0.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
