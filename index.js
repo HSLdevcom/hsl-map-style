@@ -106,6 +106,8 @@ module.exports = {
 	 * @return {Object}         Generated style object
 	 */
 	generateStyle: function(options) {
+		if (!options) return JSON.parse(BASE_STYLE);
+		
 		var replacedStyle = replaceInStyle(BASE_STYLE, options);
 		var extendedStyle = extendStyle(JSON.parse(replacedStyle), options);
 		return extendedStyle;
