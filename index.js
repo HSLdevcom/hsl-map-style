@@ -93,7 +93,7 @@ function getExtensions(extensions) {
  */
 function replaceInStyle(style, options) {
 	var values = merge(replaceableValues, getReplacements(options));
-	var replacedStyle = JSON.parse(JSON.stringify(style));
+	var replacedStyle = JSON.stringify(style);
 
 	forEach(values, function(value) {
 		if (value.replacement) {
@@ -147,9 +147,9 @@ module.exports = {
 	generateStyle: function(options) {
 		if (!options) return JSON.parse(BASE_STYLE);
 
-		var replacedStyle = replaceInStyle(BASE_STYLE, options);
-		var extendedStyle = extendStyle(replacedStyle, options);
+		var extendedStyle = extendStyle(JSON.parse(BASE_STYLE), options);
+		var replacedStyle = replaceInStyle(extendedStyle, options);
 
-		return extendedStyle;
+		return replacedStyle;
 	}
 }
