@@ -17,5 +17,4 @@ function generateStyle(options, comparisonFile) {
 	});
 }
 
-//generateStyle(OPTIONS_ADDON_ICONS, "hsl-gl-map-v9.json");
-generateStyle(OPTIONS_ADDON_STOPS, "hsl-gl-map-with-stops-v9.json");
+generateStyle(OPTIONS_ALL, "hsl-gl-map-with-stops-v9.json");

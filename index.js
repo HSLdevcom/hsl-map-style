@@ -1,24 +1,53 @@
 var fs = require("fs");
 var forEach = require("lodash/forEach");
 var merge = require("lodash/merge");
-var sortStyle = require("./utils").sortStyle;
 
-var BASE_STYLE = fs.readFileSync("hsl-gl-map-v9.json", "utf8");
+var BASE_STYLE = fs.readFileSync("hsl-gl-map-v9-base-style.json", "utf8");
 var ADDON_STOPS_STYLE = fs.readFileSync("hsl-gl-map-v9-stops-addon.json", "utf8");
 var ADDON_ICONS_STYLE = fs.readFileSync("hsl-gl-map-v9-icons-addon.json", "utf8");
 var DEFAULT_LANGUAGE = "fi";
+
 var replaceableValues = {
-	LABEL_NAME: { default: "{ name }" },
+	LABEL_NAME: { default: "{name}" },
 };
+var layerPlacements = {
+	icons: [{
+		afterLayerId: "poi_label_harbour",
+		layerAmount: 5
+	}, {
+		afterLayerId: "poi_label_subway-station_entrance",
+		layerAmount: 3
+	}],
+	stops: [{
+		afterLayerId: "admin_country",
+		layerAmount: 15
+	}, {
+		afterLayerId: "poi_label_park-and-ride_hub",
+		layerAmount: 1
+	}, {
+		afterLayerId: "poi_label_Aerodrome",
+		layerAmount: 2
+	}]
+}
 
 function trimLanguage(lang) {
 	return lang ===  DEFAULT_LANGUAGE ? "" : "_" + lang;
 }
 
+function findLayerById(layers, id) {
+	for (var i = 0; i < layers.length; i++) {
+		if (layers[i].id === id) {
+			return i;
+		}
+	}
+	return layers.length
+
+}
+
 /**
- * Creates values that replaces the defaults in the base style
+ * Creates values that replace the defaults in the base style
  * @param  {Object} options 				Received options that are used to create replacements
- * @param  {(String|Array} options.lang 	Language, or array of languages to display on text labels
+ * @param  {String|Array} options.lang 		Language, or array of languages to display on text labels
  * @return {Object}         				Replacement values that are used to modify the base style
  */
 function getReplacements(options) {
@@ -48,53 +77,63 @@ function getReplacements(options) {
  */
 function getExtensions(extensions) {
 	var exts = [];
-	if(extensions.indexOf("stops") !== -1) {
-		exts.push(JSON.parse(ADDON_STOPS_STYLE));
-	}
 	if(extensions.indexOf("icons") !== -1) {
-		exts.push(JSON.parse(ADDON_ICONS_STYLE));
+		exts.push({ name: "icons", style: JSON.parse(ADDON_ICONS_STYLE)});
+	}
+	if(extensions.indexOf("stops") !== -1) {
+		exts.push({ name: "stops", style: JSON.parse(ADDON_STOPS_STYLE)});
 	}
 	return exts;
 }
 
 /**
  * Replaces certain values in the basestyle, based on received options
- * @param  {Object} options Determines what values to replace
- * @return {String}         Modified style
+ * @param  {Object} options 	Determines what values to replace
+ * @return {Object}        		Modified style
  */
 function replaceInStyle(style, options) {
 	var values = merge(replaceableValues, getReplacements(options));
+	var replacedStyle = JSON.parse(JSON.stringify(style));
 
 	forEach(values, function(value) {
 		if (value.replacement) {
 			var replaceableRegexp = new RegExp(value.default, "g");
-			style = style.replace(replaceableRegexp, value.replacement);
+			replacedStyle = replacedStyle.replace(replaceableRegexp, value.replacement);
 		}
 	})
-	return style;
+	return JSON.parse(replacedStyle);
 }
 
 /**
  * Extends style with certain objects (e.g. layers, sources), based on received options
- * @param  {Object} style   Style that is extended
- * @param  {Object} options Determines what extensions to add
- * @return {Object}         Extended style
+ * @param  {Object} style   	Style that is extended
+ * @param  {Object} options 	Determines what extensions to add
+ * @return {Object}         	Extended style
  */
 function extendStyle(style, options) {
 	if(!options.extensions) return style;
 
 	var extensions = getExtensions(options.extensions);
 	var extendedStyle = JSON.parse(JSON.stringify(style));
-	var extendedLayers = extendedStyle.layers;
-	extendedLayers = JSON.parse(JSON.stringify(extendedLayers));
-	
+	var extendedLayers =  JSON.parse(JSON.stringify(extendedStyle.layers));
+
 	forEach(extensions, function(extension) {
-		extendedLayers = extendedLayers.concat(extension.layers);;
-		extendedStyle = merge(extendedStyle, extension);
+		forEach(layerPlacements, function(placement, placementKey) {
+			if(placementKey === extension.name) {
+				var start = 0;
+				placement.forEach(function (subset) {
+					var end = start + subset.layerAmount;
+					var index = findLayerById(extendedLayers, subset.afterLayerId);
+
+					extendedLayers = [].concat(extendedLayers.slice(0, index + 1), extension.style.layers.slice(start, end), extendedLayers.slice(index + 1));
+					extendedStyle = merge(extendedStyle, extension.style);
+					start = end;
+				})
+			}
+		})	
 	});
 	
 	extendedStyle.layers = extendedLayers;
-
 	return extendedStyle;
 }
 
@@ -107,9 +146,10 @@ module.exports = {
 	 */
 	generateStyle: function(options) {
 		if (!options) return JSON.parse(BASE_STYLE);
-		
+
 		var replacedStyle = replaceInStyle(BASE_STYLE, options);
-		var extendedStyle = extendStyle(JSON.parse(replacedStyle), options);
+		var extendedStyle = extendStyle(replacedStyle, options);
+
 		return extendedStyle;
 	}
 }

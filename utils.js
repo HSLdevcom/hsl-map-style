@@ -2,8 +2,8 @@ var fs = require("fs");
 
 module.exports = {
 	/**
-	 * Help function that sorts objects and arrays inside an object,
-	 * making it easier to perform a diff on objects with similar elements
+	 * Help function that sorts objects and arrays inside an object, making it easier to perform a diff on objects with similar elements
+	 * Note! Since array elements are sorted, the sorted styles being eqaul does not guarantee that the originals are equal
 	 * @param  {String} inputFile  Location from which to read the input file
 	 * @param  {String} outputFile Location to write the output file to
 	 */

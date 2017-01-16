@@ -1,0 +1,579 @@
+{
+  "layers": [
+    {
+      "id": "poi_label_park-and-ride_hub",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010287588.8713"
+      },
+      "source": "parkandride",
+      "source-layer": "hubs",
+      "minzoom": 14,
+      "interactive": true,
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-park-and-ride",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_tickets-sales-point",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "ticket-sales",
+      "source-layer": "ticket-sales",
+      "minzoom": 16,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "TYYPPI",
+          "Myyntipiste",
+          "R-kioski"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-tickets-sales-point",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_ticket-machine",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "ticket-sales",
+      "source-layer": "ticket-sales",
+      "minzoom": 16,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "TYYPPI",
+          "HSL Automaatti KL",
+          "HSL Automaatti MNL"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-ticket-machine",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_service-point",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "ticket-sales",
+      "source-layer": "ticket-sales",
+      "minzoom": 16,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "TYYPPI",
+          "Palvelupiste"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-service-point",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_subway-station",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "rail_station_label",
+      "minzoom": 5,
+      "maxzoom": 16,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "network",
+          "rail-metro"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-subway-station",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_bus-station",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "poi_label",
+      "minzoom": 5,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "Bus Station"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-bus-station",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_railway-station",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "rail_station_label",
+      "minzoom": 5,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "name",
+            "Maisemajuna",
+            "Pasilan autojuna-asema"
+          ],
+          [
+            "==",
+            "network",
+            "rail"
+          ]
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-rail-station",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": {
+          "base": 1.4,
+          "stops": [
+            [
+              12,
+              [
+                0,
+                0.25
+              ]
+            ],
+            [
+              15,
+              [
+                0,
+                0.5
+              ]
+            ]
+          ]
+        },
+        "icon-optional": false,
+        "icon-size": {
+          "base": 1.4,
+          "stops": [
+            [
+              12,
+              0.6
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -8.5
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_Aerodrome",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "airport_label",
+      "minzoom": 5,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "scalerank",
+          1,
+          2
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-aerodrome",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    }
+  ]
+}
