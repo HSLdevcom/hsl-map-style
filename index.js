@@ -1,10 +1,11 @@
 var fs = require("fs");
+var path = require("path");
 var forEach = require("lodash/forEach");
 var merge = require("lodash/merge");
 
-var BASE_STYLE = fs.readFileSync("hsl-gl-map-v9-base-style.json", "utf8");
-var ADDON_STOPS_STYLE = fs.readFileSync("hsl-gl-map-v9-stops-addon.json", "utf8");
-var ADDON_ICONS_STYLE = fs.readFileSync("hsl-gl-map-v9-icons-addon.json", "utf8");
+var BASE_STYLE = fs.readFileSync(path.join(__dirname, "hsl-gl-map-v9-base-style.json"), "utf8");
+var ADDON_STOPS_STYLE = fs.readFileSync(path.join(__dirname, "hsl-gl-map-v9-stops-addon.json"), "utf8");
+var ADDON_ICONS_STYLE = fs.readFileSync(path.join(__dirname, "hsl-gl-map-v9-icons-addon.json"), "utf8");
 var DEFAULT_LANGUAGE = "fi";
 
 var replaceableValues = {

@@ -13,6 +13,7 @@
     "spritezero-cli": "^1.0.2"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "path": "^0.12.7"
   }
 }
