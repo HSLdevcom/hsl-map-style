@@ -1,4 +1,10 @@
 {
+  "sources": {
+    "ticket-sales": {
+      "url": "http://api.digitransit.fi/map/v1/hsl-ticket-sales-map/index.json",
+      "type": "vector"
+    }
+  },
   "layers": [
     {
       "id": "poi_label_park-and-ride_hub",
@@ -575,7 +581,7 @@
         "icon-opacity": 1
       }
     },
-     {
+    {
       "id": "poi_label_retail",
       "type": "symbol",
       "metadata": {
