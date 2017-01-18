@@ -3,9 +3,10 @@ var sortStyle = require("./utils").sortStyle;
 
 var OPTIONS_LANG = { lang: "fi" };
 var OPTIONS_LANGS = { lang: ["fi", "sv"] };
-var OPTIONS_ADDON_ICONS = { extensions: ["icons"] };
-var OPTIONS_ADDON_STOPS = { extensions: ["stops"] };
-var OPTIONS_ALL = { lang: ["fi", "sv"], extensions: ["icons", "stops"]};
+var OPTIONS_ICONS = { extensions: ["icons"] };
+var OPTIONS_STOPS = { extensions: ["stops"] };
+var OPTIONS_ALL = { extensions: ["icons", "stops"] };
+var OPTIONS_FULL = { lang: ["fi", "sv"], extensions: ["icons", "stops"]};
 
 function generateStyle(options, comparisonFile) {
 	var style = require("./index.js").generateStyle(options);
@@ -15,6 +16,8 @@ function generateStyle(options, comparisonFile) {
     	sortStyle(comparisonFile, "test-sorted-" + comparisonFile);
     	sortStyle("test-hsl-gl-map-v9-final.json", "test-sorted-hsl-gl-map-v9-final.json");
 	});
+
+	fs.writeFileSync("test-" + comparisonFile, fs.readFileSync(comparisonFile, "utf8"));
 }
 
 generateStyle(OPTIONS_ALL, "hsl-gl-map-with-stops-v9.json");
