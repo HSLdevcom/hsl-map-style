@@ -18,6 +18,9 @@ var layerPlacements = {
 	}, {
 		afterLayerId: "poi_label_subway-station_entrance",
 		layerAmount: 3
+	},{
+		afterLayerId: "$replace",
+		layerAmount: 23
 	}],
 	stops: [{
 		afterLayerId: "admin_country",
@@ -42,8 +45,26 @@ function findLayerById(layers, id) {
 		}
 	}
 	return layers.length
-
 }
+
+function replaceLayers(replacementLayers, replaceableLayers, start, end) {
+	replacementLayers.filter(function(replacementLayer, index) {
+		return (index >= start && index < end)
+	})
+	.forEach(function(replacementLayer) {
+		var index = findLayerById(replaceableLayers, replacementLayer.id);
+		replaceableLayers[index] = replacementLayer;
+	})
+	return replaceableLayers;
+}
+
+function extendLayers(extensionLayers, extendableLayers, id, start, end) {
+	var index = findLayerById(extendableLayers, id);
+	extendableLayers = [].concat(extendableLayers.slice(0, index + 1), extensionLayers.slice(start, end), extendableLayers.slice(index + 1));
+
+	return extendableLayers;
+}
+
 
 /**
  * Creates values that replace the defaults in the base style
@@ -79,10 +100,10 @@ function getReplacements(options) {
 function getExtensions(extensions) {
 	var exts = [];
 	if(extensions.indexOf("icons") !== -1) {
-		exts.push({ name: "icons", style: JSON.parse(ADDON_ICONS_STYLE)});
+		exts.push({ name: "icons", style: JSON.parse(ADDON_ICONS_STYLE) });
 	}
 	if(extensions.indexOf("stops") !== -1) {
-		exts.push({ name: "stops", style: JSON.parse(ADDON_STOPS_STYLE)});
+		exts.push({ name: "stops", style: JSON.parse(ADDON_STOPS_STYLE) });
 	}
 	return exts;
 }
@@ -117,27 +138,29 @@ function extendStyle(style, options) {
 	var extensions = getExtensions(options.extensions);
 	var extendedStyle = JSON.parse(JSON.stringify(style));
 	var extendedLayers =  JSON.parse(JSON.stringify(extendedStyle.layers));
-
+	
 	forEach(extensions, function(extension) {
 		forEach(layerPlacements, function(placement, placementKey) {
 			if(placementKey === extension.name) {
 				var start = 0;
 				placement.forEach(function (subset) {
 					var end = start + subset.layerAmount;
-					var index = findLayerById(extendedLayers, subset.afterLayerId);
-
-					extendedLayers = [].concat(extendedLayers.slice(0, index + 1), extension.style.layers.slice(start, end), extendedLayers.slice(index + 1));
-					extendedStyle = merge(extendedStyle, extension.style);
-					start = end;
+					if (subset.afterLayerId === "$replace") {
+						extendedLayers = replaceLayers(extension.style.layers, extendedLayers, start, end)
+					}
+					else {
+						extendedLayers = extendLayers(extension.style.layers, extendedLayers, subset.afterLayerId, start, end)
+						extendedStyle = merge(extendedStyle, extension.style);
+						start = end;
+					}
 				})
 			}
 		})	
 	});
-	
+
 	extendedStyle.layers = extendedLayers;
 	return extendedStyle;
 }
-
 
 module.exports = {
 	/**

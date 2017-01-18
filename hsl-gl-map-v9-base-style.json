@@ -36,10 +36,6 @@
         "parkandride": {
             "url": "http://api.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
             "type": "vector"
-        },
-        "ticket-sales": {
-            "url": "http://api.digitransit.fi/map/v1/hsl-ticket-sales-map/index.json",
-            "type": "vector"
         }
     },
     "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
@@ -3414,11 +3410,6 @@
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3427,12 +3418,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3472,16 +3458,10 @@
                         ]
                     ]
                 },
-                "icon-image": "icon-cinema",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3490,12 +3470,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3537,16 +3512,10 @@
                         ]
                     ]
                 },
-                "icon-image": "icon-hotel",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3555,12 +3524,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3619,16 +3583,10 @@
                         ]
                     ]
                 },
-                "icon-image": "icon-theatre",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3637,12 +3595,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3682,16 +3635,10 @@
                         ]
                     ]
                 },
-                "icon-image": "icon-concert-hall",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3700,12 +3647,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3758,11 +3700,6 @@
                     "Gotham Rounded Book"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3771,12 +3708,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3820,11 +3752,6 @@
                     "Gotham Rounded Book"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3833,12 +3760,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3888,16 +3810,10 @@
                         ]
                     ]
                 },
-                "icon-image": "icon-attraction",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3906,12 +3822,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -3951,16 +3862,10 @@
                         ]
                     ]
                 },
-                "icon-image": "icon-sibelius",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -3969,12 +3874,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4036,11 +3936,6 @@
                 "text-font": [
                     "Gotham Rounded Medium Italic"
                 ],
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "visibility": "visible"
@@ -4049,12 +3944,7 @@
                 "text-color": "rgba(142,166,109,1)",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4098,11 +3988,6 @@
                 "text-font": [
                     "Gotham Rounded Medium Italic"
                 ],
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "bottom",
                 "text-field": "{name}",
                 "visibility": "visible"
@@ -4111,12 +3996,7 @@
                 "text-color": "#999",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4177,16 +4057,10 @@
                         ]
                     ]
                 },
-                "icon-image": "icon-sport",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "text-max-width": 8
@@ -4195,12 +4069,7 @@
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4241,34 +4110,20 @@
                     ]
                 },
                 "text-allow-overlap": false,
-                "icon-image": "icon-cemetary",
                 "text-ignore-placement": false,
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-optional": false,
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
-                "text-max-width": 8,
-                "icon-ignore-placement": false
+                "text-max-width": 8
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4309,34 +4164,20 @@
                     ]
                 },
                 "text-allow-overlap": false,
-                "icon-image": "icon-amusement-park",
                 "text-ignore-placement": false,
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-optional": false,
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
-                "text-max-width": 8,
-                "icon-ignore-placement": false
+                "text-max-width": 8
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4377,34 +4218,20 @@
                     ]
                 },
                 "text-allow-overlap": false,
-                "icon-image": "icon-parliament",
                 "text-ignore-placement": false,
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-optional": false,
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
-                "text-max-width": 8,
-                "icon-ignore-placement": false
+                "text-max-width": 8
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4446,34 +4273,20 @@
                     ]
                 },
                 "text-allow-overlap": false,
-                "icon-image": "icon-school",
                 "text-ignore-placement": false,
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-optional": false,
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
-                "text-max-width": 8,
-                "icon-ignore-placement": false
+                "text-max-width": 8
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4522,34 +4335,20 @@
                     ]
                 },
                 "text-allow-overlap": false,
-                "icon-image": "icon-place-of-worship",
                 "text-ignore-placement": false,
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-optional": false,
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
-                "text-max-width": 8,
-                "icon-ignore-placement": false
+                "text-max-width": 8
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4590,34 +4389,20 @@
                     ]
                 },
                 "text-allow-overlap": false,
-                "icon-image": "icon-parliament",
                 "text-ignore-placement": false,
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-optional": false,
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
-                "text-max-width": 8,
-                "icon-ignore-placement": false
+                "text-max-width": 8
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4658,34 +4443,20 @@
                     ]
                 },
                 "text-allow-overlap": false,
-                "icon-image": "icon-hospital",
                 "text-ignore-placement": false,
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "icon-allow-overlap": false,
                 "visibility": "visible",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-optional": false,
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
-                "text-max-width": 8,
-                "icon-ignore-placement": false
+                "text-max-width": 8
             },
             "paint": {
                 "text-color": "#666",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4730,11 +4501,6 @@
                 "text-font": [
                     "Gotham Rounded Book"
                 ],
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "visibility": "visible"
@@ -4743,12 +4509,7 @@
                 "text-color": "#888",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4875,11 +4636,6 @@
                 "text-font": [
                     "Gotham Rounded Medium Italic"
                 ],
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "visibility": "visible"
@@ -4888,12 +4644,7 @@
                 "text-color": "#39c6ea",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,0.5)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
@@ -4938,7 +4689,6 @@
                     0,
                     0.5
                 ],
-                "icon-size": 0.9,
                 "text-anchor": "top",
                 "text-field": "{name}",
                 "visibility": "visible"
@@ -4947,12 +4697,7 @@
                 "text-color": "#777",
                 "text-halo-width": 1,
                 "text-halo-color": "rgba(255,255,255,1.0)",
-                "text-halo-blur": 0,
-                "icon-translate": [
-                    0,
-                    -5.25
-                ],
-                "icon-opacity": 1
+                "text-halo-blur": 0
             }
         },
         {
