@@ -2,7 +2,7 @@
   "name": "hsl-map-style",
   "version": "1.0.0",
   "description": "",
-  "main": "hsl-gl-map-v9.json",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +11,9 @@
     "fontmachine": "^0.1.1",
     "mapbox-gl": "^0.14.1",
     "spritezero-cli": "^1.0.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "path": "^0.12.7"
   }
 }
