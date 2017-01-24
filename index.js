@@ -10,6 +10,8 @@ var DEFAULT_LANGUAGE = "fi";
 
 var replaceableValues = {
 	LABEL_NAME: { default: "{name}" },
+	SOURCES_URL: { default: "api.digitransit.fi/map/v1/" },
+	GLYPHS_URL: { default:"http://localhost:8000/" },
 };
 var layerPlacements = {
 	icons: [{
@@ -89,6 +91,9 @@ function getReplacements(options) {
 			replacement : replacement,
 		};
 	}
+	if (options.sourcesUrl) replacements.SOURCES_URL = { replacement : options.sourcesUrl };
+	if (options.glyphsUrl) replacements.GLYPHS_URL = { replacement : options.glyphsUrl };
+
 	return replacements;
 }
 
