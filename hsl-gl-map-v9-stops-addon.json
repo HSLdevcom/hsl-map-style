@@ -210,7 +210,7 @@
       "id": "Stops case citybikes",
       "type": "circle",
       "metadata": {
-        "mapbox:group": "1455204550197.1404"
+        "mapbox:group": "1457010266398.4177"
       },
       "source": "citybike",
       "source-layer": "stations",
