@@ -210,7 +210,7 @@
       "id": "Stops case citybikes",
       "type": "circle",
       "metadata": {
-        "mapbox:group": "1455204550197.1404"
+        "mapbox:group": "1457010266398.4177"
       },
       "source": "citybike",
       "source-layer": "stations",
@@ -488,7 +488,7 @@
     {
       "id": "Stops_citybikes",
       "metadata": {
-        "mapbox:group": "1455204550197.1404"
+        "mapbox:group": "1457010266398.4177"
       },
       "ref": "Stops case citybikes",
       "interactive": true,
@@ -837,8 +837,8 @@
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
         "icon-translate": [
-            0,
-            -5.25
+          0,
+          -5.25
         ],
         "icon-opacity": 1
       }
