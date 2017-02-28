@@ -22,7 +22,7 @@ var layerPlacements = {
 		layerAmount: 3
 	},{
 		afterLayerId: "$replace",
-		layerAmount: 23
+		layerAmount: 3
 	}],
 	stops: [{
 		afterLayerId: "admin_country",
