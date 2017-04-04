@@ -8,7 +8,7 @@ var BASE_STYLE = require("./hsl-gl-map-v9-base-style.json");
 var ADDON_ROUTES_STYLE = require("./hsl-gl-map-v9-routes-addon.json");
 var OVERLAY_STYLE = require("./hsl-gl-map-v9-overlay-style.json");
 var ADDON_ICONS_STYLE = require("./hsl-gl-map-v9-icons-addon.json");
-var ADDON_DRIVER_INSTRUCTIONS_STYLE = require("./hsl-gl-map-v9-driver-instructons-addon.json");
+var ADDON_DRIVER_INSTRUCTIONS_STYLE = require("./hsl-gl-map-v9-driver-instructions-addon.json");
 var ADDON_STOPS_STYLE = require("./hsl-gl-map-v9-stops-addon.json");
 var ADDON_CITYBIKES_STYLE = require("./hsl-gl-map-v9-citybikes-addon.json")
 var DEFAULT_LANGUAGE = "fi";
@@ -121,7 +121,7 @@ function extendStyle(style, options) {
 	var extendedLayers =  extendedStyle.layers;
 
 	forEach(extensions, function(extension) {
-		extendedLayers = extendedLayers.append(extension.layers)
+		extendedLayers = extendedLayers.concat(extension.layers)
 		extendedStyle = merge(extendedStyle, extension);
 	});
 
