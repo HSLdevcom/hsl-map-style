@@ -1,0 +1,1734 @@
+{
+    "metadata": {
+        "mapbox:groups": {
+            "1457010208438.9548": {
+                "name": "POI–public-transport",
+                "collapsed": true
+            },
+            "1457010362398.355": {
+                "name": "POI-private-sector",
+                "collapsed": true
+            },
+            "1452776685487.2012": {
+                "name": "POI-public",
+                "collapsed": true
+            }
+        }
+    },
+    "layers": [
+        {
+            "id": "road_minor_one-way",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "oneway",
+                        1
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "driveway",
+                        "main",
+                        "motorway_link",
+                        "service",
+                        "street",
+                        "street_limited"
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": "icon-one-way",
+                "symbol-placement": "line",
+                "symbol-spacing": 100,
+                "icon-rotation-alignment": "map",
+                "icon-keep-upright": false,
+                "icon-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15.4,
+                            0
+                        ],
+                        [
+                            15.5,
+                            0.25
+                        ],
+                        [
+                            22,
+                            1.5
+                        ]
+                    ]
+                }
+            },
+            "paint": {}
+        },
+        {
+            "id": "housenum_label",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "housenum_label",
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ],
+            "layout": {
+                "text-field": "{house_num}",
+                "text-size": {
+                    "stops": [
+                        [
+                            15,
+                            8
+                        ],
+                        [
+                            22,
+                            17
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Book"
+                ]
+            },
+            "paint": {
+                "text-color": "#999",
+                "text-opacity": 0.7
+            }
+        },
+        {
+            "id": "poi_label_retail",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1457010362398.355"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "in",
+                        "localrank",
+                        1,
+                        11,
+                        2,
+                        3,
+                        4
+                    ],
+                    [
+                        "in",
+                        "name",
+                        "Forum",
+                        "Iso Omena",
+                        "Jumbo",
+                        "Kampinkeskus",
+                        "Kauppakeskus Itis",
+                        "Kauppakeskus Kaari",
+                        "Kauppakeskus Kluuvi",
+                        "Makkaratalo",
+                        "Sello",
+                        "Sokos",
+                        "Stockmann",
+                        "Stockmann Helsinki",
+                        "World Trade Center Helsinki"
+                    ],
+                    [
+                        "in",
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_cinema",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1457010362398.355"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Cinema"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_hotel",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1457010362398.355"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "type",
+                    "Bed And Breakfast",
+                    "Hostel",
+                    "Hotel"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_theatre",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "type",
+                        "Theatre"
+                    ],
+                    [
+                        "in",
+                        "localrank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    [
+                        "in",
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_concert-hall",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Concert Hall"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_attraction_scalerank_low",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "!in",
+                        "scalerank",
+                        1,
+                        2
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "Attraction"
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Book"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_transportation",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Transportation"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Book"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_attraction",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "!in",
+                        "scalerank",
+                        3,
+                        4,
+                        5
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "Attraction"
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_sibelius",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "name",
+                    "Sibelius-monumentti"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_park",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "type",
+                        "Park"
+                    ],
+                    [
+                        "in",
+                        "localrank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    [
+                        "in",
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 8,
+                "text-font": [
+                    "Gotham Rounded Medium Italic"
+                ],
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(142,166,109,1)",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_sq",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "road_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "!in",
+                    "name",
+                    "Aleksanterinkatu",
+                    "Keskuskatu"
+                ],
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 8,
+                "text-font": [
+                    "Gotham Rounded Medium Italic"
+                ],
+                "text-anchor": "bottom",
+                "text-field": "{name}",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "#999",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_sport",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "in",
+                        "localrank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    [
+                        "in",
+                        "scalerank",
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "",
+                        "Sports Centre",
+                        "Stadium"
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_cemetary",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Cemetery"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_theme-park",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Theme Park"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_museum",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Museum"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_school",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "type",
+                    "School",
+                    "University"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_place-of-worship",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "<",
+                        "scalerank",
+                        4
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "Place Of Worship"
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_parliament",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Parliament"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_hospital",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "Hospital"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "visibility": "visible",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_harbour",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1452776685487.2012"
+            },
+            "source": "vector",
+            "source-layer": "poi_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "type",
+                    "Ferry Terminal",
+                    "Harbour",
+                    "Marina"
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 8,
+                "text-font": [
+                    "Gotham Rounded Book"
+                ],
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "#888",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "poi_label_subway-station_entrance",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1457010208438.9548"
+            },
+            "source": "vector",
+            "source-layer": "rail_station_label",
+            "minzoom": 16,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "maki",
+                    "entrance"
+                ]
+            ],
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "icon-subway-entrance",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "icon-allow-overlap": true,
+                "visibility": "visible",
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15,
+                            [
+                                0,
+                                0.5
+                            ]
+                        ],
+                        [
+                            22,
+                            [
+                                0,
+                                3
+                            ]
+                        ]
+                    ]
+                },
+                "icon-optional": false,
+                "icon-size": {
+                    "base": 1.15,
+                    "stops": [
+                        [
+                            15,
+                            0.3
+                        ],
+                        [
+                            22,
+                            1
+                        ]
+                    ]
+                },
+                "text-anchor": "top",
+                "text-field": "",
+                "text-max-width": 8,
+                "icon-ignore-placement": false
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0,
+                "icon-translate": [
+                    0,
+                    -5.25
+                ],
+                "icon-opacity": 1
+            }
+        },
+        {
+            "id": "water_label",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "water_label",
+            "minzoom": 5,
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ],
+            "layout": {
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 8,
+                "text-font": [
+                    "Gotham Rounded Medium Italic"
+                ],
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "#39c6ea",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,0.5)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "place_label_island",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "place_label",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "type",
+                    "island",
+                    "islet"
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            15,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 8,
+                "text-font": [
+                    "Gotham Rounded Book"
+                ],
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "#777",
+                "text-halo-width": 1,
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "road_street_label",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "road_label",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "!in",
+                        "name",
+                        "Harakan talvipolku",
+                        "Suomenlinnan Huoltotunneli"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "path",
+                        "service",
+                        "street",
+                        "street_limited",
+                        "tertiary"
+                    ]
+                ]
+            ],
+            "layout": {
+                "symbol-placement": "line",
+                "text-field": "{name}",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.1,
+                "text-size": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            10,
+                            8
+                        ],
+                        [
+                            20,
+                            14
+                        ]
+                    ]
+                },
+                "text-keep-upright": true,
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-color": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            13,
+                            "#999"
+                        ],
+                        [
+                            15,
+                            "#666"
+                        ]
+                    ]
+                },
+                "text-halo-color": "rgba(255,255,255,0.75)",
+                "text-halo-width": 2
+            }
+        },
+        {
+            "id": "road_primary_label",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "road_label",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "class",
+                    "motorway",
+                    "primary",
+                    "secondary",
+                    "trunk"
+                ]
+            ],
+            "layout": {
+                "symbol-placement": "line",
+                "text-field": "{name}",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.1,
+                "text-size": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            10,
+                            8
+                        ],
+                        [
+                            20,
+                            14
+                        ]
+                    ]
+                },
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-color": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            13,
+                            "#999"
+                        ],
+                        [
+                            15,
+                            "#666"
+                        ]
+                    ]
+                },
+                "text-halo-color": "rgba(255,255,255,0.75)",
+                "text-halo-width": 2
+            }
+        },
+        {
+            "id": "place_label_other",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "place_label",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "type",
+                    "hamlet",
+                    "neighbourhood",
+                    "suburb",
+                    "town",
+                    "village"
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "text-font": [
+                    "Gotham Rounded Book"
+                ],
+                "text-max-width": 6,
+                "text-size": {
+                    "stops": [
+                        [
+                            10,
+                            10
+                        ],
+                        [
+                            16,
+                            18
+                        ]
+                    ],
+                    "base": 1.2
+                }
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-color": "rgba(255,255,255,1.00)",
+                "text-halo-width": 1,
+                "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "place_label_city",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "place_label",
+            "maxzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "type",
+                    "city"
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-max-width": 10,
+                "text-size": {
+                    "stops": [
+                        [
+                            6,
+                            10
+                        ],
+                        [
+                            10,
+                            16
+                        ]
+                    ],
+                    "base": 1.4
+                },
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.125
+            },
+            "paint": {
+                "text-color": "#777",
+                "text-halo-color": "rgba(255,255,255,1.0)",
+                "text-halo-width": 1.5,
+                "text-halo-blur": 0,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            12,
+                            1
+                        ],
+                        [
+                            13,
+                            0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "country_label",
+            "type": "symbol",
+            "source": "vector",
+            "source-layer": "country_label",
+            "maxzoom": 12,
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "text-font": [
+                    "Gotham Rounded Medium"
+                ],
+                "text-max-width": 10,
+                "text-size": {
+                    "stops": [
+                        [
+                            3,
+                            10
+                        ],
+                        [
+                            8,
+                            30
+                        ]
+                    ]
+                },
+                "text-transform": "uppercase"
+            },
+            "paint": {
+                "text-color": "#666",
+                "text-halo-color": "hsl(0, 0%, 100%)",
+                "text-halo-width": 1.5,
+                "text-halo-blur": 0
+            }
+        }
+    ]
+}

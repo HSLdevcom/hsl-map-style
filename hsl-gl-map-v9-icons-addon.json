@@ -1,4 +1,16 @@
 {
+  "metadata": {
+    "mapbox:groups": {
+      "1457010287588.8713": {
+        "name": "POI-park-and-ride",
+        "collapsed": true
+      },
+      "1457010208438.9548": {
+        "name": "POI–public-transport",
+        "collapsed": true
+      },
+    },
+  },
   "sources": {
     "ticket-sales": {
       "url": "http://api.digitransit.fi/map/v1/hsl-ticket-sales-map/index.json",
@@ -571,210 +583,6 @@
       },
       "paint": {
         "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "poi_label_subway-station_entrance",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
-      "source": "vector",
-      "source-layer": "rail_station_label",
-      "minzoom": 16,
-      "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "maki",
-          "entrance"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-subway-entrance",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": true,
-        "visibility": "visible",
-        "text-offset": {
-          "base": 1,
-          "stops": [
-            [
-              15,
-              [
-                0,
-                0.5
-              ]
-            ],
-            [
-              22,
-              [
-                0,
-                3
-              ]
-            ]
-          ]
-        },
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1.15,
-          "stops": [
-            [
-              15,
-              0.3
-            ],
-            [
-              22,
-              1
-            ]
-          ]
-        },
-        "text-anchor": "top",
-        "text-field": "",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "water_label",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "water_label",
-      "minzoom": 5,
-      "interactive": true,
-      "filter": [
-        "==",
-        "$type",
-        "Point"
-      ],
-      "layout": {
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              11
-            ]
-          ]
-        },
-        "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Medium Italic"
-        ],
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-size": 0.9,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#39c6ea",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,0.5)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "place_label_island",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "place_label",
-      "minzoom": 5,
-      "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "type",
-          "island",
-          "islet"
-        ]
-      ],
-      "layout": {
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              11
-            ]
-          ]
-        },
-        "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Book"
-        ],
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-size": 0.9,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#777",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
