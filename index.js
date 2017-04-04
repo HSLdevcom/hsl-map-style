@@ -40,7 +40,7 @@ function findLayerById(layers, id) {
  */
 function getReplacements(options) {
 	var replacements = {}
-	if (options.lang) {
+	if (options && options.lang) {
 		var replacement;
 		if (typeof(options.lang) == "string") {
 			replacement = "{name" + trimLanguage(options.lang) + "}";
@@ -55,8 +55,10 @@ function getReplacements(options) {
 			replacement : replacement,
 		};
 	}
-	if (options.sourcesUrl) replacements.SOURCES_URL = { replacement : options.sourcesUrl };
-	if (options.glyphsUrl) replacements.GLYPHS_URL = { replacement : options.glyphsUrl };
+	if (options && options.sourcesUrl) {
+		replacements.SOURCES_URL = { replacement : options.sourcesUrl };
+	}
+	if (options && options.glyphsUrl) replacements.GLYPHS_URL = { replacement : options.glyphsUrl };
 
 	return replacements;
 }
@@ -114,7 +116,13 @@ function replaceInStyle(style, options) {
  * @return {Object}         	Extended style
  */
 function extendStyle(style, options) {
-	if(!options.extensions) return style;
+	if( !options ) {
+		options = { extensions: [] };
+	}
+
+	if( !options.extensions ) {
+		options.extensions = [];
+	}
 
 	var extensions = getExtensions(options.extensions);
 	var extendedStyle = cloneDeep(style);
@@ -136,8 +144,6 @@ module.exports = {
 	 * @return {Object}         Generated style object
 	 */
 	generateStyle: function(options) {
-		if (!options) return BASE_STYLE;
-
 		var extendedStyle = extendStyle(BASE_STYLE, options);
 		var replacedStyle = replaceInStyle(extendedStyle, options);
 
