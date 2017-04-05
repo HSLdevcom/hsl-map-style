@@ -1483,7 +1483,6 @@
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "text-transform": "uppercase",
                 "text-letter-spacing": 0.1,
                 "text-size": {
                     "base": 1.4,
@@ -1546,7 +1545,6 @@
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
-                "text-transform": "uppercase",
                 "text-letter-spacing": 0.1,
                 "text-size": {
                     "base": 1.4,
