@@ -1514,7 +1514,7 @@
                         ]
                     ]
                 },
-                "text-halo-color": "rgba(255,255,255,0.75)",
+                "text-halo-color": "rgba(255,255,255,0.95)",
                 "text-halo-width": 2
             }
         },
@@ -1575,7 +1575,7 @@
                         ]
                     ]
                 },
-                "text-halo-color": "rgba(255,255,255,0.75)",
+                "text-halo-color": "rgba(255,255,255,0.95)",
                 "text-halo-width": 2
             }
         },
