@@ -1,7 +1,7 @@
-var fs = require("fs");
 var path = require("path");
 var forEach = require("lodash/forEach");
 var merge = require("lodash/merge");
+var mergeWith = require("lodash/mergeWith");
 var cloneDeep = require("lodash/cloneDeep");
 
 var BASE_STYLE = require("./hsl-gl-map-v9-base-style.json");
@@ -109,6 +109,12 @@ function replaceInStyle(style, options) {
 	return JSON.parse(replacedStyle);
 }
 
+function customizer(objValue, srcValue) {
+  if (Array.isArray(objValue)) {
+    return objValue.concat(srcValue);
+  }
+}
+
 /**
  * Extends style with certain objects (e.g. layers, sources), based on received options
  * @param  {Object} style   	Style that is extended
@@ -126,14 +132,11 @@ function extendStyle(style, options) {
 
 	var extensions = getExtensions(options.extensions);
 	var extendedStyle = cloneDeep(style);
-	var extendedLayers =  extendedStyle.layers;
 
 	forEach(extensions, function(extension) {
-		extendedLayers = extendedLayers.concat(extension.layers)
-		extendedStyle = merge(extendedStyle, extension);
+		extendedStyle = mergeWith(extendedStyle, extension, customizer);
 	});
 
-	extendedStyle.layers = extendedLayers;
 	return extendedStyle;
 }
 
