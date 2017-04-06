@@ -1,11 +1,16 @@
-var fs = require("fs");
 var path = require("path");
 var forEach = require("lodash/forEach");
 var merge = require("lodash/merge");
+var mergeWith = require("lodash/mergeWith");
+var cloneDeep = require("lodash/cloneDeep");
 
-var BASE_STYLE = fs.readFileSync(path.join(__dirname, "hsl-gl-map-v9-base-style.json"), "utf8");
-var ADDON_STOPS_STYLE = fs.readFileSync(path.join(__dirname, "hsl-gl-map-v9-stops-addon.json"), "utf8");
-var ADDON_ICONS_STYLE = fs.readFileSync(path.join(__dirname, "hsl-gl-map-v9-icons-addon.json"), "utf8");
+var BASE_STYLE = require("./hsl-gl-map-v9-base-style.json");
+var ADDON_ROUTES_STYLE = require("./hsl-gl-map-v9-routes-addon.json");
+var OVERLAY_STYLE = require("./hsl-gl-map-v9-overlay-style.json");
+var ADDON_ICONS_STYLE = require("./hsl-gl-map-v9-icons-addon.json");
+var ADDON_DRIVER_INSTRUCTIONS_STYLE = require("./hsl-gl-map-v9-driver-instructions-addon.json");
+var ADDON_STOPS_STYLE = require("./hsl-gl-map-v9-stops-addon.json");
+var ADDON_CITYBIKES_STYLE = require("./hsl-gl-map-v9-citybikes-addon.json")
 var DEFAULT_LANGUAGE = "fi";
 
 var replaceableValues = {
@@ -13,28 +18,6 @@ var replaceableValues = {
 	SOURCES_URL: { default: "api.digitransit.fi/map/v1/" },
 	GLYPHS_URL: { default:"http://localhost:8000/" },
 };
-var layerPlacements = {
-	icons: [{
-		afterLayerId: "poi_label_harbour",
-		layerAmount: 5
-	}, {
-		afterLayerId: "poi_label_subway-station_entrance",
-		layerAmount: 3
-	},{
-		afterLayerId: "$replace",
-		layerAmount: 3
-	}],
-	stops: [{
-		afterLayerId: "admin_country",
-		layerAmount: 15
-	}, {
-		afterLayerId: "poi_label_park-and-ride_hub",
-		layerAmount: 1
-	}, {
-		afterLayerId: "poi_label_Aerodrome",
-		layerAmount: 2
-	}]
-}
 
 function trimLanguage(lang) {
 	return lang ===  DEFAULT_LANGUAGE ? "" : "_" + lang;
@@ -49,25 +32,6 @@ function findLayerById(layers, id) {
 	return layers.length
 }
 
-function replaceLayers(replacementLayers, replaceableLayers, start, end) {
-	replacementLayers.filter(function(replacementLayer, index) {
-		return (index >= start && index < end)
-	})
-	.forEach(function(replacementLayer) {
-		var index = findLayerById(replaceableLayers, replacementLayer.id);
-		replaceableLayers[index] = replacementLayer;
-	})
-	return replaceableLayers;
-}
-
-function extendLayers(extensionLayers, extendableLayers, id, start, end) {
-	var index = findLayerById(extendableLayers, id);
-	extendableLayers = [].concat(extendableLayers.slice(0, index + 1), extensionLayers.slice(start, end), extendableLayers.slice(index + 1));
-
-	return extendableLayers;
-}
-
-
 /**
  * Creates values that replace the defaults in the base style
  * @param  {Object} options 				Received options that are used to create replacements
@@ -76,7 +40,7 @@ function extendLayers(extensionLayers, extendableLayers, id, start, end) {
  */
 function getReplacements(options) {
 	var replacements = {}
-	if (options.lang) {
+	if (options && options.lang) {
 		var replacement;
 		if (typeof(options.lang) == "string") {
 			replacement = "{name" + trimLanguage(options.lang) + "}";
@@ -91,8 +55,10 @@ function getReplacements(options) {
 			replacement : replacement,
 		};
 	}
-	if (options.sourcesUrl) replacements.SOURCES_URL = { replacement : options.sourcesUrl };
-	if (options.glyphsUrl) replacements.GLYPHS_URL = { replacement : options.glyphsUrl };
+	if (options && options.sourcesUrl) {
+		replacements.SOURCES_URL = { replacement : options.sourcesUrl };
+	}
+	if (options && options.glyphsUrl) replacements.GLYPHS_URL = { replacement : options.glyphsUrl };
 
 	return replacements;
 }
@@ -104,11 +70,23 @@ function getReplacements(options) {
  */
 function getExtensions(extensions) {
 	var exts = [];
-	if(extensions.indexOf("icons") !== -1) {
-		exts.push({ name: "icons", style: JSON.parse(ADDON_ICONS_STYLE) });
+	if(extensions.includes("routes")) {
+		exts.push(ADDON_ROUTES_STYLE);
 	}
-	if(extensions.indexOf("stops") !== -1) {
-		exts.push({ name: "stops", style: JSON.parse(ADDON_STOPS_STYLE) });
+	if(extensions.includes("noText") === false) {
+		exts.push(OVERLAY_STYLE);
+	}
+	if(extensions.includes("icons")) {
+		exts.push(ADDON_ICONS_STYLE);
+	}
+	if(extensions.includes("driver_instructions")) {
+		exts.push(ADDON_DRIVER_INSTRUCTIONS_STYLE);
+	}
+	if(extensions.includes("stops")) {
+		exts.push(ADDON_STOPS_STYLE);
+	}
+	if(extensions.includes("citybikes")) {
+		exts.push(ADDON_CITYBIKES_STYLE);
 	}
 	return exts;
 }
@@ -131,6 +109,12 @@ function replaceInStyle(style, options) {
 	return JSON.parse(replacedStyle);
 }
 
+function customizer(objValue, srcValue) {
+  if (Array.isArray(objValue)) {
+    return objValue.concat(srcValue);
+  }
+}
+
 /**
  * Extends style with certain objects (e.g. layers, sources), based on received options
  * @param  {Object} style   	Style that is extended
@@ -138,32 +122,21 @@ function replaceInStyle(style, options) {
  * @return {Object}         	Extended style
  */
 function extendStyle(style, options) {
-	if(!options.extensions) return style;
+	if( !options ) {
+		options = { extensions: [] };
+	}
+
+	if( !options.extensions ) {
+		options.extensions = [];
+	}
 
 	var extensions = getExtensions(options.extensions);
-	var extendedStyle = JSON.parse(JSON.stringify(style));
-	var extendedLayers =  JSON.parse(JSON.stringify(extendedStyle.layers));
-	
+	var extendedStyle = cloneDeep(style);
+
 	forEach(extensions, function(extension) {
-		forEach(layerPlacements, function(placement, placementKey) {
-			if(placementKey === extension.name) {
-				var start = 0;
-				placement.forEach(function (subset) {
-					var end = start + subset.layerAmount;
-					if (subset.afterLayerId === "$replace") {
-						extendedLayers = replaceLayers(extension.style.layers, extendedLayers, start, end)
-					}
-					else {
-						extendedLayers = extendLayers(extension.style.layers, extendedLayers, subset.afterLayerId, start, end)
-						extendedStyle = merge(extendedStyle, extension.style);
-						start = end;
-					}
-				})
-			}
-		})	
+		extendedStyle = mergeWith(extendedStyle, extension, customizer);
 	});
 
-	extendedStyle.layers = extendedLayers;
 	return extendedStyle;
 }
 
@@ -174,9 +147,7 @@ module.exports = {
 	 * @return {Object}         Generated style object
 	 */
 	generateStyle: function(options) {
-		if (!options) return JSON.parse(BASE_STYLE);
-
-		var extendedStyle = extendStyle(JSON.parse(BASE_STYLE), options);
+		var extendedStyle = extendStyle(BASE_STYLE, options);
 		var replacedStyle = replaceInStyle(extendedStyle, options);
 
 		return replacedStyle;

@@ -8,12 +8,10 @@
   },
   "author": "",
   "devDependencies": {
-    "fontmachine": "^0.1.1",
-    "mapbox-gl": "^0.14.1",
-    "spritezero-cli": "^1.0.2"
+    "@mapbox/fontmachine": "^0.2.1",
+    "@mapbox/spritezero-cli": "^2.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "path": "^0.12.7"
+    "lodash": "^4.17.4"
   }
 }
