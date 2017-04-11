@@ -1,5 +1,6 @@
 var path = require("path");
 var forEach = require("lodash/forEach");
+var includes = require("lodash/includes");
 var merge = require("lodash/merge");
 var mergeWith = require("lodash/mergeWith");
 var cloneDeep = require("lodash/cloneDeep");
@@ -70,22 +71,22 @@ function getReplacements(options) {
  */
 function getExtensions(extensions) {
 	var exts = [];
-	if(extensions.includes("routes")) {
+	if (includes(extensions, "routes")) {
 		exts.push(ADDON_ROUTES_STYLE);
 	}
-	if(extensions.includes("noText") === false) {
+	if (includes(extensions, "noText") === false) {
 		exts.push(OVERLAY_STYLE);
 	}
-	if(extensions.includes("icons")) {
+	if (includes(extensions, "icons")) {
 		exts.push(ADDON_ICONS_STYLE);
 	}
-	if(extensions.includes("driver_instructions")) {
+	if (includes(extensions, "driver_instructions")) {
 		exts.push(ADDON_DRIVER_INSTRUCTIONS_STYLE);
 	}
-	if(extensions.includes("stops")) {
+	if (includes(extensions, "stops")) {
 		exts.push(ADDON_STOPS_STYLE);
 	}
-	if(extensions.includes("citybikes")) {
+	if (includes(extensions, "citybikes")) {
 		exts.push(ADDON_CITYBIKES_STYLE);
 	}
 	return exts;
