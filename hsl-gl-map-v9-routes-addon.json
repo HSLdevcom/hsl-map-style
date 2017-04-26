@@ -23,13 +23,28 @@
   },
   "layers": [
     {
-      "id": "51 case",
+      "id": "bus_route_case",
       "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
       "source": "routes",
       "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "!in",
+          "shortName",
+          "550",
+          "560"
+        ],
+        [
+          "!in",
+          "mode",
+          "RAIL",
+          "SUBWAY"
+        ]
+      ],
       "interactive": true,
       "layout": {
         "visibility": "visible",
@@ -55,13 +70,28 @@
       }
     },
     {
-      "id": "51",
+      "id": "bus_route",
       "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
       "source": "routes",
       "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "!in",
+          "shortName",
+          "550",
+          "560"
+        ],
+        [
+          "!in",
+          "mode",
+          "RAIL",
+          "SUBWAY"
+        ]
+      ],
       "interactive": true,
       "layout": {
         "visibility": "visible",
@@ -88,14 +118,124 @@
       }
     },
     {
-      "id": "51 copy",
+      "id": "bus_route_inner",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
-      "ref": "51",
+      "ref": "bus_route",
       "interactive": true,
       "paint": {
         "line-color": "#3395d4",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              22,
+              2
+            ]
+          ]
+        },
+        "line-blur": 0,
+        "line-opacity": 1
+      }
+    },
+
+    {
+      "id": "trunk_route_case",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "in",
+          "shortName",
+          "550",
+          "560"
+        ]
+      ],
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "trunk_route",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "in",
+          "shortName",
+          "550",
+          "560"
+        ]
+      ],
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round",
+        "line-round-limit": 1
+      },
+      "paint": {
+        "line-color": "#f25d21",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              22,
+              6
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "trunk_route_inner",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "ref": "trunk_route",
+      "interactive": true,
+      "paint": {
+        "line-color": "#f25d21",
         "line-width": {
           "base": 1,
           "stops": [
