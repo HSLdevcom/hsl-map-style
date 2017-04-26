@@ -3,7 +3,7 @@
     {
       "type": "Feature",
       "properties": {
-        "mode": "subway",
+        "mode": "SUBWAY",
         "underground": "false"
       },
       "geometry": {
