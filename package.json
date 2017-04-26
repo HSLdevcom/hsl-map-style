@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
+    "watch": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "devDependencies": {
     "@mapbox/fontmachine": "^0.2.1",
-    "@mapbox/spritezero-cli": "^2.0.0"
+    "@mapbox/spritezero-cli": "^2.0.0",
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "lodash": "^4.17.4"
