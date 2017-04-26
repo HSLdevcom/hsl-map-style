@@ -11,17 +11,40 @@
     "routes": {
       "url": "http://api.digitransit.fi/map/v1/hsl-route-map/index.json",
       "type": "vector"
+    },
+    "rail": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/ad0ecfd4241e5129d9410d664dd15dc2f3475e6b/data/rail.geojson",
+      "type": "geojson"
+    },
+    "subway": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/ad0ecfd4241e5129d9410d664dd15dc2f3475e6b/data/subway.geojson",
+      "type": "geojson"
     }
   },
   "layers": [
     {
-      "id": "51 case",
+      "id": "bus_route_case",
       "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
       "source": "routes",
       "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "!in",
+          "shortName",
+          "550",
+          "560"
+        ],
+        [
+          "!in",
+          "mode",
+          "RAIL",
+          "SUBWAY"
+        ]
+      ],
       "interactive": true,
       "layout": {
         "visibility": "visible",
@@ -47,13 +70,28 @@
       }
     },
     {
-      "id": "51",
+      "id": "bus_route",
       "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
       "source": "routes",
       "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "!in",
+          "shortName",
+          "550",
+          "560"
+        ],
+        [
+          "!in",
+          "mode",
+          "RAIL",
+          "SUBWAY"
+        ]
+      ],
       "interactive": true,
       "layout": {
         "visibility": "visible",
@@ -80,11 +118,11 @@
       }
     },
     {
-      "id": "51 copy",
+      "id": "bus_route_inner",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
-      "ref": "51",
+      "ref": "bus_route",
       "interactive": true,
       "paint": {
         "line-color": "#3395d4",
@@ -103,6 +141,297 @@
         },
         "line-blur": 0,
         "line-opacity": 1
+      }
+    },
+
+    {
+      "id": "trunk_route_case",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "in",
+          "shortName",
+          "550",
+          "560"
+        ]
+      ],
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              6
+            ],
+            [
+              22,
+              10
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "trunk_route",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "all",
+        [
+          "in",
+          "shortName",
+          "550",
+          "560"
+        ]
+      ],
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round",
+        "line-round-limit": 1
+      },
+      "paint": {
+        "line-color": "#f25d21",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "trunk_route_inner",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "ref": "trunk_route",
+      "interactive": true,
+      "paint": {
+        "line-color": "#f25d21",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              1
+            ],
+            [
+              22,
+              4
+            ]
+          ]
+        },
+        "line-blur": 0,
+        "line-opacity": 1
+      }
+    },
+
+    {
+      "id": "subway_case",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "subway",
+      "filter": [
+        "all",
+        [
+          "==",
+          "underground",
+          "false"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FF6319",
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              16,
+              12
+            ],
+            [
+              19,
+              24
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "subway",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "ref": "subway_case",
+      "paint": {
+        "line-color": "#fff",
+        "line-dasharray": [
+          2.3,
+          1.5
+        ],
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              11,
+              2
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              19,
+              18
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "subway_underground",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "subway",
+      "filter": [
+        "all",
+        [
+          "==",
+          "underground",
+          "true"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FF6319",
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              11,
+              1
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              19,
+              20
+            ]
+          ]
+        },
+        "line-dasharray": [
+          2.3,
+          1.5
+        ]
+      }
+    },
+    {
+      "id": "rail_case",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "rail",
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#8C4799",
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              16,
+              12
+            ],
+            [
+              19,
+              24
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "rail",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "ref": "rail_case",
+      "paint": {
+        "line-color": "#fff",
+        "line-dasharray": [
+          2.3,
+          1.5
+        ],
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              11,
+              2
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              19,
+              18
+            ]
+          ]
+        }
       }
     }
   ]
