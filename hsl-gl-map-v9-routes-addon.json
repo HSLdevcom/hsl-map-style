@@ -13,7 +13,7 @@
       "type": "vector"
     },
     "rail": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/ad0ecfd4241e5129d9410d664dd15dc2f3475e6b/data/rail.geojson",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/f723bedb3b7ceee8eb2d469244f5081edc22fddb/data/rail.geojson",
       "type": "geojson"
     },
     "subway": {
