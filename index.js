@@ -5,6 +5,7 @@ var merge = require("lodash/merge");
 var mergeWith = require("lodash/mergeWith");
 var cloneDeep = require("lodash/cloneDeep");
 
+var BASE_JSON = require("./hsl-gl-map-v9-base-style.json");
 var BASE_STYLE = require("./hsl-gl-map-v9-base-style.json");
 var ADDON_ROUTES_STYLE = require("./hsl-gl-map-v9-routes-addon.json");
 var OVERLAY_STYLE = require("./hsl-gl-map-v9-overlay-style.json");
@@ -71,10 +72,13 @@ function getReplacements(options) {
  */
 function getExtensions(extensions) {
 	var exts = [];
+	if (includes(extensions, "no_base_map") === false) {
+		exts.push(OVERLAY_STYLE);
+	}
 	if (includes(extensions, "routes")) {
 		exts.push(ADDON_ROUTES_STYLE);
 	}
-	if (includes(extensions, "noText") === false) {
+	if (includes(extensions, "no_text") === false) {
 		exts.push(OVERLAY_STYLE);
 	}
 	if (includes(extensions, "icons")) {
@@ -148,7 +152,7 @@ module.exports = {
 	 * @return {Object}         Generated style object
 	 */
 	generateStyle: function(options) {
-		var extendedStyle = extendStyle(BASE_STYLE, options);
+		var extendedStyle = extendStyle(BASE_JSON, options);
 		var replacedStyle = replaceInStyle(extendedStyle, options);
 
 		return replacedStyle;
