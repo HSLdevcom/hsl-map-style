@@ -61,7 +61,6 @@ function trimLanguage(lang) {
   return lang === DEFAULT_LANGUAGE ? "" : "_" + lang;
 }
 
-
 /**
  * Creates values that replace the defaults in the base style
  * @param  {Object} options         Received options that are used to create replacements
@@ -72,14 +71,17 @@ function getReplacements(options) {
   var replacements = {};
   if (options && options.lang) {
     var replacement;
-    if (typeof (options.lang) === "string") {
+    if (typeof options.lang === "string") {
       replacement = "{name" + trimLanguage(options.lang) + "}";
     } else {
-      replacement = options.lang.reduce(function (prev, cur, index) {
-        var separator = "   ";
-        if (index === 0) separator = "";
-        return prev + separator + "{name" + trimLanguage(cur) + "}";
-      }, "");
+      replacement = options.lang.reduce(
+        function (prev, cur, index) {
+          var separator = "   ";
+          if (index === 0) separator = "";
+          return prev + separator + "{name" + trimLanguage(cur) + "}";
+        },
+        ""
+      );
     }
     replacements.LABEL_NAME = {
       replacement: replacement
