@@ -3,7 +3,7 @@ var merge = require("lodash/merge");
 var mergeWith = require("lodash/mergeWith");
 var cloneDeep = require("lodash/cloneDeep");
 
-var BASE_JSON = require("./hsl-gl-map-v9-base.json");
+var BASE_JSON = require("./hsl-gl-map-v9-style.json");
 var DEFAULT_LANGUAGE = "fi";
 
 var replaceableValues = {
@@ -17,43 +17,43 @@ var components = [
     id: "base",
     enabled: true,
     description: "Taustakartta",
-    style: require("./hsl-gl-map-v9-base-style.json")
+    style: require("./hsl-gl-map-v9-base.json")
   },
   {
     id: "routes",
     enabled: false,
     description: "Linjaviivat",
-    style: require("./hsl-gl-map-v9-routes-addon.json")
+    style: require("./hsl-gl-map-v9-routes.json")
   },
   {
     id: "text",
     enabled: true,
     description: "Tekstit",
-    style: require("./hsl-gl-map-v9-overlay-style.json")
+    style: require("./hsl-gl-map-v9-overlay.json")
   },
   {
     id: "icons",
     enabled: false,
     description: "Jukkoliikenne-POI",
-    style: require("./hsl-gl-map-v9-icons-addon.json")
+    style: require("./hsl-gl-map-v9-icons.json")
   },
   {
     id: "driver_instructions",
     enabled: false,
     description: "Kuljettajaohjeet",
-    style: require("./hsl-gl-map-v9-driver-instructions-addon.json")
+    style: require("./hsl-gl-map-v9-driver-instructions.json")
   },
   {
     id: "stops",
     enabled: false,
     description: "Pysäkit",
-    style: require("./hsl-gl-map-v9-stops-addon.json")
+    style: require("./hsl-gl-map-v9-stops.json")
   },
   {
     id: "citybikes",
     enabled: false,
     description: "Kaupunkipyörät",
-    style: require("./hsl-gl-map-v9-citybikes-addon.json")
+    style: require("./hsl-gl-map-v9-citybikes.json")
   }
 ];
 
