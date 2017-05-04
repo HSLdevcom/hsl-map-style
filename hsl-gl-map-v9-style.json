@@ -1,0 +1,32 @@
+{
+    "version": 8,
+    "name": "HSL v1.6",
+    "metadata": {
+        "mapbox:groups": {}
+    },
+    "center": [
+        24.780522192591405,
+        60.178648250675934
+    ],
+    "zoom": 14.051135528958179,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "vector": {
+            "url": "http://api.digitransit.fi/map/v1/hsl-vector-map/index.json",
+            "type": "vector"
+        },
+        "parkandride": {
+            "url": "http://api.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+            "type": "vector"
+        }
+    },
+    "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
+    "glyphs": "http://localhost:8000/fontstack/{fontstack}/{range}.pbf",
+    "layers": [],
+    "created": "2016-05-12T07:20:14.210Z",
+    "id": "cio3ytjzp005dbzm1uaowh9s3",
+    "modified": "2016-05-18T13:09:30.929Z",
+    "owner": "vhamalai",
+    "draft": false
+}
