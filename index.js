@@ -34,7 +34,7 @@ var components = [
   {
     id: "icons",
     enabled: false,
-    description: "Jukkoliikenne-POI",
+    description: "Joukkoliikenne-POI",
     style: require("./hsl-gl-map-v9-icons.json")
   },
   {
