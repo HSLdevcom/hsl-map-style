@@ -1399,7 +1399,7 @@
             "type": "symbol",
             "source": "vector",
             "source-layer": "place_label",
-            "minzoom": 5,
+            "minzoom": 11,
             "filter": [
                 "all",
                 [
