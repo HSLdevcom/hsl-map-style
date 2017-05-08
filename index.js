@@ -8,7 +8,7 @@ var DEFAULT_LANGUAGE = "fi";
 
 var replaceableValues = {
   LABEL_NAME: { default: "{name}" },
-  SOURCES_URL: { default: "api.digitransit.fi/map/v1/" },
+  SOURCES_URL: { default: "http://api.digitransit.fi/map/v1/" },
   GLYPHS_URL: { default: "http://localhost:8000/" }
 };
 
@@ -62,6 +62,19 @@ function trimLanguage(lang) {
 }
 
 /**
+ * Prepends http:// to relative urls. Returns original string if absolute or protocol-relative url.
+ * @param url {string}
+ * @returns {string}
+ */
+function makeAbsoluteUrl(url) {
+  var isAbsoluteUrl = new RegExp("^(?:[a-z]+:)?//", "i");
+  if (isAbsoluteUrl.test(url)) {
+    return url;
+  }
+  return "http://" + url;
+}
+
+/**
  * Creates values that replace the defaults in the base style
  * @param  {Object} options         Received options that are used to create replacements
  * @param  {String|Array} options.lang     Language, or array of languages to display on text labels
@@ -88,9 +101,13 @@ function getReplacements(options) {
     };
   }
   if (options && options.sourcesUrl) {
-    replacements.SOURCES_URL = { replacement: options.sourcesUrl };
+    var sourcesUrl = makeAbsoluteUrl(options.sourcesUrl);
+    replacements.SOURCES_URL = { replacement: sourcesUrl };
   }
-  if (options && options.glyphsUrl) replacements.GLYPHS_URL = { replacement: options.glyphsUrl };
+  if (options && options.glyphsUrl) {
+    var glyphsUrl = makeAbsoluteUrl(options.glyphsUrl);
+    replacements.GLYPHS_URL = { replacement: glyphsUrl };
+  }
 
   return replacements;
 }
