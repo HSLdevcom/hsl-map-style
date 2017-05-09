@@ -55,6 +55,12 @@ var components = [
     enabled: false,
     description: "Kaupunkipyörät",
     style: require("./hsl-gl-map-v9-citybikes.json")
+  },
+  {
+    id: "print",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./hsl-gl-map-v9-print.json")
   }
 ];
 

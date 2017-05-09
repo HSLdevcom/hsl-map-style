@@ -1,0 +1,42 @@
+{
+  "layers": [
+    {
+      "id": "landuse_park",
+      "paint": {
+        "fill-color": "rgb(234,242,224)"
+      }
+    },
+    {
+      "id": "landuse_wood",
+      "paint": {
+        "fill-color": "rgb(227,238,212)"
+      }
+    },
+    {
+      "id": "landuse_athletics",
+      "paint": {
+        "fill-color": "rgb(225,236,211)",
+        "fill-outline-color": "rgb(205,221,185)"
+      }
+    },
+    {
+      "id": "landuse_cemetery",
+      "paint": {
+        "fill-color": "rgb(224,235,210)",
+        "fill-outline-color": "rgb(212,227,195)"
+      }
+    },
+    {
+      "id": "landuse_grass",
+      "paint": {
+        "fill-color": "rgb(223,235,208)"
+      }
+    },
+    {
+      "id": "landuse_agriculture",
+      "paint": {
+        "fill-color": "rgb(238,244,220)"
+      }
+    }
+  ]
+}
