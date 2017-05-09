@@ -2,6 +2,7 @@ var forEach = require("lodash/forEach");
 var merge = require("lodash/merge");
 var mergeWith = require("lodash/mergeWith");
 var cloneDeep = require("lodash/cloneDeep");
+var isPlainObject = require("lodash/isPlainObject");
 
 var BASE_JSON = require("./hsl-gl-map-v9-style.json");
 var DEFAULT_LANGUAGE = "fi";
@@ -131,8 +132,20 @@ function replaceInStyle(style, options) {
 }
 
 function customizer(objValue, srcValue) {
-  if (Array.isArray(objValue)) {
-    return objValue.concat(srcValue);
+  if (Array.isArray(objValue) && Array.isArray(srcValue)) {
+    srcValue.forEach(function(srcElement) {
+      if (isPlainObject(srcElement) && srcElement.id) {
+        const destElement = objValue.find(function(objElement) {
+          return isPlainObject(objElement) && objElement.id === srcElement.id;
+        });
+        if (destElement) {
+          merge(destElement, srcElement);
+          return;
+        }
+      }
+      objValue.push(srcElement);
+    });
+    return objValue;
   }
 }
 
