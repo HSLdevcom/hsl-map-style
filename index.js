@@ -1,7 +1,9 @@
+var includes = require("lodash/includes");
 var forEach = require("lodash/forEach");
 var merge = require("lodash/merge");
 var mergeWith = require("lodash/mergeWith");
 var cloneDeep = require("lodash/cloneDeep");
+var isPlainObject = require("lodash/isPlainObject");
 
 var BASE_JSON = require("./hsl-gl-map-v9-style.json");
 var DEFAULT_LANGUAGE = "fi";
@@ -54,6 +56,13 @@ var components = [
     enabled: false,
     description: "Kaupunkipyörät",
     style: require("./hsl-gl-map-v9-citybikes.json")
+  },
+  {
+    id: "print",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./hsl-gl-map-v9-print.json"),
+    dependencies: ["base"]
   }
 ];
 
@@ -82,7 +91,7 @@ function makeAbsoluteUrl(url) {
  */
 function getReplacements(options) {
   var replacements = {};
-  if (options && options.lang) {
+  if (options.lang) {
     var replacement;
     if (typeof options.lang === "string") {
       replacement = "{name" + trimLanguage(options.lang) + "}";
@@ -100,11 +109,11 @@ function getReplacements(options) {
       replacement: replacement
     };
   }
-  if (options && options.sourcesUrl) {
+  if (options.sourcesUrl) {
     var sourcesUrl = makeAbsoluteUrl(options.sourcesUrl);
     replacements.SOURCES_URL = { replacement: sourcesUrl };
   }
-  if (options && options.glyphsUrl) {
+  if (options.glyphsUrl) {
     var glyphsUrl = makeAbsoluteUrl(options.glyphsUrl);
     replacements.GLYPHS_URL = { replacement: glyphsUrl };
   }
@@ -131,8 +140,20 @@ function replaceInStyle(style, options) {
 }
 
 function customizer(objValue, srcValue) {
-  if (Array.isArray(objValue)) {
-    return objValue.concat(srcValue);
+  if (Array.isArray(objValue) && Array.isArray(srcValue)) {
+    srcValue.forEach(function(srcElement) {
+      if (isPlainObject(srcElement) && srcElement.id) {
+        const destElement = objValue.find(function(objElement) {
+          return isPlainObject(objElement) && objElement.id === srcElement.id;
+        });
+        if (destElement) {
+          merge(destElement, srcElement);
+          return;
+        }
+      }
+      objValue.push(srcElement);
+    });
+    return objValue;
   }
 }
 
@@ -144,27 +165,31 @@ function customizer(objValue, srcValue) {
  */
 function extendStyle(style, options) {
   var extendedStyle = cloneDeep(style);
-  var updatedComponents = {};
+  var extendedComponents = cloneDeep(components);
 
-  if (options && options.extensions) {
-    options.extensions.forEach(function (extension) {
-      updatedComponents[extension] = { enabled: true };
-    });
-  } else if (options && options.components) {
-    updatedComponents = options.components;
-  }
-
-  forEach(components, function (component) {
-    if (
-      (component.enabled &&
-        (updatedComponents[component.id] === undefined ||
-          updatedComponents[component.id].enabled !== false)) ||
-      (updatedComponents[component.id] && updatedComponents[component.id].enabled === true)
-    ) {
-      extendedStyle = mergeWith(extendedStyle, component.style, customizer);
+  extendedComponents.forEach(function (component) {
+    if (options.extensions && includes(options.extensions, component.id)) {
+      component.enabled = true;
+      return;
+    }
+    if (options.components) {
+      var componentOptions = options.components[component.id];
+      if (componentOptions && componentOptions.enabled !== undefined) {
+        component.enabled = !!componentOptions.enabled;
+      }
     }
   });
 
+  extendedComponents.forEach(function (component) {
+    var dependenciesEnabled = !component.dependencies || component.dependencies.every(function(id) {
+      const dependency = extendedComponents.find(function(element) { return element.id === id; });
+      return dependency && dependency.enabled;
+    });
+
+    if (component.enabled && dependenciesEnabled) {
+      mergeWith(extendedStyle, component.style, customizer);
+    }
+  });
   return extendedStyle;
 }
 
@@ -175,9 +200,8 @@ module.exports = {
    * @return {Object}         Generated style object
    */
   generateStyle: function generateStyle(options) {
-    var extendedStyle = extendStyle(BASE_JSON, options);
-    var replacedStyle = replaceInStyle(extendedStyle, options);
-
+    var extendedStyle = extendStyle(BASE_JSON, options || {});
+    var replacedStyle = replaceInStyle(extendedStyle, options || {});
     return replacedStyle;
   },
   components: components

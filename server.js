@@ -11,7 +11,8 @@ var style = require("./index").generateStyle({
         routes: { enabled: true },
         stops: { enabled: true },
         citybikes: { enabled: true },
-        icons: { enables: true },
+        icons: { enabled: true },
+        print: { enabled: false },
     }
 });
 
