@@ -39,10 +39,9 @@
           "560"
         ],
         [
-          "!in",
+          "==",
           "mode",
-          "RAIL",
-          "SUBWAY"
+          "BUS"
         ]
       ],
       "interactive": true,
@@ -86,10 +85,9 @@
           "560"
         ],
         [
-          "!in",
+          "==",
           "mode",
-          "RAIL",
-          "SUBWAY"
+          "BUS"
         ]
       ],
       "interactive": true,
@@ -126,6 +124,107 @@
       "interactive": true,
       "paint": {
         "line-color": "#3395d4",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              22,
+              2
+            ]
+          ]
+        },
+        "line-blur": 0,
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "tram_route_case",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "==",
+        "mode",
+        "TRAM"
+      ],
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "tram_route",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "==",
+        "mode",
+        "TRAM"
+      ],
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round",
+        "line-round-limit": 1
+      },
+      "paint": {
+        "line-color": "#00985F",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              22,
+              6
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "tram_route_inner",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "ref": "tram_route",
+      "interactive": true,
+      "paint": {
+        "line-color": "#00bb75",
         "line-width": {
           "base": 1,
           "stops": [
@@ -291,6 +390,44 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "ferry_route",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1457010660461.3042"
+      },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "==",
+        "mode",
+        "FERRY"
+      ],
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#00B9E4",
+        "line-dasharray": [0, 4],
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
+        },
+        "line-blur": 0
       }
     },
     {
