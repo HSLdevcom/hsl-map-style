@@ -31,7 +31,7 @@ var components = [
     id: "text",
     enabled: true,
     description: "Tekstit",
-    style: require("./hsl-gl-map-v9-overlay.json")
+    style: require("./hsl-gl-map-v9-text.json")
   },
   {
     id: "icons",
