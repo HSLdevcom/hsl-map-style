@@ -31,7 +31,14 @@ var components = [
     id: "text",
     enabled: true,
     description: "Tekstit",
-    style: require("./hsl-gl-map-v9-text.json")
+    style: require("./hsl-gl-map-v9-text.json"),
+  },
+  {
+    id: "text_fisv",
+    enabled: false,
+    description: "Kaksikieliset tekstit",
+    style: require("./hsl-gl-map-v9-text-fisv.json"),
+    dependencies: ["text"]
   },
   {
     id: "icons",
