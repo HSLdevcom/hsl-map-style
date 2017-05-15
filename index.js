@@ -157,10 +157,6 @@ function extendStyle(style, options) {
   var extendedComponents = cloneDeep(components);
 
   extendedComponents.forEach(function (component) {
-    if (options.extensions && includes(options.extensions, component.id)) {
-      component.enabled = true;
-      return;
-    }
     if (options.components) {
       var componentOptions = options.components[component.id];
       if (componentOptions && componentOptions.enabled !== undefined) {
