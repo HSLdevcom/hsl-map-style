@@ -165,7 +165,7 @@
             ],
             "layout": {
                 "symbol-placement": "line",
-                "text-field": "{name} {name_sv}",
+                "text-field": "{name}   {name_sv}",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
@@ -227,7 +227,7 @@
             ],
             "layout": {
                 "symbol-placement": "line",
-                "text-field": "{name} {name_sv}",
+                "text-field": "{name}   {name_sv}",
                 "text-font": [
                     "Gotham Rounded Medium"
                 ],
