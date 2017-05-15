@@ -34,6 +34,13 @@ var components = [
     style: require("./hsl-gl-map-v9-text.json"),
   },
   {
+    id: "text_sv",
+    enabled: false,
+    description: "Ruotsinkieliset tekstit",
+    style: require("./hsl-gl-map-v9-text-sv.json"),
+    dependencies: ["text"]
+  },
+  {
     id: "text_fisv",
     enabled: false,
     description: "Kaksikieliset tekstit",
