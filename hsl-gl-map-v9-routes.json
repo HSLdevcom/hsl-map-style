@@ -309,7 +309,7 @@
         "line-round-limit": 1
       },
       "paint": {
-        "line-color": "#f25d21",
+        "line-color": "#FF6319",
         "line-width": {
           "base": 1,
           "stops": [
@@ -334,7 +334,7 @@
       "ref": "trunk_route",
       "interactive": true,
       "paint": {
-        "line-color": "#f25d21",
+        "line-color": "#FF6319",
         "line-width": {
           "base": 1,
           "stops": [
