@@ -2384,7 +2384,19 @@
             "id": "road_primary",
             "ref": "road_primary_case",
             "paint": {
-                "line-color": "#fff",
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            9.9,
+                            "#eeeeee"
+                        ],
+                        [
+                            10.2,
+                            "#ffffff"
+                        ]
+                    ]
+                },
                 "line-width": {
                     "base": 1.55,
                     "stops": [
@@ -2408,11 +2420,11 @@
                     "base": 1,
                     "stops": [
                         [
-                            10,
-                            "#fff"
+                            9.5,
+                            "#f4d880"
                         ],
                         [
-                            10.1,
+                            10.2,
                             "#fef2c6"
                         ]
                     ]
