@@ -6,10 +6,8 @@ var cloneDeep = require("lodash/cloneDeep");
 var isPlainObject = require("lodash/isPlainObject");
 
 var BASE_JSON = require("./hsl-gl-map-v9-style.json");
-var DEFAULT_LANGUAGE = "fi";
 
 var replaceableValues = {
-  LABEL_NAME: { default: "{name}" },
   SOURCES_URL: { default: "http://api.digitransit.fi/map/v1/" },
   GLYPHS_URL: { default: "http://localhost:8000/" }
 };
@@ -86,10 +84,6 @@ var components = [
   }
 ];
 
-function trimLanguage(lang) {
-  return lang === DEFAULT_LANGUAGE ? "" : "_" + lang;
-}
-
 /**
  * Prepends http:// to relative urls. Returns original string if absolute or protocol-relative url.
  * @param url {string}
@@ -106,29 +100,10 @@ function makeAbsoluteUrl(url) {
 /**
  * Creates values that replace the defaults in the base style
  * @param  {Object} options         Received options that are used to create replacements
- * @param  {String|Array} options.lang     Language, or array of languages to display on text labels
  * @return {Object}                 Replacement values that are used to modify the base style
  */
 function getReplacements(options) {
   var replacements = {};
-  if (options.lang) {
-    var replacement;
-    if (typeof options.lang === "string") {
-      replacement = "{name" + trimLanguage(options.lang) + "}";
-    } else {
-      replacement = options.lang.reduce(
-        function (prev, cur, index) {
-          var separator = "   ";
-          if (index === 0) separator = "";
-          return prev + separator + "{name" + trimLanguage(cur) + "}";
-        },
-        ""
-      );
-    }
-    replacements.LABEL_NAME = {
-      replacement: replacement
-    };
-  }
   if (options.sourcesUrl) {
     var sourcesUrl = makeAbsoluteUrl(options.sourcesUrl);
     replacements.SOURCES_URL = { replacement: sourcesUrl };
@@ -188,10 +163,6 @@ function extendStyle(style, options) {
   var extendedComponents = cloneDeep(components);
 
   extendedComponents.forEach(function (component) {
-    if (options.extensions && includes(options.extensions, component.id)) {
-      component.enabled = true;
-      return;
-    }
     if (options.components) {
       var componentOptions = options.components[component.id];
       if (componentOptions && componentOptions.enabled !== undefined) {
