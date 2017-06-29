@@ -13,6 +13,7 @@ var style = require("./index").generateStyle({
         citybikes: { enabled: true },
         icons: { enabled: true },
         print: { enabled: false },
+        municipal_borders: { enabled: true },
     }
 });
 

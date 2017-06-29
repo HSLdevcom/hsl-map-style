@@ -20,6 +20,12 @@ var components = [
     style: require("./hsl-gl-map-v9-base.json")
   },
   {
+    id: "municipal_borders",
+    enabled: false,
+    description: "Kuntarajat",
+    style: require("./hsl-gl-map-v9-municipal-borders.json")
+  },
+  {
     id: "routes",
     enabled: false,
     description: "Linjaviivat",

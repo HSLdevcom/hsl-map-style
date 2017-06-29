@@ -1,0 +1,39 @@
+{
+  "sources": {
+    "borders": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuntarajat.json",
+      "type": "geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "municipal_border",
+      "type": "line",
+      "source": "borders",
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#ccc",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        },
+        "line-blur": 0,
+        "line-dasharray": [2, 2]
+      }
+    }
+  ]
+}
