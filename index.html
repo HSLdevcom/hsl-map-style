@@ -6,18 +6,42 @@
         <script src="https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css" rel="stylesheet" />
         <style>
-            body { margin: 0; padding: 0; }
-            #map { position:absolute; top:0; bottom:0; width:100%; }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+            #info {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.6);
+                overflow-y: auto;
+            }
         </style>
     </head>
     <body>
         <div id="map"></div>
+        <div id="info"></div>
         <script>
             var map = new mapboxgl.Map({
                 container: "map", // container id
                 style: "style.json", //stylesheet location
                 center: [24.9, 60.5], // starting position
                 zoom: 9 // starting zoom
+            });
+
+            map.on("click", function (event) {
+                var features = map.queryRenderedFeatures(event.point);
+                var content = JSON.stringify(features, null, 2);
+                document.getElementById("info").innerHTML = "<pre>" + content + "</pre>";
             });
         </script>
     </body>
