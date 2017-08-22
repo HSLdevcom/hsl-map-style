@@ -137,12 +137,19 @@ function replaceInStyle(style, options) {
 function customizer(objValue, srcValue) {
   if (Array.isArray(objValue) && Array.isArray(srcValue)) {
     srcValue.forEach(function(srcElement) {
+      // Objects with id properties are layers
       if (isPlainObject(srcElement) && srcElement.id) {
         const destElement = objValue.find(function(objElement) {
           return isPlainObject(objElement) && objElement.id === srcElement.id;
         });
         if (destElement) {
+          // Override or add properties to existing layer
           merge(destElement, srcElement);
+          return;
+        }
+        if (!srcElement.ref && (!srcElement.type || !srcElement.paint ||
+            (srcElement.type !== "background" && !srcElement.source))) {
+          // Omit incomplete layer with no matching layer in destination array
           return;
         }
       }
