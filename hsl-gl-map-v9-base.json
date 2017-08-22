@@ -654,7 +654,7 @@
             }
         },
         {
-            "id": "road_service",
+            "id": "road_service_polygon",
             "type": "fill",
             "source": "vector",
             "source-layer": "road",
@@ -1937,6 +1937,54 @@
             }
         },
         {
+            "id": "road_service",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
+                    ],
+                    [
+                        "==",
+                        "class",
+                        "service"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            0,
+                            1.5
+                        ],
+                        [
+                            22,
+                            26
+                        ]
+                    ]
+                }
+            }
+        },
+        {
             "id": "road_motorway_case",
             "type": "line",
             "source": "vector",
@@ -2057,7 +2105,6 @@
                     [
                         "in",
                         "class",
-                        "service",
                         "street",
                         "tertiary"
                     ]
