@@ -178,12 +178,7 @@ function extendStyle(style, options) {
   });
 
   extendedComponents.forEach(function (component) {
-    var dependenciesEnabled = !component.dependencies || component.dependencies.every(function(id) {
-      const dependency = extendedComponents.find(function(element) { return element.id === id; });
-      return dependency && dependency.enabled;
-    });
-
-    if (component.enabled && dependenciesEnabled) {
+    if (component.enabled) {
       mergeWith(extendedStyle, component.style, customizer);
     }
   });
