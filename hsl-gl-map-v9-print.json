@@ -94,12 +94,6 @@
       }
     },
     {
-      "id": "poi_label_park",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
       "id": "poi_label_sq",
       "paint": {
         "text-color": "#000"
@@ -155,12 +149,6 @@
     },
     {
       "id": "poi_label_harbour",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "water_label",
       "paint": {
         "text-color": "#000"
       }
