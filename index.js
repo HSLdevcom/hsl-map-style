@@ -79,8 +79,7 @@ var components = [
     id: "print",
     enabled: false,
     description: "Tulostevärit",
-    style: require("./hsl-gl-map-v9-print.json"),
-    dependencies: ["base"]
+    style: require("./hsl-gl-map-v9-print.json")
   }
 ];
 
@@ -137,12 +136,19 @@ function replaceInStyle(style, options) {
 function customizer(objValue, srcValue) {
   if (Array.isArray(objValue) && Array.isArray(srcValue)) {
     srcValue.forEach(function(srcElement) {
+      // Objects with id properties are layers
       if (isPlainObject(srcElement) && srcElement.id) {
         const destElement = objValue.find(function(objElement) {
           return isPlainObject(objElement) && objElement.id === srcElement.id;
         });
         if (destElement) {
+          // Override or add properties to existing layer
           merge(destElement, srcElement);
+          return;
+        }
+        if (!srcElement.ref && (!srcElement.type || !srcElement.paint ||
+            (srcElement.type !== "background" && !srcElement.source))) {
+          // Omit incomplete layer with no matching layer in destination array
           return;
         }
       }
@@ -172,12 +178,7 @@ function extendStyle(style, options) {
   });
 
   extendedComponents.forEach(function (component) {
-    var dependenciesEnabled = !component.dependencies || component.dependencies.every(function(id) {
-      const dependency = extendedComponents.find(function(element) { return element.id === id; });
-      return dependency && dependency.enabled;
-    });
-
-    if (component.enabled && dependenciesEnabled) {
+    if (component.enabled) {
       mergeWith(extendedStyle, component.style, customizer);
     }
   });
