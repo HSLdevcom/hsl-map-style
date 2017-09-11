@@ -9,7 +9,7 @@
   },
   "sources": {
     "routes": {
-      "url": "http://api.digitransit.fi/map/v1/hsl-route-map/index.json",
+      "url": "http://kartat.hsl.fi/jore/tiles/routes/index.json",
       "type": "vector"
     },
     "rail": {
@@ -34,9 +34,9 @@
         "all",
         [
           "!in",
-          "shortName",
-          "550",
-          "560"
+          "routeId",
+          "2550",
+          "4560"
         ],
         [
           "==",
@@ -80,9 +80,9 @@
         "all",
         [
           "!in",
-          "shortName",
-          "550",
-          "560"
+          "routeId",
+          "2550",
+          "4560"
         ],
         [
           "==",
@@ -255,9 +255,9 @@
         "all",
         [
           "in",
-          "shortName",
-          "550",
-          "560"
+          "routeId",
+          "2550",
+          "4560"
         ]
       ],
       "interactive": true,
@@ -296,9 +296,9 @@
         "all",
         [
           "in",
-          "shortName",
-          "550",
-          "560"
+          "routeId",
+          "2550",
+          "4560"
         ]
       ],
       "interactive": true,
