@@ -1399,7 +1399,7 @@
             "type": "symbol",
             "source": "vector",
             "source-layer": "place_label",
-            "minzoom": 11,
+            "minzoom": 10,
             "filter": [
                 "all",
                 [
@@ -1412,6 +1412,11 @@
                     "type",
                     "island",
                     "islet"
+                ],
+                [
+                    "==",
+                    "localrank",
+                    1
                 ]
             ],
             "layout": {
