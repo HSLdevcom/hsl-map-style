@@ -13,11 +13,11 @@
     "pitch": 0,
     "sources": {
         "vector": {
-            "url": "http://api.digitransit.fi/map/v1/hsl-vector-map/index.json",
+            "url": "https://digitransit-prod-cdn-origin.azureedge.net/map/v1/hsl-vector-map/index.json",
             "type": "vector"
         },
         "parkandride": {
-            "url": "http://api.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+            "url": "https://digitransit-prod-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
             "type": "vector"
         }
     },

@@ -13,7 +13,7 @@
   },
   "sources": {
     "ticket-sales": {
-      "url": "http://api.digitransit.fi/map/v1/hsl-ticket-sales-map/index.json",
+      "url": "https://digitransit-prod-cdn-origin.azureedge.net/map/v1/hsl-ticket-sales-map/index.json",
       "type": "vector"
     }
   },
