@@ -9,7 +9,7 @@
   },
   "sources": {
     "stops": {
-      "url": "http://api.digitransit.fi/map/v1/hsl-stop-map/index.json",
+      "url": "http://kartat.hsl.fi/jore/tiles/stops/index.json",
       "type": "vector"
     }
   },
@@ -25,7 +25,7 @@
       "interactive": true,
       "filter": [
         "!=",
-        "type",
+        "mode",
         "RAIL"
       ],
       "layout": {
@@ -64,7 +64,7 @@
       "interactive": true,
       "filter": [
         "==",
-        "type",
+        "mode",
         "RAIL"
       ],
       "layout": {
@@ -102,7 +102,7 @@
       "interactive": true,
       "filter": [
         "==",
-        "type",
+        "mode",
         "BUS"
       ],
       "layout": {
@@ -153,7 +153,7 @@
       "interactive": true,
       "filter": [
         "==",
-        "type",
+        "mode",
         "FERRY"
       ],
       "layout": {
@@ -204,7 +204,7 @@
       "interactive": true,
       "filter": [
         "==",
-        "type",
+        "mode",
         "TRAM"
       ],
       "layout": {
@@ -296,7 +296,7 @@
       "interactive": true,
       "filter": [
         "==",
-        "type",
+        "mode",
         "SUBWAY"
       ],
       "layout": {
@@ -376,7 +376,7 @@
       "interactive": true,
       "filter": [
         "in",
-        "type",
+        "mode",
         "",
         "RAIL"
       ],
