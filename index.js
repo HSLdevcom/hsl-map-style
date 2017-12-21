@@ -8,7 +8,7 @@ var isPlainObject = require("lodash/isPlainObject");
 var BASE_JSON = require("./hsl-gl-map-v9-style.json");
 
 var replaceableValues = {
-  SOURCES_URL: { default: "https://digitransit-prod-cdn-origin.azureedge.net/map/v1/" },
+  SOURCES_URL: { default: "https://cdn.digitransit.fi/map/v1/" },
   GLYPHS_URL: { default: "http://localhost:8000/" }
 };
 
