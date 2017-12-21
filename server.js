@@ -4,16 +4,9 @@ var express = require("express");
 var index = fs.readFileSync("index.html", "utf8");
 
 var style = require("./index").generateStyle({
-    sourcesUrl: "http://dev-api.digitransit.fi/map/v1/",
-    glyphsUrl: "http://kartat.hsl.fi/",
     components: {
-        text_fisv: { enabled: true },
-        routes: { enabled: true },
-        stops: { enabled: true },
         citybikes: { enabled: true },
         icons: { enabled: true },
-        print: { enabled: false },
-        municipal_borders: { enabled: true },
     }
 });
 
