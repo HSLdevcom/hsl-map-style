@@ -42,6 +42,11 @@
           "==",
           "mode",
           "BUS"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
         ]
       ],
       "interactive": true,
@@ -88,6 +93,11 @@
           "==",
           "mode",
           "BUS"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
         ]
       ],
       "interactive": true,
@@ -150,9 +160,17 @@
       "source": "routes",
       "source-layer": "routes",
       "filter": [
-        "==",
-        "mode",
-        "TRAM"
+        "all",
+        [
+          "==",
+          "mode",
+          "TRAM"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -187,9 +205,17 @@
       "source": "routes",
       "source-layer": "routes",
       "filter": [
-        "==",
-        "mode",
-        "TRAM"
+        "all",
+        [
+          "==",
+          "mode",
+          "TRAM"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -258,6 +284,11 @@
           "routeId",
           "2550",
           "4560"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
         ]
       ],
       "interactive": true,
@@ -299,6 +330,11 @@
           "routeId",
           "2550",
           "4560"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
         ]
       ],
       "interactive": true,
@@ -366,6 +402,11 @@
           "==",
           "underground",
           "false"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
         ]
       ],
       "layout": {
@@ -401,9 +442,17 @@
       "source": "routes",
       "source-layer": "routes",
       "filter": [
-        "==",
-        "mode",
-        "FERRY"
+        "all",
+        [
+          "==",
+          "mode",
+          "FERRY"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -474,6 +523,11 @@
           "==",
           "underground",
           "true"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
         ]
       ],
       "layout": {
@@ -512,9 +566,17 @@
       },
       "source": "rail",
       "filter": [
-        "==",
-        "$type",
-        "LineString"
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "layout": {
         "visibility": "visible"
