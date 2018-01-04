@@ -52,10 +52,16 @@ var components = [
     dependencies: ["text"]
   },
   {
-    id: "icons",
+    id: "poi",
     enabled: false,
     description: "Joukkoliikenne-POI",
-    style: require("./hsl-gl-map-v9-icons.json")
+    style: require("./hsl-gl-map-v9-poi.json")
+  },
+  {
+    id: "ticketsales",
+    enabled: false,
+    description: "Lipunmyyntipisteet",
+    style: require("./hsl-gl-map-v9-ticketsales.json")
   },
   {
     id: "driver_instructions",
