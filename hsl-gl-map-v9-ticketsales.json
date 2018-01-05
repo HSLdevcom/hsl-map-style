@@ -1,8 +1,8 @@
 {
   "sources": {
     "ticket-sales": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-ticket-sales-map/index.json",
-      "type": "vector"
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/e83c8208b81342a0a724e383f313498e_0.geojson",
+      "type": "geojson"
     }
   },
   "layers": [
@@ -10,7 +10,6 @@
       "id": "poi_label_tickets-sales-point",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "interactive": true,
       "filter": [
@@ -76,7 +75,6 @@
       "id": "poi_label_ticket-machine",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "interactive": true,
       "filter": [
@@ -142,7 +140,6 @@
       "id": "poi_label_ticket-machine-parking",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "interactive": true,
       "filter": [
@@ -207,7 +204,6 @@
       "id": "poi_label_service-point",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "interactive": true,
       "filter": [
