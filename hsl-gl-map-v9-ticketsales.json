@@ -1,7 +1,7 @@
 {
   "sources": {
     "ticket-sales": {
-      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/e83c8208b81342a0a724e383f313498e_0.geojson",
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/21918372164d410683f03925e4441598_0.geojson",
       "type": "geojson"
     }
   },
