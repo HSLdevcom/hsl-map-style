@@ -58,10 +58,10 @@ var components = [
     style: require("./hsl-gl-map-v9-poi.json")
   },
   {
-    id: "ticketsales",
+    id: "ticket_sales",
     enabled: false,
     description: "Lipunmyyntipisteet",
-    style: require("./hsl-gl-map-v9-ticketsales.json")
+    style: require("./hsl-gl-map-v9-ticket-sales.json")
   },
   {
     id: "driver_instructions",
