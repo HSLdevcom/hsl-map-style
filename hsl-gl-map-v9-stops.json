@@ -403,6 +403,39 @@
           ]
         }
       }
+    },
+    {
+      "id": "Stops_onClick",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "interactive": true,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              50
+            ]
+          ]
+        }
+      }
     }
   ]
 }

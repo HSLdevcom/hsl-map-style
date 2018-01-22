@@ -5,9 +5,7 @@ var index = fs.readFileSync("index.html", "utf8");
 
 var style = require("./index").generateStyle({
   components: {
-    citybikes: { enabled: true },
-    ticket_sales: { enabled: true },
-    poi: { enabled: true }
+    stops: { enabled: true }
   }
 });
 
