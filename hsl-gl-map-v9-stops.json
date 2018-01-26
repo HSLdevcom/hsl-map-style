@@ -414,7 +414,7 @@
       "source-layer": "stops",
       "interactive": true,
       "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "circle-color": "#ff0000",
@@ -427,11 +427,20 @@
             ],
             [
               12,
-              3
+              4
             ],
             [
               22,
-              50
+              60
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 0,
+          "stops": [
+            [
+              11,
+              0
             ]
           ]
         }
