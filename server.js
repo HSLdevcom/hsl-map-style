@@ -4,8 +4,11 @@ var express = require("express");
 var index = fs.readFileSync("index.html", "utf8");
 
 var style = require("./index").generateStyle({
+  glyphsUrl: "http://kartat.hsl.fi/",
   components: {
-    stops: { enabled: true }
+    stops: { enabled: false },
+    text_sv: { enabled: true },
+    text: { enabled: true }
   }
 });
 
