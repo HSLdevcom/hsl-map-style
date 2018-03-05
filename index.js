@@ -52,28 +52,28 @@ var components = [
     dependencies: ["text"]
   },
   {
-    id: "poi",
-    enabled: false,
-    description: "Joukkoliikenne-POI",
-    style: require("./hsl-gl-map-v9-poi.json")
-  },
-  {
     id: "ticket_sales",
     enabled: false,
     description: "Lipunmyyntipisteet",
     style: require("./hsl-gl-map-v9-ticket-sales.json")
   },
   {
-    id: "driver_instructions",
-    enabled: false,
-    description: "Kuljettajaohjeet",
-    style: require("./hsl-gl-map-v9-driver-instructions.json")
-  },
-  {
     id: "stops",
     enabled: false,
     description: "Pysäkit",
     style: require("./hsl-gl-map-v9-stops.json")
+  },
+  {
+    id: "poi",
+    enabled: false,
+    description: "Joukkoliikenne-POI",
+    style: require("./hsl-gl-map-v9-poi.json")
+  },
+  {
+    id: "driver_instructions",
+    enabled: false,
+    description: "Kuljettajaohjeet",
+    style: require("./hsl-gl-map-v9-driver-instructions.json")
   },
   {
     id: "citybikes",

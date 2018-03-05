@@ -48,7 +48,7 @@
           "Gotham Rounded Medium"
         ],
         "icon-allow-overlap": false,
-        "visibility": "visible",
+        "visibility": "none",
         "text-offset": [
           0,
           0.5
@@ -80,7 +80,7 @@
       "source": "vector",
       "source-layer": "rail_station_label",
       "minzoom": 5,
-      "maxzoom": 16,
+      "maxzoom": 24,
       "interactive": true,
       "filter": [
         "all",

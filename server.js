@@ -6,9 +6,10 @@ var index = fs.readFileSync("index.html", "utf8");
 var style = require("./index").generateStyle({
   glyphsUrl: "http://kartat.hsl.fi/",
   components: {
-    stops: { enabled: false },
-    text_sv: { enabled: true },
-    text: { enabled: true }
+    stops: { enabled: true },
+    text: { enabled: true },
+    poi: { enabled: true },
+    routes: { enabled: true }
   }
 });
 
