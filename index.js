@@ -32,6 +32,12 @@ var components = [
     style: require("./hsl-gl-map-v9-routes.json")
   },
   {
+    id: "regular_routes",
+    enabled: false,
+    description: "Linjaviivat ilman lähibusseja",
+    style: require("./hsl-gl-map-v9-regular-routes.json")
+  },
+  {
     id: "text",
     enabled: true,
     description: "Tekstit",
@@ -74,6 +80,12 @@ var components = [
     enabled: false,
     description: "Pysäkit",
     style: require("./hsl-gl-map-v9-stops.json")
+  },
+  {
+    id: "regular_stops",
+    enabled: false,
+    description: "Pysäkit ilman lähibusseja",
+    style: require("./hsl-gl-map-v9-regular-stops.json")
   },
   {
     id: "citybikes",
