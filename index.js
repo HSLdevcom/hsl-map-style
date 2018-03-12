@@ -32,6 +32,12 @@ var components = [
     style: require("./hsl-gl-map-v9-routes.json")
   },
   {
+    id: "regular_routes",
+    enabled: false,
+    description: "Linjaviivat ilman lähibusseja",
+    style: require("./hsl-gl-map-v9-regular-routes.json")
+  },
+  {
     id: "text",
     enabled: true,
     description: "Tekstit",
@@ -76,6 +82,12 @@ var components = [
     style: require("./hsl-gl-map-v9-driver-instructions.json")
   },
   {
+    id: "regular_stops",
+    enabled: false,
+    description: "Pysäkit ilman lähibusseja",
+    style: require("./hsl-gl-map-v9-regular-stops.json")
+  },
+  {
     id: "citybikes",
     enabled: false,
     description: "Kaupunkipyörät",
@@ -86,6 +98,12 @@ var components = [
     enabled: false,
     description: "Tulostevärit",
     style: require("./hsl-gl-map-v9-print.json")
+  },
+  {
+    id: "jore_terminals",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./hsl-gl-map-v9-jore-terminals.json")
   }
 ];
 

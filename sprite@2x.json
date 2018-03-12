@@ -94,7 +94,7 @@
     "height": 22,
     "pixelRatio": 2,
     "width": 32,
-    "x": 48,
+    "x": 80,
     "y": 188
   },
   "icon-park": {
@@ -108,7 +108,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 48,
-    "x": 0,
+    "x": 32,
     "y": 188
   },
   "icon-parliament": {
@@ -188,6 +188,13 @@
     "x": 184,
     "y": 0
   },
+  "icon-subway-station-2": {
+    "height": 32,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 216,
+    "y": 0
+  },
   "icon-suunta1": {
     "height": 60,
     "pixelRatio": 2,
@@ -206,28 +213,28 @@
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 216,
+    "x": 248,
     "y": 0
   },
   "icon-ticket-machine": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 248,
+    "x": 280,
     "y": 0
   },
   "icon-ticket-machine-parking": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 280,
+    "x": 312,
     "y": 0
   },
   "icon-tickets-sales-point": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 312,
+    "x": 344,
     "y": 0
   },
   "icon-time1": {
@@ -248,7 +255,7 @@
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 344,
-    "y": 0
+    "x": 0,
+    "y": 188
   }
 }

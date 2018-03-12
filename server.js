@@ -8,7 +8,7 @@ var style = require("./index").generateStyle({
   components: {
     stops: { enabled: true },
     text: { enabled: true },
-    poi: { enabled: true },
+    jore_terminals: { enabled: true },
     routes: { enabled: true }
   }
 });
