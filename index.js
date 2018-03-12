@@ -86,6 +86,12 @@ var components = [
     enabled: false,
     description: "Tulostevärit",
     style: require("./hsl-gl-map-v9-print.json")
+  },
+  {
+    id: "jore_terminals",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./hsl-gl-map-v9-jore-terminals.json")
   }
 ];
 
