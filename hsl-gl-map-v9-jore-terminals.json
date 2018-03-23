@@ -28,20 +28,8 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
         "text-allow-overlap": false,
-        "icon-image": "icon-subway-station-2",
+        "icon-image": "icon-subway-station",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
@@ -53,7 +41,23 @@
           0.5
         ],
         "icon-optional": false,
-        "icon-size": 1,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              4
+            ]
+          ]
+        },
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8,
@@ -93,18 +97,6 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
         "text-allow-overlap": false,
         "icon-image": "icon-rail-station",
         "text-ignore-placement": false,
@@ -118,7 +110,23 @@
           0.5
         ],
         "icon-optional": false,
-        "icon-size": 0.9,
+        "icon-size": {
+          "base": 0.9,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              0.9
+            ],
+            [
+              22,
+              3.6
+            ]
+          ]
+        },
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8,
@@ -158,18 +166,6 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
         "text-allow-overlap": false,
         "icon-image": "icon-bus-station",
         "text-ignore-placement": false,
@@ -183,7 +179,23 @@
           0.5
         ],
         "icon-optional": false,
-        "icon-size": 1,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              4
+            ]
+          ]
+        },
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8,
