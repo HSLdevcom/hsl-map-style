@@ -15,7 +15,7 @@
   },
   "layers": [
     {
-      "id": "Stops case",
+      "id": "Stops case platform",
       "type": "circle",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
@@ -24,9 +24,16 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "!=",
-        "mode",
-        "RAIL"
+        "all",
+        [
+          "!=",
+          "mode",
+          "RAIL"
+        ],
+        [
+          "has",
+          "terminalId"
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -47,6 +54,123 @@
             [
               22,
               26
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              0
+            ],
+            [
+              16.1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Stops case",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "mode",
+          "RAIL"
+        ],
+        [
+          "!has",
+          "terminalId"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1.5
+            ],
+            [
+              22,
+              26
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Stops case rail platform",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 15,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "mode",
+          "RAIL"
+        ],
+        [
+          "has",
+          "terminalId"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1.5
+            ],
+            [
+              22,
+              26
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              0
+            ],
+            [
+              16.1,
+              1
             ]
           ]
         }
@@ -63,9 +187,16 @@
       "minzoom": 15,
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "RAIL"
+        "all",
+        [
+          "==",
+          "mode",
+          "RAIL"
+        ],
+        [
+          "!has",
+          "terminalId"
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -92,6 +223,64 @@
       }
     },
     {
+      "id": "Stops_bus_platform",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "mode",
+          "BUS"
+        ],
+        [
+          "has",
+          "terminalId"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#007ac9",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              0
+            ],
+            [
+              16.1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "Stops_bus",
       "type": "circle",
       "metadata": {
@@ -101,9 +290,16 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "BUS"
+        "all",
+        [
+          "==",
+          "mode",
+          "BUS"
+        ],
+        [
+          "!has",
+          "terminalId"
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -245,6 +441,47 @@
       }
     },
     {
+      "id": "Stops_rail_platform",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "ref": "Stops case rail platform",
+      "interactive": true,
+      "paint": {
+        "circle-color": "#8c54a2",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              0
+            ],
+            [
+              16.1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "Stops_rail",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
@@ -295,9 +532,16 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "SUBWAY"
+        "all",
+        [
+          "==",
+          "mode",
+          "SUBWAY"
+        ],
+        [
+          "!has",
+          "terminalId"
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -330,6 +574,105 @@
             ],
             [
               14,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Stops_subway_platform",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "mode",
+          "SUBWAY"
+        ],
+        [
+          "has",
+          "terminalId"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#ff6319",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              0
+            ],
+            [
+              16.1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Stops_hub_platform",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "ref": "Stops case platform",
+      "interactive": true,
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              14.1,
+              2
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              0
+            ],
+            [
+              16.1,
               1
             ]
           ]
@@ -375,10 +718,17 @@
       "minzoom": 15,
       "interactive": true,
       "filter": [
-        "in",
+        "all",
+        [
+          "in",
         "mode",
         "",
         "RAIL"
+        ],
+        [
+          "!has",
+          "terminalId"
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -399,6 +749,66 @@
             [
               22,
               20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Stops_hub_rail_platform",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 15,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "in",
+          "mode",
+          "",
+          "RAIL"
+        ],
+        [
+          "has",
+          "terminalId"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              14.1,
+              2
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              0
+            ],
+            [
+              16.1,
+              1
             ]
           ]
         }

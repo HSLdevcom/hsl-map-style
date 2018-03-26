@@ -28,13 +28,13 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-allow-overlap": false,
+        "text-allow-overlap": true,
         "icon-image": "icon-subway-station",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "visibility": "visible",
         "text-offset": [
           0,
@@ -53,8 +53,12 @@
               1
             ],
             [
-              22,
-              4
+              16,
+              2
+            ],
+            [
+              16.1,
+              0
             ]
           ]
         },
@@ -97,13 +101,13 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-allow-overlap": false,
+        "text-allow-overlap": true,
         "icon-image": "icon-rail-station",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "visibility": "visible",
         "text-offset": [
           0,
@@ -122,8 +126,12 @@
               0.9
             ],
             [
-              22,
-              3.6
+              16,
+              1.8
+            ],
+            [
+              16.1,
+              0
             ]
           ]
         },
@@ -166,13 +174,13 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-allow-overlap": false,
+        "text-allow-overlap": true,
         "icon-image": "icon-bus-station",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "visibility": "visible",
         "text-offset": [
           0,
@@ -191,8 +199,12 @@
               1
             ],
             [
-              22,
-              4
+              16,
+              2
+            ],
+            [
+              16.1,
+              0
             ]
           ]
         },
