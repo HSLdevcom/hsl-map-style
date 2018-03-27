@@ -11,7 +11,8 @@
       "type": "symbol",
       "source": "terminals",
       "source-layer": "terminals",
-      "minzoom": 11,
+      "minzoom": 11.9,
+      "maxzoom": 16.1,
       "interactive": true,
       "filter": [
         "all",
@@ -84,7 +85,8 @@
       "type": "symbol",
       "source": "terminals",
       "source-layer": "terminals",
-      "minzoom": 11,
+      "minzoom": 11.9,
+      "maxzoom": 16.1,
       "interactive": true,
       "filter": [
         "all",
@@ -157,7 +159,8 @@
       "type": "symbol",
       "source": "terminals",
       "source-layer": "terminals",
-      "minzoom": 11,
+      "minzoom": 11.9,
+      "maxzoom": 16.1,
       "interactive": true,
       "filter": [
         "all",

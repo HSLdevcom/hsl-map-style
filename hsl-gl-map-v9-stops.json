@@ -823,9 +823,60 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
+      "filter": [
+        "!has",
+        "terminalId"
+      ],
       "layout": {
         "visibility": "visible"
       },
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              60
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 0,
+          "stops": [
+            [
+              11,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Platform_stops_onClick",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "interactive": true,
+      "filter": [
+        "has",
+        "terminalId"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 15.9,
       "paint": {
         "circle-color": "#ff0000",
         "circle-radius": {
