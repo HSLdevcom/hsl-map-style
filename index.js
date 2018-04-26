@@ -104,7 +104,19 @@ var components = [
     enabled: false,
     description: "Tulostevärit",
     style: require("./hsl-gl-map-v9-jore-terminals.json")
-  }
+  },
+  {
+    id: "otp_stops",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./hsl-gl-map-v9-otp-stops.json")
+  },
+  {
+    id: "otp_stations",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./hsl-gl-map-v9-otp-stations.json")
+  },
 ];
 
 /**

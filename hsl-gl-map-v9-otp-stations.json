@@ -1,0 +1,227 @@
+{
+  "sources": {
+    "terminals": {
+      "url": "https://digitransit-prod-cdn-origin.azureedge.net/map/v1/hsl-stop-map/index.json",
+      "type": "vector"
+    }
+  },
+  "layers": [
+    {
+      "id": "terminals_subway-station",
+      "type": "symbol",
+      "source": "stops",
+      "source-layer": "stations",
+      "minzoom": 11.9,
+      "maxzoom": 16.1,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "SUBWAY"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-allow-overlap": true,
+        "icon-image": "icon-subway-station",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              0.5
+            ],
+            [
+              16,
+              1
+            ],
+            [
+              16.1,
+              0
+            ]
+          ]
+        },
+        "text-anchor": "top",
+
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "terminals_rail-station",
+      "type": "symbol",
+      "source": "stops",
+      "source-layer": "stations",
+      "minzoom": 11.9,
+      "maxzoom": 16.1,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "RAIL"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-allow-overlap": true,
+        "icon-image": "icon-rail-station",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": {
+          "base": 0.9,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              0.5
+            ],
+            [
+              16,
+              1
+            ],
+            [
+              16.1,
+              0
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "terminals_bus-station",
+      "type": "symbol",
+      "source": "stops",
+      "source-layer": "stations",
+      "minzoom": 11.9,
+      "maxzoom": 16.1,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "BUS"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-allow-overlap": true,
+        "icon-image": "icon-bus-station",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              0.5
+            ],
+            [
+              16,
+              1
+            ],
+            [
+              16.1,
+              0
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    }
+  ]
+}
