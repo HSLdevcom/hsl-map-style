@@ -104,6 +104,18 @@ var components = [
     enabled: false,
     description: "Tulostevärit",
     style: require("./hsl-gl-map-v9-jore-terminals.json")
+  },
+  {
+    id: "near_bus_routes",
+    enabled: false,
+    description: "Lähibussi reitit",
+    style: require("./hsl-gl-map-v9-near-bus-routes.json")
+  },
+  {
+    id: "near_bus_stops",
+    enabled: false,
+    description: "Lähibussi pysäkit",
+    style: require("./hsl-gl-map-v9-near-bus-stops.json")
   }
 ];
 
