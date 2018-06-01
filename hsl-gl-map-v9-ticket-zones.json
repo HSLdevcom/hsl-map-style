@@ -17,7 +17,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#999999",
+        "line-color": "#666666",
         "line-width": {
           "base": 1,
           "stops": [
