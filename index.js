@@ -116,6 +116,12 @@ var components = [
     enabled: false,
     description: "Lähibussi pysäkit",
     style: require("./hsl-gl-map-v9-near-bus-stops.json")
+  },
+  {
+    id: "ticket_zones",
+    enabled: false,
+    description: "Lippyvyöhykkeet",
+    style: require("./hsl-gl-map-v9-ticket-zones.json")
   }
 ];
 

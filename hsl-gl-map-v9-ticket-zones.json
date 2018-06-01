@@ -1,0 +1,66 @@
+{
+  "sources": {
+    "ticketzones": {
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/b00bf5910c8246bca8da0b39cd4d588a_0.geojson",
+      "type": "geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "ticketzones",
+      "type": "line",
+      "source": "ticketzones",
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(0,0,0,0.5)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "ticketzones_shadow",
+      "type": "line",
+      "source": "ticketzones",
+      "interactive": true,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(0,0,0,0.2)",
+        "line-width": {
+          "base": 4,
+          "stops": [
+            [
+              10,
+              15
+            ],
+            [
+              18,
+              20
+            ]
+          ]
+        },
+        "line-blur": 0
+      }
+    }
+  ]
+}
