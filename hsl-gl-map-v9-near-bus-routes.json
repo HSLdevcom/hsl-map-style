@@ -9,7 +9,7 @@
   },
   "sources": {
     "routes": {
-      "url": "http://dev-kartat.hsldev.com/jore/tiles/near-bus-routes/index.json",
+      "url": "https://kartat.hsldev.com/jore/tiles/near-bus-routes/index.json",
       "type": "vector"
     },
     "rail": {

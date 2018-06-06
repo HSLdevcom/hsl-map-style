@@ -9,7 +9,7 @@
   },
   "sources": {
     "stops": {
-      "url": "http://dev-kartat.hsldev.com/jore/tiles/near-bus-stops/index.json",
+      "url": "https://kartat.hsldev.com/jore/tiles/near-bus-stops/index.json",
       "type": "vector"
     }
   },
