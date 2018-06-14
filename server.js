@@ -7,7 +7,7 @@ var style = require("./index").generateStyle({
   components: {
     citybikes: { enabled: true },
     ticket_sales: { enabled: true },
-    poi: { enabled: true }
+    poi: { enabled: true },
     jore_terminals: { enabled: true }
   }
 });
