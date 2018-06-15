@@ -122,6 +122,12 @@ var components = [
     enabled: false,
     description: "Lippyvyöhykkeet",
     style: require("./hsl-gl-map-v9-ticket-zones.json")
+  },
+  {
+    id: "ticket_zone_labels",
+    enabled: false,
+    description: "Lippyvyöhykkeen ikonit",
+    style: require("./hsl-gl-map-v9-ticket-zone-labels.json")
   }
 ];
 

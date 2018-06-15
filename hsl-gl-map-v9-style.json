@@ -21,7 +21,7 @@
             "type": "vector"
         }
     },
-    "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/bb980ff122fdaa9194488f0c3eaeb6172866bfdd/sprite",
+    "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/8d772ae4ed0fe800df7a2dae200f508317a1411e/sprite",
     "glyphs": "http://localhost:8000/fontstack/{fontstack}/{range}.pbf",
     "layers": [],
     "created": "2016-05-12T07:20:14.210Z",
