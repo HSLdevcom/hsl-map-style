@@ -4,7 +4,7 @@ var express = require("express");
 var index = fs.readFileSync("index.html", "utf8");
 
 var style = require("./index").generateStyle({
-  glyphsUrl: "http://kartat.hsl.fi/",
+  glyphsUrl: "https://static.hsl.fi/mapfonts/",
   components: {
     text: { enabled: true },
     otp_stops: { enabled: true },
