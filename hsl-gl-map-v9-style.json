@@ -22,7 +22,7 @@
         }
     },
     "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
-    "glyphs": "http://localhost:8000/fontstack/{fontstack}/{range}.pbf",
+    "glyphs": "https://static.hsl.fi/mapfonts/{fontstack}/{range}.pbf",
     "layers": [],
     "created": "2016-05-12T07:20:14.210Z",
     "id": "cio3ytjzp005dbzm1uaowh9s3",
