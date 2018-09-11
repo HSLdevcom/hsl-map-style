@@ -7,10 +7,7 @@ var style = require("./index").generateStyle({
   components: {
     citybikes: { enabled: true },
     ticket_sales: { enabled: true },
-    poi: { enabled: true },
-    routes: { enabled: true },
-    text: { enabled: true },
-    text_fisv: { enabled: true }
+    poi: { enabled: true }
   }
 });
 
