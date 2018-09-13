@@ -2839,6 +2839,98 @@
             }
         },
         {
+            "id": "bridge_pedestrian",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "paint": {
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            16.5
+                        ]
+                    ]
+                },
+                "line-color": "rgba(255, 255, 255, 1)"
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "pedestrian"
+                ],
+                [
+                    "==",
+                    "structure",
+                    "bridge"
+                ]
+            ]
+        },
+        {
+            "id": "bridge_pedestrian_case",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "layout": {
+                "visibility": "visible",
+                "line-join": "round",
+                "line-cap": "butt",
+                "line-miter-limit": 2
+            },
+            "paint": {
+                "line-color": "#ccc",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.25
+                        ],
+                        [
+                            20,
+                            6
+                        ]
+                    ]
+                },
+                "line-gap-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            30
+                        ]
+                    ]
+                }
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "pedestrian"
+                ],
+                [
+                    "==",
+                    "structure",
+                    "bridge"
+                ]
+            ]
+        },
+        {
             "id": "bridge_street_case",
             "type": "line",
             "source": "vector",
