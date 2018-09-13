@@ -2839,44 +2839,6 @@
             }
         },
         {
-            "id": "bridge_pedestrian",
-            "type": "line",
-            "source": "vector",
-            "source-layer": "road",
-            "paint": {
-                "line-width": {
-                    "base": 1.55,
-                    "stops": [
-                        [
-                            4,
-                            0.25
-                        ],
-                        [
-                            20,
-                            16.5
-                        ]
-                    ]
-                },
-                "line-color": "rgba(255, 255, 255, 1)"
-            },
-            "layout": {
-                "visibility": "visible"
-            },
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "class",
-                    "pedestrian"
-                ],
-                [
-                    "==",
-                    "structure",
-                    "bridge"
-                ]
-            ]
-        },
-        {
             "id": "bridge_pedestrian_case",
             "type": "line",
             "source": "vector",
@@ -2915,6 +2877,44 @@
                         ]
                     ]
                 }
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "pedestrian"
+                ],
+                [
+                    "==",
+                    "structure",
+                    "bridge"
+                ]
+            ]
+        },
+        {
+            "id": "bridge_pedestrian",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "paint": {
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            16.5
+                        ]
+                    ]
+                },
+                "line-color": "rgba(255, 255, 255, 1)"
+            },
+            "layout": {
+                "visibility": "visible"
             },
             "filter": [
                 "all",
