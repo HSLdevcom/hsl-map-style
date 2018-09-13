@@ -2217,6 +2217,12 @@
                 [
                     "all",
                     [
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
+                    ],
+                    [
                         "in",
                         "class",
                         "link",
@@ -2312,6 +2318,12 @@
                 ],
                 [
                     "all",
+                    [
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
+                    ],
                     [
                         "in",
                         "class",
@@ -3168,6 +3180,126 @@
                         [
                             20,
                             100
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "bridge_motorway_link_case",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "link",
+                        "motorway_link"
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "motorway_link",
+                        "trunk_link"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "butt",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#f4d880",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            6,
+                            1
+                        ],
+                        [
+                            20,
+                            44
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "bridge_motorway_link",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "link",
+                        "motorway_link"
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "motorway_link",
+                        "trunk_link"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            "#fff"
+                        ],
+                        [
+                            10.2,
+                            "#fef2c6"
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            20,
+                            40
                         ]
                     ]
                 }
