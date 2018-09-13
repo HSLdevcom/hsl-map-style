@@ -88,6 +88,43 @@
           ]
         }
       }
+    },
+    {
+      "id": "Stops_citybikes_onClick",
+      "metadata": {
+        "mapbox:group": "1457010266398.4177"
+      },
+      "ref": "Stops case citybikes",
+      "interactive": true,
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              60
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 0,
+          "stops": [
+            [
+              11,
+              0
+            ]
+          ]
+        }
+      }
     }
   ]
 }
