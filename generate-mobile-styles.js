@@ -19,7 +19,7 @@ style = index.generateStyle({
   }
 });
 
-fs.writeFile(output + "/finnish_with_stops.json", JSON.stringify(style), function generateFiStops(err) {
+fs.writeFile(output + "/hsl-map-style-with-stations.json", JSON.stringify(style), function generateFiStops(err) {
   if (err) {
     // eslint-disable-next-line
     console.log(err);
@@ -38,7 +38,7 @@ style = index.generateStyle({
   }
 });
 
-fs.writeFile(output + "/swedish_with_stops.json", JSON.stringify(style), function generateFiStops(err) {
+fs.writeFile(output + "/hsl-map-style-with-stations-swedish.json", JSON.stringify(style), function generateFiStops(err) {
   if (err) {
     // eslint-disable-next-line
     console.log(err);
@@ -54,7 +54,7 @@ style = index.generateStyle({
   }
 });
 
-fs.writeFile(output + "/finnish_base.json", JSON.stringify(style), function generateFiStops(err) {
+fs.writeFile(output + "/hsl-map-style-without-stops.json", JSON.stringify(style), function generateFiStops(err) {
   if (err) {
     // eslint-disable-next-line
     console.log(err);
@@ -71,7 +71,7 @@ style = index.generateStyle({
   }
 });
 
-fs.writeFile(output + "/swedish_base.json", JSON.stringify(style), function generateFiStops(err) {
+fs.writeFile(output + "/hsl-map-style-without-stops-swedish.json", JSON.stringify(style), function generateFiStops(err) {
   if (err) {
     // eslint-disable-next-line
     console.log(err);
