@@ -1347,54 +1347,6 @@
             }
         },
         {
-            "id": "bridge_subway",
-            "type": "line",
-            "source": "vector",
-            "source-layer": "road",
-            "filter": [
-                "all",
-                [
-                    "!=",
-                    "osm_id",
-                    120809795
-                ],
-                [
-                    "==",
-                    "class",
-                    "major_rail"
-                ],
-                [
-                    "==",
-                    "structure",
-                    "bridge"
-                ],
-                [
-                    "==",
-                    "type",
-                    "subway"
-                ]
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "line-color": "#bbb",
-                "line-width": {
-                    "base": 1.4,
-                    "stops": [
-                        [
-                            6,
-                            0.5
-                        ],
-                        [
-                            20,
-                            20
-                        ]
-                    ]
-                }
-            }
-        },
-        {
             "id": "waterway",
             "ref": "waterway_case",
             "paint": {
@@ -2680,6 +2632,54 @@
                         [
                             22,
                             8
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "bridge_subway",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "osm_id",
+                    120809795
+                ],
+                [
+                    "==",
+                    "class",
+                    "major_rail"
+                ],
+                [
+                    "==",
+                    "structure",
+                    "bridge"
+                ],
+                [
+                    "==",
+                    "type",
+                    "subway"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "#bbb",
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            20,
+                            20
                         ]
                     ]
                 }
