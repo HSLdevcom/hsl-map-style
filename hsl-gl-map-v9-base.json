@@ -1234,6 +1234,59 @@
             }
         },
         {
+            "id": "tunnel_road_path_cycleway",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "structure",
+                        "tunnel"
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "cycleway",
+                        "pedestrian",
+                        "track"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            0,
+                            1.5
+                        ],
+                        [
+                            22,
+                            26
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ]
+            }
+        },
+        {
             "id": "road_subway",
             "type": "line",
             "source": "vector",
@@ -1849,9 +1902,10 @@
                 [
                     "all",
                     [
-                        "!=",
+                        "!in",
                         "structure",
-                        "bridge"
+                        "bridge",
+                        "tunnel"
                     ],
                     [
                         "in",
