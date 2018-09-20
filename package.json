@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "styletool": "./bin/styletool-cli"
+  },
   "scripts": {
     "start": "node server",
     "watch": "nodemon --watch . -e js,json,html server",
@@ -20,6 +23,9 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "commander": "^2.18.0",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2"
   }
 }
