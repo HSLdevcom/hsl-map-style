@@ -5,7 +5,7 @@ var mergeWith = require("lodash/mergeWith");
 var cloneDeep = require("lodash/cloneDeep");
 var isPlainObject = require("lodash/isPlainObject");
 
-var BASE_JSON = require("./hsl-gl-map-v9-style.json");
+var BASE_JSON = require("./_oldstyle/hsl-gl-map-v9-style.json");
 
 var replaceableValues = {
   SOURCES_URL: { default: "https://cdn.digitransit.fi/map/v1/" },
@@ -17,75 +17,75 @@ var components = [
     id: "base",
     enabled: true,
     description: "Taustakartta",
-    style: require("./hsl-gl-map-v9-base.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-base.json")
   },
   {
     id: "municipal_borders",
     enabled: false,
     description: "Kuntarajat",
-    style: require("./hsl-gl-map-v9-municipal-borders.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-municipal-borders.json")
   },
   {
     id: "routes",
     enabled: false,
     description: "Linjaviivat",
-    style: require("./hsl-gl-map-v9-routes.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-routes.json")
   },
   {
     id: "text",
     enabled: true,
     description: "Tekstit",
-    style: require("./hsl-gl-map-v9-text.json"),
+    style: require("./_oldstyle/hsl-gl-map-v9-text.json"),
   },
   {
     id: "text_sv",
     enabled: false,
     description: "Ruotsinkieliset tekstit",
-    style: require("./hsl-gl-map-v9-text-sv.json"),
+    style: require("./_oldstyle/hsl-gl-map-v9-text-sv.json"),
     dependencies: ["text"]
   },
   {
     id: "text_fisv",
     enabled: false,
     description: "Kaksikieliset tekstit",
-    style: require("./hsl-gl-map-v9-text-fisv.json"),
+    style: require("./_oldstyle/hsl-gl-map-v9-text-fisv.json"),
     dependencies: ["text"]
   },
   {
     id: "poi",
     enabled: false,
     description: "Joukkoliikenne-POI",
-    style: require("./hsl-gl-map-v9-poi.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-poi.json")
   },
   {
     id: "ticket_sales",
     enabled: false,
     description: "Lipunmyyntipisteet",
-    style: require("./hsl-gl-map-v9-ticket-sales.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-ticket-sales.json")
   },
   {
     id: "driver_instructions",
     enabled: false,
     description: "Kuljettajaohjeet",
-    style: require("./hsl-gl-map-v9-driver-instructions.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-driver-instructions.json")
   },
   {
     id: "stops",
     enabled: false,
     description: "Pysäkit",
-    style: require("./hsl-gl-map-v9-stops.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-stops.json")
   },
   {
     id: "citybikes",
     enabled: false,
     description: "Kaupunkipyörät",
-    style: require("./hsl-gl-map-v9-citybikes.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-citybikes.json")
   },
   {
     id: "print",
     enabled: false,
     description: "Tulostevärit",
-    style: require("./hsl-gl-map-v9-print.json")
+    style: require("./_oldstyle/hsl-gl-map-v9-print.json")
   }
 ];
 

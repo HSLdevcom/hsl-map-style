@@ -1,0 +1,51 @@
+{
+  "layers": [
+    {
+      "id": "admin_country",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "admin",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "<=",
+            "admin_level",
+            2
+          ],
+          [
+            "==",
+            "maritime",
+            0
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#8b8a8a",
+        "line-width": {
+          "base": 1.3,
+          "stops": [
+            [
+              3,
+              0.5
+            ],
+            [
+              22,
+              15
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

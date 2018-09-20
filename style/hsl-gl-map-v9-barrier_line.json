@@ -1,0 +1,122 @@
+{
+  "layers": [
+    {
+      "id": "landuse_barrier_line",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "land"
+        ],
+        [
+          "in",
+          "$type",
+          "Point",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#edf0f5",
+        "fill-outline-color": "#a6d8f4"
+      }
+    },
+    {
+      "id": "landuse_barrier_line_land",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "class",
+          "land"
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt"
+      },
+      "paint": {
+        "line-color": "#f0f1f2",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landuse_barrier_line_cliff",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "cliff"
+        ],
+        [
+          "in",
+          "$type",
+          "LineString",
+          "Polygon"
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "line-color": "#ccc",
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "landuse_barrier_line_fence",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "==",
+        "class",
+        "fence"
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              4,
+              0.25
+            ],
+            [
+              20,
+              6
+            ]
+          ]
+        },
+        "line-color": "#ccc"
+      }
+    }
+  ]
+}

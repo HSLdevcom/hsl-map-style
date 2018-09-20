@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "commander": "^2.18.0",
+    "fs-extra": "^7.0.0",
     "lodash": "^4.17.4",
-    "mkdirp": "^0.5.1",
     "rimraf": "^2.6.2"
   }
 }

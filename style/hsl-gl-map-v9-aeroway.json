@@ -1,0 +1,88 @@
+{
+  "layers": [
+    {
+      "id": "landuse_aeroway",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "aeroway",
+      "filter": [
+        "==",
+        "$type",
+        "Polygon"
+      ],
+      "paint": {
+        "fill-color": "#e3e3e3",
+        "fill-outline-color": "#ccc"
+      }
+    },
+    {
+      "id": "aeroway",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "aeroway",
+      "filter": [
+        "==",
+        "type",
+        "runway"
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              10,
+              2.5
+            ],
+            [
+              20,
+              240
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "aeroway_taxiway",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "aeroway",
+      "filter": [
+        "==",
+        "type",
+        "taxiway"
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              10,
+              1
+            ],
+            [
+              22,
+              8
+            ]
+          ]
+        },
+        "line-opacity": 1,
+        "line-dasharray": [
+          1,
+          2
+        ]
+      }
+    }
+  ]
+}
