@@ -141,6 +141,12 @@
       }
     }
   ],
+  "sources": {
+    "kuljettajaohjeet": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuljettajaohjeet.json",
+      "type": "geojson"
+    }
+  },
   "metadata": {
     "mapbox:groups": {
       "1460634974533.995": {

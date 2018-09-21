@@ -45,48 +45,7 @@
   "zoom": 14.051135528958179,
   "bearing": 0,
   "pitch": 0,
-  "sources": {
-    "vector": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-vector-map/index.json",
-      "type": "vector"
-    },
-    "parkandride": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
-      "type": "vector"
-    },
-    "borders": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuntarajat.json",
-      "type": "geojson"
-    },
-    "routes": {
-      "url": "http://kartat.hsl.fi/jore/tiles/routes/index.json",
-      "type": "vector"
-    },
-    "rail": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/rail.geojson",
-      "type": "geojson"
-    },
-    "subway": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/subway.geojson",
-      "type": "geojson"
-    },
-    "ticket-sales": {
-      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/727c6618a0814f8ba21bb00c9cb34019_0.geojson",
-      "type": "geojson"
-    },
-    "kuljettajaohjeet": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuljettajaohjeet.json",
-      "type": "geojson"
-    },
-    "stops": {
-      "url": "http://kartat.hsl.fi/jore/tiles/stops/index.json",
-      "type": "vector"
-    },
-    "citybike": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-citybike-map/index.json",
-      "type": "vector"
-    }
-  },
+  "sources": {},
   "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
   "glyphs": "https://static.hsl.fi/mapfonts/{fontstack}/{range}.pbf",
   "layers": [],

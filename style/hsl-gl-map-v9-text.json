@@ -1794,6 +1794,65 @@
       }
     },
     {
+      "id": "poi_label_park-and-ride_hub",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010287588.8713"
+      },
+      "source": "parkandride",
+      "source-layer": "hubs",
+      "minzoom": 14,
+      "interactive": true,
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-park-and-ride",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
       "id": "poi_label_subway-station",
       "type": "symbol",
       "metadata": {
@@ -2102,8 +2161,360 @@
         ],
         "icon-opacity": 1
       }
+    },
+    {
+      "id": "poi_label_tickets-sales-point",
+      "type": "symbol",
+      "source": "ticket-sales",
+      "minzoom": 15,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "Tyyppi",
+          "Myyntipiste",
+          "R-kioski"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-tickets-sales-point",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_ticket-machine",
+      "type": "symbol",
+      "source": "ticket-sales",
+      "minzoom": 15,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "TYYPPI",
+          "HSL Automaatti KL",
+          "HSL Automaatti MNL"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-ticket-machine",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_ticket-machine-parking",
+      "type": "symbol",
+      "source": "ticket-sales",
+      "minzoom": 15,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "TYYPPI",
+          "HKI Automaatti PA"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-ticket-machine-parking",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_service-point",
+      "type": "symbol",
+      "source": "ticket-sales",
+      "minzoom": 15,
+      "interactive": true,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "TYYPPI",
+          "Palvelupiste"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-image": "icon-service-point",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_citybike-station",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010266398.4177"
+      },
+      "source": "citybike",
+      "source-layer": "stations",
+      "minzoom": 14,
+      "interactive": true,
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": false,
+        "icon-offset": [
+          0,
+          -6
+        ],
+        "icon-image": "icon-citybike-station",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": false,
+        "symbol-placement": "point",
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0.8
+            ],
+            [
+              20,
+              1.2
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "text-max-width": 8,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          0
+        ],
+        "icon-opacity": 1
+      }
     }
   ],
+  "sources": {
+    "vector": {
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-vector-map/index.json",
+      "type": "vector"
+    },
+    "parkandride": {
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+      "type": "vector"
+    },
+    "ticket-sales": {
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/727c6618a0814f8ba21bb00c9cb34019_0.geojson",
+      "type": "geojson"
+    },
+    "citybike": {
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-citybike-map/index.json",
+      "type": "vector"
+    }
+  },
   "metadata": {
     "mapbox:groups": {
       "1457010362398.355": {
@@ -2116,6 +2527,14 @@
       },
       "1457010208438.9548": {
         "name": "POI–public-transport",
+        "collapsed": true
+      },
+      "1457010287588.8713": {
+        "name": "POI-park-and-ride",
+        "collapsed": true
+      },
+      "1457010266398.4177": {
+        "name": "POI-citybikes",
         "collapsed": true
       }
     }

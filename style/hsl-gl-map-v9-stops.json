@@ -322,6 +322,12 @@
       }
     }
   ],
+  "sources": {
+    "stops": {
+      "url": "http://kartat.hsl.fi/jore/tiles/stops/index.json",
+      "type": "vector"
+    }
+  },
   "metadata": {
     "mapbox:groups": {
       "1455204550197.1404": {

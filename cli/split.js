@@ -4,31 +4,62 @@ var get = require("lodash/get");
 var set = require("lodash/set");
 var reduce = require("lodash/reduce");
 var find = require("lodash/find");
+var some = require("lodash/some");
 var merge = require("lodash/merge");
 
 var FILENAME_PREFIX = "hsl-gl-map-v9-";
 
-var manualLayerGroups = {
-  base: [
-    "building",
-    "facilities",
-    "hubs",
-    "landuse",
-    "landuse_overlay",
-    "road",
-    "water",
-    "waterway"
-  ],
-  text: [
-    "airport_label",
-    "country_label",
-    "housenum_label",
-    "place_label",
-    "poi_label",
-    "rail_station_label",
-    "road_label",
-    "water_label"
-  ]
+function select(values, value) {
+  return some(values, function (val) {
+    return val === value;
+  });
+}
+
+// manually assign layers into files. The order matters -
+// the later file group will override the earlier.
+var layerFileGroups = {
+  base: function (value) {
+    var sourceLayers = [
+      "background",
+      "building",
+      "facilities",
+      "hubs",
+      "road",
+      "water",
+      "waterway",
+      "waterway_case",
+      "aeroway",
+      "aeroway_taxiway",
+      "admin_country"
+    ];
+
+    if (/landuse|road|building|tunnel|bridge/.test(value)) {
+      return true;
+    }
+
+    return select(sourceLayers, value);
+  },
+  text: function (value) {
+    return /label/.test(value);
+  },
+  "driver-instructions": function (value) {
+    var sourceLayers = [
+      "poi_bajamaja",
+      "poi_taukotila"
+    ];
+
+    return select(sourceLayers, value);
+  },
+  "ticket-sales": function (value) {
+    var sourceLayers = [
+      "poi_label_service-point",
+      "poi_label_ticket-machine-parking",
+      "poi_label_ticket-machine",
+      "poi_label_tickets-sales-point"
+    ];
+
+    return select(sourceLayers, value);
+  }
 };
 
 module.exports = function (file, dir) {
@@ -39,12 +70,14 @@ module.exports = function (file, dir) {
 
   var styleJson = fs.readJsonSync(filePath);
   var mapboxGroups = get(styleJson, "metadata.mapbox:groups", {});
+  var sources = get(styleJson, "sources", {});
   var layers = get(styleJson, "layers", []);
 
   console.log("Resetting style wrapper...");
 
   // Reset these to empty things
   set(styleJson, "metadata.mapbox-groups", {});
+  set(styleJson, "sources", {});
   set(styleJson, "layers", []);
 
   console.log("Writing style wrapper...");
@@ -54,13 +87,17 @@ module.exports = function (file, dir) {
   console.log("Splitting layers...");
 
   var layerGroups = reduce(layers, function (groups, layer) {
+    var layerId = get(layer, "id");
     var sourceLayer = get(layer, "source-layer", "base");
-    var fileGroup = reduce(manualLayerGroups, function (groupName, layerNames, layerGroupName) {
-      var isInGroup = find(layerNames, function (layerName) {
-        return layerName === sourceLayer;
-      });
 
-      if (typeof isInGroup !== "undefined") {
+    var fileGroup = reduce(layerFileGroups, function (groupName, match, layerGroupName) {
+      var isInGroup = [layerId, sourceLayer].some(match);
+
+      if (!isInGroup) {
+        isInGroup = match(layerId);
+      }
+
+      if (isInGroup) {
         return layerGroupName;
       }
 
@@ -81,7 +118,17 @@ module.exports = function (file, dir) {
     };
 
     groupLayers.forEach(function (layer) {
+      var source = get(layer, "source");
       var mapboxGroup = get(layer, "metadata.mapbox:group", "");
+
+      if (source) {
+        if (!("sources" in container)) {
+          container.sources = {};
+        }
+
+        set(container.sources, source, get(sources, source, {}));
+      }
+
       if (mapboxGroup) {
         if (!("metadata" in container)) {
           container.metadata = {

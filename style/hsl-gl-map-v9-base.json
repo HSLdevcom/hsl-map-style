@@ -111,6 +111,21 @@
       }
     },
     {
+      "id": "landuse_aeroway",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "aeroway",
+      "filter": [
+        "==",
+        "$type",
+        "Polygon"
+      ],
+      "paint": {
+        "fill-color": "#e3e3e3",
+        "fill-outline-color": "#ccc"
+      }
+    },
+    {
       "id": "landuse_grass",
       "type": "fill",
       "source": "vector",
@@ -287,6 +302,75 @@
       }
     },
     {
+      "id": "aeroway",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "aeroway",
+      "filter": [
+        "==",
+        "type",
+        "runway"
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              10,
+              2.5
+            ],
+            [
+              20,
+              240
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "aeroway_taxiway",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "aeroway",
+      "filter": [
+        "==",
+        "type",
+        "taxiway"
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              10,
+              1
+            ],
+            [
+              22,
+              8
+            ]
+          ]
+        },
+        "line-opacity": 1,
+        "line-dasharray": [
+          1,
+          2
+        ]
+      }
+    },
+    {
       "id": "waterway_case",
       "type": "line",
       "source": "vector",
@@ -371,6 +455,93 @@
       }
     },
     {
+      "id": "landuse_barrier_line",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "land"
+        ],
+        [
+          "in",
+          "$type",
+          "Point",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#edf0f5",
+        "fill-outline-color": "#a6d8f4"
+      }
+    },
+    {
+      "id": "landuse_barrier_line_land",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "class",
+          "land"
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt"
+      },
+      "paint": {
+        "line-color": "#f0f1f2",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landuse_barrier_line_cliff",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "cliff"
+        ],
+        [
+          "in",
+          "$type",
+          "LineString",
+          "Polygon"
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "line-color": "#ccc",
+        "line-blur": 0
+      }
+    },
+    {
       "id": "landuse_barrier_rock",
       "type": "fill",
       "source": "vector",
@@ -449,6 +620,37 @@
           1,
           2
         ]
+      }
+    },
+    {
+      "id": "landuse_barrier_line_fence",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "barrier_line",
+      "filter": [
+        "==",
+        "class",
+        "fence"
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              4,
+              0.25
+            ],
+            [
+              20,
+              6
+            ]
+          ]
+        },
+        "line-color": "#ccc"
       }
     },
     {
@@ -3272,6 +3474,53 @@
       }
     },
     {
+      "id": "admin_country",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "admin",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "<=",
+            "admin_level",
+            2
+          ],
+          [
+            "==",
+            "maritime",
+            0
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#8b8a8a",
+        "line-width": {
+          "base": 1.3,
+          "stops": [
+            [
+              3,
+              0.5
+            ],
+            [
+              22,
+              15
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "municipal_border",
       "type": "line",
       "source": "borders",
@@ -3637,323 +3886,6 @@
       "paint": {}
     },
     {
-      "id": "poi_label_park-and-ride_hub",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010287588.8713"
-      },
-      "source": "parkandride",
-      "source-layer": "hubs",
-      "minzoom": 14,
-      "interactive": true,
-      "filter": [
-        "==",
-        "$type",
-        "Point"
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-park-and-ride",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "poi_label_tickets-sales-point",
-      "type": "symbol",
-      "source": "ticket-sales",
-      "minzoom": 15,
-      "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "Tyyppi",
-          "Myyntipiste",
-          "R-kioski"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-tickets-sales-point",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "poi_label_ticket-machine",
-      "type": "symbol",
-      "source": "ticket-sales",
-      "minzoom": 15,
-      "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "TYYPPI",
-          "HSL Automaatti KL",
-          "HSL Automaatti MNL"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-ticket-machine",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "poi_label_ticket-machine-parking",
-      "type": "symbol",
-      "source": "ticket-sales",
-      "minzoom": 15,
-      "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "TYYPPI",
-          "HKI Automaatti PA"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-ticket-machine-parking",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "poi_label_service-point",
-      "type": "symbol",
-      "source": "ticket-sales",
-      "minzoom": 15,
-      "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "TYYPPI",
-          "Palvelupiste"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-service-point",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
       "id": "Stops_rail",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
@@ -4064,14 +3996,32 @@
       }
     }
   ],
+  "sources": {
+    "vector": {
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-vector-map/index.json",
+      "type": "vector"
+    },
+    "parkandride": {
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+      "type": "vector"
+    },
+    "borders": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuntarajat.json",
+      "type": "geojson"
+    },
+    "subway": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/subway.geojson",
+      "type": "geojson"
+    },
+    "rail": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/rail.geojson",
+      "type": "geojson"
+    }
+  },
   "metadata": {
     "mapbox:groups": {
       "1457010660461.3042": {
         "name": "Routes",
-        "collapsed": true
-      },
-      "1457010287588.8713": {
-        "name": "POI-park-and-ride",
         "collapsed": true
       },
       "1455204550197.1404": {
