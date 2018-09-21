@@ -51,7 +51,7 @@ module.exports = async function(file, compareFile) {
   });
 
   const newLayers = layers.filter((layer) => {
-    const isDiff = diffLayers.find((dl) => dl.id === layer.is);
+    const isDiff = diffLayers.find((dl) => dl.id === layer.id);
     return !isDiff;
   });
 
@@ -63,6 +63,6 @@ module.exports = async function(file, compareFile) {
     diffFilejson,
     { spaces: 2 }
   );
-  
+
   process.exit(0);
 };
