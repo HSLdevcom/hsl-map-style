@@ -1,0 +1,10 @@
+{
+  "name": "spritezero-run",
+  "scripts": {
+    "icons": "spritezero sprite ../map-icons && spritezero --ratio=2 sprite@2x ../map-icons && spritezero --ratio=3 sprite@3x ../map-icons"
+  },
+  "devDependencies": {
+    "@mapbox/fontmachine": "^0.2.1",
+    "@mapbox/spritezero-cli": "^2.1.0"
+  }
+}

@@ -1,8 +1,8 @@
-var program = require("commander");
-var split = require("./split");
-var render = require("./render");
+const program = require("commander");
+const split = require("./split");
+const render = require("./render");
 
-module.exports = function () {
+module.exports = function() {
   program.version("1.0.0");
 
   program

@@ -1,7 +1,7 @@
-var style = require("../index");
+const style = require("../index");
 
-module.exports = function () {
-  var styleJson = style.generateStyle({
+module.exports = function() {
+  const styleJson = style.generateStyle({
     glyphsUrl: "https://kartat.hsldev.com/",
     components: {
       text_fisv: { enabled: true },
@@ -12,8 +12,8 @@ module.exports = function () {
       municipal_borders: { enabled: true },
       poi: { enabled: true },
       ticket_sales: { enabled: true },
-      driver_instructions: { enabled: true }
-    }
+      driver_instructions: { enabled: true },
+    },
   });
 
   process.stdout.write(JSON.stringify(styleJson, null, 2));
