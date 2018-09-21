@@ -4,6 +4,18 @@ const get = require("lodash/get");
 
 const select = (values, value) => some(values, (val) => val === value);
 
+/**
+ * Map layers to files. FileMappers is a map of file names and the criteria
+ * a layer has to fulfill with its id or source-layer property to be included
+ * in the file. The criteria can be either a function that returns a boolean
+ * to indicate whether or not the layer should be included, or an array of
+ * strings that the layer's id or source-layer prop should match.
+ *
+ * The order is important. Later file matchers override earlier ones. For a
+ * layer called "rail_tunnel", and the files "routes" and "base", the layer
+ * will be included in the "base" file if both criterias match.
+ */
+
 const fileMappers = {
   routes: (value) => /route|subway|rail/.test(value),
   base: (value) => {
@@ -64,6 +76,7 @@ function layerToFile(layer) {
         return false;
       };
 
+      // The matchers will be called with the sourceLayer first, and then the layerId.
       let isInGroup = matchToGroup(sourceLayer);
 
       if (!isInGroup) {

@@ -11,6 +11,7 @@ const FILENAME_PREFIX = "hsl-gl-map-v9-";
 module.exports = async function(file, dir) {
   const filePath = path.resolve(process.cwd(), file);
   const outputPath = path.resolve(process.cwd(), dir);
+  const staticPath = path.resolve(__dirname, "static");
 
   const writeFile = async (name, content) => {
     await fs.writeJson(path.resolve(outputPath, FILENAME_PREFIX + name), content, {
@@ -90,6 +91,17 @@ module.exports = async function(file, dir) {
   const writePromises = fileGroups.map((styleFile) => {
     console.log("Writing file %s", styleFile.name);
     return writeFile(`${styleFile.name}.json`, styleFile.content);
+  });
+
+  const staticFiles = await fs.readdir(staticPath);
+
+  staticFiles.forEach((staticFile) => {
+    writePromises.push(
+      fs.copy(
+        path.resolve(staticPath, staticFile),
+        path.resolve(outputPath, FILENAME_PREFIX + staticFile)
+      )
+    );
   });
 
   await Promise.all(writePromises);
