@@ -5,12 +5,12 @@ const get = require("lodash/get");
 const select = (values, value) => some(values, (val) => val === value);
 
 const fileMappers = {
-  base(value) {
+  routes: (value) => /route|subway|rail/.test(value),
+  base: (value) => {
     const names = [
       "background",
       "building",
       "facilities",
-      "hubs",
       "road",
       "water",
       "waterway",
@@ -26,27 +26,24 @@ const fileMappers = {
 
     return select(names, value);
   },
-  text(value) {
-    return /label/.test(value);
-  },
-  "driver-instructions": function(value) {
-    const names = ["poi_bajamaja", "poi_taukotila"];
-    return select(names, value);
-  },
-  "ticket-sales": function(value) {
-    const names = [
-      "poi_label_service-point",
-      "poi_label_ticket-machine-parking",
-      "poi_label_ticket-machine",
-      "poi_label_tickets-sales-point",
-    ];
-
-    return select(names, value);
-  },
-  citybikes(value) {
-    const names = ["stations", "Stops_citybikes"];
-    return select(names, value);
-  },
+  text: (value) => /label/.test(value),
+  stops: ["stops", "Stops_hub"],
+  poi: [
+    "poi_label_park-and-ride_hub",
+    "poi_label_subway-station",
+    "poi_label_bus-station",
+    "poi_label_railway-station",
+    "poi_label_Aerodrome",
+  ],
+  "driver-instructions": ["poi_bajamaja", "poi_taukotila"],
+  "ticket-sales": [
+    "poi_label_service-point",
+    "poi_label_ticket-machine-parking",
+    "poi_label_ticket-machine",
+    "poi_label_tickets-sales-point",
+  ],
+  citybikes: ["stations", "Stops_citybikes"],
+  "municipal-borders": ["municipal_border"],
 };
 
 function layerToFile(layer) {
@@ -56,10 +53,21 @@ function layerToFile(layer) {
   return reduce(
     fileMappers,
     (groupName, match, layerGroupName) => {
-      let isInGroup = [layerId, sourceLayer].some(match);
+      const matchToGroup = (val) => {
+        if (typeof match === "function") {
+          return match(val);
+        }
+        if (Array.isArray(match)) {
+          return select(match, val);
+        }
+
+        return false;
+      };
+
+      let isInGroup = matchToGroup(sourceLayer);
 
       if (!isInGroup) {
-        isInGroup = match(layerId);
+        isInGroup = matchToGroup(layerId);
       }
 
       if (isInGroup) {

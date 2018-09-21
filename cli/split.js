@@ -68,7 +68,7 @@ module.exports = async function(file, dir) {
 
         if (source) {
           merge(container, {
-            sources: { [mapboxGroup]: mapboxGroups[mapboxGroup] },
+            sources: { [source]: sources[source] },
           });
         }
 
@@ -87,10 +87,12 @@ module.exports = async function(file, dir) {
     []
   );
 
-  fileGroups.forEach(async (styleFile) => {
+  const writePromises = fileGroups.map((styleFile) => {
     console.log("Writing file %s", styleFile.name);
-    await writeFile(`${styleFile.name}.json`, styleFile.content);
+    return writeFile(`${styleFile.name}.json`, styleFile.content);
   });
+
+  await Promise.all(writePromises);
 
   process.exit(0);
 };
