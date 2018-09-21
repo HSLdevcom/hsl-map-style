@@ -3,7 +3,9 @@
   "plugins": ["import"],
   "rules": {
     "quotes": ["error", "double", {"avoidEscape": true}],
-    "vars-on-top": "off"
+    "vars-on-top": "off",
+    "global-require": "off",
+    "import/order": "off"
   },
   "env": {
     "browser": true,

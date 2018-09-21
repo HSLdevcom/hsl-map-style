@@ -158,7 +158,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgb(234,242,224)"
+        "fill-color": "#dceacc"
       }
     },
     {
@@ -173,7 +173,7 @@
         "wood"
       ],
       "paint": {
-        "fill-color": "rgb(227,238,212)"
+        "fill-color": "rgba(208,227,184,1)"
       }
     },
     {
@@ -225,7 +225,7 @@
         "grass"
       ],
       "paint": {
-        "fill-color": "rgb(223,235,208)"
+        "fill-color": "rgba(208,227,184,1)"
       }
     },
     {
@@ -268,8 +268,8 @@
         "cemetery"
       ],
       "paint": {
-        "fill-color": "rgb(224,235,210)",
-        "fill-outline-color": "rgb(212,227,195)"
+        "fill-color": "rgba(203,222,180,1)",
+        "fill-outline-color": "rgba(184,209,155,1)"
       }
     },
     {
@@ -283,7 +283,7 @@
         "agriculture"
       ],
       "paint": {
-        "fill-color": "rgb(238,244,220)"
+        "fill-color": "#e3ecc5"
       }
     },
     {
@@ -311,8 +311,8 @@
         "pitch"
       ],
       "paint": {
-        "fill-color": "rgb(225,236,211)",
-        "fill-outline-color": "rgb(205,221,185)"
+        "fill-color": "rgba(205,224,182,1)",
+        "fill-outline-color": "rgba(172,199,139,1)"
       }
     },
     {
@@ -4464,11 +4464,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4515,11 +4515,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4568,11 +4568,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4638,11 +4638,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4689,11 +4689,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4749,11 +4749,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4800,11 +4800,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4861,11 +4861,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4912,11 +4912,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -4981,7 +4981,7 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -5032,11 +5032,11 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "bottom",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#999",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5104,11 +5104,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5157,11 +5157,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5210,11 +5210,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5263,11 +5263,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5317,11 +5317,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5378,11 +5378,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5431,11 +5431,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5484,11 +5484,11 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5536,11 +5536,11 @@
           "Gotham Rounded Book"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#888",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5669,7 +5669,7 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -5726,11 +5726,11 @@
           0.5
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#777",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0
@@ -5791,7 +5791,19 @@
         "text-rotation-alignment": "map"
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": {
+          "base": 1.4,
+          "stops": [
+            [
+              13,
+              "#999"
+            ],
+            [
+              15,
+              "#666"
+            ]
+          ]
+        },
         "text-halo-color": "rgba(255,255,255,0.85)",
         "text-halo-width": 2
       }
@@ -5840,7 +5852,19 @@
         "text-rotation-alignment": "map"
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": {
+          "base": 1.4,
+          "stops": [
+            [
+              13,
+              "#999"
+            ],
+            [
+              15,
+              "#666"
+            ]
+          ]
+        },
         "text-halo-color": "rgba(255,255,255,0.85)",
         "text-halo-width": 2
       }
@@ -5869,7 +5893,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Book"
         ],
@@ -5889,7 +5913,7 @@
         }
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-color": "rgba(255,255,255,1.00)",
         "text-halo-width": 1,
         "text-halo-blur": 0
@@ -5915,7 +5939,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
@@ -5937,7 +5961,7 @@
         "text-letter-spacing": 0.125
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#777",
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-width": 1.5,
         "text-halo-blur": 0,
@@ -5968,7 +5992,7 @@
         "Point"
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
@@ -5988,119 +6012,10 @@
         "text-transform": "uppercase"
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "#666",
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 1.5,
         "text-halo-blur": 0
-      }
-    },
-    {
-      "id": "road_street_label_fisv",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "road_label",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "all",
-          [
-            "!in",
-            "name",
-            "Harakan talvipolku",
-            "Suomenlinnan Huoltotunneli"
-          ],
-          [
-            "in",
-            "class",
-            "path",
-            "service",
-            "street",
-            "street_limited",
-            "tertiary"
-          ]
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "text-field": "{name}   {name_sv_nodefault}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [
-              10,
-              8
-            ],
-            [
-              20,
-              14
-            ]
-          ]
-        },
-        "text-keep-upright": true,
-        "text-rotation-alignment": "map"
-      },
-      "paint": {
-        "text-color": "#000",
-        "text-halo-color": "rgba(255,255,255,0.85)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "road_primary_label_fisv",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "road_label",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "in",
-          "class",
-          "motorway",
-          "primary",
-          "secondary",
-          "trunk"
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "text-field": "{name}   {name_sv_nodefault}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [
-              10,
-              8
-            ],
-            [
-              20,
-              14
-            ]
-          ]
-        },
-        "text-rotation-alignment": "map"
-      },
-      "paint": {
-        "text-color": "#000",
-        "text-halo-color": "rgba(255,255,255,0.85)",
-        "text-halo-width": 2
       }
     },
     {

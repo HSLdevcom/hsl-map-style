@@ -1,11 +1,10 @@
-const includes = require("lodash/includes");
 const forEach = require("lodash/forEach");
 const merge = require("lodash/merge");
 const mergeWith = require("lodash/mergeWith");
 const cloneDeep = require("lodash/cloneDeep");
 const isPlainObject = require("lodash/isPlainObject");
 
-const BASE_JSON = require("./_oldstyle/hsl-gl-map-v9-style.json");
+const BASE_JSON = require("./style/hsl-gl-map-v9-style.json");
 
 const replaceableValues = {
   SOURCES_URL: { default: "https://cdn.digitransit.fi/map/v1/" },
@@ -17,75 +16,75 @@ const components = [
     id: "base",
     enabled: true,
     description: "Taustakartta",
-    style: require("./_oldstyle/hsl-gl-map-v9-base.json"),
+    style: require("./style/hsl-gl-map-v9-base.json"),
   },
   {
     id: "municipal_borders",
     enabled: false,
     description: "Kuntarajat",
-    style: require("./_oldstyle/hsl-gl-map-v9-municipal-borders.json"),
+    style: require("./style/hsl-gl-map-v9-municipal-borders.json"),
   },
   {
     id: "routes",
     enabled: false,
     description: "Linjaviivat",
-    style: require("./_oldstyle/hsl-gl-map-v9-routes.json"),
+    style: require("./style/hsl-gl-map-v9-routes.json"),
   },
   {
     id: "text",
     enabled: true,
     description: "Tekstit",
-    style: require("./_oldstyle/hsl-gl-map-v9-text.json"),
+    style: require("./style/hsl-gl-map-v9-text.json"),
   },
   {
     id: "text_sv",
     enabled: false,
     description: "Ruotsinkieliset tekstit",
-    style: require("./_oldstyle/hsl-gl-map-v9-text-sv.json"),
+    style: require("./style/hsl-gl-map-v9-text-sv.json"),
     dependencies: ["text"],
   },
   {
     id: "text_fisv",
     enabled: false,
     description: "Kaksikieliset tekstit",
-    style: require("./_oldstyle/hsl-gl-map-v9-text-fisv.json"),
+    style: require("./style/hsl-gl-map-v9-text-fisv.json"),
     dependencies: ["text"],
   },
   {
     id: "poi",
     enabled: false,
     description: "Joukkoliikenne-POI",
-    style: require("./_oldstyle/hsl-gl-map-v9-poi.json"),
+    style: require("./style/hsl-gl-map-v9-poi.json"),
   },
   {
     id: "ticket_sales",
     enabled: false,
     description: "Lipunmyyntipisteet",
-    style: require("./_oldstyle/hsl-gl-map-v9-ticket-sales.json"),
+    style: require("./style/hsl-gl-map-v9-ticket-sales.json"),
   },
   {
     id: "driver_instructions",
     enabled: false,
     description: "Kuljettajaohjeet",
-    style: require("./_oldstyle/hsl-gl-map-v9-driver-instructions.json"),
+    style: require("./style/hsl-gl-map-v9-driver-instructions.json"),
   },
   {
     id: "stops",
     enabled: false,
     description: "Pysäkit",
-    style: require("./_oldstyle/hsl-gl-map-v9-stops.json"),
+    style: require("./style/hsl-gl-map-v9-stops.json"),
   },
   {
     id: "citybikes",
     enabled: false,
     description: "Kaupunkipyörät",
-    style: require("./_oldstyle/hsl-gl-map-v9-citybikes.json"),
+    style: require("./style/hsl-gl-map-v9-citybikes.json"),
   },
   {
     id: "print",
     enabled: false,
     description: "Tulostevärit",
-    style: require("./_oldstyle/hsl-gl-map-v9-print.json"),
+    style: require("./style/hsl-gl-map-v9-print.json"),
   },
 ];
 
@@ -139,6 +138,7 @@ function replaceInStyle(style, options) {
   return JSON.parse(replacedStyle);
 }
 
+// eslint-disable-next-line consistent-return
 function customizer(objValue, srcValue) {
   if (Array.isArray(objValue) && Array.isArray(srcValue)) {
     srcValue.forEach((srcElement) => {
@@ -183,6 +183,7 @@ function extendStyle(style, options) {
     if (options.components) {
       const componentOptions = options.components[component.id];
       if (componentOptions && componentOptions.enabled !== undefined) {
+        // eslint-disable-next-line no-param-reassign
         component.enabled = !!componentOptions.enabled;
       }
     }

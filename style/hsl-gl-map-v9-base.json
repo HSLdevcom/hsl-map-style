@@ -69,7 +69,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgb(234,242,224)"
+        "fill-color": "#dceacc"
       }
     },
     {
@@ -84,7 +84,7 @@
         "wood"
       ],
       "paint": {
-        "fill-color": "rgb(227,238,212)"
+        "fill-color": "rgba(208,227,184,1)"
       }
     },
     {
@@ -136,7 +136,7 @@
         "grass"
       ],
       "paint": {
-        "fill-color": "rgb(223,235,208)"
+        "fill-color": "rgba(208,227,184,1)"
       }
     },
     {
@@ -179,8 +179,8 @@
         "cemetery"
       ],
       "paint": {
-        "fill-color": "rgb(224,235,210)",
-        "fill-outline-color": "rgb(212,227,195)"
+        "fill-color": "rgba(203,222,180,1)",
+        "fill-outline-color": "rgba(184,209,155,1)"
       }
     },
     {
@@ -194,7 +194,7 @@
         "agriculture"
       ],
       "paint": {
-        "fill-color": "rgb(238,244,220)"
+        "fill-color": "#e3ecc5"
       }
     },
     {
@@ -222,8 +222,8 @@
         "pitch"
       ],
       "paint": {
-        "fill-color": "rgb(225,236,211)",
-        "fill-outline-color": "rgb(205,221,185)"
+        "fill-color": "rgba(205,224,182,1)",
+        "fill-outline-color": "rgba(172,199,139,1)"
       }
     },
     {

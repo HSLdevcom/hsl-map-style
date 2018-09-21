@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server",
-    "watch": "nodemon --watch . -e js,json,html server",
+    "watch": "nodemon --watch . -e js,json,html server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
