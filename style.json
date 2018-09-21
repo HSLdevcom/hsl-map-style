@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "HSL v1.6",
+  "name": "HSL v2.0",
   "metadata": {
     "mapbox:groups": {
       "1457010660461.3042": {
@@ -716,6 +716,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "barrier_line",
+      "minzoom": 16,
       "filter": [
         "==",
         "class",
@@ -772,6 +773,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -798,7 +800,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
-      "minzoom": 10,
+      "minzoom": 16,
       "layout": {
         "visibility": "visible"
       },
@@ -842,8 +844,54 @@
     {
       "id": "building",
       "ref": "building_shadow",
+      "type": "fill",
+      "source-layer": "building",
+      "minzoom": 14,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "fill-color": "#e2e4e9",
+        "fill-outline-color": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              "#dde1e9"
+            ],
+            [
+              17,
+              "rgba(194,195,204,1)"
+            ]
+          ]
+        },
+        "fill-opacity": 1,
+        "fill-translate": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "building-public",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "building",
+      "minzoom": 14,
+      "filter": [
+        "in",
+        "type",
+        "cathedral",
+        "church",
+        "public",
+        "train_station",
+        "university"
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": "hsl(40, 11%, 86%)",
         "fill-outline-color": {
           "base": 1,
           "stops": [
@@ -1184,6 +1232,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -1489,8 +1538,77 @@
       }
     },
     {
+      "id": "bridge_subway",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "osm_id",
+          120809795
+        ],
+        [
+          "==",
+          "class",
+          "major_rail"
+        ],
+        [
+          "==",
+          "structure",
+          "bridge"
+        ],
+        [
+          "==",
+          "type",
+          "subway"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#bbb",
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [
+              6,
+              0.5
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "waterway",
-      "ref": "waterway_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "waterway",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "in",
+          "class",
+          "canal",
+          "river",
+          "stream"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "#bee4f8",
         "line-width": {
@@ -1665,6 +1783,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -1718,6 +1837,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -1751,7 +1871,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#fff",
+        "line-color": "hsl(0, 0%, 100%)",
         "line-width": {
           "base": 1.55,
           "stops": [
@@ -1800,8 +1920,8 @@
           ],
           [
             "==",
-            "name",
-            "MTB Reitti"
+            "class",
+            "MTB Reitt"
           ],
           [
             "==",
@@ -1841,6 +1961,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -1908,6 +2029,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -2000,6 +2122,7 @@
             "in",
             "type",
             "cycleway",
+            "path",
             "pedestrian",
             "track"
           ]
@@ -2181,6 +2304,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 14,
       "filter": [
         "all",
         [
@@ -2199,6 +2323,7 @@
           [
             "in",
             "class",
+            "service",
             "street",
             "tertiary"
           ]
@@ -2515,7 +2640,38 @@
     },
     {
       "id": "road_street",
-      "ref": "road_street_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "service",
+            "street",
+            "tertiary"
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(255,255,255,1)",
         "line-width": {
@@ -2535,21 +2691,38 @@
     },
     {
       "id": "road_primary",
-      "ref": "road_primary_case",
-      "paint": {
-        "line-color": {
-          "base": 1,
-          "stops": [
-            [
-              9.9,
-              "#eeeeee"
-            ],
-            [
-              10.2,
-              "#ffffff"
-            ]
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "primary",
+            "secondary"
           ]
-        },
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
         "line-width": {
           "base": 1.55,
           "stops": [
@@ -2567,17 +2740,46 @@
     },
     {
       "id": "road_motorway",
-      "ref": "road_motorway_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "motorway",
+            "trunk"
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": {
           "base": 1,
           "stops": [
             [
-              9.5,
-              "#f4d880"
+              10,
+              "#fff"
             ],
             [
-              10.2,
+              10.1,
               "#fef2c6"
             ]
           ]
@@ -2644,7 +2846,7 @@
           "base": 1,
           "stops": [
             [
-              15,
+              13,
               1
             ],
             [
@@ -2718,7 +2920,35 @@
     },
     {
       "id": "bridge_major_rail_case",
-      "ref": "bridge_major_rail_case_bg",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!=",
+            "type",
+            "subway"
+          ],
+          [
+            "==",
+            "class",
+            "major_rail"
+          ],
+          [
+            "==",
+            "structure",
+            "bridge"
+          ]
+        ]
+      ],
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -3392,11 +3622,11 @@
           "base": 1,
           "stops": [
             [
-              9.5,
-              "#f4d880"
+              10,
+              "#fff"
             ],
             [
-              10.2,
+              10.1,
               "#fef2c6"
             ]
           ]
@@ -3415,126 +3645,6 @@
             [
               20,
               100
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "bridge_motorway_link_case",
-      "type": "line",
-      "source": "vector",
-      "source-layer": "road",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "all",
-          [
-            "==",
-            "structure",
-            "bridge"
-          ],
-          [
-            "in",
-            "class",
-            "link",
-            "motorway_link"
-          ],
-          [
-            "in",
-            "type",
-            "motorway_link",
-            "trunk_link"
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#f4d880",
-        "line-width": {
-          "base": 1.55,
-          "stops": [
-            [
-              6,
-              1
-            ],
-            [
-              20,
-              44
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "bridge_motorway_link",
-      "type": "line",
-      "source": "vector",
-      "source-layer": "road",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "all",
-          [
-            "==",
-            "structure",
-            "bridge"
-          ],
-          [
-            "in",
-            "class",
-            "link",
-            "motorway_link"
-          ],
-          [
-            "in",
-            "type",
-            "motorway_link",
-            "trunk_link"
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": {
-          "base": 1,
-          "stops": [
-            [
-              10,
-              "#fff"
-            ],
-            [
-              10.2,
-              "#fef2c6"
-            ]
-          ]
-        },
-        "line-width": {
-          "base": 1.55,
-          "stops": [
-            [
-              6,
-              0.5
-            ],
-            [
-              20,
-              40
             ]
           ]
         }
@@ -4383,11 +4493,12 @@
           ]
         },
         "text-font": [
-          "Gotham Rounded Book"
+          "Gotham Rounded Book",
+          "Arial Unicode MS Regular"
         ]
       },
       "paint": {
-        "text-color": "#999",
+        "text-color": "#666",
         "text-opacity": 0.7
       }
     },
@@ -4460,9 +4571,15 @@
           ]
         },
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4471,7 +4588,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4510,10 +4632,17 @@
             ]
           ]
         },
+        "icon-image": "icon_cinema",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4522,7 +4651,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4563,10 +4697,17 @@
             ]
           ]
         },
+        "icon-image": "icon_hotel",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4575,7 +4716,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4633,10 +4779,17 @@
             ]
           ]
         },
+        "icon-image": "icon-theatre",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4645,7 +4798,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4684,10 +4842,17 @@
             ]
           ]
         },
+        "icon-image": "icon_concert-hall",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4696,7 +4861,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4745,9 +4915,15 @@
           ]
         },
         "text-font": [
-          "Gotham Rounded Book"
+          "Gotham Rounded Book",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4756,7 +4932,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4796,9 +4977,15 @@
           ]
         },
         "text-font": [
-          "Gotham Rounded Book"
+          "Gotham Rounded Book",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4807,7 +4994,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4856,10 +5048,17 @@
             ]
           ]
         },
+        "icon-image": "icon_attraction",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4868,7 +5067,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4907,10 +5111,17 @@
             ]
           ]
         },
+        "icon-image": "icon_sibelius",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -4919,7 +5130,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -4978,8 +5194,14 @@
         },
         "text-max-width": 8,
         "text-font": [
-          "Gotham Rounded Medium Italic"
+          "Gotham Rounded Medium Italic",
+          "Arial Unicode MS Bold"
         ],
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -4988,7 +5210,12 @@
         "text-color": "rgba(142,166,109,1)",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5029,17 +5256,28 @@
         },
         "text-max-width": 8,
         "text-font": [
-          "Gotham Rounded Medium Italic"
+          "Gotham Rounded Medium Italic",
+          "Arial Unicode MS Bold"
         ],
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "bottom",
         "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#999",
+        "text-color": "#888",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5099,10 +5337,17 @@
             ]
           ]
         },
+        "icon-image": "icon-sport",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -5111,7 +5356,12 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5151,20 +5401,35 @@
           ]
         },
         "text-allow-overlap": false,
+        "icon-image": "icon-cemetary",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "icon-allow-overlap": false,
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "icon-ignore-placement": false
       },
       "paint": {
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5204,20 +5469,35 @@
           ]
         },
         "text-allow-overlap": false,
+        "icon-image": "icon-amusement-park",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "icon-allow-overlap": false,
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "icon-ignore-placement": false
       },
       "paint": {
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5257,20 +5537,35 @@
           ]
         },
         "text-allow-overlap": false,
+        "icon-image": "icon-parliament",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "icon-allow-overlap": false,
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "icon-ignore-placement": false
       },
       "paint": {
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5311,20 +5606,35 @@
           ]
         },
         "text-allow-overlap": false,
+        "icon-image": "icon-school",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "icon-allow-overlap": false,
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "icon-ignore-placement": false
       },
       "paint": {
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5372,20 +5682,35 @@
           ]
         },
         "text-allow-overlap": false,
+        "icon-image": "icon-place-of-worship",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "icon-allow-overlap": false,
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "icon-ignore-placement": false
       },
       "paint": {
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5425,20 +5750,35 @@
           ]
         },
         "text-allow-overlap": false,
+        "icon-image": "icon-parliament",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "icon-allow-overlap": false,
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "icon-ignore-placement": false
       },
       "paint": {
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5478,20 +5818,35 @@
           ]
         },
         "text-allow-overlap": false,
+        "icon-image": "icon-hospital",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "icon-allow-overlap": false,
         "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "icon-ignore-placement": false
       },
       "paint": {
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -5533,8 +5888,14 @@
         },
         "text-max-width": 8,
         "text-font": [
-          "Gotham Rounded Book"
+          "Gotham Rounded Book",
+          "Arial Unicode MS Bold"
         ],
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -5543,7 +5904,12 @@
         "text-color": "#888",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {

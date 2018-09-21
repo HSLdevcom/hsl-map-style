@@ -5,7 +5,8 @@
     "quotes": ["error", "double", {"avoidEscape": true}],
     "vars-on-top": "off",
     "global-require": "off",
-    "import/order": "off"
+    "import/order": "off",
+    "no-plusplus": "off"
   },
   "env": {
     "browser": true,
