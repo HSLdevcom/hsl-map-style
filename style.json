@@ -2605,7 +2605,8 @@
         "symbol-placement": "line",
         "text-field": "{name}",
         "text-font": [
-          "Gotham Rounded Book"
+          "Gotham Rounded Book",
+          "Arial Unicode MS Bold"
         ],
         "text-transform": "none",
         "text-letter-spacing": 0,
@@ -4485,9 +4486,18 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "!=",
-        "mode",
-        "RAIL"
+        "all", [
+          [
+           "!=",
+           "mode",
+           "RAIL"
+          ],
+          [
+            "!=",
+            "type",
+            "RAIL"
+          ]
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -4498,12 +4508,12 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
-              1.5
+              13,
+              0
             ],
             [
               22,
@@ -4524,9 +4534,18 @@
       "minzoom": 15,
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "RAIL"
+        "any", [
+          [
+            "==",
+            "mode",
+            "RAIL"
+          ],
+          [
+            "==",
+            "type",
+            "RAIL"
+          ]
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -4571,11 +4590,11 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1.5
             ],
             [
@@ -4596,9 +4615,18 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "BUS"
+        "any", [
+          [
+            "==",
+            "mode",
+            "BUS"
+          ],
+          [
+            "==",
+            "type",
+            "BUS"
+          ]
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -4609,11 +4637,11 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1
             ],
             [
@@ -4647,9 +4675,18 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "FERRY"
+        "any", [
+          [
+            "==",
+            "mode",
+            "FERRY"
+          ],
+          [
+            "==",
+            "type",
+            "FERRY"
+          ]
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -4660,11 +4697,11 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1
             ],
             [
@@ -4698,9 +4735,18 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "TRAM"
+        "any", [
+          [
+            "==",
+            "mode",
+            "TRAM"
+          ],
+          [
+            "==",
+            "type",
+            "TRAM"
+          ]
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -4711,11 +4757,11 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1
             ],
             [
@@ -4741,10 +4787,21 @@
     },
     {
       "id": "Stops_rail",
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
-      "ref": "Stops case rail",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 15,
+      "filter": [
+        "==",
+        "type",
+        "RAIL"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
       "interactive": true,
       "paint": {
         "circle-color": "#8c54a2",
@@ -4752,11 +4809,11 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1
             ],
             [
@@ -4790,9 +4847,18 @@
       "source-layer": "stops",
       "interactive": true,
       "filter": [
-        "==",
-        "mode",
-        "SUBWAY"
+        "any", [
+          [
+            "==",
+            "mode",
+            "SUBWAY"
+          ],
+          [
+            "==",
+            "type",
+            "SUBWAY"
+          ]
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -4803,11 +4869,11 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1
             ],
             [
@@ -4833,22 +4899,28 @@
     },
     {
       "id": "Stops_citybikes",
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1457010266398.4177"
       },
-      "ref": "Stops case citybikes",
+      "source": "citybike",
+      "source-layer": "stations",
+      "maxzoom": 14,
       "interactive": true,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "circle-color": "#fcbc19",
         "circle-radius": {
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1
             ],
             [
@@ -4874,22 +4946,41 @@
     },
     {
       "id": "Stops_hub",
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
-      "ref": "Stops case",
+      "source": "stops",
+      "source-layer": "stops",
       "interactive": true,
+      "filter": [
+        "all", [
+          [
+            "!=",
+            "mode",
+            "RAIL"
+          ],
+          [
+            "!=",
+            "type",
+            "RAIL"
+          ]
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
           "stops": [
             [
-              14,
+              12.9,
               0
             ],
             [
-              14.1,
+              15,
               2
             ],
             [
@@ -4911,10 +5002,20 @@
       "minzoom": 15,
       "interactive": true,
       "filter": [
-        "in",
-        "mode",
-        "",
-        "RAIL"
+        "any", [
+          [
+            "in",
+            "mode",
+            "",
+            "RAIL"
+          ],
+          [
+            "in",
+            "type",
+            "",
+            "RAIL"
+          ]
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -4972,7 +5073,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "icon-one-way",
+        "icon-image": "icon_one-way",
         "symbol-placement": "line",
         "symbol-spacing": 100,
         "icon-rotation-alignment": "map",
@@ -6471,10 +6572,11 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-park-and-ride",
+        "icon-image": "icon_park-and-ride",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "visible",
@@ -6534,10 +6636,11 @@
           0,
           -6
         ],
-        "icon-image": "icon-citybike-station",
+        "icon-image": "icon_Citybike-Station",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "symbol-placement": "point",
@@ -6611,10 +6714,11 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-tickets-sales-point",
+        "icon-image": "icon_tickets-sales-point",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "visible",
@@ -6676,10 +6780,11 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-ticket-machine",
+        "icon-image": "icon_ticket-machine",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "visible",
@@ -6740,10 +6845,11 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-service-point",
+        "icon-image": "icon_service-point",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "visible",
@@ -6812,7 +6918,8 @@
         "icon-image": "icon-subway-station",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "visible",
@@ -6879,7 +6986,8 @@
         "icon-image": "icon-subway-entrance",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": true,
         "visibility": "visible",
@@ -6974,7 +7082,8 @@
         "icon-image": "icon-bus-station",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "visible",
@@ -7027,9 +7136,10 @@
             "Pasilan autojuna-asema"
           ],
           [
-            "==",
+            "!in",
             "network",
-            "rail"
+            "entrance",
+            "rail-metro"
           ]
         ]
       ],
@@ -7048,10 +7158,11 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-rail-station",
+        "icon-image": "icon-Rail-Station",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "visible",
@@ -7147,10 +7258,10 @@
         "icon-image": "icon-aerodrome",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
-        "visibility": "visible",
         "text-offset": [
           0,
           0.5
@@ -7212,11 +7323,12 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-cafe",
+        "icon-image": "icon_cafe",
         "text-ignore-placement": false,
         "text-transform": "none",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "none",
@@ -7284,10 +7396,11 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-bajamaja",
+        "icon-image": "icon_bajamaja",
         "text-ignore-placement": false,
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "icon-allow-overlap": false,
         "visibility": "none",
@@ -7340,8 +7453,14 @@
         },
         "text-max-width": 8,
         "text-font": [
-          "Gotham Rounded Medium Italic"
+          "Gotham Rounded Medium Italic",
+          "Arial Unicode MS Bold"
         ],
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -7350,7 +7469,12 @@
         "text-color": "#39c6ea",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,0.5)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -7358,7 +7482,7 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "place_label",
-      "minzoom": 10,
+      "minzoom": 12,
       "filter": [
         "all",
         [
@@ -7393,12 +7517,14 @@
         },
         "text-max-width": 8,
         "text-font": [
-          "Gotham Rounded Book"
+          "Gotham Rounded Book",
+          "Arial Unicode MS Bold"
         ],
         "text-offset": [
           0,
           0.5
         ],
+        "icon-size": 0.9,
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -7407,7 +7533,12 @@
         "text-color": "#777",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
       }
     },
     {
@@ -7445,8 +7576,10 @@
         "symbol-placement": "line",
         "text-field": "{name}",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "text-rotation-alignment": "map",
         "text-letter-spacing": 0.1,
         "text-size": {
           "base": 1.4,
@@ -7478,7 +7611,7 @@
             ]
           ]
         },
-        "text-halo-color": "rgba(255,255,255,0.85)",
+        "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 2
       }
     },
@@ -7507,8 +7640,10 @@
         "symbol-placement": "line",
         "text-field": "{name}",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
+        "text-rotation-alignment": "map",
         "text-letter-spacing": 0.1,
         "text-size": {
           "base": 1.4,
@@ -7539,7 +7674,7 @@
             ]
           ]
         },
-        "text-halo-color": "rgba(255,255,255,0.85)",
+        "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 2
       }
     },
@@ -7569,7 +7704,8 @@
       "layout": {
         "text-field": "{name}",
         "text-font": [
-          "Gotham Rounded Book"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "text-max-width": 6,
         "text-size": {
@@ -7598,7 +7734,7 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "place_label",
-      "maxzoom": 13,
+      "maxzoom": 16,
       "filter": [
         "all",
         [
@@ -7615,7 +7751,8 @@
       "layout": {
         "text-field": "{name}",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Bold"
         ],
         "text-max-width": 10,
         "text-size": {
@@ -7630,14 +7767,12 @@
             ]
           ],
           "base": 1.4
-        },
-        "text-transform": "uppercase",
-        "text-letter-spacing": 0.125
+        }
       },
       "paint": {
-        "text-color": "#777",
+        "text-color": "#333",
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-width": 1.5,
+        "text-halo-width": 0.5,
         "text-halo-blur": 0,
         "text-opacity": {
           "base": 1,
@@ -7668,7 +7803,8 @@
       "layout": {
         "text-field": "{name}",
         "text-font": [
-          "Gotham Rounded Medium"
+          "Gotham Rounded Medium",
+          "Arial Unicode MS Regular"
         ],
         "text-max-width": 10,
         "text-size": {
