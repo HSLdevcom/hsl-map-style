@@ -1,14 +1,3 @@
-Copyright (c) 2018, HSL Developer Community
-
-Copyright (c) 2016, KlokanTech.com & OpenMapTiles contributors.
-
-Copyright (c) 2014, Mapbox.
-
-All rights reserved.
-
-Derived from "Mapbox Open Styles" https://github.com/mapbox/mapbox-gl-styles
-
-
 # Code license: MIT License
 
 Copyright (c) 2018, HSL Developer Community
