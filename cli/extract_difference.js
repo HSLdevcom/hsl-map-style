@@ -6,10 +6,10 @@ const merge = require("lodash/merge");
 
 module.exports = async function(file, compareFile) {
   const filePath = path.resolve(process.cwd(), file);
-  const orderFilePath = path.resolve(process.cwd(), compareFile);
+  const compareFilePath = path.resolve(process.cwd(), compareFile);
 
   const fileJson = await fs.readJson(filePath);
-  const compareFileJson = await fs.readJson(orderFilePath);
+  const compareFileJson = await fs.readJson(compareFilePath);
 
   const layers = get(fileJson, "layers", []);
 

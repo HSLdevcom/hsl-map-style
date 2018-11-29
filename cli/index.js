@@ -9,23 +9,29 @@ module.exports = function() {
 
   program
     .command("split <file> <dir>")
-    .description("Split a style json file into distinct parts.")
+    .description(
+      "Split a style json file into distinct parts. Splits file into partials and writes them into dir. Dir will be created if it doesn't exist."
+    )
     .action(split);
 
   program
     .command("render")
-    .description("Render a complete style.json from parts.")
+    .description(
+      "Render a complete style.json from parts. Toggle partials in cli/render.js."
+    )
     .action(render);
 
   program
-    .command("matchorder")
-    .description("Match layer order between different style files")
+    .command("matchorder <fileA> <fileB>")
+    .description(
+      "Match layer order between different style files. Rewrites fileA to have its layers in the same order as fileB."
+    )
     .action(reorder);
 
   program
-    .command("extract-diff")
+    .command("extract-diff <fileA> <fileB>")
     .description(
-      "Separate layers from file A that don't exist in file B. Modifies file A."
+      "Move layers out from fileA that don't exist in fileB. Modifies fileA."
     )
     .action(extract_difference);
 
