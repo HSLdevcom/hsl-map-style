@@ -8,11 +8,11 @@ module.exports = function() {
       stops: { enabled: false },
       citybikes: { enabled: false },
       municipal_borders: { enabled: false },
-      poi: { enabled: false },
+      poi: { enabled: true },
       ticket_sales: { enabled: false },
       driver_instructions: { enabled: false },
-      icons: { enabled: true },
-      text_fisv: { enabled: true },
+      icons: { enabled: false },
+      text_fisv: { enabled: false },
     },
   });
 

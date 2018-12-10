@@ -73,6 +73,23 @@
       }
     },
     {
+      "id": "landuse_playground",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "landuse",
+      "filter": [
+        "==",
+        "type",
+        "playground"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#f9f4d2"
+      }
+    },
+    {
       "id": "landuse_wood",
       "type": "fill",
       "source": "vector",
