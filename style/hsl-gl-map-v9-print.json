@@ -40,55 +40,7 @@
     },
 
     {
-      "id": "poi_label_retail",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_cinema",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_hotel",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_theatre",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_concert-hall",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_attraction_scalerank_low",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_transportation",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_attraction",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_sibelius",
+      "id": "poi_label_general",
       "paint": {
         "text-color": "#000"
       }
@@ -101,48 +53,6 @@
     },
     {
       "id": "poi_label_sport",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_cemetary",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_theme-park",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_museum",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_school",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_place-of-worship",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_parliament",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "poi_label_hospital",
       "paint": {
         "text-color": "#000"
       }

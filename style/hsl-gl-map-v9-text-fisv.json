@@ -1,55 +1,7 @@
 {
     "layers": [
         {
-            "id": "poi_label_retail",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_cinema",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_hotel",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_theatre",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_concert-hall",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_attraction_scalerank_low",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_transportation",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_attraction",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_sibelius",
+            "id": "poi_label_general",
             "layout": {
                 "text-field": "{name}\n{name_sv_nodefault}"
             }
@@ -68,48 +20,6 @@
         },
         {
             "id": "poi_label_sport",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_cemetary",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_theme-park",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_museum",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_school",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_place-of-worship",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_parliament",
-            "layout": {
-                "text-field": "{name}\n{name_sv_nodefault}"
-            }
-        },
-        {
-            "id": "poi_label_hospital",
             "layout": {
                 "text-field": "{name}\n{name_sv_nodefault}"
             }
