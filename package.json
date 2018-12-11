@@ -3,23 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "styletool": "./bin/styletool-cli"
+  },
   "scripts": {
     "start": "node server",
-    "watch": "nodemon --watch . -e js,json,html server",
-    "icons": "spritezero sprite map-icons && spritezero --ratio=2 sprite@2x map-icons && spritezero --ratio=3 sprite@3x map-icons",
+    "watch": "nodemon --watch . -e js,json,html server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "devDependencies": {
-    "@mapbox/fontmachine": "^0.2.1",
-    "@mapbox/spritezero-cli": "^2.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.1.3",
-    "eslint-plugin-import": "^2.2.0",
-    "express": "^4.15.2",
-    "nodemon": "^1.11.0"
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.14.3"
   },
   "dependencies": {
+    "commander": "^2.18.0",
+    "fs-extra": "^7.0.0",
     "lodash": "^4.17.4"
   }
 }
