@@ -1,0 +1,76 @@
+{
+    "layers": [
+        {
+            "id": "poi_label_general",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "poi_label_park",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "poi_label_sq",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "poi_label_sport",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "poi_label_harbour",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "water_label",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "place_label_island",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "road_street_label",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "road_primary_label",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "place_label_other",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "place_label_city",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        },
+        {
+            "id": "country_label",
+            "layout": {
+                "text-field": "{name_sv}"
+            }
+        }
+    ]
+}

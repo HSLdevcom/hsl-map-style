@@ -1234,6 +1234,59 @@
             }
         },
         {
+            "id": "tunnel_road_path_cycleway",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "structure",
+                        "tunnel"
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "cycleway",
+                        "pedestrian",
+                        "track"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            0,
+                            1.5
+                        ],
+                        [
+                            22,
+                            26
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ]
+            }
+        },
+        {
             "id": "road_subway",
             "type": "line",
             "source": "vector",
@@ -1341,54 +1394,6 @@
                         [
                             20,
                             12
-                        ]
-                    ]
-                }
-            }
-        },
-        {
-            "id": "bridge_subway",
-            "type": "line",
-            "source": "vector",
-            "source-layer": "road",
-            "filter": [
-                "all",
-                [
-                    "!=",
-                    "osm_id",
-                    120809795
-                ],
-                [
-                    "==",
-                    "class",
-                    "major_rail"
-                ],
-                [
-                    "==",
-                    "structure",
-                    "bridge"
-                ],
-                [
-                    "==",
-                    "type",
-                    "subway"
-                ]
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "line-color": "#bbb",
-                "line-width": {
-                    "base": 1.4,
-                    "stops": [
-                        [
-                            6,
-                            0.5
-                        ],
-                        [
-                            20,
-                            20
                         ]
                     ]
                 }
@@ -1897,15 +1902,15 @@
                 [
                     "all",
                     [
-                        "!=",
+                        "!in",
                         "structure",
-                        "bridge"
+                        "bridge",
+                        "tunnel"
                     ],
                     [
                         "in",
                         "type",
                         "cycleway",
-                        "path",
                         "pedestrian",
                         "track"
                     ]
@@ -2218,6 +2223,12 @@
                 [
                     "all",
                     [
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
+                    ],
+                    [
                         "in",
                         "class",
                         "link",
@@ -2313,6 +2324,12 @@
                 ],
                 [
                     "all",
+                    [
+                        "!in",
+                        "structure",
+                        "bridge",
+                        "tunnel"
+                    ],
                     [
                         "in",
                         "class",
@@ -2687,6 +2704,54 @@
             }
         },
         {
+            "id": "bridge_subway",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "osm_id",
+                    120809795
+                ],
+                [
+                    "==",
+                    "class",
+                    "major_rail"
+                ],
+                [
+                    "==",
+                    "structure",
+                    "bridge"
+                ],
+                [
+                    "==",
+                    "type",
+                    "subway"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "#bbb",
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            20,
+                            20
+                        ]
+                    ]
+                }
+            }
+        },
+        {
             "id": "bridge_path_bg",
             "type": "line",
             "source": "vector",
@@ -2838,6 +2903,98 @@
                     ]
                 }
             }
+        },
+        {
+            "id": "bridge_pedestrian_case",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "layout": {
+                "visibility": "visible",
+                "line-join": "round",
+                "line-cap": "butt",
+                "line-miter-limit": 2
+            },
+            "paint": {
+                "line-color": "#ccc",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.25
+                        ],
+                        [
+                            20,
+                            6
+                        ]
+                    ]
+                },
+                "line-gap-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            30
+                        ]
+                    ]
+                }
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "pedestrian"
+                ],
+                [
+                    "==",
+                    "structure",
+                    "bridge"
+                ]
+            ]
+        },
+        {
+            "id": "bridge_pedestrian",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "paint": {
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            16.5
+                        ]
+                    ]
+                },
+                "line-color": "rgba(255, 255, 255, 1)"
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "pedestrian"
+                ],
+                [
+                    "==",
+                    "structure",
+                    "bridge"
+                ]
+            ]
         },
         {
             "id": "bridge_street_case",
@@ -3169,6 +3326,126 @@
                         [
                             20,
                             100
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "bridge_motorway_link_case",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "link",
+                        "motorway_link"
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "motorway_link",
+                        "trunk_link"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "butt",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#f4d880",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            6,
+                            1
+                        ],
+                        [
+                            20,
+                            44
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "bridge_motorway_link",
+            "type": "line",
+            "source": "vector",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ],
+                    [
+                        "in",
+                        "class",
+                        "link",
+                        "motorway_link"
+                    ],
+                    [
+                        "in",
+                        "type",
+                        "motorway_link",
+                        "trunk_link"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            "#fff"
+                        ],
+                        [
+                            10.2,
+                            "#fef2c6"
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            20,
+                            40
                         ]
                     ]
                 }

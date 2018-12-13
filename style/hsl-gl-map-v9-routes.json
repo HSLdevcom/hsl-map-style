@@ -1,26 +1,4 @@
 {
-  "metadata": {
-    "mapbox:groups": {
-      "1457010660461.3042": {
-        "name": "Routes",
-        "collapsed": true
-      }
-    }
-  },
-  "sources": {
-    "routes": {
-      "url": "http://kartat.hsl.fi/jore/tiles/routes/index.json",
-      "type": "vector"
-    },
-    "rail": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/rail.geojson",
-      "type": "geojson"
-    },
-    "subway": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/subway.geojson",
-      "type": "geojson"
-    }
-  },
   "layers": [
     {
       "id": "bus_route_case",
@@ -35,8 +13,12 @@
         [
           "!in",
           "routeId",
+          "1500",
+          "2200",
+          "2510",
           "2550",
-          "4560"
+          "4560",
+          "4570"
         ],
         [
           "==",
@@ -86,8 +68,12 @@
         [
           "!in",
           "routeId",
+          "1500",
+          "2200",
+          "2510",
           "2550",
-          "4560"
+          "4560",
+          "4570"
         ],
         [
           "==",
@@ -268,7 +254,6 @@
         "line-opacity": 1
       }
     },
-
     {
       "id": "trunk_route_case",
       "type": "line",
@@ -282,8 +267,12 @@
         [
           "in",
           "routeId",
+          "1500",
+          "2200",
+          "2510",
           "2550",
-          "4560"
+          "4560",
+          "4570"
         ],
         [
           "!=",
@@ -328,8 +317,12 @@
         [
           "in",
           "routeId",
+          "1500",
+          "2200",
+          "2510",
           "2550",
-          "4560"
+          "4560",
+          "4570"
         ],
         [
           "!=",
@@ -388,7 +381,6 @@
         "line-opacity": 1
       }
     },
-
     {
       "id": "subway_case",
       "type": "line",
@@ -462,7 +454,10 @@
       },
       "paint": {
         "line-color": "#00B9E4",
-        "line-dasharray": [0, 4],
+        "line-dasharray": [
+          0,
+          4
+        ],
         "line-width": {
           "base": 1,
           "stops": [
@@ -632,6 +627,73 @@
           ]
         }
       }
+    },
+    {
+      "id": "Stops_rail",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "ref": "Stops case rail",
+      "interactive": true,
+      "paint": {
+        "circle-color": "#8c54a2",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              11,
+              0.6
+            ],
+            [
+              14,
+              1
+            ]
+          ]
+        }
+      }
     }
-  ]
+  ],
+  "sources": {
+    "routes": {
+      "url": "http://kartat.hsl.fi/jore/tiles/routes/index.json",
+      "type": "vector"
+    },
+    "subway": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/subway.geojson",
+      "type": "geojson"
+    },
+    "rail": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/rail.geojson",
+      "type": "geojson"
+    }
+  },
+  "metadata": {
+    "mapbox:groups": {
+      "1457010660461.3042": {
+        "name": "Routes",
+        "collapsed": true
+      },
+      "1455204550197.1404": {
+        "name": "Stops",
+        "collapsed": true
+      }
+    }
+  }
 }
