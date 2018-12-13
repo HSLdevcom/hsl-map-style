@@ -31,6 +31,18 @@ const components = [
     style: require("./style/hsl-gl-map-v9-routes.json"),
   },
   {
+    id: "regular_routes",
+    enabled: false,
+    description: "Linjaviivat ilman lähibusseja",
+    style: require("./style/hsl-gl-map-v9-regular-routes.json")
+  },
+  {
+    id: "near_bus_routes",
+    enabled: false,
+    description: "Lähibussi reitit",
+    style: require("./style/hsl-gl-map-v9-near-bus-routes.json")
+  },
+  {
     id: "text",
     enabled: true,
     description: "Tekstit",
@@ -75,6 +87,12 @@ const components = [
     style: require("./style/hsl-gl-map-v9-stops.json"),
   },
   {
+    id: "regular_stops",
+    enabled: false,
+    description: "Pysäkit ilman lähibusseja",
+    style: require("./style/hsl-gl-map-v9-regular-stops.json")
+  },
+  {
     id: "citybikes",
     enabled: false,
     description: "Kaupunkipyörät",
@@ -84,8 +102,32 @@ const components = [
     id: "print",
     enabled: false,
     description: "Tulostevärit",
-    style: require("./style/hsl-gl-map-v9-print.json"),
+    style: require("./style/hsl-gl-map-v9-print.json")
   },
+  {
+    id: "jore_terminals",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./style/hsl-gl-map-v9-jore-terminals.json")
+  },
+  {
+    id: "near_bus_stops",
+    enabled: false,
+    description: "Lähibussi pysäkit",
+    style: require("./style/hsl-gl-map-v9-near-bus-stops.json")
+  },
+  {
+    id: "ticket_zones",
+    enabled: false,
+    description: "Lippyvyöhykkeet",
+    style: require("./style/hsl-gl-map-v9-ticket-zones.json")
+  },
+  {
+    id: "ticket_zone_labels",
+    enabled: false,
+    description: "Lippyvyöhykkeen ikonit",
+    style: require("./style/hsl-gl-map-v9-ticket-zone-labels.json")
+  }
 ];
 
 /**
