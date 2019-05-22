@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "watch": "nodemon server",
-    "icons": "spritezero sprite map-icons && spritezero --ratio=2 sprite@2x map-icons && spritezero --ratio=3 sprite@3x map-icons",
+    "icons": "spritezero ./sprites/sprite map-icons && spritezero --ratio=2 ./sprites/sprite@2x map-icons && spritezero --ratio=3 ./sprites/sprite@3x map-icons",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
