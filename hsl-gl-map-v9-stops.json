@@ -353,40 +353,26 @@
         "FERRY"
       ],
       "layout": {
-        "visibility": "visible"
+        "text-optional": true,
+        "text-allow-overlap": true,
+        "icon-image": "icon-ferry-station",
+        "text-ignore-placement": false,
+        "text-font": ["Gotham Rounded Medium"],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [0, 0.5],
+        "icon-optional": false,
+        "icon-size": {"base": 0.9, "stops": [[11.9, 0], [12, 0.5], [16, 1], [16.1, 0]]},
+        "text-anchor": "top",
+        "icon-ignore-placement": false
       },
       "paint": {
-        "circle-color": "#00b9e4",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
-          ]
-        },
-        "circle-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
-          ]
-        }
+          "text-color": "#00b9e4",
+          "text-halo-width": 1,
+          "text-halo-color": "rgba(255,255,255,1.0)",
+          "text-halo-blur": 0,
+          "icon-translate": [0, -5.25],
+          "icon-opacity": 1
       }
     },
     {
@@ -400,6 +386,7 @@
       "interactive": true,
       "filter": [
         "==",
+
         "mode",
         "TRAM"
       ],
