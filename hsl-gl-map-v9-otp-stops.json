@@ -344,40 +344,7 @@
         }
       }
     },
-    {
-      "id": "Stops_ferry",
-      "type": "symbol",
-      "source": "stops",
-      "source-layer": "stops",
-      "interactive": true,
-      "filter": [
-        "==",
-        "type",
-        "FERRY"
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-allow-overlap": true,
-        "icon-image": "icon-ferry-station",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": true,
-        "visibility": "visible",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": {"base": 0.9, "stops": [[11.9, 0], [12, 0.5], [16, 1], [16.1, 1]]},
-        "text-anchor": "top",
-        "icon-ignore-placement": false
-      },
-      "paint": {
-          "text-color": "#00b9e4",
-          "text-halo-width": 1,
-          "text-halo-color": "rgba(255,255,255,1.0)",
-          "text-halo-blur": 0,
-          "icon-translate": [0, -5.25],
-          "icon-opacity": 1
-      }
-    },
+
     {
       "id": "Stops_tram",
       "type": "circle",
@@ -900,6 +867,40 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "Stops_ferry",
+      "type": "symbol",
+      "source": "stops",
+      "source-layer": "stops",
+      "interactive": true,
+      "filter": [
+        "==",
+        "type",
+        "FERRY"
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-allow-overlap": true,
+        "icon-image": "icon-ferry-station",
+        "text-ignore-placement": false,
+        "text-font": ["Gotham Rounded Medium"],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [0, 0.5],
+        "icon-optional": false,
+        "icon-size": {"base": 0.9, "stops": [[11.9, 0], [12, 0.5], [16, 1], [16.1, 1]]},
+        "text-anchor": "center",
+        "icon-ignore-placement": false
+      },
+      "paint": {
+          "text-color": "#00b9e4",
+          "text-halo-width": 1,
+          "text-halo-color": "rgba(255,255,255,1.0)",
+          "text-halo-blur": 0,
+          "icon-translate": [0, -5.25],
+          "icon-opacity": 1
       }
     }
   ]
