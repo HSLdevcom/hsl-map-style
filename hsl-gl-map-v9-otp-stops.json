@@ -365,7 +365,7 @@
         "visibility": "visible",
         "text-offset": [0, 0.5],
         "icon-optional": false,
-        "icon-size": {"base": 0.9, "stops": [[11.9, 0], [12, 0.5], [16, 1], [16.1, 0]]},
+        "icon-size": {"base": 0.9, "stops": [[11.9, 0], [12, 0.5], [16, 1], [16.1, 1]]},
         "text-anchor": "top",
         "icon-ignore-placement": false
       },
