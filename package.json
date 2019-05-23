@@ -7,8 +7,7 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "icons": "spritezero ./sprites/sprite map-icons && spritezero --ratio=2 ./sprites/sprite@2x map-icons && spritezero --ratio=3 ./sprites/sprite@3x map-icons",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:m": "node generate-mobile-styles.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "devDependencies": {
