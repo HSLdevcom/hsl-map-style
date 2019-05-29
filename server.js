@@ -14,6 +14,8 @@ var style = require("./index").generateStyle({
 
 var app = express();
 
+app.use(express.static("sprites"));
+
 app.get("/", function (req, res) {
   res.redirect("/index.html");
 });

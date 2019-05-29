@@ -46,6 +46,42 @@ fs.writeFile(output + "/hsl-map-style-with-stations-swedish.json", JSON.stringif
   return 0;
 });
 
+style = index.generateStyle({
+  glyphsUrl: fontAddress,
+  components: {
+    text: { enabled: true },
+    otp_stops: { enabled: true },
+    otp_stations: { enabled: true },
+    citybikes: { enabled: false }
+  }
+});
+
+fs.writeFile(output + "/hsl-map-style-bike-stations-hidden-with-stations.json", JSON.stringify(style), function generateFiStops(err) {
+  if (err) {
+    // eslint-disable-next-line
+    console.log(err);
+  }
+  return 0;
+});
+
+style = index.generateStyle({
+  glyphsUrl: fontAddress,
+  components: {
+    text: { enabled: true },
+    text_sv: { enabled: true },
+    otp_stops: { enabled: true },
+    otp_stations: { enabled: true },
+    citybikes: { enabled: false }
+  }
+});
+
+fs.writeFile(output + "/hsl-map-style-bike-stations-hidden-with-stations-swedish.json", JSON.stringify(style), function generateFiStops(err) {
+  if (err) {
+    // eslint-disable-next-line
+    console.log(err);
+  }
+  return 0;
+});
 
 style = index.generateStyle({
   glyphsUrl: fontAddress,
