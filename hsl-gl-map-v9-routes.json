@@ -114,7 +114,7 @@
         "line-round-limit": 1
       },
       "paint": {
-        "line-color": "#A200CA",
+        "line-color": "#007ac9",
         "line-width": {
           "base": 1,
           "stops": [
