@@ -3,197 +3,218 @@
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 148,
-    "y": 0
+    "x": 60,
+    "y": 82
   },
   "icon-amusement-park": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 164,
-    "y": 0
+    "x": 76,
+    "y": 82
   },
   "icon-attraction": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 0,
-    "y": 80
+    "x": 92,
+    "y": 82
   },
   "icon-bajamaja": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 16,
-    "y": 80
+    "x": 108,
+    "y": 82
   },
   "icon-bus-station": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 0,
+    "x": 34,
     "y": 48
   },
   "icon-cafe": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 32,
-    "y": 80
+    "x": 124,
+    "y": 82
   },
   "icon-cemetary": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 48,
-    "y": 80
+    "x": 140,
+    "y": 82
   },
   "icon-cinema": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 64,
-    "y": 80
+    "x": 156,
+    "y": 82
   },
   "icon-citybike-station-samocat": {
-    "height": 32,
-    "pixelRatio": 1,
-    "width": 32,
-    "x": 32,
-    "y": 48
-  },
-  "icon-citybike-station-smoove": {
-    "height": 32,
-    "pixelRatio": 1,
-    "width": 32,
-    "x": 64,
-    "y": 48
-  },
-  "icon-citybike-station-vantaa": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
     "x": 24,
     "y": 0
   },
-  "icon-concert-hall": {
-    "height": 16,
-    "pixelRatio": 1,
-    "width": 16,
-    "x": 80,
-    "y": 80
-  },
-  "icon-ferry-station": {
+  "icon-citybike-station-samocat-disabled": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
     "x": 56,
     "y": 0
   },
+  "icon-citybike-station-smoove": {
+    "height": 32,
+    "pixelRatio": 1,
+    "width": 32,
+    "x": 66,
+    "y": 48
+  },
+  "icon-citybike-station-smoove-disabled": {
+    "height": 32,
+    "pixelRatio": 1,
+    "width": 32,
+    "x": 98,
+    "y": 48
+  },
+  "icon-citybike-station-vantaa": {
+    "height": 32,
+    "pixelRatio": 1,
+    "width": 32,
+    "x": 130,
+    "y": 48
+  },
+  "icon-citybike-station-vantaa-disabled": {
+    "height": 34,
+    "pixelRatio": 1,
+    "width": 34,
+    "x": 0,
+    "y": 48
+  },
+  "icon-concert-hall": {
+    "height": 16,
+    "pixelRatio": 1,
+    "width": 16,
+    "x": 172,
+    "y": 82
+  },
+  "icon-ferry-station": {
+    "height": 32,
+    "pixelRatio": 1,
+    "width": 32,
+    "x": 88,
+    "y": 0
+  },
   "icon-hospital": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 96,
-    "y": 80
+    "x": 0,
+    "y": 112
   },
   "icon-hotel": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 112,
-    "y": 80
+    "x": 16,
+    "y": 112
   },
   "icon-lift": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 128,
-    "y": 80
+    "x": 32,
+    "y": 112
   },
   "icon-one-way": {
     "height": 11,
     "pixelRatio": 1,
     "width": 16,
-    "x": 24,
-    "y": 112
+    "x": 120,
+    "y": 128
   },
   "icon-park": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 144,
-    "y": 80
+    "x": 48,
+    "y": 112
   },
   "icon-park-and-ride": {
     "height": 12,
     "pixelRatio": 1,
     "width": 24,
-    "x": 0,
-    "y": 112
+    "x": 96,
+    "y": 128
   },
   "icon-parliament": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 160,
-    "y": 80
+    "x": 64,
+    "y": 112
   },
   "icon-place-of-worship": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 176,
-    "y": 80
+    "x": 80,
+    "y": 112
   },
   "icon-rail-station": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 96,
-    "y": 48
+    "x": 120,
+    "y": 0
   },
   "icon-retail": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 0,
-    "y": 96
+    "x": 96,
+    "y": 112
   },
   "icon-school": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 16,
-    "y": 96
+    "x": 112,
+    "y": 112
   },
   "icon-service-point": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 32,
-    "y": 96
+    "x": 128,
+    "y": 112
   },
   "icon-sibelius": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 48,
-    "y": 96
+    "x": 144,
+    "y": 112
   },
   "icon-sport": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 64,
-    "y": 96
+    "x": 160,
+    "y": 112
   },
   "icon-stairs": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 80,
-    "y": 96
+    "x": 176,
+    "y": 112
   },
   "icon-subway-entrance": {
     "height": 48,
@@ -206,77 +227,77 @@
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 128,
-    "y": 48
+    "x": 152,
+    "y": 0
   },
   "icon-subway-station-2": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 96,
-    "y": 96
+    "x": 0,
+    "y": 128
   },
   "icon-suunta1": {
     "height": 30,
     "pixelRatio": 1,
     "width": 20,
-    "x": 160,
+    "x": 162,
     "y": 48
   },
   "icon-suunta2": {
     "height": 30,
     "pixelRatio": 1,
     "width": 20,
-    "x": 88,
-    "y": 0
+    "x": 0,
+    "y": 82
   },
   "icon-theatre": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 112,
-    "y": 96
+    "x": 16,
+    "y": 128
   },
   "icon-ticket-machine": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 128,
-    "y": 96
+    "x": 32,
+    "y": 128
   },
   "icon-ticket-machine-parking": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 144,
-    "y": 96
+    "x": 48,
+    "y": 128
   },
   "icon-tickets-sales-point": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 160,
-    "y": 96
+    "x": 64,
+    "y": 128
   },
   "icon-time1": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
-    "x": 108,
-    "y": 0
+    "x": 20,
+    "y": 82
   },
   "icon-time2": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
-    "x": 128,
-    "y": 0
+    "x": 40,
+    "y": 82
   },
   "icon-wetland": {
     "height": 16,
     "pixelRatio": 1,
     "width": 16,
-    "x": 176,
-    "y": 96
+    "x": 80,
+    "y": 128
   }
 }
