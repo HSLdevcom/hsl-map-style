@@ -288,6 +288,7 @@
     {
       "id": "Stops_bus",
       "type": "circle",
+      "minzoom": 11,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -348,6 +349,7 @@
     {
       "id": "Stops_tram",
       "type": "circle",
+      "minzoom": 11,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -398,6 +400,7 @@
     },
     {
       "id": "Stops_rail_platform",
+      "minzoom": 11,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -439,6 +442,7 @@
     },
     {
       "id": "Stops_rail",
+      "minzoom": 11,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -481,6 +485,7 @@
     {
       "id": "Stops_subway",
       "type": "circle",
+      "minzoom": 11,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -540,6 +545,7 @@
     {
       "id": "Stops_subway_platform",
       "type": "circle",
+      "minzoom": 11,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -598,6 +604,7 @@
     },
     {
       "id": "Stops_hub_platform",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -639,6 +646,7 @@
     },
     {
       "id": "Stops_hub",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -673,7 +681,7 @@
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 15,
+      "minzoom": 14,
       "interactive": true,
       "filter": [
         "all",
@@ -698,11 +706,11 @@
           "base": 1.15,
           "stops": [
             [
-              14,
+              15,
               0
             ],
             [
-              14.1,
+              15.1,
               2
             ],
             [
@@ -721,7 +729,7 @@
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 15,
+      "minzoom": 14,
       "interactive": true,
       "filter": [
         "all",
@@ -746,11 +754,11 @@
           "base": 1.15,
           "stops": [
             [
-              14,
+              15,
               0
             ],
             [
-              14.1,
+              15.1,
               2
             ],
             [
@@ -893,7 +901,7 @@
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 11.9,
+      "minzoom": 11,
       "interactive": true,
       "filter": [
           "==",
