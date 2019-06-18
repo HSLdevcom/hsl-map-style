@@ -49,6 +49,61 @@
       }
     },
     {
+      "id": "terminals_citybike-station",
+      "type": "symbol",
+      "source": "citybike",
+      "source-layer": "stations",
+      "interactive": true,
+      "minzoom": 13,
+      "layout": {
+        "text-optional": true,
+        "text-allow-overlap": true,
+        "icon-image": "icon-citybike-station-{networks}",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-anchor": "center",
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              13.9,
+              0
+            ],
+            [
+              14,
+              0.5
+            ],
+            [
+              17,
+              1
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,1.0)",
+        "text-halo-blur": 0,
+        "icon-translate": [
+          0,
+          -5.25
+        ],
+        "icon-opacity": 1
+      }
+    },
+    {
       "id": "Stops_citybikes",
       "metadata": {
         "mapbox:group": "1457010266398.4177"
