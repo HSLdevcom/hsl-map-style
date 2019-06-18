@@ -54,7 +54,7 @@
       "source": "citybike",
       "source-layer": "stations",
       "interactive": true,
-      "minzoom": 13,
+      "minzoom": 14,
       "layout": {
         "text-optional": true,
         "text-allow-overlap": true,
