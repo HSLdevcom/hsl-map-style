@@ -20,6 +20,27 @@
     "x": 384,
     "y": 348
   },
+  "icon-circle-green": {
+    "height": 72,
+    "pixelRatio": 3,
+    "width": 75,
+    "x": 480,
+    "y": 348
+  },
+  "icon-circle-orange": {
+    "height": 72,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 0,
+    "y": 444
+  },
+  "icon-circle-red": {
+    "height": 72,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 72,
+    "y": 444
+  },
   "icon-citybike-station-samocat": {
     "height": 96,
     "pixelRatio": 3,
@@ -122,8 +143,8 @@
     "height": 63,
     "pixelRatio": 3,
     "width": 42,
-    "x": 522,
-    "y": 252
+    "x": 144,
+    "y": 444
   },
   "icon-rail-station": {
     "height": 96,
