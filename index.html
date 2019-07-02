@@ -3,8 +3,8 @@
         <meta charset="utf-8" />
         <title>HSL Map Style</title>
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-        <script src="https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js"></script>
-        <link href="https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css" rel="stylesheet" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel="stylesheet" />
         <style>
             body {
                 margin: 0;
@@ -23,7 +23,9 @@
                 right: 0;
                 padding: 10px;
                 background: rgba(255, 255, 255, 0.6);
-                overflow-y: auto;
+                overflow: auto;
+                max-width: 600px;
+                word-break: break-all;
             }
         </style>
     </head>
@@ -34,8 +36,11 @@
             var map = new mapboxgl.Map({
                 container: "map", // container id
                 style: "style.json", //stylesheet location
-                center: [24.9, 60.5], // starting position
-                zoom: 9 // starting zoom
+                center: [
+                    24.942,
+                    60.170
+                ], // starting position
+                zoom: 14.5 // starting zoom
             });
 
             map.on("click", function (event) {

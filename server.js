@@ -7,8 +7,10 @@ var style = require("./index").generateStyle({
   glyphsUrl: "https://static.hsl.fi/mapfonts/",
   components: {
     text: { enabled: true },
+    text_sv: { enabled: true },
     otp_stops: { enabled: true },
-    otp_stations: { enabled: true }
+    otp_stations: { enabled: true },
+    citybikes: { enabled: true }
   }
 });
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="32px" viewBox="0 0 23 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>HSL Shared Components-215</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HSL-Shared-Components-215" fill-rule="nonzero">
+            <path d="M10.5705883,31.1189782 C3.93386438,21.5108918 0.615384615,14.8739323 0.615384615,11.0769231 C0.615384615,5.29917493 5.29917493,0.615384615 11.0769231,0.615384615 C16.8546713,0.615384615 21.5384615,5.29917493 21.5384615,11.0769231 C21.5384615,14.8739323 18.2199818,21.5108918 11.5832579,31.1189782 L11.0769231,31.8520069 L10.5705883,31.1189782 Z" id="Oval" stroke="#FFFFFF" fill="#64BE14"></path>
+            <path d="M6.76923077,11.0769231 C6.76923077,8.70153846 8.70153846,6.76923077 11.0769231,6.76923077 C13.4523077,6.76923077 15.3846154,8.70153846 15.3846154,11.0769231 C15.3846154,13.4523077 13.4523077,15.3846154 11.0769231,15.3846154 C8.70153846,15.3846154 6.76923077,13.4523077 6.76923077,11.0769231 Z" id="Path" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

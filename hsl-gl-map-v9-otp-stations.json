@@ -11,7 +11,7 @@
       "type": "symbol",
       "source": "stops",
       "source-layer": "stations",
-      "minzoom": 11.9,
+      "minzoom": 11,
       "maxzoom": 16.1,
       "interactive": true,
       "filter": [
@@ -84,7 +84,7 @@
       "type": "symbol",
       "source": "stops",
       "source-layer": "stations",
-      "minzoom": 11.9,
+      "minzoom": 11,
       "maxzoom": 16.1,
       "interactive": true,
       "filter": [
@@ -156,7 +156,7 @@
       "type": "symbol",
       "source": "stops",
       "source-layer": "stations",
-      "minzoom": 11.9,
+      "minzoom": 11,
       "maxzoom": 16.1,
       "interactive": true,
       "filter": [
