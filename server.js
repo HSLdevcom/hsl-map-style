@@ -1,35 +1,35 @@
-var fs = require("fs");
-var express = require("express");
+const fs = require("fs");
+const express = require("express");
 
-var index = fs.readFileSync("index.html", "utf8");
+const index = fs.readFileSync("index.html", "utf8");
 
-var style = require("./index").generateStyle({
+const style = require("./index").generateStyle({
   components: {
+    routes: { enabled: true },
+    stops: { enabled: true },
     citybikes: { enabled: true },
-    ticket_sales: { enabled: true },
+    municipal_borders: { enabled: true },
     poi: { enabled: true },
-    jore_terminals: { enabled: true },
-    ticket_zones: { enabled: true },
-    ticket_zone_labels: { enabled: true }
-  }
+    ticket_sales: { enabled: true }
+  },
 });
 
-var app = express();
+const app = express();
 
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.redirect("/index.html");
 });
 
-app.get("/index.html", function (req, res) {
+app.get("/index.html", (req, res) => {
   res.set("Content-Type", "text/html");
   res.send(index);
 });
 
-app.get("/style.json", function (req, res) {
+app.get("/style.json", (req, res) => {
   res.set("Content-Type", "application/json");
   res.send(style);
 });
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log("Listening at localhost:3000");
 });

@@ -1,7 +1,7 @@
 {
   "sources": {
     "ticket-sales": {
-      "data": "data-hslhrt.opendata.arcgis.com/datasets/8c6220ad96454da5be097331a6cb0fe6_0.json",
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/727c6618a0814f8ba21bb00c9cb34019_0.geojson",
       "type": "geojson"
     }
   },
@@ -21,7 +21,7 @@
         ],
         [
           "in",
-          "TYYPPI",
+          "Tyyppi",
           "Myyntipiste",
           "R-kioski"
         ]
