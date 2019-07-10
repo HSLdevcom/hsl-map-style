@@ -9,7 +9,7 @@
   },
   "sources": {
     "routes": {
-      "url": "https://kartat.hsldev.com/jore/tiles/routes/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/routes/index.json",
       "type": "vector"
     },
     "rail": {
