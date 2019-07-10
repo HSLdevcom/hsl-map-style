@@ -889,7 +889,7 @@
       "type": "geojson"
     },
     "routes": {
-      "url": "http://kartat.hsl.fi/jore/tiles/routes/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/routes/index.json",
       "type": "vector"
     },
     "subway": {
