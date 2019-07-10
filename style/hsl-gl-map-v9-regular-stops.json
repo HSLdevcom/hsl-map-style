@@ -9,7 +9,7 @@
   },
   "sources": {
     "stops": {
-      "url": "http://kartat.hsl.fi/jore/tiles/regular-stops/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/regular-stops/index.json",
       "type": "vector"
     }
   },

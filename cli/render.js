@@ -2,7 +2,7 @@ const style = require("../index");
 
 module.exports = function() {
   const styleJson = style.generateStyle({
-    glyphsUrl: "https://kartat.hsldev.com/",
+    glyphsUrl: "https://kartat.hsl.fi/",
     components: {
       routes: { enabled: false },
       stops: { enabled: false },

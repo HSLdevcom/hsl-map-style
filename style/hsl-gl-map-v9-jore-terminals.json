@@ -1,7 +1,7 @@
 {
   "sources": {
     "terminals": {
-      "url": "http://kartat.hsl.fi/jore/tiles/terminals/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/terminals/index.json",
       "type": "vector"
     }
   },

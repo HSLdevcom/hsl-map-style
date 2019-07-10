@@ -81,7 +81,7 @@ Use the exported `generateStyle` function and pass it the layers you want to inc
 import { generateStyle } from "hsl-map-style";
 
 const style = generateStyle({
-  glyphsUrl: "https://kartat.hsldev.com/", // <-- you probably need to provide the glyphs url
+  glyphsUrl: "https://kartat.hsl.fi/", // <-- you probably need to provide the glyphs url
   components: {
     // Set each layer you want to include to true
     routes: { enabled: false },

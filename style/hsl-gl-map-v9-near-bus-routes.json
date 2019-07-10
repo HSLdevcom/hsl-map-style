@@ -9,7 +9,7 @@
   },
   "sources": {
     "routes": {
-      "url": "http://kartat.hsl.fi/jore/tiles/near-bus-routes/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/near-bus-routes/index.json",
       "type": "vector"
     },
     "rail": {
@@ -35,6 +35,8 @@
         [
           "!in",
           "routeId",
+          "1500",
+          "2510",
           "2550",
           "4560"
         ],
@@ -86,6 +88,8 @@
         [
           "!in",
           "routeId",
+          "1500",
+          "2510",
           "2550",
           "4560"
         ],
@@ -282,6 +286,8 @@
         [
           "in",
           "routeId",
+          "1500",
+          "2510",
           "2550",
           "4560"
         ],
@@ -328,6 +334,8 @@
         [
           "in",
           "routeId",
+          "1500",
+          "2510",
           "2550",
           "4560"
         ],
