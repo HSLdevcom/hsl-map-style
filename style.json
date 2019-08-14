@@ -88,7 +88,7 @@
     }
   },
   "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
-  "glyphs": "https://static.hsl.fi/mapfonts/{fontstack}/{range}.pbf",
+  "glyphs": "https://static.hsldev.com/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -168,9 +168,9 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": [
-      "==",
-      "type",
-      "playground"
+        "==",
+        "type",
+        "playground"
       ],
       "layout": {
         "visibility": "visible"
