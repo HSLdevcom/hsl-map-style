@@ -56,7 +56,7 @@
     }
   },
   "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
-  "glyphs": "https://static.hsl.fi/mapfonts/{fontstack}/{range}.pbf",
+  "glyphs": "https://static.hsldev.com/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
