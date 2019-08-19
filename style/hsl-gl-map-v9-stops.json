@@ -102,8 +102,7 @@
       "interactive": true,
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
-        ["==", "mode", "BUS"]
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"]
       ],
       "layout": {
         "visibility": "visible"
