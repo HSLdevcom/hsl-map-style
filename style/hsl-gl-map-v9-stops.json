@@ -71,12 +71,45 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": ["==", "mode", "BUS"],
+      "filter": [
+        "all",
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["==", "mode", "BUS"]
+      ],
       "layout": {
         "visibility": "visible"
       },
       "paint": {
         "circle-color": "#007ac9",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [[11.9, 0], [12, 1], [22, 24]]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [[11, 0.6], [14, 1]]
+        }
+      }
+    },
+    {
+      "id": "Stops_trunk",
+      "type": "circle",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "source": "stops",
+      "source-layer": "stops",
+      "interactive": true,
+      "filter": [
+        "all",
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["==", "mode", "BUS"]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#FF6319",
         "circle-radius": {
           "base": 1.15,
           "stops": [[11.9, 0], [12, 1], [22, 24]]
