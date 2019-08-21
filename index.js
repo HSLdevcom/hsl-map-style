@@ -8,7 +8,6 @@ const BASE_JSON = require("./style/hsl-gl-map-v9-style.json");
 
 const replaceableValues = {
   SOURCES_URL: { default: "https://cdn.digitransit.fi/map/v1/" },
-  GLYPHS_URL: { default: "http://localhost:8000/" },
 };
 
 const components = [
@@ -34,13 +33,13 @@ const components = [
     id: "regular_routes",
     enabled: false,
     description: "Linjaviivat ilman lähibusseja",
-    style: require("./style/hsl-gl-map-v9-regular-routes.json")
+    style: require("./style/hsl-gl-map-v9-regular-routes.json"),
   },
   {
     id: "near_bus_routes",
     enabled: false,
     description: "Lähibussi reitit",
-    style: require("./style/hsl-gl-map-v9-near-bus-routes.json")
+    style: require("./style/hsl-gl-map-v9-near-bus-routes.json"),
   },
   {
     id: "text",
@@ -90,7 +89,7 @@ const components = [
     id: "regular_stops",
     enabled: false,
     description: "Pysäkit ilman lähibusseja",
-    style: require("./style/hsl-gl-map-v9-regular-stops.json")
+    style: require("./style/hsl-gl-map-v9-regular-stops.json"),
   },
   {
     id: "citybikes",
@@ -102,61 +101,63 @@ const components = [
     id: "print",
     enabled: false,
     description: "Tulostevärit",
-    style: require("./style/hsl-gl-map-v9-print.json")
+    style: require("./style/hsl-gl-map-v9-print.json"),
   },
   {
     id: "jore_terminals",
     enabled: false,
     description: "Tulostevärit",
-    style: require("./style/hsl-gl-map-v9-jore-terminals.json")
+    style: require("./style/hsl-gl-map-v9-jore-terminals.json"),
   },
   {
     id: "near_bus_stops",
     enabled: false,
     description: "Lähibussi pysäkit",
-    style: require("./style/hsl-gl-map-v9-near-bus-stops.json")
+    style: require("./style/hsl-gl-map-v9-near-bus-stops.json"),
   },
   {
     id: "ticket_zones",
     enabled: false,
     description: "Lippyvyöhykkeet",
-    style: require("./style/hsl-gl-map-v9-ticket-zones.json")
+    style: require("./style/hsl-gl-map-v9-ticket-zones.json"),
   },
   {
     id: "ticket_zone_labels",
     enabled: false,
     description: "Lippyvyöhykkeen ikonit",
-    style: require("./style/hsl-gl-map-v9-ticket-zone-labels.json")
-  }
+    style: require("./style/hsl-gl-map-v9-ticket-zone-labels.json"),
+  },
 ];
 
 /**
- * Prepends http:// to relative urls. Returns original string if absolute or protocol-relative url.
+ * Prepends http:// to relative urls. Returns original string if absolute or
+ * protocol-relative url.
  * @param url {string}
  * @returns {string}
  */
 function makeAbsoluteUrl(url) {
   const isAbsoluteUrl = new RegExp("^(?:[a-z]+:)?//", "i");
+
   if (isAbsoluteUrl.test(url)) {
     return url;
   }
-  return `http://${url}`;
+
+  return `https://${url}`;
 }
 
 /**
  * Creates values that replace the defaults in the base style
- * @param  {Object} options         Received options that are used to create replacements
- * @return {Object}                 Replacement values that are used to modify the base style
+ * @param  {Object} options         Received options that are used to create
+ *   replacements
+ * @return {Object}                 Replacement values that are used to modify the
+ *   base style
  */
 function getReplacements(options) {
   const replacements = {};
+
   if (options.sourcesUrl) {
     const sourcesUrl = makeAbsoluteUrl(options.sourcesUrl);
     replacements.SOURCES_URL = { replacement: sourcesUrl };
-  }
-  if (options.glyphsUrl) {
-    const glyphsUrl = makeAbsoluteUrl(options.glyphsUrl);
-    replacements.GLYPHS_URL = { replacement: glyphsUrl };
   }
 
   return replacements;
@@ -177,6 +178,7 @@ function replaceInStyle(style, options) {
       replacedStyle = replacedStyle.replace(replaceableRegexp, value.replacement);
     }
   });
+
   return JSON.parse(replacedStyle);
 }
 
@@ -212,7 +214,8 @@ function customizer(objValue, srcValue) {
 }
 
 /**
- * Creates a style with certain objects (e.g. layers, sources), based on received options
+ * Creates a style with certain objects (e.g. layers, sources), based on received
+ * options
  * @param  {Object} style     Style that is extended
  * @param  {Object} options   Determines what components to add
  * @return {Object}           Extended style
@@ -236,6 +239,7 @@ function extendStyle(style, options) {
       mergeWith(extendedStyle, component.style, customizer);
     }
   });
+
   return extendedStyle;
 }
 
@@ -247,8 +251,7 @@ module.exports = {
    */
   generateStyle: function generateStyle(options) {
     const extendedStyle = extendStyle(BASE_JSON, options || {});
-    const replacedStyle = replaceInStyle(extendedStyle, options || {});
-    return replacedStyle;
+    return replaceInStyle(extendedStyle, options || {});
   },
   components,
 };

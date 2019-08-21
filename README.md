@@ -81,7 +81,8 @@ Use the exported `generateStyle` function and pass it the layers you want to inc
 import { generateStyle } from "hsl-map-style";
 
 const style = generateStyle({
-  glyphsUrl: "https://kartat.hsl.fi/", // <-- you probably need to provide the glyphs url
+  sourcesUrl: 'https://cdn.digitransit.fi/map/v1/', // <-- You can override the default sources URL
+  // glyphsUrl: '', <-- The glyphsUrl prop is removed. URL for fonts from HSL Azure storage is used.
   components: {
     // Set each layer you want to include to true
     routes: { enabled: false },
@@ -102,3 +103,5 @@ const map = new mapboxgl.Map({
 ```
 
 Some layers are enabled by default and the layers may change as we develop the style. Check `index.js` for the list of layers.
+
+

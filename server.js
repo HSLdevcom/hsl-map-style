@@ -10,7 +10,9 @@ const style = require("./index").generateStyle({
     citybikes: { enabled: true },
     municipal_borders: { enabled: true },
     poi: { enabled: true },
-    ticket_sales: { enabled: true }
+    ticket_sales: { enabled: true },
+    driver_instructions: { enabled: true },
+    ticket_zone_labels: { enabled: true },
   },
 });
 
