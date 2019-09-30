@@ -38,15 +38,12 @@
     },
     "mapbox-groups": {}
   },
-  "center": [
-    24.780522192591405,
-    60.178648250675934
-  ],
+  "center": [24.780522192591405, 60.178648250675934],
   "zoom": 14.051135528958179,
   "bearing": 0,
   "pitch": 0,
   "sources": {},
-  "sprite": "https://hslstoragestatic.azureedge.net/mapsprite/sprite",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
   "glyphs": "https://static.hsldev.com/mapfonts/{fontstack}/{range}.pbf",
   "layers": [],
   "created": "2016-05-12T07:20:14.210Z",
