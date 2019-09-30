@@ -43,7 +43,7 @@
   "bearing": 0,
   "pitch": 0,
   "sources": {},
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite.json",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite.png",
   "glyphs": "https://static.hsldev.com/mapfonts/{fontstack}/{range}.pbf",
   "layers": [],
   "created": "2016-05-12T07:20:14.210Z",
