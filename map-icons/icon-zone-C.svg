@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-zone-C</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-zone-C">
+            <ellipse id="icon-circle-red" fill="#007AC9" fill-rule="nonzero" cx="23.7798165" cy="24" rx="23.7798165" ry="24"></ellipse>
+            <path d="M24.024,39.528 C15.048,39.528 8.36,32.532 8.36,23.688 L8.36,23.6 C8.36,14.844 14.916,7.672 24.244,7.672 C28.996,7.672 32.12,9.08 34.804,11.148 C35.376,11.588 35.86,12.336 35.86,13.304 C35.86,14.8 34.672,15.944 33.176,15.944 C32.428,15.944 31.9,15.68 31.548,15.416 C29.436,13.7 27.148,12.644 24.2,12.644 C18.348,12.644 14.036,17.484 14.036,23.512 L14.036,23.6 C14.036,29.628 18.304,34.512 24.2,34.512 C27.456,34.512 29.656,33.456 31.9,31.564 C32.296,31.212 32.868,30.948 33.528,30.948 C34.892,30.948 36.08,32.092 36.08,33.456 C36.08,34.292 35.684,34.952 35.2,35.392 C32.296,37.944 28.996,39.528 24.024,39.528 Z" id="C" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
