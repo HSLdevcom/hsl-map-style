@@ -17,28 +17,28 @@
     "height": 25,
     "pixelRatio": 1,
     "width": 32,
-    "x": 339,
+    "x": 311,
     "y": 132
   },
   "icon-circle-green": {
     "height": 24,
     "pixelRatio": 1,
     "width": 25,
-    "x": 191,
-    "y": 96
+    "x": 343,
+    "y": 132
   },
   "icon-circle-orange": {
     "height": 24,
     "pixelRatio": 1,
     "width": 24,
-    "x": 216,
+    "x": 191,
     "y": 96
   },
   "icon-circle-red": {
     "height": 24,
     "pixelRatio": 1,
     "width": 24,
-    "x": 240,
+    "x": 215,
     "y": 96
   },
   "icon-citybike-station-samocat": {
@@ -143,8 +143,8 @@
     "height": 21,
     "pixelRatio": 1,
     "width": 14,
-    "x": 264,
-    "y": 96
+    "x": 368,
+    "y": 132
   },
   "icon-rail-station": {
     "height": 32,
@@ -182,11 +182,11 @@
     "y": 132
   },
   "icon-walking-pattern": {
-    "height": 28,
+    "height": 16,
     "pixelRatio": 1,
-    "width": 28,
-    "x": 311,
-    "y": 132
+    "width": 16,
+    "x": 239,
+    "y": 96
   },
   "icon-zone-A": {
     "height": 48,
