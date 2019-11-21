@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-zone-B</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-zone-B">
+            <ellipse id="icon-circle-red" fill="#007AC9" fill-rule="nonzero" cx="23.7798165" cy="24" rx="23.7798165" ry="24"></ellipse>
+            <path d="M13.076,36.272 L13.076,10.928 C13.076,9.388 14.264,8.2 15.804,8.2 L26.892,8.2 C30.412,8.2 33.184,9.168 34.944,10.928 C36.308,12.292 37.012,13.964 37.012,16.032 L37.012,16.12 C37.012,19.816 34.9,21.796 32.612,22.984 C36.22,24.216 38.728,26.284 38.728,30.464 L38.728,30.552 C38.728,36.052 34.196,39 27.332,39 L15.804,39 C14.264,39 13.076,37.812 13.076,36.272 Z M18.4,21.18 L25.792,21.18 C29.268,21.18 31.6,19.816 31.6,17 L31.6,16.912 C31.6,14.492 29.664,12.996 26.188,12.996 L18.4,12.996 L18.4,21.18 Z M18.4,34.204 L27.376,34.204 C31.072,34.204 33.316,32.752 33.316,29.98 L33.316,29.892 C33.316,27.296 31.248,25.756 26.98,25.756 L18.4,25.756 L18.4,34.204 Z" id="B" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

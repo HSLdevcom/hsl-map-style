@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-zone-D</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-zone-D">
+            <ellipse id="icon-circle-red" fill="#007AC9" fill-rule="nonzero" cx="23.7798165" cy="24" rx="23.7798165" ry="24"></ellipse>
+            <path d="M12.756,36.272 L12.756,10.928 C12.756,9.388 13.944,8.2 15.484,8.2 L24.24,8.2 C33.92,8.2 40.608,14.844 40.608,23.512 L40.608,23.6 C40.608,32.268 33.92,39 24.24,39 L15.484,39 C13.944,39 12.756,37.812 12.756,36.272 Z M18.168,34.072 L24.24,34.072 C30.708,34.072 34.932,29.716 34.932,23.688 L34.932,23.6 C34.932,17.572 30.708,13.128 24.24,13.128 L18.168,13.128 L18.168,34.072 Z" id="D" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

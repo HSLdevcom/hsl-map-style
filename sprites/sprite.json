@@ -3,162 +3,162 @@
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 96,
-    "y": 0
+    "x": 104,
+    "y": 96
   },
   "icon-bus-station-border": {
     "height": 36,
     "pixelRatio": 1,
     "width": 36,
-    "x": 0,
-    "y": 48
+    "x": 120,
+    "y": 0
   },
   "icon-checkmark": {
     "height": 25,
     "pixelRatio": 1,
     "width": 32,
-    "x": 128,
-    "y": 116
+    "x": 311,
+    "y": 132
   },
   "icon-circle-green": {
     "height": 24,
     "pixelRatio": 1,
     "width": 25,
-    "x": 160,
-    "y": 116
+    "x": 343,
+    "y": 132
   },
   "icon-circle-orange": {
     "height": 24,
     "pixelRatio": 1,
     "width": 24,
-    "x": 0,
-    "y": 148
+    "x": 191,
+    "y": 96
   },
   "icon-circle-red": {
     "height": 24,
     "pixelRatio": 1,
     "width": 24,
-    "x": 24,
-    "y": 148
+    "x": 215,
+    "y": 96
   },
   "icon-citybike-station-samocat": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 128,
-    "y": 0
+    "x": 136,
+    "y": 96
   },
   "icon-citybike-station-samocat-border": {
     "height": 36,
     "pixelRatio": 1,
     "width": 36,
-    "x": 36,
-    "y": 48
+    "x": 156,
+    "y": 0
   },
   "icon-citybike-station-samocat-disabled": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 160,
-    "y": 0
+    "x": 0,
+    "y": 132
   },
   "icon-citybike-station-smoove": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 0,
-    "y": 84
+    "x": 32,
+    "y": 132
   },
   "icon-citybike-station-smoove-border": {
     "height": 36,
     "pixelRatio": 1,
     "width": 36,
-    "x": 24,
-    "y": 0
+    "x": 96,
+    "y": 48
   },
   "icon-citybike-station-smoove-disabled": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 32,
-    "y": 84
+    "x": 64,
+    "y": 132
   },
   "icon-citybike-station-vantaa": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 64,
-    "y": 84
+    "x": 96,
+    "y": 132
   },
   "icon-citybike-station-vantaa-border": {
     "height": 34,
     "pixelRatio": 1,
     "width": 34,
-    "x": 108,
-    "y": 48
+    "x": 36,
+    "y": 96
   },
   "icon-citybike-station-vantaa-disabled": {
     "height": 34,
     "pixelRatio": 1,
     "width": 34,
-    "x": 142,
-    "y": 48
+    "x": 70,
+    "y": 96
   },
   "icon-cross": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 96,
-    "y": 84
+    "x": 128,
+    "y": 132
   },
   "icon-endpoint-end": {
     "height": 32,
     "pixelRatio": 1,
     "width": 23,
-    "x": 128,
-    "y": 84
+    "x": 160,
+    "y": 132
   },
   "icon-endpoint-start": {
     "height": 32,
     "pixelRatio": 1,
     "width": 23,
-    "x": 151,
-    "y": 84
+    "x": 168,
+    "y": 96
   },
   "icon-ferry-station": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 0,
-    "y": 116
+    "x": 183,
+    "y": 132
   },
   "icon-ferry-station-border": {
     "height": 36,
     "pixelRatio": 1,
     "width": 36,
-    "x": 60,
-    "y": 0
+    "x": 132,
+    "y": 48
   },
   "icon-limited-availability": {
     "height": 21,
     "pixelRatio": 1,
     "width": 14,
-    "x": 48,
-    "y": 148
+    "x": 368,
+    "y": 132
   },
   "icon-rail-station": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 32,
-    "y": 116
+    "x": 215,
+    "y": 132
   },
   "icon-rail-station-border": {
     "height": 36,
     "pixelRatio": 1,
     "width": 36,
-    "x": 72,
-    "y": 48
+    "x": 0,
+    "y": 96
   },
   "icon-subway-entrance": {
     "height": 48,
@@ -171,14 +171,49 @@
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 64,
-    "y": 116
+    "x": 247,
+    "y": 132
   },
   "icon-subway-station-border": {
     "height": 32,
     "pixelRatio": 1,
     "width": 32,
-    "x": 96,
-    "y": 116
+    "x": 279,
+    "y": 132
+  },
+  "icon-walking-pattern": {
+    "height": 16,
+    "pixelRatio": 1,
+    "width": 16,
+    "x": 239,
+    "y": 96
+  },
+  "icon-zone-A": {
+    "height": 48,
+    "pixelRatio": 1,
+    "width": 48,
+    "x": 0,
+    "y": 48
+  },
+  "icon-zone-B": {
+    "height": 48,
+    "pixelRatio": 1,
+    "width": 48,
+    "x": 24,
+    "y": 0
+  },
+  "icon-zone-C": {
+    "height": 48,
+    "pixelRatio": 1,
+    "width": 48,
+    "x": 48,
+    "y": 48
+  },
+  "icon-zone-D": {
+    "height": 48,
+    "pixelRatio": 1,
+    "width": 48,
+    "x": 72,
+    "y": 0
   }
 }

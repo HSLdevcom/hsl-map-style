@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-zone-A</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-zone-A">
+            <ellipse id="icon-circle-red" fill="#007AC9" fill-rule="nonzero" cx="23.7798165" cy="24" rx="23.7798165" ry="24"></ellipse>
+            <path d="M8.842,34.712 C8.842,34.316 8.974,33.92 9.194,33.48 L20.634,7.96 C21.25,6.596 22.35,5.76 23.89,5.76 L24.154,5.76 C25.694,5.76 26.75,6.596 27.366,7.96 L38.806,33.48 C39.026,33.876 39.114,34.272 39.114,34.624 C39.114,36.076 38.014,37.22 36.562,37.22 C35.286,37.22 34.406,36.472 33.922,35.328 L31.414,29.564 L16.454,29.564 L13.858,35.504 C13.418,36.604 12.494,37.22 11.35,37.22 C9.942,37.22 8.842,36.12 8.842,34.712 Z M18.522,24.768 L29.346,24.768 L23.934,12.316 L18.522,24.768 Z" id="A" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
