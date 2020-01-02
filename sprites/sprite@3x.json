@@ -3,8 +3,8 @@
     "height": 72,
     "pixelRatio": 3,
     "width": 72,
-    "x": 906,
-    "y": 534
+    "x": 1056,
+    "y": 324
   },
   "icon-bus-circle-trail": {
     "height": 162,
@@ -17,273 +17,301 @@
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 102,
-    "y": 432
+    "x": 312,
+    "y": 468
   },
   "icon-bus-station-border": {
     "height": 108,
     "pixelRatio": 3,
     "width": 108,
-    "x": 432,
-    "y": 162
+    "x": 144,
+    "y": 324
+  },
+  "icon-bus-trail": {
+    "height": 162,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 72,
+    "y": 0
   },
   "icon-checkmark": {
     "height": 75,
     "pixelRatio": 3,
     "width": 96,
-    "x": 810,
-    "y": 534
+    "x": 960,
+    "y": 324
   },
   "icon-circle-green": {
     "height": 72,
     "pixelRatio": 3,
     "width": 75,
-    "x": 978,
-    "y": 534
+    "x": 576,
+    "y": 0
   },
   "icon-circle-orange": {
     "height": 72,
     "pixelRatio": 3,
     "width": 72,
-    "x": 1053,
-    "y": 534
+    "x": 651,
+    "y": 0
   },
   "icon-circle-red": {
     "height": 72,
     "pixelRatio": 3,
     "width": 72,
-    "x": 486,
-    "y": 432
+    "x": 723,
+    "y": 0
   },
   "icon-citybike-station-samocat": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 198,
-    "y": 432
+    "x": 408,
+    "y": 468
   },
   "icon-citybike-station-samocat-border": {
     "height": 108,
     "pixelRatio": 3,
     "width": 108,
-    "x": 0,
+    "x": 252,
     "y": 324
   },
   "icon-citybike-station-samocat-disabled": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 294,
-    "y": 432
+    "x": 504,
+    "y": 468
   },
   "icon-citybike-station-smoove": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 390,
-    "y": 432
+    "x": 600,
+    "y": 468
   },
   "icon-citybike-station-smoove-border": {
     "height": 108,
     "pixelRatio": 3,
     "width": 108,
-    "x": 108,
+    "x": 360,
     "y": 324
   },
   "icon-citybike-station-smoove-disabled": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 0,
-    "y": 534
+    "x": 696,
+    "y": 468
   },
   "icon-citybike-station-vantaa": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 96,
-    "y": 534
+    "x": 792,
+    "y": 468
   },
   "icon-citybike-station-vantaa-border": {
     "height": 102,
     "pixelRatio": 3,
     "width": 102,
-    "x": 432,
-    "y": 324
+    "x": 108,
+    "y": 468
   },
   "icon-citybike-station-vantaa-disabled": {
     "height": 102,
     "pixelRatio": 3,
     "width": 102,
-    "x": 0,
-    "y": 432
+    "x": 210,
+    "y": 468
   },
   "icon-cross": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 192,
-    "y": 534
+    "x": 888,
+    "y": 468
   },
   "icon-endpoint-end": {
     "height": 96,
     "pixelRatio": 3,
     "width": 69,
-    "x": 288,
-    "y": 534
+    "x": 984,
+    "y": 468
   },
   "icon-endpoint-start": {
     "height": 96,
     "pixelRatio": 3,
     "width": 69,
-    "x": 357,
-    "y": 534
+    "x": 1053,
+    "y": 468
   },
   "icon-ferry-circle": {
     "height": 72,
     "pixelRatio": 3,
     "width": 72,
-    "x": 558,
-    "y": 432
-  },
-  "icon-ferry-circle-trail": {
-    "height": 162,
-    "pixelRatio": 3,
-    "width": 72,
-    "x": 72,
+    "x": 795,
     "y": 0
   },
-  "icon-ferry-station": {
-    "height": 96,
-    "pixelRatio": 3,
-    "width": 96,
-    "x": 426,
-    "y": 534
-  },
-  "icon-ferry-station-border": {
-    "height": 108,
-    "pixelRatio": 3,
-    "width": 108,
-    "x": 216,
-    "y": 324
-  },
-  "icon-limited-availability": {
-    "height": 63,
-    "pixelRatio": 3,
-    "width": 42,
-    "x": 846,
-    "y": 432
-  },
-  "icon-rail-station": {
-    "height": 96,
-    "pixelRatio": 3,
-    "width": 96,
-    "x": 522,
-    "y": 534
-  },
-  "icon-rail-station-border": {
-    "height": 108,
-    "pixelRatio": 3,
-    "width": 108,
-    "x": 324,
-    "y": 324
-  },
-  "icon-subway-circle": {
-    "height": 72,
-    "pixelRatio": 3,
-    "width": 72,
-    "x": 630,
-    "y": 432
-  },
-  "icon-subway-circle-trail": {
+  "icon-ferry-circle-trail": {
     "height": 162,
     "pixelRatio": 3,
     "width": 72,
     "x": 0,
     "y": 162
   },
+  "icon-ferry-station": {
+    "height": 96,
+    "pixelRatio": 3,
+    "width": 96,
+    "x": 576,
+    "y": 324
+  },
+  "icon-ferry-station-border": {
+    "height": 108,
+    "pixelRatio": 3,
+    "width": 108,
+    "x": 468,
+    "y": 324
+  },
+  "icon-ferry-trail": {
+    "height": 162,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 72,
+    "y": 162
+  },
+  "icon-limited-availability": {
+    "height": 63,
+    "pixelRatio": 3,
+    "width": 42,
+    "x": 1083,
+    "y": 0
+  },
+  "icon-rail-station": {
+    "height": 96,
+    "pixelRatio": 3,
+    "width": 96,
+    "x": 672,
+    "y": 324
+  },
+  "icon-rail-station-border": {
+    "height": 108,
+    "pixelRatio": 3,
+    "width": 108,
+    "x": 0,
+    "y": 468
+  },
+  "icon-subway-circle": {
+    "height": 72,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 867,
+    "y": 0
+  },
+  "icon-subway-circle-trail": {
+    "height": 162,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 144,
+    "y": 0
+  },
   "icon-subway-entrance": {
     "height": 144,
     "pixelRatio": 3,
     "width": 72,
-    "x": 216,
+    "x": 360,
     "y": 0
   },
   "icon-subway-station": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 618,
-    "y": 534
+    "x": 768,
+    "y": 324
   },
   "icon-subway-station-border": {
     "height": 96,
     "pixelRatio": 3,
     "width": 96,
-    "x": 714,
-    "y": 534
+    "x": 864,
+    "y": 324
   },
   "icon-train-circle": {
     "height": 72,
     "pixelRatio": 3,
     "width": 72,
-    "x": 702,
-    "y": 432
+    "x": 939,
+    "y": 0
   },
   "icon-train-circle-trail": {
     "height": 162,
     "pixelRatio": 3,
     "width": 72,
-    "x": 72,
+    "x": 216,
+    "y": 0
+  },
+  "icon-train-trail": {
+    "height": 162,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 144,
     "y": 162
   },
   "icon-tram-circle": {
     "height": 72,
     "pixelRatio": 3,
     "width": 72,
-    "x": 774,
-    "y": 432
+    "x": 1011,
+    "y": 0
   },
   "icon-tram-circle-trail": {
     "height": 162,
     "pixelRatio": 3,
     "width": 72,
-    "x": 144,
+    "x": 216,
+    "y": 162
+  },
+  "icon-tram-trail": {
+    "height": 162,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 288,
     "y": 0
   },
   "icon-walking-pattern": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 888,
-    "y": 432
-  },
-  "icon-zone-A": {
-    "height": 144,
-    "pixelRatio": 3,
-    "width": 144,
-    "x": 144,
+    "x": 576,
     "y": 162
   },
-  "icon-zone-B": {
-    "height": 144,
-    "pixelRatio": 3,
-    "width": 144,
-    "x": 288,
-    "y": 0
-  },
-  "icon-zone-C": {
+  "icon-zone-A": {
     "height": 144,
     "pixelRatio": 3,
     "width": 144,
     "x": 432,
     "y": 0
   },
-  "icon-zone-D": {
+  "icon-zone-B": {
     "height": 144,
     "pixelRatio": 3,
     "width": 144,
     "x": 288,
     "y": 162
+  },
+  "icon-zone-C": {
+    "height": 144,
+    "pixelRatio": 3,
+    "width": 144,
+    "x": 432,
+    "y": 162
+  },
+  "icon-zone-D": {
+    "height": 144,
+    "pixelRatio": 3,
+    "width": 144,
+    "x": 0,
+    "y": 324
   }
 }
