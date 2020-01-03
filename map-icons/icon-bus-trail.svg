@@ -1,17 +1,1 @@
-<?xml version="1.0" standalone="yes" ?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 54" preserveAspectRatio="xMidYMid meet" style="height: 50px; width: 50px;zoom: 1;">
-    <defs>
-        <linearGradient x1="50%" y1="97.8555485%" x2="50%" y2="0%" id="BusTail-linearGradient-1">
-            <stop stop-color="#0079c9" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#0079c9" stop-opacity="0.5" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="icon-bus-live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M12.000002,0 C5.372586,-0.000001 0.000002,5.372581 0.000001,11.999999 C0.000001,18.627417 5.372581,54 11.999998,54 C18.627415,54 24,18.62742 24.000002,12.000001 C24.000002,5.372582 18.627419,0.000001 12.000002,0  Z " id="tail" fill="url(#BusTail-linearGradient-1)"></path>
-        <g transform="translate(0,30)">
-            <g id="icon-bus" transform="translate(3,3)">
-                <g id="icon_bus"></g>
-            </g>
-        </g>
-    </g>
-</svg>
+<?xml version="1.0" standalone="yes"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 54" preserveAspectRatio="xMidYMid meet" style="height: 50px; width: 50px;zoom: 1;"><defs><linearGradient x2="50%" y2="0%" x1="50%" y1="97.8555485%" id="BusWithTail-linearGradient-1"><stop stop-color="#0079c9" stop-opacity="0" offset="0%"></stop><stop stop-color="#0079c9" stop-opacity="0.5" offset="100%"></stop></linearGradient></defs><g id="icon-bus-live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M12.000002,-11.080001 C5.372586,-11.080003 0.000002,-5.70742 0.000001,0.919999 C0.000001,7.547419 5.372581,42.919998 11.999998,42.919998 C18.627415,42.919998 24,7.547419 24.000002,0.919999 C24.000002,-5.70742 18.627419,-11.079999 12.000002,-11.080001  Z " id="tail" fill="url(#BusWithTail-linearGradient-1)"></path><g transform="translate(0,30)"><g id="icon-bus" transform="translate(3,3)"><g id="icon_bus"></g></g></g></g></svg>

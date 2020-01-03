@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 54" preserveAspectRatio="xMidYMid meet" style="height: 50px; width: 50px;zoom: 1;">
+    <defs>
+        <linearGradient x2="50%" y2="0%" x1="50%" y1="97.8555485%" id="SubwayTail-linearGradient-1">
+            <stop stop-color="#ff621a" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#ff621a" stop-opacity="0.3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon-subway-live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12.000002,0 C5.372586,-0.000001 0.000002,5.372581 0.000001,11.999999 C0.000001,18.627417 5.372581,54 11.999998,54 C18.627415,54 24,18.62742 24.000002,12.000001 C24.000002,5.372582 18.627419,0.000001 12.000002,0  Z " id="tail" fill="url(#SubwayTail-linearGradient-1)"></path>
+        <g transform="translate(0,30)">
+            <g id="icon-subway" transform="translate(3,3)">
+                <g id="icon_subway">
+                    <g id="Group-3" fill="#ff621a"></g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

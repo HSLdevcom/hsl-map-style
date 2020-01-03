@@ -3,7 +3,7 @@
     <defs>
         <linearGradient x2="50%" y2="0%" x1="50%" y1="97.8555485%" id="TramTail-linearGradient-1">
             <stop stop-color="#00985f" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#00985f" stop-opacity="0.5" offset="100%"></stop>
+            <stop stop-color="#00985f" stop-opacity="0.3" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="icon-tram-live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
