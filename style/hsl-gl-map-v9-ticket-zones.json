@@ -1,7 +1,7 @@
 {
   "sources": {
     "ticketzones": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/Using-Staging-server/ticket-zones.json",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/ticket-zones.json",
       "type": "geojson"
     }
   },
