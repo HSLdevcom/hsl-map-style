@@ -1,68 +1,56 @@
 {
   "sources": {
     "ticketzones": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/Using-Staging-server/ticket-zones.json",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/ticket-zones.json",
       "type": "geojson"
     }
   },
   "layers": [
-      {
-        "id": "Vyohykerajat-halo copy",
-        "type": "line",
-        "metadata": {
-            "mapbox:group": "97277aa2af8ed709345ef0bd93abe928"
+    {
+      "id": "Vyohykerajat-halo copy",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "97277aa2af8ed709345ef0bd93abe928"
+      },
+      "source": "ticketzones",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#333333",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [10, 4],
+            [22, 80]
+          ]
         },
-        "source": "ticketzones",
-        "layout": {
-            "line-join": "round",
-            "line-cap": "round"
-        },
-        "paint": {
-            "line-color": "#333333",
-            "line-width": {
-                "base": 1.2,
-                "stops": [
-                    [
-                        10,
-                        4
-                    ],
-                    [
-                        22,
-                        80
-                    ]
-                ]
-            },
-            "line-opacity": 0.2
-        }
+        "line-opacity": 0.2
+      }
     },
     {
-        "id": "Vyohykerajat copy",
-        "type": "line",
-        "metadata": {
-            "mapbox:group": "97277aa2af8ed709345ef0bd93abe928"
+      "id": "Vyohykerajat copy",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "97277aa2af8ed709345ef0bd93abe928"
+      },
+      "source": "ticketzones",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#333333",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [10, 1],
+            [22, 6]
+          ]
         },
-        "source": "ticketzones",
-        "layout": {
-            "line-join": "round",
-            "line-cap": "round"
-        },
-        "paint": {
-            "line-color": "#333333",
-            "line-width": {
-                "base": 1.2,
-                "stops": [
-                    [
-                        10,
-                        1
-                    ],
-                    [
-                        22,
-                        6
-                    ]
-                ]
-            },
-            "line-gap-width": 0
-        }
+        "line-gap-width": 0
+      }
     }
   ]
 }
