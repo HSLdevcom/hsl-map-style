@@ -128,10 +128,10 @@ const components = [
     style: require("./style/hsl-gl-map-v9-ticket-zone-labels.json"),
   },
   {
-    id: "ticket_zone_labels_minimap",
+    id: "ticket_zone_labels_fixed",
     enabled: false,
-    description: "Lippyvyöhykkeen ikonit minimap",
-    style: require("./style/hsl-gl-map-v9-ticket-zone-labels-minimap.json"),
+    description: "Lippyvyöhykkeen ikonit kiinteä",
+    style: require("./style/hsl-gl-map-v9-ticket-zone-labels-fixed.json"),
   },
 ];
 
