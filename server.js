@@ -12,7 +12,6 @@ const style = require("./index").generateStyle({
     poi: { enabled: true },
     ticket_sales: { enabled: true },
     driver_instructions: { enabled: true },
-    ticket_zone_labels: { enabled: true },
   },
 });
 

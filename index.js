@@ -121,18 +121,6 @@ const components = [
     description: "Lippyvyöhykkeet",
     style: require("./style/hsl-gl-map-v9-ticket-zones.json"),
   },
-  {
-    id: "ticket_zone_labels",
-    enabled: false,
-    description: "Lippyvyöhykkeen ikonit",
-    style: require("./style/hsl-gl-map-v9-ticket-zone-labels.json"),
-  },
-  {
-    id: "ticket_zone_labels_fixed",
-    enabled: false,
-    description: "Lippyvyöhykkeen ikonit kiinteä",
-    style: require("./style/hsl-gl-map-v9-ticket-zone-labels-fixed.json"),
-  },
 ];
 
 /**
