@@ -14,10 +14,9 @@
           "Point"
         ],
         [
-          "in",
+          "==",
           "Tyyppi",
-          "Myyntipiste",
-          "R-kioski"
+          "Myyntipiste"
         ]
       ],
       "layout": {
@@ -80,9 +79,9 @@
         ],
         [
           "in",
-          "TYYPPI",
-          "HSL Automaatti KL",
-          "HSL Automaatti MNL"
+          "Tyyppi",
+          "Kertalippuautomaatti",
+          "Monilippuautomaatti"
         ]
       ],
       "layout": {
@@ -145,8 +144,8 @@
         ],
         [
           "==",
-          "TYYPPI",
-          "HKI Automaatti PA"
+          "Tyyppi",
+          "Pysäköintiautomaatti"
         ]
       ],
       "layout": {
@@ -209,7 +208,7 @@
         ],
         [
           "==",
-          "TYYPPI",
+          "Tyyppi",
           "Palvelupiste"
         ]
       ],
