@@ -1,7 +1,7 @@
 {
   "sources": {
     "ticket-sales": {
-      "data": "https://hslstoragekarttatuotanto.blob.core.windows.net/map-server-legacy-data/21918372164d410683f03925e4441598_0.geojson",
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/727c6618a0814f8ba21bb00c9cb34019_0.geojson",
       "type": "geojson"
     }
   },
@@ -20,10 +20,9 @@
           "Point"
         ],
         [
-          "in",
+          "==",
           "Tyyppi",
-          "Myyntipiste",
-          "R-kioski"
+          "Myyntipiste"
         ]
       ],
       "layout": {
@@ -84,12 +83,10 @@
           "$type",
           "Point"
         ],
-        [
           "in",
-          "TYYPPI",
-          "HSL Automaatti KL",
-          "HSL Automaatti MNL"
-        ]
+          "Tyyppi",
+          "Kertalippuautomaatti",
+          "Monilippuautomaatti"
       ],
       "layout": {
         "text-optional": true,
@@ -151,8 +148,8 @@
         ],
         [
           "==",
-          "TYYPPI",
-          "HKI Automaatti PA"
+          "Tyyppi",
+          "Pysäköintiautomaatti"
         ]
       ],
       "layout": {
@@ -215,7 +212,7 @@
         ],
         [
           "==",
-          "TYYPPI",
+          "Tyyppi",
           "Palvelupiste"
         ]
       ],
