@@ -2067,7 +2067,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "2550", "4560"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
@@ -2095,7 +2095,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "2550", "4560"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
