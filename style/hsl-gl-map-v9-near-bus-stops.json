@@ -17,17 +17,14 @@
     {
       "id": "Stops case",
       "type": "circle",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "!=",
-        "mode",
-        "RAIL"
-      ],
+      "filter": ["!=", "mode", "RAIL"],
       "layout": {
         "visibility": "visible"
       },
@@ -36,18 +33,9 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1.5
-            ],
-            [
-              22,
-              26
-            ]
+            [12.9, 0],
+            [13, 0],
+            [22, 26]
           ]
         }
       }
@@ -62,11 +50,7 @@
       "source-layer": "stops",
       "minzoom": 15,
       "interactive": true,
-      "filter": [
-        "==",
-        "mode",
-        "RAIL"
-      ],
+      "filter": ["==", "mode", "RAIL"],
       "layout": {
         "visibility": "visible"
       },
@@ -75,18 +59,9 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1.5
-            ],
-            [
-              22,
-              26
-            ]
+            [11.9, 0],
+            [12, 1.5],
+            [22, 26]
           ]
         }
       }
@@ -94,17 +69,14 @@
     {
       "id": "Stops_bus",
       "type": "circle",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "==",
-        "mode",
-        "BUS"
-      ],
+      "filter": ["==", "mode", "BUS"],
       "layout": {
         "visibility": "visible"
       },
@@ -113,31 +85,16 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
+            [12.9, 0],
+            [13, 1],
+            [22, 24]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [11, 0.6],
+            [14, 1]
           ]
         }
       }
@@ -151,11 +108,7 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "==",
-        "mode",
-        "FERRY"
-      ],
+      "filter": ["==", "mode", "FERRY"],
       "layout": {
         "visibility": "visible"
       },
@@ -164,31 +117,16 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
+            [12.9, 0],
+            [13, 1],
+            [22, 24]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [11, 0.6],
+            [14, 1]
           ]
         }
       }
@@ -196,17 +134,14 @@
     {
       "id": "Stops_tram",
       "type": "circle",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "==",
-        "mode",
-        "TRAM"
-      ],
+      "filter": ["==", "mode", "TRAM"],
       "layout": {
         "visibility": "visible"
       },
@@ -215,31 +150,16 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
+            [13.9, 0],
+            [14, 4],
+            [18, 24]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [11, 0.6],
+            [14, 1]
           ]
         }
       }
@@ -256,31 +176,16 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
+            [12.9, 0],
+            [13, 1],
+            [22, 24]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [11, 0.6],
+            [14, 1]
           ]
         }
       }
@@ -294,11 +199,7 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "==",
-        "mode",
-        "SUBWAY"
-      ],
+      "filter": ["==", "mode", "SUBWAY"],
       "layout": {
         "visibility": "visible"
       },
@@ -307,31 +208,16 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
+            [11.9, 0],
+            [12, 1],
+            [22, 24]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [11, 0.6],
+            [14, 1]
           ]
         }
       }
@@ -348,18 +234,9 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              14,
-              0
-            ],
-            [
-              14.1,
-              2
-            ],
-            [
-              22,
-              20
-            ]
+            [14, 0],
+            [14.1, 2],
+            [22, 20]
           ]
         }
       }
@@ -374,12 +251,7 @@
       "source-layer": "stops",
       "minzoom": 15,
       "interactive": true,
-      "filter": [
-        "in",
-        "mode",
-        "",
-        "RAIL"
-      ],
+      "filter": ["in", "mode", "", "RAIL"],
       "layout": {
         "visibility": "visible"
       },
@@ -388,18 +260,9 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              14,
-              0
-            ],
-            [
-              14.1,
-              2
-            ],
-            [
-              22,
-              20
-            ]
+            [14, 0],
+            [14.1, 2],
+            [22, 20]
           ]
         }
       }

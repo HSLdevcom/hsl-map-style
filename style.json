@@ -528,7 +528,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
-      "minzoom": 10,
+      "minzoom": 17,
       "layout": {
         "visibility": "visible"
       },
@@ -547,15 +547,18 @@
     },
     {
       "id": "building",
-      "ref": "building_shadow",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "building",
+      "minzoom": 16,
+      "layout": {},
       "paint": {
-        "fill-color": "#e2e4e9",
-        "fill-outline-color": {
-          "base": 1,
-          "stops": [[13, "#dde1e9"], [17, "rgba(194,195,204,1)"]]
-        },
-        "fill-opacity": 1,
-        "fill-translate": [0, 0]
+          "fill-color": "#e2e4e9",
+          "fill-outline-color": {
+              "base": 1,
+              "stops": [[13, "#dde1e9"], [17, "rgba(194,195,204,1)"]]
+          },
+          "fill-translate": [0, 0]
       }
     },
     {
@@ -895,6 +898,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -919,6 +923,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -975,6 +980,7 @@
     },
     {
       "id": "road_path_steps_case",
+      "minzoom": 16,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
@@ -1010,6 +1016,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1048,7 +1055,7 @@
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "type", "cycleway", "pedestrian", "track"]
+          ["in", "type", "cycleway", "path", "pedestrian", "track"]
         ]
       ],
       "layout": {
@@ -1101,7 +1108,6 @@
         ]
       ],
       "layout": {
-        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -1126,16 +1132,10 @@
           ["in", "class", "primary", "secondary"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
+      "layout": {"line-join": "round", "visibility": "none"},
       "paint": {
-        "line-color": "#ccc",
-        "line-width": {
-          "base": 1.55,
-          "stops": [[6, 1], [20, 84]]
-        }
+        "line-color": "hsl(0, 0%, 80%)",
+        "line-width": {"base": 1.55, "stops": [[6, 1], [20, 84]]}
       }
     },
     {
@@ -1149,19 +1149,17 @@
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "class", "street", "tertiary"]
+          ["in", "class", "service", "street", "tertiary"]
         ]
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "none"
       },
       "paint": {
-        "line-color": "#ccc",
-        "line-width": {
-          "base": 1.55,
-          "stops": [[4, 1], [20, 54]]
-        }
+        "line-color": "hsl(0, 0%, 80%)",
+        "line-width": {"base": 1.55, "stops": [[4, 1], [20, 54]]}
       }
     },
     {
@@ -1200,14 +1198,8 @@
       },
       "paint": {
         "line-color": "#ccc",
-        "line-width": {
-          "base": 1.55,
-          "stops": [[6, 0.25], [20, 4]]
-        },
-        "line-gap-width": {
-          "base": 1.55,
-          "stops": [[10, 2], [20, 40]]
-        },
+        "line-width": {"base": 1.55, "stops": [[6, 0.25], [20, 4]]},
+        "line-gap-width": {"base": 1.55, "stops": [[10, 2], [20, 40]]},
         "line-dasharray": [1, 1]
       }
     },
@@ -1314,41 +1306,66 @@
     },
     {
       "id": "road_street",
-      "ref": "road_street_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 13,
+      "filter": [
+          "all",
+          ["==", "$type", "LineString"],
+          [
+              "all",
+              ["!in", "structure", "bridge", "tunnel"],
+              ["in", "class", "service", "street", "tertiary"]
+          ]
+      ],
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
-        "line-color": "rgba(255,255,255,1)",
-        "line-width": {
-          "base": 1.55,
-          "stops": [[4, 0.25], [20, 50]]
-        }
+          "line-color": "rgba(255,255,255,1)",
+          "line-width": {"base": 1.55, "stops": [[4, 0.25], [20, 50]]}
       }
     },
     {
       "id": "road_primary",
-      "ref": "road_primary_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+          "all",
+          ["==", "$type", "LineString"],
+          [
+              "all",
+              ["!in", "structure", "bridge", "tunnel"],
+              ["in", "class", "primary", "secondary"]
+          ]
+      ],
+      "layout": {"line-join": "round"},
       "paint": {
-        "line-color": {
-          "base": 1,
-          "stops": [[9.9, "#eeeeee"], [10.2, "#ffffff"]]
-        },
-        "line-width": {
-          "base": 1.55,
-          "stops": [[6, 0.5], [20, 80]]
-        }
+          "line-color": "#fff",
+          "line-width": {"base": 1.55, "stops": [[6, 0.5], [20, 80]]}
       }
     },
     {
       "id": "road_motorway",
-      "ref": "road_motorway_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+          "all",
+          ["==", "$type", "LineString"],
+          [
+              "all",
+              ["!in", "structure", "bridge", "tunnel"],
+              ["in", "class", "motorway", "trunk"]
+          ]
+      ],
+      "layout": {"line-join": "round"},
       "paint": {
-        "line-color": {
-          "base": 1,
-          "stops": [[9.5, "#f4d880"], [10.2, "#fef2c6"]]
-        },
-        "line-width": {
-          "base": 1.75,
-          "stops": [[6, 0.5], [20, 110]]
-        }
+          "line-color": {
+              "base": 1,
+              "stops": [[10, "#fff"], [10.1, "#fef2c6"]]
+          },
+          "line-width": {"base": 1.75, "stops": [[6, 0.5], [20, 110]]}
       }
     },
     {
@@ -2271,7 +2288,7 @@
         "circle-color": "#8c54a2",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [[12.9, 0], [13, 1], [22, 24]]
         },
         "circle-opacity": {
           "base": 1,
@@ -2318,7 +2335,7 @@
         "text-font": ["Gotham Rounded Book"]
       },
       "paint": {
-        "text-color": "#999",
+        "text-color": "#666",
         "text-opacity": 0.7
       }
     },
@@ -2330,7 +2347,7 @@
       },
       "source": "vector",
       "source-layer": "poi_label",
-      "minzoom": 5,
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -2423,7 +2440,7 @@
       },
       "source": "vector",
       "source-layer": "poi_label",
-      "minzoom": 5,
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -2640,7 +2657,7 @@
       "paint": {
         "text-color": {
           "base": 1.4,
-          "stops": [[13, "#999"], [15, "#666"]]
+          "stops": [[13, "#999"], [15, "#333"]]
         },
         "text-halo-color": "rgba(255,255,255,0.85)",
         "text-halo-width": 2
@@ -2670,9 +2687,9 @@
       "paint": {
         "text-color": {
           "base": 1.4,
-          "stops": [[13, "#999"], [15, "#666"]]
+          "stops": [[13, "#999"], [15, "#333"]]
         },
-        "text-halo-color": "rgba(255,255,255,0.85)",
+        "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 2
       }
     },
@@ -2708,7 +2725,7 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "place_label",
-      "maxzoom": 13,
+      "maxzoom": 16,
       "filter": ["all", ["==", "$type", "Point"], ["==", "type", "city"]],
       "layout": {
         "text-field": "{name}\n{name_sv_nodefault}",
@@ -2722,9 +2739,9 @@
         "text-letter-spacing": 0.125
       },
       "paint": {
-        "text-color": "#777",
+        "text-color": "#333",
         "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-width": 1.5,
+        "text-halo-width": 0.5,
         "text-halo-blur": 0,
         "text-opacity": {
           "base": 1,
@@ -2828,7 +2845,7 @@
       },
       "source": "parkandride",
       "source-layer": "hubs",
-      "minzoom": 14,
+      "minzoom": 13,
       "interactive": true,
       "filter": ["==", "$type", "Point"],
       "layout": {
@@ -2945,7 +2962,7 @@
       },
       "source": "vector",
       "source-layer": "rail_station_label",
-      "minzoom": 5,
+      "minzoom": 11,
       "interactive": true,
       "filter": [
         "all",
@@ -3267,6 +3284,7 @@
     {
       "id": "Stops case",
       "type": "circle",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -3280,8 +3298,8 @@
       "paint": {
         "circle-color": "#fff",
         "circle-radius": {
-          "base": 1.15,
-          "stops": [[11.9, 0], [12, 1.5], [22, 26]]
+            "base": 1.15,
+            "stops": [[12.9, 0], [13, 0], [22, 26]]
         }
       }
     },
@@ -3310,6 +3328,7 @@
     {
       "id": "Stops_bus",
       "type": "circle",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -3324,7 +3343,7 @@
         "circle-color": "#007ac9",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [[12.9, 0], [13, 1], [22, 24]]
         },
         "circle-opacity": {
           "base": 1,
@@ -3349,7 +3368,7 @@
         "circle-color": "#00b9e4",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [[12.9, 0], [13, 1], [22, 24]]
         },
         "circle-opacity": {
           "base": 1,
@@ -3371,17 +3390,14 @@
         "visibility": "visible"
       },
       "paint": {
-        "circle-color": "#00985f",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
-        },
-        "circle-opacity": {
-          "base": 1,
-          "stops": [[11, 0.6], [14, 1]]
-        }
+          "circle-color": "#00985f",
+          "circle-radius": {
+              "base": 1.15,
+              "stops": [[12.9, 0], [13, 1], [22, 24]]
+          },
+          "circle-opacity": {"base": 1, "stops": [[11, 0.6], [14, 1]]}
       }
-    },
+  },
     {
       "id": "Stops_subway",
       "type": "circle",
@@ -3399,7 +3415,7 @@
         "circle-color": "#ff6319",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [[12.9, 0], [13, 1], [22, 24]]
         },
         "circle-opacity": {
           "base": 1,
@@ -3461,7 +3477,7 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1.5], [22, 26]]
+          "stops": [[12.9, 0], [13, 1.5], [22, 26]]
         }
       }
     },
@@ -3472,6 +3488,7 @@
       },
       "ref": "Stops case citybikes",
       "interactive": true,
+      "minzoom": 13,
       "paint": {
         "circle-color": "#fcbc19",
         "circle-radius": {

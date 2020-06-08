@@ -8,39 +8,24 @@
       },
       "source": "parkandride",
       "source-layer": "hubs",
-      "minzoom": 14,
+      "minzoom": 13,
       "interactive": true,
-      "filter": [
-        "==",
-        "$type",
-        "Point"
-      ],
+      "filter": ["==", "$type", "Point"],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
+            [0, 8],
+            [15, 10]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-park-and-ride",
         "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
+        "text-offset": [0, 0.5],
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
@@ -52,10 +37,7 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
+        "icon-translate": [0, -5.25],
         "icon-opacity": 1
       }
     },
@@ -70,45 +52,22 @@
       "minzoom": 5,
       "maxzoom": 16,
       "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "network",
-          "rail-metro"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "network", "rail-metro"]],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
+            [0, 8],
+            [15, 10]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-subway-station",
         "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
+        "text-offset": [0, 0.5],
         "icon-optional": false,
         "icon-size": 0.9,
         "text-anchor": "top",
@@ -121,10 +80,7 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
+        "icon-translate": [0, -5.25],
         "icon-opacity": 1
       }
     },
@@ -138,45 +94,22 @@
       "source-layer": "poi_label",
       "minzoom": 5,
       "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "type",
-          "Bus Station"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "type", "Bus Station"]],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
+            [0, 8],
+            [15, 10]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-bus-station",
         "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
+        "text-offset": [0, 0.5],
         "icon-optional": false,
         "icon-size": 0.9,
         "text-anchor": "top",
@@ -189,10 +122,7 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
+        "icon-translate": [0, -5.25],
         "icon-opacity": 1
       }
     },
@@ -204,83 +134,44 @@
       },
       "source": "vector",
       "source-layer": "rail_station_label",
-      "minzoom": 5,
+      "minzoom": 11,
       "interactive": true,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
+        ["==", "$type", "Point"],
         [
           "all",
-          [
-            "!in",
-            "name",
-            "Maisemajuna",
-            "Pasilan autojuna-asema"
-          ],
-          [
-            "==",
-            "network",
-            "rail"
-          ]
+          ["!in", "name", "Maisemajuna", "Pasilan autojuna-asema"],
+          ["==", "network", "rail"]
         ]
       ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
+            [0, 8],
+            [15, 10]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-rail-station",
         "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
         "visibility": "visible",
         "text-offset": {
           "base": 1.4,
           "stops": [
-            [
-              12,
-              [
-                0,
-                0.25
-              ]
-            ],
-            [
-              15,
-              [
-                0,
-                0.5
-              ]
-            ]
+            [12, [0, 0.25]],
+            [15, [0, 0.5]]
           ]
         },
         "icon-optional": false,
         "icon-size": {
           "base": 1.4,
           "stops": [
-            [
-              12,
-              0.6
-            ],
-            [
-              15,
-              1
-            ]
+            [12, 0.6],
+            [15, 1]
           ]
         },
         "text-anchor": "top",
@@ -293,10 +184,7 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -8.5
-        ],
+        "icon-translate": [0, -8.5],
         "icon-opacity": 1
       }
     },
@@ -310,46 +198,22 @@
       "source-layer": "airport_label",
       "minzoom": 5,
       "interactive": true,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "scalerank",
-          1,
-          2
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["in", "scalerank", 1, 2]],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
+            [0, 8],
+            [15, 10]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-aerodrome",
         "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
+        "text-offset": [0, 0.5],
         "icon-optional": false,
         "icon-size": 0.9,
         "text-anchor": "top",
@@ -362,10 +226,7 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
+        "icon-translate": [0, -5.25],
         "icon-opacity": 1
       }
     }
