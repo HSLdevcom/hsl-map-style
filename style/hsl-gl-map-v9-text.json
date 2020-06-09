@@ -32,6 +32,7 @@
       "id": "housenum_label",
       "type": "symbol",
       "source": "vector",
+      "minzoom": 17,
       "source-layer": "housenum_label",
       "filter": ["==", "$type", "Point"],
       "layout": {
