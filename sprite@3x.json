@@ -3,287 +3,455 @@
     "height": 108,
     "pixelRatio": 3,
     "width": 108,
-    "x": 0,
-    "y": 144
+    "x": 420,
+    "y": 165
   },
   "icon-Zone-B": {
     "height": 108,
     "pixelRatio": 3,
     "width": 108,
-    "x": 108,
-    "y": 144
+    "x": 249,
+    "y": 0
   },
   "icon-Zone-C": {
     "height": 108,
     "pixelRatio": 3,
     "width": 108,
-    "x": 72,
+    "x": 357,
     "y": 0
   },
   "icon-Zone-D": {
     "height": 108,
     "pixelRatio": 3,
     "width": 108,
-    "x": 180,
+    "x": 465,
     "y": 0
   },
   "icon-aerodrome": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 516,
-    "y": 144
+    "x": 60,
+    "y": 480
   },
   "icon-amusement-park": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 288,
-    "y": 0
+    "x": 108,
+    "y": 480
   },
   "icon-attraction": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 336,
-    "y": 0
+    "x": 156,
+    "y": 480
   },
   "icon-bajamaja": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 384,
-    "y": 0
+    "x": 204,
+    "y": 480
   },
   "icon-bus-station": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 432,
-    "y": 0
+    "x": 252,
+    "y": 480
   },
   "icon-cafe": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 480,
-    "y": 0
+    "x": 300,
+    "y": 480
   },
   "icon-cemetary": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 528,
-    "y": 0
+    "x": 348,
+    "y": 480
   },
   "icon-cinema": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 0,
-    "y": 252
+    "x": 396,
+    "y": 480
   },
   "icon-citybike-station": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 48,
-    "y": 252
+    "x": 444,
+    "y": 480
+  },
+  "icon-citybike_station-green-large": {
+    "height": 129,
+    "pixelRatio": 3,
+    "width": 102,
+    "x": 63,
+    "y": 165
+  },
+  "icon-citybike_station-green-medium": {
+    "height": 81,
+    "pixelRatio": 3,
+    "width": 60,
+    "x": 264,
+    "y": 300
+  },
+  "icon-citybike_station-green-small": {
+    "height": 66,
+    "pixelRatio": 3,
+    "width": 48,
+    "x": 120,
+    "y": 399
+  },
+  "icon-citybike_station-red-large": {
+    "height": 129,
+    "pixelRatio": 3,
+    "width": 102,
+    "x": 165,
+    "y": 165
+  },
+  "icon-citybike_station-red-medium": {
+    "height": 81,
+    "pixelRatio": 3,
+    "width": 60,
+    "x": 324,
+    "y": 300
+  },
+  "icon-citybike_station-red-small": {
+    "height": 66,
+    "pixelRatio": 3,
+    "width": 48,
+    "x": 168,
+    "y": 399
+  },
+  "icon-citybike_station-yellow-large": {
+    "height": 129,
+    "pixelRatio": 3,
+    "width": 102,
+    "x": 147,
+    "y": 0
+  },
+  "icon-citybike_station-yellow-medium": {
+    "height": 81,
+    "pixelRatio": 3,
+    "width": 60,
+    "x": 384,
+    "y": 300
+  },
+  "icon-citybike_station-yellow-small": {
+    "height": 66,
+    "pixelRatio": 3,
+    "width": 48,
+    "x": 216,
+    "y": 399
+  },
+  "icon-citybike_station_closed-large": {
+    "height": 129,
+    "pixelRatio": 3,
+    "width": 102,
+    "x": 267,
+    "y": 165
+  },
+  "icon-citybike_station_closed-medium": {
+    "height": 81,
+    "pixelRatio": 3,
+    "width": 60,
+    "x": 444,
+    "y": 300
+  },
+  "icon-citybike_station_closed-small": {
+    "height": 66,
+    "pixelRatio": 3,
+    "width": 48,
+    "x": 264,
+    "y": 399
   },
   "icon-concert-hall": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 96,
-    "y": 252
+    "x": 492,
+    "y": 480
   },
   "icon-hospital": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 144,
-    "y": 252
+    "x": 540,
+    "y": 480
   },
   "icon-hotel": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 192,
-    "y": 252
+    "x": 0,
+    "y": 540
   },
   "icon-lift": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 240,
-    "y": 252
+    "x": 48,
+    "y": 540
   },
   "icon-one-way": {
     "height": 33,
     "pixelRatio": 3,
     "width": 48,
-    "x": 0,
-    "y": 348
+    "x": 360,
+    "y": 588
   },
   "icon-park": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 288,
-    "y": 252
+    "x": 96,
+    "y": 540
   },
   "icon-park-and-ride": {
     "height": 36,
     "pixelRatio": 3,
     "width": 72,
-    "x": 480,
-    "y": 300
+    "x": 288,
+    "y": 588
   },
   "icon-parliament": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 336,
-    "y": 252
+    "x": 144,
+    "y": 540
   },
   "icon-place-of-worship": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 384,
-    "y": 252
+    "x": 192,
+    "y": 540
   },
   "icon-rail-station": {
     "height": 60,
     "pixelRatio": 3,
     "width": 60,
-    "x": 336,
-    "y": 144
+    "x": 456,
+    "y": 399
   },
   "icon-retail": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 432,
-    "y": 252
+    "x": 240,
+    "y": 540
   },
   "icon-school": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 480,
-    "y": 252
+    "x": 288,
+    "y": 540
   },
   "icon-service-point": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 528,
-    "y": 252
+    "x": 336,
+    "y": 540
   },
   "icon-sibelius": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 0,
-    "y": 300
+    "x": 384,
+    "y": 540
   },
   "icon-sport": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 48,
-    "y": 300
+    "x": 432,
+    "y": 540
   },
   "icon-stairs": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 96,
+    "x": 480,
+    "y": 540
+  },
+  "icon-stop-bus-large": {
+    "height": 99,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 528,
+    "y": 165
+  },
+  "icon-stop-bus-medium": {
+    "height": 81,
+    "pixelRatio": 3,
+    "width": 60,
+    "x": 504,
     "y": 300
+  },
+  "icon-stop-bus-small": {
+    "height": 66,
+    "pixelRatio": 3,
+    "width": 48,
+    "x": 312,
+    "y": 399
+  },
+  "icon-stop-hsl_ferry-large": {
+    "height": 99,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 0,
+    "y": 300
+  },
+  "icon-stop-hsl_ferry-medium": {
+    "height": 81,
+    "pixelRatio": 3,
+    "width": 60,
+    "x": 0,
+    "y": 399
+  },
+  "icon-stop-hsl_ferry-small": {
+    "height": 66,
+    "pixelRatio": 3,
+    "width": 48,
+    "x": 360,
+    "y": 399
+  },
+  "icon-stop-hybrid-large": {
+    "height": 165,
+    "pixelRatio": 3,
+    "width": 75,
+    "x": 0,
+    "y": 0
+  },
+  "icon-stop-hybrid-medium": {
+    "height": 135,
+    "pixelRatio": 3,
+    "width": 63,
+    "x": 0,
+    "y": 165
+  },
+  "icon-stop-hybrid-small": {
+    "height": 111,
+    "pixelRatio": 3,
+    "width": 51,
+    "x": 369,
+    "y": 165
+  },
+  "icon-stop-tram-large": {
+    "height": 99,
+    "pixelRatio": 3,
+    "width": 72,
+    "x": 72,
+    "y": 300
+  },
+  "icon-stop-tram-medium": {
+    "height": 81,
+    "pixelRatio": 3,
+    "width": 60,
+    "x": 60,
+    "y": 399
+  },
+  "icon-stop-tram-small": {
+    "height": 66,
+    "pixelRatio": 3,
+    "width": 48,
+    "x": 408,
+    "y": 399
   },
   "icon-subway-entrance": {
     "height": 144,
     "pixelRatio": 3,
     "width": 72,
-    "x": 0,
+    "x": 75,
     "y": 0
   },
   "icon-subway-station": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 144,
-    "y": 300
+    "x": 528,
+    "y": 540
   },
   "icon-subway-station-2": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 192,
-    "y": 300
+    "x": 0,
+    "y": 588
   },
   "icon-suunta1": {
     "height": 90,
     "pixelRatio": 3,
     "width": 60,
-    "x": 216,
-    "y": 144
+    "x": 144,
+    "y": 300
   },
   "icon-suunta2": {
     "height": 90,
     "pixelRatio": 3,
     "width": 60,
-    "x": 276,
-    "y": 144
+    "x": 204,
+    "y": 300
   },
   "icon-theatre": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 240,
-    "y": 300
+    "x": 48,
+    "y": 588
   },
   "icon-ticket-machine": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 288,
-    "y": 300
+    "x": 96,
+    "y": 588
   },
   "icon-ticket-machine-parking": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 336,
-    "y": 300
+    "x": 144,
+    "y": 588
   },
   "icon-tickets-sales-point": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 384,
-    "y": 300
+    "x": 192,
+    "y": 588
   },
   "icon-time1": {
     "height": 60,
     "pixelRatio": 3,
     "width": 60,
-    "x": 396,
-    "y": 144
+    "x": 516,
+    "y": 399
   },
   "icon-time2": {
     "height": 60,
     "pixelRatio": 3,
     "width": 60,
-    "x": 456,
-    "y": 144
+    "x": 0,
+    "y": 480
   },
   "icon-wetland": {
     "height": 48,
     "pixelRatio": 3,
     "width": 48,
-    "x": 432,
-    "y": 300
+    "x": 240,
+    "y": 588
   }
 }
