@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="22px" viewBox="0 0 16 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-platform-tram-small</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-52.000000, -210.000000)">
+            <g id="stop-marker-master-alt3" transform="translate(36.000000, 194.000000)">
+                <g id="stop-ball/tram-alt" transform="translate(16.800000, 16.800000)" fill="#00985F" stroke="#FFFFFF" stroke-width="0.8">
+                    <circle id="Oval" cx="7.2" cy="7.2" r="7.6"></circle>
+                </g>
+                <path d="M23.2,31.2 L24.8,31.2 L24.8,36.8 C24.8,37.2418278 24.4418278,37.6 24,37.6 C23.5581722,37.6 23.2,37.2418278 23.2,36.8 L23.2,31.2 L23.2,31.2 Z" id="Rectangle" fill="#333333"></path>
+            </g>
+        </g>
+    </g>
+</svg>
