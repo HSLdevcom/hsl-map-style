@@ -8,6 +8,7 @@
       },
       "source": "citybike",
       "source-layer": "stations",
+      "minzoom": 13,
       "maxzoom": 14,
       "interactive": true,
       "layout": {
@@ -18,8 +19,8 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [11.9, 0],
-            [12, 1.5],
+            [12.9, 0],
+            [13, 1.5],
             [22, 26]
           ]
         }
@@ -33,6 +34,7 @@
       "ref": "Stops case citybikes",
       "interactive": true,
       "minzoom": 13,
+      "maxzoom": 14,
       "paint": {
         "circle-color": "#fcbc19",
         "circle-radius": {
@@ -73,7 +75,7 @@
         },
         "text-allow-overlap": false,
         "icon-offset": [0, -6],
-        "icon-image": "icon-citybike-station",
+        "icon-image": "icon-citybike_station-medium",
         "text-ignore-placement": false,
         "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,

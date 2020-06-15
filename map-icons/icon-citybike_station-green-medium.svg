@@ -13,7 +13,6 @@
                         <mask id="mask-2" fill="white">
                             <use xlink:href="#path-1"></use>
                         </mask>
-                        <circle stroke="#FFFFFF" cx="9" cy="9" r="9.5"></circle>
                         <g mask="url(#mask-2)" id="icon_citybike">
                             <g transform="translate(1.500000, 1.500000)">
                                 <g>
@@ -24,6 +23,7 @@
                                 </g>
                             </g>
                         </g>
+                        <circle stroke="#FFFFFF" cx="9" cy="9" r="9.5"></circle>
                     </g>
                     <circle id="Oval" stroke="#FFFFFF" fill="#008855" cx="15" cy="3" r="3.5"></circle>
                 </g>

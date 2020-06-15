@@ -50,7 +50,6 @@
       "source": "vector",
       "source-layer": "rail_station_label",
       "minzoom": 5,
-      "maxzoom": 16,
       "interactive": true,
       "filter": ["all", ["==", "$type", "Point"], ["==", "network", "rail-metro"]],
       "layout": {
@@ -62,10 +61,10 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-subway-station",
+        "icon-image": "icon-metro-24",
         "text-ignore-placement": false,
         "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "visibility": "visible",
         "text-offset": [0, 0.5],
         "icon-optional": false,
@@ -82,6 +81,48 @@
         "text-halo-blur": 0,
         "icon-translate": [0, -5.25],
         "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_terminal",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "poi_label",
+      "minzoom": 13,
+      "interactive": true,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["in", "name", "Makasiiniterminaali", "Katajanokan Terminaali, Helsinki"],
+        ["in", "type", "Ferry Terminal", "Harbour", "Marina"]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [15, 10]
+          ]
+        },
+        "text-allow-overlap": true,
+        "icon-image": "icon-ship_terminal-20",
+        "text-ignore-placement": false,
+        "text-font": ["Gotham Rounded Medium"],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [0, 0.5],
+        "icon-optional": false,
+        "icon-size": {
+          "base": 1.4,
+          "stops": [
+            [12, 0.6],
+            [15, 1]
+          ]
+        },
+        "icon-ignore-placement": false
       }
     },
     {
@@ -104,14 +145,20 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-bus-station",
+        "icon-image": "icon-bus-24",
         "text-ignore-placement": false,
         "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
         "visibility": "visible",
         "text-offset": [0, 0.5],
         "icon-optional": false,
-        "icon-size": 0.9,
+        "icon-size": {
+          "base": 1.4,
+          "stops": [
+            [12, 0.6],
+            [15, 1]
+          ]
+        },
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8,
@@ -154,7 +201,7 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-rail-station",
+        "icon-image": "icon-train-24",
         "text-ignore-placement": false,
         "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
