@@ -10,9 +10,22 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
-        ["==", "mode", "BUS"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "!in",
+          "routeId",
+          "2550",
+          "4560"
+        ],
+        [
+          "==",
+          "mode",
+          "BUS"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -24,7 +37,16 @@
         "line-color": "#fff",
         "line-width": {
           "base": 1,
-          "stops": [[10, 4], [22, 8]]
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
         },
         "line-blur": 0
       }
@@ -39,9 +61,22 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
-        ["==", "mode", "BUS"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "!in",
+          "routeId",
+          "2550",
+          "4560"
+        ],
+        [
+          "==",
+          "mode",
+          "BUS"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -54,7 +89,16 @@
         "line-color": "#007ac9",
         "line-width": {
           "base": 1,
-          "stops": [[10, 2], [22, 6]]
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              22,
+              6
+            ]
+          ]
         },
         "line-blur": 0
       }
@@ -70,7 +114,16 @@
         "line-color": "#3395d4",
         "line-width": {
           "base": 1,
-          "stops": [[10, 0.5], [22, 2]]
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              22,
+              2
+            ]
+          ]
         },
         "line-blur": 0,
         "line-opacity": 1
@@ -86,8 +139,16 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", "mode", "TRAM"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "==",
+          "mode",
+          "TRAM"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -99,7 +160,16 @@
         "line-color": "#fff",
         "line-width": {
           "base": 1,
-          "stops": [[10, 4], [22, 8]]
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
         },
         "line-blur": 0
       }
@@ -114,8 +184,16 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", "mode", "TRAM"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "==",
+          "mode",
+          "TRAM"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -128,7 +206,16 @@
         "line-color": "#00985F",
         "line-width": {
           "base": 1,
-          "stops": [[10, 2], [22, 6]]
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              22,
+              6
+            ]
+          ]
         },
         "line-blur": 0
       }
@@ -144,7 +231,16 @@
         "line-color": "#00bb75",
         "line-width": {
           "base": 1,
-          "stops": [[10, 0.5], [22, 2]]
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              22,
+              2
+            ]
+          ]
         },
         "line-blur": 0,
         "line-opacity": 1
@@ -160,8 +256,21 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "in",
+          "routeId",
+          "1500",
+          "2200",
+          "2510",
+          "2550",
+          "4560",
+          "4570"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -173,7 +282,16 @@
         "line-color": "#fff",
         "line-width": {
           "base": 1,
-          "stops": [[10, 6], [22, 10]]
+          "stops": [
+            [
+              10,
+              6
+            ],
+            [
+              22,
+              10
+            ]
+          ]
         },
         "line-blur": 0
       }
@@ -188,8 +306,21 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "in",
+          "routeId",
+          "1500",
+          "2200",
+          "2510",
+          "2550",
+          "4560",
+          "4570"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -202,7 +333,16 @@
         "line-color": "#FF6319",
         "line-width": {
           "base": 1,
-          "stops": [[10, 4], [22, 8]]
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
         },
         "line-blur": 0
       }
@@ -218,7 +358,16 @@
         "line-color": "#FF6319",
         "line-width": {
           "base": 1,
-          "stops": [[10, 1], [22, 4]]
+          "stops": [
+            [
+              10,
+              1
+            ],
+            [
+              22,
+              4
+            ]
+          ]
         },
         "line-blur": 0,
         "line-opacity": 1
@@ -233,8 +382,16 @@
       "source": "subway",
       "filter": [
         "all",
-        ["==", "underground", "false"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "==",
+          "underground",
+          "false"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -243,7 +400,20 @@
         "line-color": "#FF6319",
         "line-width": {
           "base": 1.4,
-          "stops": [[11, 3], [16, 12], [19, 24]]
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              16,
+              12
+            ],
+            [
+              19,
+              24
+            ]
+          ]
         }
       }
     },
@@ -257,8 +427,16 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", "mode", "FERRY"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "==",
+          "mode",
+          "FERRY"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "interactive": true,
       "layout": {
@@ -268,10 +446,22 @@
       },
       "paint": {
         "line-color": "#00B9E4",
-        "line-dasharray": [0, 4],
+        "line-dasharray": [
+          0,
+          4
+        ],
         "line-width": {
           "base": 1,
-          "stops": [[10, 4], [22, 8]]
+          "stops": [
+            [
+              10,
+              4
+            ],
+            [
+              22,
+              8
+            ]
+          ]
         },
         "line-blur": 0
       }
@@ -284,10 +474,26 @@
       "ref": "subway_case",
       "paint": {
         "line-color": "#fff",
-        "line-dasharray": [2.3, 1.5],
+        "line-dasharray": [
+          2.3,
+          1.5
+        ],
         "line-width": {
           "base": 1.4,
-          "stops": [[11, 2], [16, 8], [19, 18]]
+          "stops": [
+            [
+              11,
+              2
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              19,
+              18
+            ]
+          ]
         }
       }
     },
@@ -300,8 +506,16 @@
       "source": "subway",
       "filter": [
         "all",
-        ["==", "underground", "true"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "==",
+          "underground",
+          "true"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -310,9 +524,25 @@
         "line-color": "#FF6319",
         "line-width": {
           "base": 1.4,
-          "stops": [[11, 1], [16, 8], [19, 20]]
+          "stops": [
+            [
+              11,
+              1
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              19,
+              20
+            ]
+          ]
         },
-        "line-dasharray": [2.3, 1.5]
+        "line-dasharray": [
+          2.3,
+          1.5
+        ]
       }
     },
     {
@@ -324,8 +554,16 @@
       "source": "rail",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
-        ["!=", "hasRegularDayDepartures", false]
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "!=",
+          "hasRegularDayDepartures",
+          false
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -334,7 +572,20 @@
         "line-color": "#8C4799",
         "line-width": {
           "base": 1.4,
-          "stops": [[11, 3], [16, 12], [19, 24]]
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              16,
+              12
+            ],
+            [
+              19,
+              24
+            ]
+          ]
         }
       }
     },
@@ -346,10 +597,26 @@
       "ref": "rail_case",
       "paint": {
         "line-color": "#fff",
-        "line-dasharray": [2.3, 1.5],
+        "line-dasharray": [
+          2.3,
+          1.5
+        ],
         "line-width": {
           "base": 1.4,
-          "stops": [[11, 2], [16, 8], [19, 18]]
+          "stops": [
+            [
+              11,
+              2
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              19,
+              18
+            ]
+          ]
         }
       }
     }
@@ -372,10 +639,6 @@
     "mapbox:groups": {
       "1457010660461.3042": {
         "name": "Routes",
-        "collapsed": true
-      },
-      "1455204550197.1404": {
-        "name": "Stops",
         "collapsed": true
       }
     }

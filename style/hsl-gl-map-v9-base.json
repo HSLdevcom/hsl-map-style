@@ -769,8 +769,11 @@
     },
     {
       "id": "building",
-      "ref": "building_shadow",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "building",
       "minzoom": 16,
+      "layout": {},
       "paint": {
         "fill-color": "#e2e4e9",
         "fill-outline-color": {
@@ -786,7 +789,6 @@
             ]
           ]
         },
-        "fill-opacity": 1,
         "fill-translate": [
           0,
           0
@@ -1597,10 +1599,10 @@
     },
     {
       "id": "road_path",
-      "minzoom": 16,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -1789,10 +1791,10 @@
     },
     {
       "id": "road_path_steps",
-      "minzoom": 16,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -2040,10 +2042,25 @@
           ]
         ]
       ],
-      "layout": {"line-join": "round", "visibility": "none"},
+      "layout": {
+        "line-join": "round",
+        "visibility": "none"
+      },
       "paint": {
         "line-color": "hsl(0, 0%, 80%)",
-        "line-width": {"base": 1.55, "stops": [[6, 1], [20, 84]]}
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              6,
+              1
+            ],
+            [
+              20,
+              84
+            ]
+          ]
+        }
       }
     },
     {
@@ -2053,11 +2070,26 @@
       "source-layer": "road",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
         [
           "all",
-          ["!in", "structure", "bridge", "tunnel"],
-          ["in", "class", "service", "street", "tertiary"]
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "service",
+            "street",
+            "tertiary"
+          ]
         ]
       ],
       "layout": {
@@ -2067,7 +2099,19 @@
       },
       "paint": {
         "line-color": "hsl(0, 0%, 80%)",
-        "line-width": {"base": 1.55, "stops": [[4, 1], [20, 54]]}
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              20,
+              54
+            ]
+          ]
+        }
       }
     },
     {
@@ -2103,12 +2147,43 @@
           "construction:unclassified"
         ]
       ],
-      "layout": {"line-join": "round"},
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
       "paint": {
         "line-color": "#ccc",
-        "line-width": {"base": 1.55, "stops": [[6, 0.25], [20, 4]]},
-        "line-gap-width": {"base": 1.55, "stops": [[10, 2], [20, 40]]},
-        "line-dasharray": [1, 1]
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              6,
+              0.25
+            ],
+            [
+              20,
+              4
+            ]
+          ]
+        },
+        "line-gap-width": {
+          "base": 1.55,
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              20,
+              40
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -2118,11 +2193,31 @@
       "source-layer": "road",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
         [
-            "all",
-            ["in", "class", "link", "motorway_link"],
-            ["in", "type", "motorway_link", "trunk_link"]
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "link",
+            "motorway_link"
+          ],
+          [
+            "in",
+            "type",
+            "motorway_link",
+            "trunk_link"
+          ]
         ]
       ],
       "layout": {
@@ -2309,7 +2404,38 @@
     },
     {
       "id": "road_street",
-      "ref": "road_street_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "service",
+            "street",
+            "tertiary"
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(255,255,255,1)",
         "line-width": {
@@ -2329,21 +2455,37 @@
     },
     {
       "id": "road_primary",
-      "ref": "road_primary_case",
-      "paint": {
-        "line-color": {
-          "base": 1,
-          "stops": [
-            [
-              9.9,
-              "#eeeeee"
-            ],
-            [
-              10.2,
-              "#ffffff"
-            ]
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "primary",
+            "secondary"
           ]
-        },
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
         "line-width": {
           "base": 1.55,
           "stops": [
@@ -2361,17 +2503,45 @@
     },
     {
       "id": "road_motorway",
-      "ref": "road_motorway_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!in",
+            "structure",
+            "bridge",
+            "tunnel"
+          ],
+          [
+            "in",
+            "class",
+            "motorway",
+            "trunk"
+          ]
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
       "paint": {
         "line-color": {
           "base": 1,
           "stops": [
             [
-              9.5,
-              "#f4d880"
+              10,
+              "#fff"
             ],
             [
-              10.2,
+              10.1,
               "#fef2c6"
             ]
           ]
