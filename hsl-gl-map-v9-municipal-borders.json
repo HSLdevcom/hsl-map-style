@@ -1,10 +1,4 @@
 {
-  "sources": {
-    "borders": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuntarajat.json",
-      "type": "geojson"
-    }
-  },
   "layers": [
     {
       "id": "municipal_border",
@@ -32,8 +26,17 @@
           ]
         },
         "line-blur": 0,
-        "line-dasharray": [2, 2]
+        "line-dasharray": [
+          2,
+          2
+        ]
       }
     }
-  ]
+  ],
+  "sources": {
+    "borders": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuntarajat.json",
+      "type": "geojson"
+    }
+  }
 }

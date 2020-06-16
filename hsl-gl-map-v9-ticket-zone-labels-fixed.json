@@ -1,0 +1,224 @@
+{
+  "sources": {
+    "ticketzonepolygons": {
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "A"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.927, 60.19]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "B"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.925, 60.258]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "B"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.78, 60.202]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "B"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [25.09, 60.213]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "C"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [25.1794, 60.264]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "C"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.791, 60.323]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "C"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [25.038, 60.33]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "C"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.63, 60.25]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "D"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.98, 60.415]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "D"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [25.228, 60.401]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "D"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [25.331, 60.31]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "D"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.371, 60.18]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "Zone": "D"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [24.5, 60.091]
+            }
+          }
+        ]
+      },
+      "type": "geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "D-alue",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "73dc3d0821160c67d298c7670b9d46cc"
+      },
+      "source": "ticketzonepolygons",
+      "filter": ["all", ["==", "Zone", "D"]],
+      "layout": {
+        "icon-image": "icon-Zone-D",
+        "icon-rotation-alignment": "map",
+        "icon-size": 0.7,
+        "icon-padding": 1,
+        "symbol-avoid-edges": false,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-translate-anchor": "viewport"
+      }
+    },
+    {
+      "id": "C-alue",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "73dc3d0821160c67d298c7670b9d46cc"
+      },
+      "source": "ticketzonepolygons",
+      "filter": ["all", ["==", "Zone", "C"]],
+      "layout": {
+        "icon-image": "icon-Zone-C",
+        "icon-rotation-alignment": "map",
+        "icon-size": 0.7,
+        "icon-padding": 1,
+        "symbol-avoid-edges": false,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-translate-anchor": "viewport"
+      }
+    },
+    {
+      "id": "B-alue",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "73dc3d0821160c67d298c7670b9d46cc"
+      },
+      "source": "ticketzonepolygons",
+      "filter": ["all", ["==", "Zone", "B"]],
+      "layout": {
+        "icon-image": "icon-Zone-B",
+        "icon-rotation-alignment": "map",
+        "icon-size": 0.7,
+        "icon-padding": 1,
+        "symbol-avoid-edges": false,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-translate-anchor": "viewport"
+      }
+    },
+    {
+      "id": "A-alue",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "73dc3d0821160c67d298c7670b9d46cc"
+      },
+      "source": "ticketzonepolygons",
+      "filter": ["all", ["==", "Zone", "A"]],
+      "layout": {
+        "icon-image": "icon-Zone-A",
+        "icon-rotation-alignment": "map",
+        "icon-size": 0.7,
+        "icon-padding": 1,
+        "symbol-avoid-edges": false,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-translate-anchor": "viewport"
+      }
+    }
+  ]
+}

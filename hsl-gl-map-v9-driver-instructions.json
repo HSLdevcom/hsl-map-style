@@ -1,18 +1,4 @@
 {
-  "metadata": {
-    "mapbox:groups": {
-      "1460634974533.995": {
-        "name": "Kuljettajan_ohje",
-        "collapsed": true
-      }
-    }
-  },
-  "sources": {
-    "kuljettajaohjeet": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuljettajaohjeet.json",
-      "type": "geojson"
-    }
-  },
   "layers": [
     {
       "id": "poi_taukotila",
@@ -154,5 +140,19 @@
         "icon-opacity": 1
       }
     }
-  ]
+  ],
+  "sources": {
+    "kuljettajaohjeet": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuljettajaohjeet.json",
+      "type": "geojson"
+    }
+  },
+  "metadata": {
+    "mapbox:groups": {
+      "1460634974533.995": {
+        "name": "Kuljettajan_ohje",
+        "collapsed": true
+      }
+    }
+  }
 }
