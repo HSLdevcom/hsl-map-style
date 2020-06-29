@@ -1111,6 +1111,7 @@
     },
     {
       "id": "tunnel_service",
+      "minzoom": 16,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
@@ -2063,7 +2064,8 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "none"
       },
       "paint": {
         "line-color": "#ccc",
