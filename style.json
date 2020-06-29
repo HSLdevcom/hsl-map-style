@@ -505,6 +505,7 @@
       "id": "landuse_barrier_line_fence",
       "type": "line",
       "source": "vector",
+      "minzoom": 16,
       "source-layer": "barrier_line",
       "filter": ["==", "class", "fence"],
       "layout": {
@@ -1291,16 +1292,15 @@
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "class", "service", "street", "tertiary"]
+          ["in", "class", "street", "tertiary"]
         ]
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "none"
+        "line-join": "round"
       },
       "paint": {
-        "line-color": "hsl(0, 0%, 80%)",
+        "line-color": "#ccc",
         "line-width": {
           "base": 1.55,
           "stops": [
