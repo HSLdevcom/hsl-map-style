@@ -546,6 +546,7 @@
     },
     {
       "id": "road_pedestrian",
+      "minzoom": 14,
       "type": "fill",
       "source": "vector",
       "source-layer": "road",
