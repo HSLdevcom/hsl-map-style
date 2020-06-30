@@ -1865,6 +1865,7 @@
     },
     {
       "id": "road_path_cycleway",
+      "minzoom": 15,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
