@@ -2317,52 +2317,53 @@
     },
     {
       "id": "road_street",
-      "ref": "road_street_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!in", "structure", "bridge", "tunnel"],
+          ["in", "class", "service", "street", "tertiary"]
+        ]
+      ],
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "rgba(255,255,255,1)",
         "line-width": {
           "base": 1.55,
           "stops": [
-            [
-              4,
-              0.25
-            ],
-            [
-              20,
-              50
-            ]
+            [4, 0.25],
+            [20, 50]
           ]
         }
       }
     },
     {
       "id": "road_primary",
-      "ref": "road_primary_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!in", "structure", "bridge", "tunnel"],
+          ["in", "class", "primary", "secondary"]
+        ]
+      ],
+      "layout": { "line-join": "round" },
       "paint": {
-        "line-color": {
-          "base": 1,
-          "stops": [
-            [
-              9.9,
-              "#eeeeee"
-            ],
-            [
-              10.2,
-              "#ffffff"
-            ]
-          ]
-        },
+        "line-color": "#fff",
         "line-width": {
           "base": 1.55,
           "stops": [
-            [
-              6,
-              0.5
-            ],
-            [
-              20,
-              80
-            ]
+            [6, 0.5],
+            [20, 80]
           ]
         }
       }
