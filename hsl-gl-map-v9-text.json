@@ -379,7 +379,7 @@
         ["==", "$type", "LineString"],
         [
           "all",
-          ["!in", "name", "Harakan talvipolku", "Suomenlinnan Huoltotunneli"],
+          ["!in", "name", "Harakan talvipolku", "Suomenlinnan huoltotunneli"],
           ["in", "class", "path", "service", "street", "street_limited", "tertiary"]
         ]
       ],
