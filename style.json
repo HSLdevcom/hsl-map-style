@@ -1248,8 +1248,8 @@
         "line-width": {
           "base": 1.55,
           "stops": [
-            [0, 1.5],
-            [22, 26]
+            [0, 0.25],
+            [22, 50]
           ]
         }
       }
@@ -1519,7 +1519,7 @@
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "class", "service", "street", "tertiary"]
+          ["in", "class", "street", "tertiary"]
         ]
       ],
       "layout": { "line-cap": "round", "line-join": "round" },
