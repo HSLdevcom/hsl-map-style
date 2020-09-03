@@ -800,7 +800,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -1112,7 +1112,7 @@
     },
     {
       "id": "tunnel_service",
-      "minzoom": 16,
+      "minzoom": 15,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
@@ -1256,6 +1256,7 @@
     },
     {
       "id": "tunnel_road_path_cycleway",
+      "minzoom": 15,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
@@ -1549,7 +1550,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -1600,7 +1601,7 @@
     },
     {
       "id": "road_path",
-      "minzoom": 16,
+      "minzoom": 15,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
@@ -1660,6 +1661,7 @@
     },
     {
       "id": "road_path_MTB",
+      "minzoom": 15,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
@@ -1724,7 +1726,7 @@
     },
     {
       "id": "road_path_steps_case",
-      "minzoom": 16,
+      "minzoom": 15,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
@@ -1792,7 +1794,7 @@
     },
     {
       "id": "road_path_steps",
-      "minzoom": 16,
+      "minzoom": 15,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
