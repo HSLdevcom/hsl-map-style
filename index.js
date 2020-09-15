@@ -106,7 +106,7 @@ const components = [
   {
     id: "jore_terminals",
     enabled: false,
-    description: "Tulostevärit",
+    description: "Terminaalit",
     style: require("./style/hsl-gl-map-v9-jore-terminals.json"),
   },
   {
