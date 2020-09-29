@@ -3,7 +3,7 @@
   "name": "Empty Style",
   "metadata": { "maputnik:renderer": "mbgljs" },
   "sources": {
-    "vector": { "type": "vector", "url": "http://localhost:8080/data/v3.json" },
+    "vector": { "type": "vector", "url": "http://localhost:8080/data/finland.json" },
     "parkandride": {
       "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
       "type": "vector"
@@ -41,7 +41,7 @@
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/style-update/sprite",
   "glyphs": "https://static.hsldev.com/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -97,7 +97,11 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
-      "filter": ["all", ["==", "$type", "Polygon"], ["==", "class", "playground"]],
+      "filter": [
+        "all",
+        ["==", "$type", "Polygon"],
+        ["==", "class", "playground"]
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -120,7 +124,11 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
-      "filter": ["all", ["==", "class", "park"], ["==", "type", "nature_reserve"]],
+      "filter": [
+        "all",
+        ["==", "class", "park"],
+        ["==", "type", "nature_reserve"]
+      ],
       "paint": {
         "fill-color": "rgba(207,219,193,1)",
         "fill-outline-color": "rgba(187,199,175,1)"
@@ -218,7 +226,11 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
-      "filter": ["all", ["==", "class", "pitch"], ["==", "type", "horse_racing"]],
+      "filter": [
+        "all",
+        ["==", "class", "pitch"],
+        ["==", "type", "horse_racing"]
+      ],
       "paint": {
         "fill-color": "#e0dfcc",
         "fill-outline-color": "rgba(209,208,190,1)"
@@ -640,7 +652,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["==", "brunnel", "tunnel"], ["in", "class", "primary", "secondary"]]
+        [
+          "all",
+          ["==", "brunnel", "tunnel"],
+          ["in", "class", "primary", "secondary"]
+        ]
       ],
       "paint": {
         "line-color": "#ccc",
@@ -669,7 +685,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["==", "brunnel", "tunnel"], ["in", "type", "motorway", "trunk"]]
+        [
+          "all",
+          ["==", "brunnel", "tunnel"],
+          ["in", "type", "motorway", "trunk"]
+        ]
       ],
       "paint": {
         "line-color": "#ccc",
@@ -905,7 +925,11 @@
       "source": "vector",
       "source-layer": "transportation",
       "minzoom": 11,
-      "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "ferry"]],
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["==", "class", "ferry"]
+      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round"
@@ -1171,7 +1195,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["!in", "brunnel", "bridge", "tunnel"], ["==", "class", "service"]]
+        [
+          "all",
+          ["!in", "brunnel", "bridge", "tunnel"],
+          ["==", "class", "service"]
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -1250,7 +1278,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["!in", "brunnel", "bridge", "tunnel"], ["in", "class", "minor"]]
+        [
+          "all",
+          ["!in", "brunnel", "bridge", "tunnel"],
+          ["in", "class", "minor"]
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -1449,7 +1481,7 @@
         [
           "all",
           ["!in", "brunnel", "bridge", "tunnel"],
-          ["in", "class", "service", "street", "tertiary"]
+          ["in", "class", "service", "street", "tertiary", "minor"]
         ]
       ],
       "layout": { "line-cap": "round", "line-join": "round" },
@@ -1769,7 +1801,11 @@
           ]
         }
       },
-      "filter": ["all", ["==", "class", "pedestrian"], ["==", "brunnel", "bridge"]]
+      "filter": [
+        "all",
+        ["==", "class", "pedestrian"],
+        ["==", "brunnel", "bridge"]
+      ]
     },
     {
       "id": "bridge_pedestrian",
@@ -1789,7 +1825,11 @@
       "layout": {
         "visibility": "visible"
       },
-      "filter": ["all", ["==", "class", "pedestrian"], ["==", "brunnel", "bridge"]]
+      "filter": [
+        "all",
+        ["==", "class", "pedestrian"],
+        ["==", "brunnel", "bridge"]
+      ]
     },
     {
       "id": "bridge_street_case",
@@ -1839,7 +1879,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["==", "brunnel", "bridge"], ["in", "class", "primary", "secondary"]]
+        [
+          "all",
+          ["==", "brunnel", "bridge"],
+          ["in", "class", "primary", "secondary"]
+        ]
       ],
       "layout": {
         "line-cap": "butt"
@@ -1863,7 +1907,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["==", "brunnel", "bridge"], ["in", "class", "motorway", "trunk"]]
+        [
+          "all",
+          ["==", "brunnel", "bridge"],
+          ["in", "class", "motorway", "trunk"]
+        ]
       ],
       "paint": {
         "line-color": "#ccc",
@@ -1930,7 +1978,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["==", "brunnel", "bridge"], ["in", "class", "primary", "secondary"]]
+        [
+          "all",
+          ["==", "brunnel", "bridge"],
+          ["in", "class", "primary", "secondary"]
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -1955,7 +2007,11 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["all", ["==", "brunnel", "bridge"], ["in", "class", "motorway", "trunk"]]
+        [
+          "all",
+          ["==", "brunnel", "bridge"],
+          ["in", "class", "motorway", "trunk"]
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -2147,17 +2203,8 @@
             [15.5, 0.25],
             [22, 1.5]
           ]
-        }
-      },
-      "paint": {
-        "line-color": "rgba(255,255,255,1)",
-        "line-width": {
-          "base": 1.55,
-          "stops": [
-            [4, 0.25],
-            [20, 50]
-          ]
-        }
+        },
+        "visibility": "none"
       }
     },
     {
@@ -2623,7 +2670,11 @@
       "source": "vector",
       "source-layer": "transportation_name",
       "minzoom": 12,
-      "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "ferry"]],
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["==", "class", "ferry"]
+      ],
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name}",
@@ -2774,7 +2825,11 @@
       "source": "vector",
       "source-layer": "poi",
       "minzoom": 14,
-      "filter": ["all", ["==", "$type", "Point"], ["all", ["in", "class", "park"]]],
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["all", ["in", "class", "park"]]
+      ],
       "layout": {
         "text-size": {
           "stops": [
@@ -2992,7 +3047,15 @@
         [
           "all",
           ["!in", "name", "Harakan talvipolku", "Suomenlinnan Huoltotunneli"],
-          ["in", "class", "path", "service", "street", "street_limited", "tertiary"]
+          [
+            "in",
+            "class",
+            "path",
+            "service",
+            "street",
+            "street_limited",
+            "tertiary"
+          ]
         ]
       ],
       "layout": {
@@ -3340,7 +3403,12 @@
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "name", "Makasiiniterminaali", "Katajanokan Terminaali, Helsinki"],
+        [
+          "in",
+          "name",
+          "Makasiiniterminaali",
+          "Katajanokan Terminaali, Helsinki"
+        ],
         ["in", "type", "ferry terminal", "harbour", "marina"]
       ],
       "layout": {
@@ -3657,7 +3725,11 @@
       "source": "ticket-sales",
       "minzoom": 15,
 
-      "filter": ["all", ["==", "$type", "Point"], ["==", "TYYPPI", "Palvelupiste"]],
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["==", "TYYPPI", "Palvelupiste"]
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
@@ -3699,7 +3771,11 @@
       "source-layer": "taukotilat",
       "minzoom": 8,
 
-      "filter": ["all", ["==", "$type", "Point"], ["==", "Tyyppi", "taukotila"]],
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["==", "Tyyppi", "taukotila"]
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
@@ -4070,54 +4146,6 @@
           "stops": [
             [11, 0.6],
             [14, 1]
-          ]
-        }
-      }
-    },
-    {
-      "id": "Stops_hub",
-      "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "source": "stops",
-      "source-layer": "stops",
-      "filter": ["!=", "mode", "RAIL"],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-color": "#fff",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [
-            [14, 0],
-            [14.1, 2],
-            [22, 20]
-          ]
-        }
-      }
-    },
-    {
-      "id": "Stops_hub_rail",
-      "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "source": "stops",
-      "source-layer": "stops",
-
-      "filter": ["in", "mode", "", "RAIL"],
-      "minzoom": 13,
-      "maxzoom": 14,
-      "paint": {
-        "circle-color": "#fff",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [
-            [14, 0],
-            [14.1, 2],
-            [22, 20]
           ]
         }
       }

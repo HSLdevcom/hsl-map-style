@@ -8,8 +8,8 @@
       },
       "source": "citybike",
       "source-layer": "stations",
+      "minzoom": 13,
       "maxzoom": 14,
-      "interactive": true,
       "layout": {
         "visibility": "visible"
       },
@@ -19,11 +19,11 @@
           "base": 1.15,
           "stops": [
             [
-              11.9,
+              12.9,
               0
             ],
             [
-              12,
+              13,
               1.5
             ],
             [
@@ -36,11 +36,16 @@
     },
     {
       "id": "Stops_citybikes",
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1457010266398.4177"
       },
-      "ref": "Stops case citybikes",
-      "interactive": true,
+      "source": "citybike",
+      "source-layer": "stations",
+      "maxzoom": 14,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "circle-color": "#fcbc19",
         "circle-radius": {
@@ -84,7 +89,6 @@
       "source": "citybike",
       "source-layer": "stations",
       "minzoom": 14,
-      "interactive": true,
       "filter": [
         "==",
         "$type",
@@ -109,7 +113,7 @@
           0,
           -6
         ],
-        "icon-image": "icon-citybike-station",
+        "icon-image": "icon-citybike_station-medium",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
@@ -138,17 +142,6 @@
         "text-anchor": "top",
         "text-max-width": 8,
         "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          0
-        ],
-        "icon-opacity": 1
       }
     }
   ],
@@ -159,11 +152,6 @@
     }
   },
   "metadata": {
-    "mapbox:groups": {
-      "1457010266398.4177": {
-        "name": "POI-citybikes",
-        "collapsed": true
-      }
-    }
+    "mapbox:groups": {}
   }
 }

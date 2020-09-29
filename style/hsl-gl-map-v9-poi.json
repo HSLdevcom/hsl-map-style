@@ -8,8 +8,7 @@
       },
       "source": "parkandride",
       "source-layer": "hubs",
-      "minzoom": 14,
-      "interactive": true,
+      "minzoom": 13,
       "filter": [
         "==",
         "$type",
@@ -66,10 +65,8 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "rail_station_label",
+      "source-layer": "poi",
       "minzoom": 5,
-      "maxzoom": 16,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -79,8 +76,13 @@
         ],
         [
           "==",
-          "network",
-          "rail-metro"
+          "class",
+          "railway"
+        ],
+        [
+          "==",
+          "subclass",
+          "subway"
         ]
       ],
       "layout": {
@@ -97,13 +99,13 @@
             ]
           ]
         },
-        "text-allow-overlap": false,
-        "icon-image": "icon-subway-station",
+        "text-allow-overlap": true,
+        "icon-image": "icon-metro-24",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "visibility": "visible",
         "text-offset": [
           0,
@@ -135,9 +137,8 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "poi_label",
+      "source-layer": "poi",
       "minzoom": 5,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -147,8 +148,13 @@
         ],
         [
           "==",
-          "type",
-          "Bus Station"
+          "class",
+          "bus"
+        ],
+        [
+          "==",
+          "subclass",
+          "bus_station"
         ]
       ],
       "layout": {
@@ -166,7 +172,7 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-bus-station",
+        "icon-image": "icon-bus-24",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
@@ -178,7 +184,19 @@
           0.5
         ],
         "icon-optional": false,
-        "icon-size": 0.9,
+        "icon-size": {
+          "base": 1.4,
+          "stops": [
+            [
+              12,
+              0.6
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8,
@@ -203,9 +221,8 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "rail_station_label",
-      "minzoom": 5,
-      "interactive": true,
+      "source-layer": "poi",
+      "minzoom": 11,
       "filter": [
         "all",
         [
@@ -223,8 +240,13 @@
           ],
           [
             "==",
-            "network",
-            "rail"
+            "class",
+            "railway"
+          ],
+          [
+            "==",
+            "subclass",
+            "station"
           ]
         ]
       ],
@@ -243,7 +265,7 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-rail-station",
+        "icon-image": "icon-train-24",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
@@ -307,9 +329,8 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "airport_label",
+      "source-layer": "poi",
       "minzoom": 5,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -376,20 +397,11 @@
       "type": "vector"
     },
     "vector": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-vector-map/index.json",
-      "type": "vector"
+      "type": "vector",
+      "url": "http://localhost:8080/data/finland.json"
     }
   },
   "metadata": {
-    "mapbox:groups": {
-      "1457010287588.8713": {
-        "name": "POI-park-and-ride",
-        "collapsed": true
-      },
-      "1457010208438.9548": {
-        "name": "POI–public-transport",
-        "collapsed": true
-      }
-    }
+    "mapbox:groups": {}
   }
 }
