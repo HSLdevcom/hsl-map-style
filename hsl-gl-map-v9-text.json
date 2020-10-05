@@ -6,18 +6,38 @@
       "source": "vector",
       "source-layer": "road_label",
       "minzoom": 12,
-      "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "ferry"]],
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "class",
+          "ferry"
+        ]
+      ],
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name}",
-        "text-font": ["Gotham Rounded Book"],
+        "text-font": [
+          "Gotham Rounded Book"
+        ],
         "text-transform": "none",
         "text-letter-spacing": 0,
         "text-size": {
           "base": 1.4,
           "stops": [
-            [10, 7],
-            [20, 20]
+            [
+              10,
+              7
+            ],
+            [
+              20,
+              20
+            ]
           ]
         },
         "text-padding": 2
@@ -32,18 +52,33 @@
       "id": "housenum_label",
       "type": "symbol",
       "source": "vector",
-      "minzoom": 17,
       "source-layer": "housenum_label",
-      "filter": ["==", "$type", "Point"],
+      "minzoom": 17,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
       "layout": {
         "text-field": "{house_num}",
         "text-size": {
           "stops": [
-            [15, 8],
-            [22, 17]
+            [
+              15,
+              8
+            ],
+            [
+              22,
+              17
+            ]
           ]
         },
-        "text-font": ["Gotham Rounded Book"]
+        "text-font": [
+          "Gotham Rounded Book"
+        ]
       },
       "paint": {
         "text-color": "#666",
@@ -61,7 +96,11 @@
       "minzoom": 16,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
         [
           "in",
           "type",
@@ -96,11 +135,19 @@
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "visibility": "visible",
         "text-anchor": "top",
         "text-field": "{name}",
@@ -124,19 +171,42 @@
       "minzoom": 13,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["in", "type", "Stadium", "Sports Centre"],
-        ["in", "scalerank", 1, 2, 3]
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "type",
+          "Stadium",
+          "Sports Centre"
+        ],
+        [
+          "in",
+          "scalerank",
+          1,
+          2,
+          3
+        ]
       ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "visibility": "visible",
         "text-anchor": "top",
         "text-field": "{name}",
@@ -160,23 +230,53 @@
       "minzoom": 14,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
         [
           "all",
-          ["==", "type", "Park"],
-          ["in", "localrank", 1, 2, 3, 4],
-          ["in", "scalerank", 1, 2, 3, 4]
+          [
+            "==",
+            "type",
+            "Park"
+          ],
+          [
+            "in",
+            "localrank",
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            "in",
+            "scalerank",
+            1,
+            2,
+            3,
+            4
+          ]
         ]
       ],
       "layout": {
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 11]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              11
+            ]
           ]
         },
         "text-max-width": 8,
-        "text-font": ["Gotham Rounded Medium Italic"],
+        "text-font": [
+          "Gotham Rounded Medium Italic"
+        ],
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -199,18 +299,35 @@
       "minzoom": 5,
       "filter": [
         "all",
-        ["!in", "name", "Aleksanterinkatu", "Keskuskatu"],
-        ["==", "$type", "Point"]
+        [
+          "!in",
+          "name",
+          "Aleksanterinkatu",
+          "Keskuskatu"
+        ],
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
       ],
       "layout": {
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 11]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              11
+            ]
           ]
         },
         "text-max-width": 8,
-        "text-font": ["Gotham Rounded Medium Italic"],
+        "text-font": [
+          "Gotham Rounded Medium Italic"
+        ],
         "text-anchor": "bottom",
         "text-field": "{name}",
         "visibility": "visible"
@@ -233,18 +350,36 @@
       "minzoom": 5,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["in", "type", "Ferry Terminal", "Harbour", "Marina"]
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "type",
+          "Ferry Terminal",
+          "Harbour",
+          "Marina"
+        ]
       ],
       "layout": {
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 11]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              11
+            ]
           ]
         },
         "text-max-width": 8,
-        "text-font": ["Gotham Rounded Book"],
+        "text-font": [
+          "Gotham Rounded Book"
+        ],
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -265,34 +400,72 @@
       "source": "vector",
       "source-layer": "rail_station_label",
       "minzoom": 16,
-      "filter": ["all", ["==", "$type", "Point"], ["==", "maki", "entrance"]],
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "maki",
+          "entrance"
+        ]
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-subway-entrance",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": true,
         "visibility": "visible",
         "text-offset": {
           "base": 1,
           "stops": [
-            [15, [0, 0.5]],
-            [22, [0, 3]]
+            [
+              15,
+              [
+                0,
+                0.5
+              ]
+            ],
+            [
+              22,
+              [
+                0,
+                3
+              ]
+            ]
           ]
         },
         "icon-optional": false,
         "icon-size": {
           "base": 1.15,
           "stops": [
-            [15, 0.3],
-            [22, 1]
+            [
+              15,
+              0.3
+            ],
+            [
+              22,
+              1
+            ]
           ]
         },
         "text-anchor": "top",
@@ -305,7 +478,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     },
@@ -315,16 +491,28 @@
       "source": "vector",
       "source-layer": "water_label",
       "minzoom": 5,
-      "filter": ["==", "$type", "Point"],
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
       "layout": {
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 11]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              11
+            ]
           ]
         },
         "text-max-width": 8,
-        "text-font": ["Gotham Rounded Medium Italic"],
+        "text-font": [
+          "Gotham Rounded Medium Italic"
+        ],
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -344,20 +532,44 @@
       "minzoom": 10,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["in", "type", "island", "islet"],
-        ["==", "localrank", 1]
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "type",
+          "island",
+          "islet"
+        ],
+        [
+          "==",
+          "localrank",
+          1
+        ]
       ],
       "layout": {
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 11]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              11
+            ]
           ]
         },
         "text-max-width": 8,
-        "text-font": ["Gotham Rounded Book"],
-        "text-offset": [0, 0.5],
+        "text-font": [
+          "Gotham Rounded Book"
+        ],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "text-anchor": "top",
         "text-field": "{name}",
         "visibility": "visible"
@@ -376,23 +588,48 @@
       "source-layer": "road_label",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
         [
           "all",
-          ["!in", "name", "Harakan talvipolku", "Suomenlinnan huoltotunneli"],
-          ["in", "class", "path", "service", "street", "street_limited", "tertiary"]
+          [
+            "!in",
+            "name",
+            "Harakan talvipolku",
+            "Suomenlinnan Huoltotunneli"
+          ],
+          [
+            "in",
+            "class",
+            "path",
+            "service",
+            "street",
+            "street_limited",
+            "tertiary"
+          ]
         ]
       ],
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name}",
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "text-letter-spacing": 0.1,
         "text-size": {
           "base": 1.4,
           "stops": [
-            [10, 8],
-            [20, 14]
+            [
+              10,
+              8
+            ],
+            [
+              20,
+              14
+            ]
           ]
         },
         "text-keep-upright": true,
@@ -402,8 +639,14 @@
         "text-color": {
           "base": 1.4,
           "stops": [
-            [13, "#999"],
-            [15, "#333"]
+            [
+              13,
+              "#999"
+            ],
+            [
+              15,
+              "#333"
+            ]
           ]
         },
         "text-halo-color": "rgba(255,255,255,0.85)",
@@ -417,19 +660,38 @@
       "source-layer": "road_label",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
-        ["in", "class", "motorway", "primary", "secondary", "trunk"]
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "in",
+          "class",
+          "motorway",
+          "primary",
+          "secondary",
+          "trunk"
+        ]
       ],
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name}",
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "text-letter-spacing": 0.1,
         "text-size": {
           "base": 1.4,
           "stops": [
-            [10, 8],
-            [20, 14]
+            [
+              10,
+              8
+            ],
+            [
+              20,
+              14
+            ]
           ]
         },
         "text-rotation-alignment": "map"
@@ -438,11 +700,17 @@
         "text-color": {
           "base": 1.4,
           "stops": [
-            [13, "#999"],
-            [15, "#333"]
+            [
+              13,
+              "#999"
+            ],
+            [
+              15,
+              "#333"
+            ]
           ]
         },
-        "text-halo-color": "rgba(255,255,255,0.85)",
+        "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 2
       }
     },
@@ -454,17 +722,37 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["in", "type", "hamlet", "neighbourhood", "suburb", "town", "village"]
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "type",
+          "hamlet",
+          "neighbourhood",
+          "suburb",
+          "town",
+          "village"
+        ]
       ],
       "layout": {
         "text-field": "{name}",
-        "text-font": ["Gotham Rounded Book"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "text-max-width": 6,
         "text-size": {
           "stops": [
-            [10, 10],
-            [16, 18]
+            [
+              10,
+              10
+            ],
+            [
+              16,
+              18
+            ]
           ],
           "base": 1.2
         }
@@ -482,15 +770,35 @@
       "source": "vector",
       "source-layer": "place_label",
       "maxzoom": 16,
-      "filter": ["all", ["==", "$type", "Point"], ["==", "type", "city"]],
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "city"
+        ]
+      ],
       "layout": {
         "text-field": "{name}",
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "text-max-width": 10,
         "text-size": {
           "stops": [
-            [6, 10],
-            [10, 16]
+            [
+              6,
+              10
+            ],
+            [
+              10,
+              16
+            ]
           ],
           "base": 1.4
         },
@@ -505,8 +813,14 @@
         "text-opacity": {
           "base": 1,
           "stops": [
-            [12, 1],
-            [13, 0]
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              0
+            ]
           ]
         }
       }
@@ -517,15 +831,27 @@
       "source": "vector",
       "source-layer": "country_label",
       "maxzoom": 12,
-      "filter": ["==", "$type", "Point"],
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
       "layout": {
         "text-field": "{name}",
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "text-max-width": 10,
         "text-size": {
           "stops": [
-            [3, 10],
-            [8, 30]
+            [
+              3,
+              10
+            ],
+            [
+              8,
+              30
+            ]
           ]
         },
         "text-transform": "uppercase"
@@ -535,6 +861,79 @@
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 1.5,
         "text-halo-blur": 0
+      }
+    },
+    {
+      "id": "poi_label_terminal",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "poi_label",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "name",
+          "Makasiiniterminaali",
+          "Katajanokan Terminaali, Helsinki"
+        ],
+        [
+          "in",
+          "type",
+          "Ferry Terminal",
+          "Harbour",
+          "Marina"
+        ]
+      ],
+      "layout": {
+        "text-optional": true,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
+          ]
+        },
+        "text-allow-overlap": true,
+        "icon-image": "icon-ship_terminal-24",
+        "text-ignore-placement": false,
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-optional": false,
+        "icon-size": {
+          "base": 1.4,
+          "stops": [
+            [
+              12,
+              0.6
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        "icon-ignore-placement": false
       }
     }
   ],

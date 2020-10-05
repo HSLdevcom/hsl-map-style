@@ -9,7 +9,6 @@
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
       "minzoom": 8,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -78,7 +77,6 @@
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
       "minzoom": 8,
-      "interactive": true,
       "filter": [
         "all",
         [

@@ -14,22 +14,45 @@
       "minzoom": 11,
       "maxzoom": 24,
       "interactive": true,
-      "filter": ["all", ["==", "$type", "Point"], ["==", "mode", "SUBWAY"]],
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "mode",
+          "SUBWAY"
+        ]
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-subway-station-2",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
@@ -42,7 +65,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     },
@@ -54,22 +80,45 @@
       "minzoom": 11,
       "maxzoom": 24,
       "interactive": true,
-      "filter": ["all", ["==", "$type", "Point"], ["==", "mode", "RAIL"]],
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "mode",
+          "RAIL"
+        ]
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-train-24",
+        "icon-image": "icon-rail-station",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
         "icon-size": 0.9,
         "text-anchor": "top",
@@ -82,7 +131,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     },
@@ -94,30 +146,47 @@
       "minzoom": 11,
       "maxzoom": 24,
       "interactive": true,
-      "filter": ["all", ["==", "$type", "Point"], ["==", "mode", "BUS"]],
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "mode",
+          "BUS"
+        ]
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-bus-24",
+        "icon-image": "icon-bus-station",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
-        "icon-size": {
-          "base": 0,
-          "stops": [
-            [13, 0.8],
-            [20, 1.2]
-          ]
-        },
+        "icon-size": 1,
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8,
@@ -128,7 +197,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     }

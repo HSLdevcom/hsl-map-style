@@ -4,7 +4,6 @@
       "id": "municipal_border",
       "type": "line",
       "source": "borders",
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",

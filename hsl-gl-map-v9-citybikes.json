@@ -10,7 +10,6 @@
       "source-layer": "stations",
       "minzoom": 13,
       "maxzoom": 14,
-      "interactive": true,
       "layout": {
         "visibility": "visible"
       },
@@ -19,37 +18,65 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [12.9, 0],
-            [13, 1.5],
-            [22, 26]
+            [
+              12.9,
+              0
+            ],
+            [
+              13,
+              1.5
+            ],
+            [
+              22,
+              26
+            ]
           ]
         }
       }
     },
     {
       "id": "Stops_citybikes",
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1457010266398.4177"
       },
-      "ref": "Stops case citybikes",
-      "interactive": true,
+      "source": "citybike",
+      "source-layer": "stations",
       "minzoom": 13,
       "maxzoom": 14,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "circle-color": "#fcbc19",
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [11.9, 0],
-            [12, 1],
-            [22, 24]
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [11, 0.6],
-            [14, 1]
+            [
+              11,
+              0.6
+            ],
+            [
+              14,
+              1
+            ]
           ]
         }
       }
@@ -63,44 +90,59 @@
       "source": "citybike",
       "source-layer": "stations",
       "minzoom": 14,
-      "interactive": true,
-      "filter": ["==", "$type", "Point"],
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
-        "icon-offset": [0, -6],
+        "icon-offset": [
+          0,
+          -6
+        ],
         "icon-image": "icon-citybike_station-medium",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "symbol-placement": "point",
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
         "icon-size": {
           "base": 1,
           "stops": [
-            [13, 0.8],
-            [20, 1.2]
+            [
+              13,
+              0.8
+            ],
+            [
+              20,
+              1.2
+            ]
           ]
         },
         "text-anchor": "top",
         "text-max-width": 8,
         "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, 0],
-        "icon-opacity": 1
       }
     }
   ],

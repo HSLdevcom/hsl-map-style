@@ -17,7 +17,6 @@
     {
       "id": "Stops case",
       "type": "circle",
-      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -32,11 +31,7 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [
-            [12.9, 0],
-            [13, 0],
-            [22, 26]
-          ]
+          "stops": [[11.9, 0], [12, 1.5], [22, 26]]
         }
       }
     },
@@ -58,46 +53,37 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [
-            [11.9, 0],
-            [12, 1.5],
-            [22, 26]
-          ]
+          "stops": [[11.9, 0], [12, 1.5], [22, 26]]
         }
       }
     },
     {
       "id": "Stops_bus",
-      "type": "symbol",
-      "minzoom": 13,
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": ["==", "mode", "BUS"],
+      "filter": [
+        "all",
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["==", "mode", "BUS"]
+      ],
       "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": false,
-        "icon-offset": [0, -6],
-        "icon-image": "icon-stop-bus-medium",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1,
-          "stops": [
-            [13, 0.8],
-            [20, 1.2]
-          ]
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#007ac9",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [[11.9, 0], [12, 1], [22, 24]]
         },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "circle-opacity": {
+          "base": 1,
+          "stops": [[11, 0.6], [14, 1]]
+        }
       }
     },
     {
@@ -121,100 +107,42 @@
         "circle-color": "#FF6319",
         "circle-radius": {
           "base": 1.15,
-          "stops": [
-            [11.9, 0],
-            [12, 1],
-            [22, 24]
-          ]
+          "stops": [[11.9, 0], [12, 1], [22, 24]]
         },
         "circle-opacity": {
           "base": 1,
-          "stops": [
-            [11, 0.6],
-            [14, 1]
-          ]
+          "stops": [[11, 0.6], [14, 1]]
         }
       }
     },
     {
       "id": "Stops_ferry",
-      "type": "symbol",
-      "minzoom": 13,
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "all",
-        ["!in", "nameFi", "Kauppatori", "Katajanokka", "Suomenlinna, päälait"],
-        ["==", "mode", "FERRY"]
-      ],
+      "filter": ["==", "mode", "FERRY"],
       "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": false,
-        "icon-offset": [0, -6],
-        "icon-image": "icon-stop-hsl_ferry-medium",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#00b9e4",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [[11.9, 0], [12, 1], [22, 24]]
+        },
+        "circle-opacity": {
           "base": 1,
-          "stops": [
-            [13, 0.8],
-            [20, 1.2]
-          ]
-        },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      }
-    },
-    {
-      "id": "Stops_ferry_hsl",
-      "type": "symbol",
-      "minzoom": 12,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "source": "stops",
-      "source-layer": "stops",
-      "interactive": true,
-      "filter": [
-        "all",
-        ["in", "nameFi", "Kauppatori", "Katajanokka", "Suomenlinna, päälait"],
-        ["==", "mode", "FERRY"]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": false,
-        "icon-offset": [0, -6],
-        "icon-image": "icon-hsl_ferry-16",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 0,
-          "stops": [
-            [13, 0.8],
-            [20, 1.2]
-          ]
-        },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+          "stops": [[11, 0.6], [14, 1]]
+        }
       }
     },
     {
       "id": "Stops_tram",
-      "type": "symbol",
+      "type": "circle",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
@@ -223,26 +151,18 @@
       "interactive": true,
       "filter": ["==", "mode", "TRAM"],
       "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": false,
-        "icon-offset": [0, -6],
-        "icon-image": "icon-stop-tram-medium",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1,
-          "stops": [
-            [13, 0.8],
-            [20, 1.2]
-          ]
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#00985f",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [[11.9, 0], [12, 1], [22, 24]]
         },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "circle-opacity": {
+          "base": 1,
+          "stops": [[11, 0.6], [14, 1]]
+        }
       }
     },
     {
@@ -256,18 +176,11 @@
         "circle-color": "#8c54a2",
         "circle-radius": {
           "base": 1.15,
-          "stops": [
-            [12.9, 0],
-            [13, 1],
-            [22, 24]
-          ]
+          "stops": [[11.9, 0], [12, 1], [22, 24]]
         },
         "circle-opacity": {
           "base": 1,
-          "stops": [
-            [11, 0.6],
-            [14, 1]
-          ]
+          "stops": [[11, 0.6], [14, 1]]
         }
       }
     },
@@ -282,24 +195,17 @@
       "interactive": true,
       "filter": ["==", "mode", "SUBWAY"],
       "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "circle-color": "#ff6319",
         "circle-radius": {
           "base": 1.15,
-          "stops": [
-            [11.9, 0],
-            [12, 1],
-            [22, 24]
-          ]
+          "stops": [[11.9, 0], [12, 1], [22, 24]]
         },
         "circle-opacity": {
           "base": 1,
-          "stops": [
-            [11, 0.6],
-            [14, 1]
-          ]
+          "stops": [[11, 0.6], [14, 1]]
         }
       }
     },
@@ -314,11 +220,7 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [
-            [14, 0],
-            [14.1, 2],
-            [22, 20]
-          ]
+          "stops": [[14, 0], [14.1, 2], [22, 20]]
         }
       }
     },
@@ -340,11 +242,7 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [
-            [14, 0],
-            [14.1, 2],
-            [22, 20]
-          ]
+          "stops": [[14, 0], [14.1, 2], [22, 20]]
         }
       }
     }

@@ -3,40 +3,20 @@
   "name": "HSL v2.0",
   "metadata": {
     "mapbox:groups": {
-      "1457010660461.3042": {
-        "name": "Routes",
-        "collapsed": true
-      },
+      "1457010660461.3042": { "name": "Routes", "collapsed": true },
       "1457010208438.9548": {
         "name": "POI–public-transport",
         "collapsed": true
       },
-      "1457010362398.355": {
-        "name": "POI-private-sector",
-        "collapsed": true
-      },
-      "1452776685487.2012": {
-        "name": "POI-public",
-        "collapsed": true
-      },
-      "1457010287588.8713": {
-        "name": "POI-park-and-ride",
-        "collapsed": true
-      },
-      "1460634974533.995": {
-        "name": "Kuljettajan_ohje",
-        "collapsed": true
-      },
-      "1455204550197.1404": {
-        "name": "Stops",
-        "collapsed": true
-      },
-      "1457010266398.4177": {
-        "name": "POI-citybikes",
-        "collapsed": true
-      }
+      "1457010362398.355": { "name": "POI-private-sector", "collapsed": true },
+      "1452776685487.2012": { "name": "POI-public", "collapsed": true },
+      "1457010287588.8713": { "name": "POI-park-and-ride", "collapsed": true },
+      "1460634974533.995": { "name": "Kuljettajan_ohje", "collapsed": true },
+      "1455204550197.1404": { "name": "Stops", "collapsed": true },
+      "1457010266398.4177": { "name": "POI-citybikes", "collapsed": true }
     },
-    "mapbox-groups": {}
+    "mapbox-groups": {},
+    "maputnik:renderer": "mbgljs"
   },
   "center": [24.780522192591405, 60.178648250675934],
   "zoom": 14.051135528958179,
@@ -108,9 +88,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "hospital"],
-      "paint": {
-        "fill-color": "#fbe6e0"
-      }
+      "paint": { "fill-color": "#fbe6e0" }
     },
     {
       "id": "landuse_school",
@@ -118,9 +96,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "school"],
-      "paint": {
-        "fill-color": "#f9f4d2"
-      }
+      "paint": { "fill-color": "#f9f4d2" }
     },
     {
       "id": "landuse_park",
@@ -128,12 +104,8 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "park"],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#dceacc"
-      }
+      "layout": { "visibility": "visible" },
+      "paint": { "fill-color": "#dceacc" }
     },
     {
       "id": "landuse_playground",
@@ -141,12 +113,8 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "type", "playground"],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#f9f4d2"
-      }
+      "layout": { "visibility": "visible" },
+      "paint": { "fill-color": "#f9f4d2" }
     },
     {
       "id": "landuse_wood",
@@ -154,9 +122,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["in", "class", "scrub", "wood"],
-      "paint": {
-        "fill-color": "rgba(208,227,184,1)"
-      }
+      "paint": { "fill-color": "rgba(208,227,184,1)" }
     },
     {
       "id": "landuse_park_nature_reserve",
@@ -179,10 +145,7 @@
       "source": "vector",
       "source-layer": "aeroway",
       "filter": ["==", "$type", "Polygon"],
-      "paint": {
-        "fill-color": "#e3e3e3",
-        "fill-outline-color": "#ccc"
-      }
+      "paint": { "fill-color": "#e3e3e3", "fill-outline-color": "#ccc" }
     },
     {
       "id": "landuse_grass",
@@ -190,9 +153,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "grass"],
-      "paint": {
-        "fill-color": "rgba(208,227,184,1)"
-      }
+      "paint": { "fill-color": "rgba(208,227,184,1)" }
     },
     {
       "id": "landuse_sand",
@@ -200,9 +161,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "sand"],
-      "paint": {
-        "fill-color": "rgba(224,223,204,1)"
-      }
+      "paint": { "fill-color": "rgba(224,223,204,1)" }
     },
     {
       "id": "landuse_scrub",
@@ -210,10 +169,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "scrub"],
-      "paint": {
-        "fill-color": "#b8d19b",
-        "fill-opacity": 0.3
-      }
+      "paint": { "fill-color": "#b8d19b", "fill-opacity": 0.3 }
     },
     {
       "id": "landuse_cemetery",
@@ -232,9 +188,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "agriculture"],
-      "paint": {
-        "fill-color": "#e3ecc5"
-      }
+      "paint": { "fill-color": "#e3ecc5" }
     },
     {
       "id": "landuse_industrial",
@@ -242,9 +196,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "industrial"],
-      "paint": {
-        "fill-color": "hsl(18, 21%, 91%)"
-      }
+      "paint": { "fill-color": "hsl(18, 21%, 91%)" }
     },
     {
       "id": "landuse_athletics",
@@ -299,9 +251,7 @@
       "type": "fill",
       "source": "parkandride",
       "source-layer": "facilities",
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "fill-color": "#007ac9",
         "fill-outline-color": "#007ac9",
@@ -364,10 +314,7 @@
         ["==", "$type", "LineString"],
         ["in", "class", "canal", "river", "stream"]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#a6d8f4",
         "line-width": {
@@ -385,10 +332,7 @@
       "source": "vector",
       "source-layer": "water",
       "layout": {},
-      "paint": {
-        "fill-color": "#bee4f8",
-        "fill-outline-color": "#a6d8f4"
-      }
+      "paint": { "fill-color": "#bee4f8", "fill-outline-color": "#a6d8f4" }
     },
     {
       "id": "landuse_wetland",
@@ -419,10 +363,7 @@
         ["==", "class", "land"],
         ["in", "$type", "Point", "Polygon"]
       ],
-      "paint": {
-        "fill-color": "#edf0f5",
-        "fill-outline-color": "#a6d8f4"
-      }
+      "paint": { "fill-color": "#edf0f5", "fill-outline-color": "#a6d8f4" }
     },
     {
       "id": "landuse_barrier_line_land",
@@ -430,9 +371,7 @@
       "source": "vector",
       "source-layer": "barrier_line",
       "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "land"]],
-      "layout": {
-        "line-cap": "butt"
-      },
+      "layout": { "line-cap": "butt" },
       "paint": {
         "line-color": "#f0f1f2",
         "line-width": {
@@ -455,10 +394,7 @@
         ["in", "$type", "LineString", "Polygon"]
       ],
       "layout": {},
-      "paint": {
-        "line-color": "#ccc",
-        "line-blur": 0
-      }
+      "paint": { "line-color": "#ccc", "line-blur": 0 }
     },
     {
       "id": "landuse_barrier_rock",
@@ -487,9 +423,7 @@
         ["==", "$type", "LineString"],
         ["==", "class", "street_limited"]
       ],
-      "layout": {
-        "line-join": "round"
-      },
+      "layout": { "line-join": "round" },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -513,13 +447,10 @@
       "id": "landuse_barrier_line_fence",
       "type": "line",
       "source": "vector",
-      "minzoom": 16,
       "source-layer": "barrier_line",
+      "minzoom": 16,
       "filter": ["==", "class", "fence"],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-width": {
           "base": 1.55,
@@ -546,10 +477,10 @@
     },
     {
       "id": "road_pedestrian",
-      "minzoom": 14,
       "type": "fill",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "$type", "Polygon"],
@@ -560,85 +491,6 @@
         "fill-color": "#f7f7f7",
         "fill-outline-color": "#ccc",
         "fill-opacity": 1
-      }
-    },
-    {
-      "id": "building_shadow",
-      "type": "fill",
-      "source": "vector",
-      "source-layer": "building",
-      "minzoom": 17,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#c2c3cc",
-        "fill-outline-color": {
-          "base": 1,
-          "stops": [
-            [13, "#dde1e9"],
-            [17, "rgba(194,195,204,1)"]
-          ]
-        },
-        "fill-opacity": 1,
-        "fill-translate": {
-          "base": 1,
-          "stops": [
-            [13, [0, 0]],
-            [22, [0, 8]]
-          ]
-        }
-      }
-    },
-    {
-      "id": "building",
-      "type": "fill",
-      "source": "vector",
-      "source-layer": "building",
-      "minzoom": 16,
-      "layout": {},
-      "paint": {
-        "fill-color": "#e2e4e9",
-        "fill-outline-color": {
-          "base": 1,
-          "stops": [
-            [13, "#dde1e9"],
-            [17, "rgba(194,195,204,1)"]
-          ]
-        },
-        "fill-translate": [0, 0]
-      }
-    },
-    {
-      "id": "tunnel_walk",
-      "type": "line",
-      "source": "vector",
-      "source-layer": "road",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        [
-          "all",
-          ["!=", "type", "cycleway"],
-          ["==", "class", "path"],
-          ["==", "structure", "tunnel"]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#bfc2c9",
-        "line-width": {
-          "base": 1.55,
-          "stops": [
-            [0, 1.25],
-            [22, 20]
-          ]
-        },
-        "line-dasharray": [0, 1.5]
       }
     },
     {
@@ -656,9 +508,7 @@
           ["==", "structure", "tunnel"]
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#bbb",
         "line-width": {
@@ -781,10 +631,10 @@
     },
     {
       "id": "tunnel_service",
-      "minzoom": 16,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -826,9 +676,7 @@
           ["==", "type", "subway"]
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -851,36 +699,6 @@
       }
     },
     {
-      "id": "tunnel_road_path_cycleway",
-      "type": "line",
-      "source": "vector",
-      "source-layer": "road",
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        [
-          "all",
-          ["==", "structure", "tunnel"],
-          ["in", "type", "cycleway", "pedestrian", "track"]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#fff",
-        "line-width": {
-          "base": 1.55,
-          "stops": [
-            [0, 1.5],
-            [22, 26]
-          ]
-        },
-        "line-dasharray": [1, 0]
-      }
-    },
-    {
       "id": "road_subway",
       "type": "line",
       "source": "vector",
@@ -891,9 +709,7 @@
         ["==", "class", "major_rail"],
         ["==", "type", "subway"]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#bbb",
         "line-width": {
@@ -916,10 +732,7 @@
         ["==", "class", "minor_rail"],
         ["==", "type", "subway"]
       ],
-      "layout": {
-        "visibility": "visible",
-        "line-join": "round"
-      },
+      "layout": { "visibility": "visible", "line-join": "round" },
       "paint": {
         "line-color": "#aaa",
         "line-width": {
@@ -947,7 +760,15 @@
     },
     {
       "id": "waterway",
-      "ref": "waterway_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "waterway",
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["in", "class", "canal", "river", "stream"]
+      ],
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#bee4f8",
         "line-width": {
@@ -970,10 +791,7 @@
         ["==", "$type", "LineString"],
         ["==", "class", "ferry"]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#72d3f0",
         "line-width": {
@@ -1004,9 +822,7 @@
         ["!in", "structure", "bridge", "tunnel"],
         ["==", "class", "major_rail"]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#bbb",
         "line-width": {
@@ -1023,7 +839,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1051,24 +867,20 @@
       }
     },
     {
-      "id": "road_path",
+      "id": "road_track",
       "type": "line",
       "source": "vector",
       "source-layer": "road",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        [
-          "all",
-          ["!in", "structure", "bridge", "tunnel"],
-          ["!in", "type", "cycleway", "steps"],
-          ["==", "class", "path"]
-        ]
+        ["all", ["!in", "track", "track:grade2"], ["==", "class", "track"]]
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "visible"
       },
       "paint": {
         "line-color": "#fff",
@@ -1084,10 +896,120 @@
       }
     },
     {
+      "id": "road_path_v2",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!in", "structure", "bridge", "tunnel"],
+          [
+            "!in",
+            "type",
+            "cycleway",
+            "steps",
+            "path",
+            "pedestrian",
+            "track",
+            "track:grade2"
+          ],
+          ["==", "class", "path"]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [0, 1.5],
+            [22, 26]
+          ]
+        },
+        "line-dasharray": [0, 1.5],
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "road_path",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!in", "structure", "bridge", "tunnel"],
+          ["!in", "type", "cycleway", "steps"],
+          ["==", "class", "path"]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [0, 1.5],
+            [22, 26]
+          ]
+        },
+        "line-dasharray": [0, 1.5],
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "road_path_park",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!in", "structure", "bridge", "tunnel"],
+          ["!in", "type", "cycleway", "steps"],
+          ["==", "class", "path"]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "#0EAB00",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [0, 0.25],
+            [22, 8]
+          ]
+        }
+      }
+    },
+    {
       "id": "road_path_MTB",
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1099,10 +1021,7 @@
           ["==", "class", "path"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#fff",
         "line-width": {
@@ -1118,10 +1037,10 @@
     },
     {
       "id": "road_path_steps_case",
-      "minzoom": 16,
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1132,10 +1051,7 @@
           ["==", "type", "steps"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "miter"
-      },
+      "layout": { "line-cap": "butt", "line-join": "miter" },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -1171,10 +1087,7 @@
           ["==", "type", "steps"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "butt", "line-join": "round" },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -1195,24 +1108,52 @@
       }
     },
     {
-      "id": "road_path_cycleway",
-      "minzoom": 15,
+      "id": "road_service_case",
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "type", "cycleway", "path", "pedestrian", "track"]
+          ["==", "class", "service"]
         ]
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "visible"
       },
+      "paint": {
+        "line-color": "#ccc",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [4, 1],
+            [20, 34]
+          ]
+        }
+      }
+    },
+    {
+      "id": "road_path_cycleway_v2",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!in", "structure", "bridge", "tunnel"],
+          ["in", "type", "cycleway"]
+        ]
+      ],
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#fff",
         "line-width": {
@@ -1226,22 +1167,24 @@
       }
     },
     {
-      "id": "road_service",
+      "id": "road_path_cycleway",
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["==", "class", "service"]
+          ["in", "type", "cycleway", "path", "pedestrian", "track"]
         ]
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "none"
       },
       "paint": {
         "line-color": "#fff",
@@ -1251,7 +1194,8 @@
             [0, 1.5],
             [22, 26]
           ]
-        }
+        },
+        "line-dasharray": [1, 0]
       }
     },
     {
@@ -1268,9 +1212,7 @@
           ["in", "class", "motorway", "trunk"]
         ]
       ],
-      "layout": {
-        "line-join": "round"
-      },
+      "layout": { "line-join": "round" },
       "paint": {
         "line-color": "#f4d880",
         "line-width": {
@@ -1293,10 +1235,10 @@
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "class", "primary", "secondary"]
+          ["in", "class", "primary", "secondary", "tertiary"]
         ]
       ],
-      "layout": { "line-join": "round", "visibility": "none" },
+      "layout": { "line-join": "round", "visibility": "visible" },
       "paint": {
         "line-color": "hsl(0, 0%, 80%)",
         "line-width": {
@@ -1313,6 +1255,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "minzoom": 13,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1325,7 +1268,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "line-color": "#ccc",
@@ -1334,6 +1277,33 @@
           "stops": [
             [4, 1],
             [20, 54]
+          ]
+        }
+      }
+    },
+    {
+      "id": "road_service",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!in", "structure", "bridge", "tunnel"],
+          ["==", "class", "service"]
+        ]
+      ],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [2, 0.25],
+            [20, 30]
           ]
         }
       }
@@ -1406,10 +1376,7 @@
           ["in", "type", "motorway_link", "trunk_link"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "butt", "line-join": "round" },
       "paint": {
         "line-color": "#f4d880",
         "line-width": {
@@ -1431,10 +1398,7 @@
         ["==", "$type", "LineString"],
         ["all", ["!=", "type", "trunk_link"], ["==", "class", "link"]]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "butt", "line-join": "round" },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -1461,10 +1425,7 @@
           ["in", "type", "motorway_link", "trunk_link"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": {
           "base": 1,
@@ -1492,10 +1453,7 @@
         ["==", "$type", "LineString"],
         ["all", ["!=", "type", "trunk_link"], ["==", "class", "link"]]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#fff",
         "line-width": {
@@ -1519,7 +1477,7 @@
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "class", "service", "street", "tertiary"]
+          ["in", "class", "street", "tertiary"]
         ]
       ],
       "layout": { "line-cap": "round", "line-join": "round" },
@@ -1545,7 +1503,7 @@
         [
           "all",
           ["!in", "structure", "bridge", "tunnel"],
-          ["in", "class", "primary", "secondary"]
+          ["in", "class", "primary", "secondary", "tertiary"]
         ]
       ],
       "layout": { "line-join": "round" },
@@ -1603,10 +1561,7 @@
         ["==", "class", "minor_rail"],
         ["==", "type", "tram"]
       ],
-      "layout": {
-        "visibility": "visible",
-        "line-join": "round"
-      },
+      "layout": { "visibility": "visible", "line-join": "round" },
       "paint": {
         "line-color": "#bbb",
         "line-width": {
@@ -1630,6 +1585,135 @@
             [20, 12]
           ]
         }
+      }
+    },
+    {
+      "id": "building_shadow",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "building",
+      "minzoom": 17,
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "fill-color": "#c2c3cc",
+        "fill-outline-color": {
+          "base": 1,
+          "stops": [
+            [13, "#dde1e9"],
+            [17, "rgba(194,195,204,1)"]
+          ]
+        },
+        "fill-opacity": 1,
+        "fill-translate": {
+          "base": 1,
+          "stops": [
+            [13, [0, 0]],
+            [22, [0, 8]]
+          ]
+        }
+      }
+    },
+    {
+      "id": "building",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "building",
+      "minzoom": 16,
+      "layout": {},
+      "paint": {
+        "fill-color": "#e2e4e9",
+        "fill-outline-color": {
+          "base": 1,
+          "stops": [
+            [13, "#dde1e9"],
+            [17, "rgba(194,195,204,1)"]
+          ]
+        },
+        "fill-translate": [0, 0]
+      }
+    },
+    {
+      "id": "road_service_parking-area",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["all", ["!in", "parking_area"], ["==", "class", "service"]]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [0, 0.25],
+            [22, 50]
+          ]
+        }
+      }
+    },
+    {
+      "id": "tunnel_road_path_cycleway",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["==", "structure", "tunnel"],
+          ["in", "type", "cycleway", "pedestrian", "track"]
+        ]
+      ],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [0, 1.5],
+            [22, 26]
+          ]
+        },
+        "line-dasharray": [1, 0]
+      }
+    },
+    {
+      "id": "tunnel_walk",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!=", "type", "cycleway"],
+          ["==", "class", "path"],
+          ["==", "structure", "tunnel"]
+        ]
+      ],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "#bfc2c9",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [0, 1.25],
+            [22, 20]
+          ]
+        },
+        "line-dasharray": [0, 1.5]
       }
     },
     {
@@ -1660,7 +1744,19 @@
     },
     {
       "id": "bridge_major_rail_case",
-      "ref": "bridge_major_rail_case_bg",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "all",
+          ["!=", "type", "subway"],
+          ["==", "class", "major_rail"],
+          ["==", "structure", "bridge"]
+        ]
+      ],
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -1690,9 +1786,7 @@
         ["==", "class", "major_rail"],
         ["==", "structure", "bridge"]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#bbb",
         "line-width": {
@@ -1716,9 +1810,7 @@
         ["==", "structure", "bridge"],
         ["==", "type", "subway"]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#bbb",
         "line-width": {
@@ -1740,10 +1832,7 @@
         ["==", "$type", "LineString"],
         ["all", ["==", "class", "path"], ["==", "structure", "bridge"]]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "butt", "line-join": "round" },
       "paint": {
         "line-color": "#f0f1f2",
         "line-width": {
@@ -1765,9 +1854,7 @@
         ["==", "$type", "LineString"],
         ["all", ["==", "class", "path"], ["==", "structure", "bridge"]]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -1796,10 +1883,7 @@
         ["==", "$type", "LineString"],
         ["all", ["==", "class", "path"], ["==", "structure", "bridge"]]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#fff",
         "line-width": {
@@ -1816,6 +1900,11 @@
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "filter": [
+        "all",
+        ["==", "class", "pedestrian"],
+        ["==", "structure", "bridge"]
+      ],
       "layout": {
         "visibility": "visible",
         "line-join": "round",
@@ -1838,18 +1927,19 @@
             [20, 30]
           ]
         }
-      },
-      "filter": [
-        "all",
-        ["==", "class", "pedestrian"],
-        ["==", "structure", "bridge"]
-      ]
+      }
     },
     {
       "id": "bridge_pedestrian",
       "type": "line",
       "source": "vector",
       "source-layer": "road",
+      "filter": [
+        "all",
+        ["==", "class", "pedestrian"],
+        ["==", "structure", "bridge"]
+      ],
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-width": {
           "base": 1.55,
@@ -1859,15 +1949,7 @@
           ]
         },
         "line-color": "rgba(255, 255, 255, 1)"
-      },
-      "layout": {
-        "visibility": "visible"
-      },
-      "filter": [
-        "all",
-        ["==", "class", "pedestrian"],
-        ["==", "structure", "bridge"]
-      ]
+      }
     },
     {
       "id": "bridge_street_case",
@@ -1923,9 +2005,7 @@
           ["in", "class", "primary", "secondary"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt"
-      },
+      "layout": { "line-cap": "butt" },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
@@ -1993,10 +2073,7 @@
           ]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "rgba(255,255,255,1)",
         "line-width": {
@@ -2022,10 +2099,7 @@
           ["in", "class", "primary", "secondary"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#fff",
         "line-width": {
@@ -2051,10 +2125,7 @@
           ["in", "class", "motorway", "trunk"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": {
           "base": 1,
@@ -2088,10 +2159,7 @@
           ["in", "type", "motorway_link", "trunk_link"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "butt", "line-join": "round" },
       "paint": {
         "line-color": "#f4d880",
         "line-width": {
@@ -2118,10 +2186,7 @@
           ["in", "type", "motorway_link", "trunk_link"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": {
           "base": 1,
@@ -2150,10 +2215,7 @@
         ["==", "structure", "bridge"],
         ["==", "type", "tram"]
       ],
-      "layout": {
-        "visibility": "visible",
-        "line-join": "round"
-      },
+      "layout": { "visibility": "visible", "line-join": "round" },
       "paint": {
         "line-color": "#bbb",
         "line-width": {
@@ -2189,10 +2251,7 @@
         ["==", "$type", "LineString"],
         ["all", ["<=", "admin_level", 2], ["==", "maritime", 0]]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
         "line-color": "#8b8a8a",
         "line-width": {
@@ -2248,7 +2307,6 @@
       "id": "municipal_border",
       "type": "line",
       "source": "borders",
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2270,9 +2328,7 @@
     {
       "id": "bus_route_case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "routes",
       "source-layer": "routes",
       "filter": [
@@ -2281,7 +2337,6 @@
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2302,9 +2357,7 @@
     {
       "id": "bus_route",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "routes",
       "source-layer": "routes",
       "filter": [
@@ -2313,7 +2366,6 @@
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2329,18 +2381,30 @@
             [22, 6]
           ]
         },
-        "line-blur": 0
+        "line-blur": 0,
+        "line-opacity": 1
       }
     },
     {
       "id": "bus_route_inner",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
+      "type": "line",
+      "metadata": { "mapbox:group": "1457010660461.3042" },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "all",
+        ["!in", "routeId", "2550", "4560"],
+        ["==", "mode", "BUS"],
+        ["!=", "hasRegularDayDepartures", false]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round",
+        "line-round-limit": 1
       },
-      "ref": "bus_route",
-      "interactive": true,
       "paint": {
-        "line-color": "#3395d4",
+        "line-color": "#3395D4",
         "line-width": {
           "base": 1,
           "stops": [
@@ -2355,9 +2419,7 @@
     {
       "id": "tram_route_case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "routes",
       "source-layer": "routes",
       "filter": [
@@ -2365,7 +2427,6 @@
         ["==", "mode", "TRAM"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2386,9 +2447,7 @@
     {
       "id": "tram_route",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "routes",
       "source-layer": "routes",
       "filter": [
@@ -2396,7 +2455,6 @@
         ["==", "mode", "TRAM"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2417,11 +2475,21 @@
     },
     {
       "id": "tram_route_inner",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
+      "type": "line",
+      "metadata": { "mapbox:group": "1457010660461.3042" },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "all",
+        ["==", "mode", "TRAM"],
+        ["!=", "hasRegularDayDepartures", false]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round",
+        "line-round-limit": 1
       },
-      "ref": "tram_route",
-      "interactive": true,
       "paint": {
         "line-color": "#00bb75",
         "line-width": {
@@ -2438,9 +2506,7 @@
     {
       "id": "trunk_route_case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "routes",
       "source-layer": "routes",
       "filter": [
@@ -2448,7 +2514,6 @@
         ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2469,9 +2534,7 @@
     {
       "id": "trunk_route",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "routes",
       "source-layer": "routes",
       "filter": [
@@ -2479,7 +2542,6 @@
         ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2500,11 +2562,21 @@
     },
     {
       "id": "trunk_route_inner",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
+      "type": "line",
+      "metadata": { "mapbox:group": "1457010660461.3042" },
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": [
+        "all",
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["!=", "hasRegularDayDepartures", false]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round",
+        "line-round-limit": 1
       },
-      "ref": "trunk_route",
-      "interactive": true,
       "paint": {
         "line-color": "#FF6319",
         "line-width": {
@@ -2521,18 +2593,14 @@
     {
       "id": "subway_case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "subway",
       "filter": [
         "all",
         ["==", "underground", "false"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#FF6319",
         "line-width": {
@@ -2548,9 +2616,7 @@
     {
       "id": "ferry_route",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "routes",
       "source-layer": "routes",
       "filter": [
@@ -2558,7 +2624,6 @@
         ["==", "mode", "FERRY"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "interactive": true,
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -2579,10 +2644,15 @@
     },
     {
       "id": "subway",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
-      "ref": "subway_case",
+      "type": "line",
+      "metadata": { "mapbox:group": "1457010660461.3042" },
+      "source": "subway",
+      "filter": [
+        "all",
+        ["==", "underground", "false"],
+        ["!=", "hasRegularDayDepartures", false]
+      ],
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#fff",
         "line-dasharray": [2.3, 1.5],
@@ -2599,18 +2669,14 @@
     {
       "id": "subway_underground",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "subway",
       "filter": [
         "all",
         ["==", "underground", "true"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#FF6319",
         "line-width": {
@@ -2627,18 +2693,14 @@
     {
       "id": "rail_case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
+      "metadata": { "mapbox:group": "1457010660461.3042" },
       "source": "rail",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
         ["!=", "hasRegularDayDepartures", false]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#8C4799",
         "line-width": {
@@ -2653,10 +2715,15 @@
     },
     {
       "id": "rail",
-      "metadata": {
-        "mapbox:group": "1457010660461.3042"
-      },
-      "ref": "rail_case",
+      "type": "line",
+      "metadata": { "mapbox:group": "1457010660461.3042" },
+      "source": "rail",
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["!=", "hasRegularDayDepartures", false]
+      ],
+      "layout": { "visibility": "visible" },
       "paint": {
         "line-color": "#fff",
         "line-dasharray": [2.3, 1.5],
@@ -2672,14 +2739,11 @@
     },
     {
       "id": "Stops_rail",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "minzoom": 14,
       "type": "symbol",
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 14,
       "filter": ["==", "mode", "RAIL"],
       "layout": {
         "visibility": "visible",
@@ -2740,9 +2804,9 @@
       "id": "housenum_label",
       "type": "symbol",
       "source": "vector",
-      "minzoom": 17,
       "source-layer": "housenum_label",
-      "filter": ["==", "$type", "Point"],
+      "minzoom": 17,
+      "filter": ["all", ["==", "$type", "Point"]],
       "layout": {
         "text-field": "{house_num}",
         "text-size": {
@@ -2753,17 +2817,12 @@
         },
         "text-font": ["Gotham Rounded Book"]
       },
-      "paint": {
-        "text-color": "#666",
-        "text-opacity": 0.7
-      }
+      "paint": { "text-color": "#666", "text-opacity": 0.7 }
     },
     {
       "id": "poi_label_general",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010362398.355"
-      },
+      "metadata": { "mapbox:group": "1457010362398.355" },
       "source": "vector",
       "source-layer": "poi_label",
       "minzoom": 16,
@@ -2811,7 +2870,7 @@
         "text-font": ["Gotham Rounded Medium"],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
@@ -2824,9 +2883,7 @@
     {
       "id": "poi_label_sport",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010362398.355"
-      },
+      "metadata": { "mapbox:group": "1457010362398.355" },
       "source": "vector",
       "source-layer": "poi_label",
       "minzoom": 13,
@@ -2860,9 +2917,7 @@
     {
       "id": "poi_label_park",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1452776685487.2012"
-      },
+      "metadata": { "mapbox:group": "1452776685487.2012" },
       "source": "vector",
       "source-layer": "poi_label",
       "minzoom": 14,
@@ -2886,7 +2941,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2899,9 +2954,7 @@
     {
       "id": "poi_label_sq",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1452776685487.2012"
-      },
+      "metadata": { "mapbox:group": "1452776685487.2012" },
       "source": "vector",
       "source-layer": "road_label",
       "minzoom": 5,
@@ -2920,7 +2973,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "bottom",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2933,9 +2986,7 @@
     {
       "id": "poi_label_harbour",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1452776685487.2012"
-      },
+      "metadata": { "mapbox:group": "1452776685487.2012" },
       "source": "vector",
       "source-layer": "poi_label",
       "minzoom": 5,
@@ -2954,7 +3005,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Book"],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2967,9 +3018,7 @@
     {
       "id": "poi_label_subway-station_entrance",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
+      "metadata": { "mapbox:group": "1457010208438.9548" },
       "source": "vector",
       "source-layer": "rail_station_label",
       "minzoom": 16,
@@ -3034,7 +3083,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -3067,7 +3116,7 @@
         "text-font": ["Gotham Rounded Book"],
         "text-offset": [0, 0.5],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -3174,8 +3223,8 @@
         ["in", "type", "hamlet", "neighbourhood", "suburb", "town", "village"]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
-        "text-font": ["Gotham Rounded Book"],
+        "text-field": "{name}",
+        "text-font": ["Gotham Rounded Medium"],
         "text-max-width": 6,
         "text-size": {
           "stops": [
@@ -3200,7 +3249,7 @@
       "maxzoom": 16,
       "filter": ["all", ["==", "$type", "Point"], ["==", "type", "city"]],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": ["Gotham Rounded Medium"],
         "text-max-width": 10,
         "text-size": {
@@ -3235,7 +3284,7 @@
       "maxzoom": 12,
       "filter": ["==", "$type", "Point"],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": ["Gotham Rounded Medium"],
         "text-max-width": 10,
         "text-size": {
@@ -3254,100 +3303,12 @@
       }
     },
     {
-      "id": "road_street_label_fisv",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "road_label",
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        [
-          "all",
-          ["!in", "name", "Harakan talvipolku", "Suomenlinnan Huoltotunneli"],
-          [
-            "in",
-            "class",
-            "path",
-            "service",
-            "street",
-            "street_limited",
-            "tertiary"
-          ]
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "text-field": "{name}   {name_sv_nodefault}",
-        "text-font": ["Gotham Rounded Medium"],
-        "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [10, 8],
-            [20, 14]
-          ]
-        },
-        "text-keep-upright": true,
-        "text-rotation-alignment": "map"
-      },
-      "paint": {
-        "text-color": {
-          "base": 1.4,
-          "stops": [
-            [13, "#999"],
-            [15, "#666"]
-          ]
-        },
-        "text-halo-color": "rgba(255,255,255,0.85)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "road_primary_label_fisv",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "road_label",
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        ["in", "class", "motorway", "primary", "secondary", "trunk"]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "text-field": "{name}   {name_sv_nodefault}",
-        "text-font": ["Gotham Rounded Medium"],
-        "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [10, 8],
-            [20, 14]
-          ]
-        },
-        "text-rotation-alignment": "map"
-      },
-      "paint": {
-        "text-color": {
-          "base": 1.4,
-          "stops": [
-            [13, "#999"],
-            [15, "#666"]
-          ]
-        },
-        "text-halo-color": "rgba(255,255,255,0.85)",
-        "text-halo-width": 2
-      }
-    },
-    {
       "id": "poi_label_park-and-ride_hub",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010287588.8713"
-      },
+      "metadata": { "mapbox:group": "1457010287588.8713" },
       "source": "parkandride",
       "source-layer": "hubs",
       "minzoom": 13,
-      "interactive": true,
       "filter": ["==", "$type", "Point"],
       "layout": {
         "text-optional": true,
@@ -3382,13 +3343,10 @@
     {
       "id": "poi_label_subway-station",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
+      "metadata": { "mapbox:group": "1457010208438.9548" },
       "source": "vector",
       "source-layer": "rail_station_label",
       "minzoom": 5,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3428,13 +3386,10 @@
     {
       "id": "poi_label_terminal",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
+      "metadata": { "mapbox:group": "1457010208438.9548" },
       "source": "vector",
       "source-layer": "poi_label",
       "minzoom": 13,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3475,13 +3430,10 @@
     {
       "id": "poi_label_bus-station",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
+      "metadata": { "mapbox:group": "1457010208438.9548" },
       "source": "vector",
       "source-layer": "poi_label",
       "minzoom": 5,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3527,13 +3479,10 @@
     {
       "id": "poi_label_railway-station",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
+      "metadata": { "mapbox:group": "1457010208438.9548" },
       "source": "vector",
       "source-layer": "rail_station_label",
       "minzoom": 11,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3589,13 +3538,10 @@
     {
       "id": "poi_label_Aerodrome",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
+      "metadata": { "mapbox:group": "1457010208438.9548" },
       "source": "vector",
       "source-layer": "airport_label",
       "minzoom": 5,
-      "interactive": true,
       "filter": ["all", ["==", "$type", "Point"], ["in", "scalerank", 1, 2]],
       "layout": {
         "text-optional": true,
@@ -3633,7 +3579,6 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 16,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3675,7 +3620,6 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3717,7 +3661,6 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3759,7 +3702,6 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3799,13 +3741,10 @@
     {
       "id": "poi_taukotila",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1460634974533.995"
-      },
+      "metadata": { "mapbox:group": "1460634974533.995" },
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
       "minzoom": 8,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3846,13 +3785,10 @@
     {
       "id": "poi_bajamaja",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1460634974533.995"
-      },
+      "metadata": { "mapbox:group": "1460634974533.995" },
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
       "minzoom": 8,
-      "interactive": true,
       "filter": [
         "all",
         ["==", "$type", "Point"],
@@ -3892,18 +3828,13 @@
     {
       "id": "Stops case",
       "type": "circle",
-      "minzoom": 13,
-      "maxzoom": 14,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 13,
+      "maxzoom": 14,
       "filter": ["!=", "mode", "RAIL"],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "circle-color": "#fff",
         "circle-radius": {
@@ -3919,17 +3850,12 @@
     {
       "id": "Stops case rail",
       "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 15,
-      "interactive": true,
       "filter": ["==", "mode", "RAIL"],
-      "layout": {
-        "visibility": "none"
-      },
+      "layout": { "visibility": "none" },
       "paint": {
         "circle-color": "#fff",
         "circle-radius": {
@@ -3945,13 +3871,10 @@
     {
       "id": "Stops_bus_pins",
       "type": "symbol",
-      "minzoom": 14,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 14,
       "filter": ["==", "mode", "BUS"],
       "layout": {
         "visibility": "visible",
@@ -3978,18 +3901,13 @@
     {
       "id": "Stops_bus",
       "type": "circle",
-      "minzoom": 13,
-      "maxzoom": 14,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 13,
+      "maxzoom": 14,
       "filter": ["==", "mode", "BUS"],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "circle-color": "#007ac9",
         "circle-radius": {
@@ -4012,13 +3930,10 @@
     {
       "id": "Stops_ferry",
       "type": "symbol",
-      "minzoom": 13,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 13,
       "filter": [
         "all",
         ["!in", "nameFi", "Kauppatori", "Katajanokka", "Suomenlinna, päälait"],
@@ -4050,13 +3965,10 @@
     {
       "id": "Stops_ferry_hsl",
       "type": "symbol",
-      "minzoom": 12,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 12,
       "filter": [
         "all",
         ["in", "nameFi", "Kauppatori", "Katajanokka", "Suomenlinna, päälait"],
@@ -4088,13 +4000,10 @@
     {
       "id": "Stops_tram_pins",
       "type": "symbol",
-      "minzoom": 14,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 14,
       "filter": ["==", "mode", "TRAM"],
       "layout": {
         "visibility": "visible",
@@ -4122,18 +4031,13 @@
     {
       "id": "Stops_tram",
       "type": "circle",
-      "minzoom": 13,
-      "maxzoom": 14,
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
+      "minzoom": 13,
+      "maxzoom": 14,
       "filter": ["==", "mode", "TRAM"],
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "circle-color": "#00985f",
         "circle-radius": {
@@ -4156,16 +4060,11 @@
     {
       "id": "Stops_subway",
       "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
       "filter": ["==", "mode", "SUBWAY"],
-      "layout": {
-        "visibility": "none"
-      },
+      "layout": { "visibility": "none" },
       "paint": {
         "circle-color": "#ff6319",
         "circle-radius": {
@@ -4187,13 +4086,14 @@
     },
     {
       "id": "Stops_hub",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "ref": "Stops case",
-      "interactive": true,
+      "type": "circle",
+      "metadata": { "mapbox:group": "1455204550197.1404" },
+      "source": "stops",
+      "source-layer": "stops",
       "minzoom": 13,
       "maxzoom": 14,
+      "filter": ["!=", "mode", "RAIL"],
+      "layout": { "visibility": "visible" },
       "paint": {
         "circle-color": "#fff",
         "circle-radius": {
@@ -4209,15 +4109,12 @@
     {
       "id": "Stops_hub_rail",
       "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
+      "metadata": { "mapbox:group": "1455204550197.1404" },
       "source": "stops",
       "source-layer": "stops",
-      "interactive": true,
-      "filter": ["in", "mode", "", "RAIL"],
       "minzoom": 13,
       "maxzoom": 14,
+      "filter": ["in", "mode", "", "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": {
@@ -4233,17 +4130,12 @@
     {
       "id": "Stops case citybikes",
       "type": "circle",
-      "metadata": {
-        "mapbox:group": "1457010266398.4177"
-      },
+      "metadata": { "mapbox:group": "1457010266398.4177" },
       "source": "citybike",
       "source-layer": "stations",
       "minzoom": 13,
       "maxzoom": 14,
-      "interactive": true,
-      "layout": {
-        "visibility": "visible"
-      },
+      "layout": { "visibility": "visible" },
       "paint": {
         "circle-color": "#fff",
         "circle-radius": {
@@ -4258,13 +4150,13 @@
     },
     {
       "id": "Stops_citybikes",
-      "metadata": {
-        "mapbox:group": "1457010266398.4177"
-      },
-      "ref": "Stops case citybikes",
-      "interactive": true,
+      "type": "circle",
+      "metadata": { "mapbox:group": "1457010266398.4177" },
+      "source": "citybike",
+      "source-layer": "stations",
       "minzoom": 13,
       "maxzoom": 14,
+      "layout": { "visibility": "visible" },
       "paint": {
         "circle-color": "#fcbc19",
         "circle-radius": {
@@ -4287,13 +4179,10 @@
     {
       "id": "poi_label_citybike-station",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010266398.4177"
-      },
+      "metadata": { "mapbox:group": "1457010266398.4177" },
       "source": "citybike",
       "source-layer": "stations",
       "minzoom": 14,
-      "interactive": true,
       "filter": ["==", "$type", "Point"],
       "layout": {
         "text-optional": true,

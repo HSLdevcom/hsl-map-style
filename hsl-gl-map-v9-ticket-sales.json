@@ -5,27 +5,46 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 16,
-      "interactive": true,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["in", "Tyyppi", "Myyntipiste", "R-kioski"]
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "Tyyppi",
+          "Myyntipiste",
+          "R-kioski"
+        ]
       ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-tickets-sales-point",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
@@ -38,7 +57,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     },
@@ -47,27 +69,46 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["in", "TYYPPI", "HSL Automaatti KL", "HSL Automaatti MNL"]
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "TYYPPI",
+          "HSL Automaatti KL",
+          "HSL Automaatti MNL"
+        ]
       ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-ticket-machine",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
@@ -80,7 +121,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     },
@@ -89,27 +133,45 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
-        ["==", "TYYPPI", "HKI Automaatti PA"]
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "TYYPPI",
+          "HKI Automaatti PA"
+        ]
       ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-ticket-machine-parking",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
@@ -122,7 +184,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     },
@@ -131,23 +196,45 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
-      "filter": ["all", ["==", "$type", "Point"], ["==", "TYYPPI", "Palvelupiste"]],
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "TYYPPI",
+          "Palvelupiste"
+        ]
+      ],
       "layout": {
         "text-optional": true,
         "text-size": {
           "stops": [
-            [0, 8],
-            [15, 10]
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
         },
         "text-allow-overlap": false,
         "icon-image": "icon-service-point",
         "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
         "icon-allow-overlap": false,
         "visibility": "visible",
-        "text-offset": [0, 0.5],
+        "text-offset": [
+          0,
+          0.5
+        ],
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
@@ -160,7 +247,10 @@
         "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,1.0)",
         "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
+        "icon-translate": [
+          0,
+          -5.25
+        ],
         "icon-opacity": 1
       }
     }
