@@ -5,7 +5,7 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "http://localhost:8084/map/v1/hsl-vector-map/index.json"
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-vector-map/index.json"
     },
     "parkandride": {
       "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
