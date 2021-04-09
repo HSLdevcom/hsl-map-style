@@ -881,7 +881,7 @@
   ],
   "sources": {
     "vector": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-vector-map/index.json",
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/index.json",
       "type": "vector"
     },
     "borders": {

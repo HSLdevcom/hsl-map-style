@@ -5,14 +5,7 @@ const index = fs.readFileSync("index.html", "utf8");
 
 const style = require("./index").generateStyle({
   components: {
-    routes: { enabled: true },
-    stops: { enabled: true },
-    citybikes: { enabled: true },
-    municipal_borders: { enabled: true },
-    poi: { enabled: true },
-    ticket_sales: { enabled: true },
-    driver_instructions: { enabled: true },
-    ticket_zone_labels: { enabled: true },
+    base: { enabled: true },
   },
 });
 

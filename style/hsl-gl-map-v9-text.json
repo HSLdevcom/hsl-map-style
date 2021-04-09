@@ -1017,7 +1017,7 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "http://localhost:8080/data/finland.json"
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-vector-map/index.json"
     }
   },
   "metadata": {
