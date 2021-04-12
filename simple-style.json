@@ -408,7 +408,7 @@
       "id": "road_street_limited",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -452,7 +452,7 @@
       "id": "road_service_polygon",
       "type": "fill",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": ["all", ["==", "$type", "Polygon"], ["==", "type", "service"]],
       "layout": {},
       "paint": {
@@ -465,7 +465,7 @@
       "id": "road_pedestrian",
       "type": "fill",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "Polygon"],
@@ -517,7 +517,7 @@
       "id": "tunnel_walk",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "minzoom": 16,
       "filter": [
         "all",
@@ -546,7 +546,7 @@
       "id": "tunnel_major_rail",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -578,7 +578,7 @@
       "id": "tunnel_primary",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -605,7 +605,7 @@
       "id": "tunnel_motorway",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -628,7 +628,7 @@
       "id": "tunnel_street",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -655,7 +655,7 @@
       "id": "tunnel_service",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -678,7 +678,7 @@
       "id": "tunnel_subway",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -712,7 +712,7 @@
       "id": "tunnel_road_path_cycleway",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -739,7 +739,7 @@
       "id": "road_subway",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["!=", "structure", "tunnel"],
@@ -761,7 +761,7 @@
       "id": "road_subway_service",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["!=", "structure", "tunnel"],
@@ -803,7 +803,7 @@
       "id": "road_ferry",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "minzoom": 11,
       "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "ferry"]],
       "layout": {
@@ -827,7 +827,7 @@
       "id": "road_major_rail_solid",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["!=", "type", "subway"],
@@ -849,7 +849,7 @@
       "id": "road_path_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -873,7 +873,7 @@
       "id": "road_path",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -902,7 +902,7 @@
       "id": "road_path_MTB",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -932,7 +932,7 @@
       "id": "road_path_steps_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -964,7 +964,7 @@
       "id": "road_path_steps",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -996,7 +996,7 @@
       "id": "road_path_cycleway",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1023,7 +1023,7 @@
       "id": "road_service",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1045,7 +1045,7 @@
       "id": "road_motorway_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1071,7 +1071,7 @@
       "id": "road_primary_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1097,7 +1097,7 @@
       "id": "road_street_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1123,7 +1123,7 @@
       "id": "road_construction",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1170,7 +1170,7 @@
       "id": "road_motorway_link_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1197,7 +1197,7 @@
       "id": "road_link_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1219,7 +1219,7 @@
       "id": "road_motorway_link",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1249,7 +1249,7 @@
       "id": "road_link",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1310,7 +1310,7 @@
       "id": "road_minor_rail",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["!in", "structure", "bridge", "tunnel"],
@@ -1341,7 +1341,7 @@
       "id": "bridge_major_rail_case_bg",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1379,7 +1379,7 @@
       "id": "bridge_major_rail",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["!=", "type", "subway"],
@@ -1401,7 +1401,7 @@
       "id": "bridge_subway",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["!=", "osm_id", 120809795],
@@ -1424,7 +1424,7 @@
       "id": "bridge_path_bg",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1446,7 +1446,7 @@
       "id": "bridge_path_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1471,7 +1471,7 @@
       "id": "bridge_path",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1493,7 +1493,7 @@
       "id": "bridge_pedestrian_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "layout": {
         "visibility": "visible",
         "line-join": "round",
@@ -1517,7 +1517,7 @@
       "id": "bridge_pedestrian",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "paint": {
         "line-width": {
           "base": 1.55,
@@ -1534,7 +1534,7 @@
       "id": "bridge_street_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1568,7 +1568,7 @@
       "id": "bridge_primary_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1593,7 +1593,7 @@
       "id": "bridge_motorway_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1615,7 +1615,7 @@
       "id": "bridge_street",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1649,7 +1649,7 @@
       "id": "bridge_primary",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1675,7 +1675,7 @@
       "id": "bridge_motorway",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1700,7 +1700,7 @@
       "id": "bridge_motorway_link_case",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1727,7 +1727,7 @@
       "id": "bridge_motorway_link",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1757,7 +1757,7 @@
       "id": "bridge_minor_rail",
       "type": "line",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "class", "minor_rail"],
@@ -1810,7 +1810,7 @@
       "id": "road_minor_one-way",
       "type": "symbol",
       "source": "vector",
-      "source-layer": "road",
+      "source-layer": "transportation",
       "filter": [
         "all",
         ["==", "$type", "LineString"],
