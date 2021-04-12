@@ -4165,25 +4165,6 @@
         "text-max-width": 8,
         "icon-ignore-placement": false
       }
-    },
-    {
-      "id": "building-3d",
-      "type": "fill-extrusion",
-      "source": "vector",
-      "source-layer": "building",
-      "minzoom": 14,
-      "paint": {
-        "fill-extrusion-color": "rgba(191, 191, 191, 1)",
-        "fill-extrusion-height": {
-          "property": "render_height",
-          "type": "identity"
-        },
-        "fill-extrusion-base": {
-          "property": "render_min_height",
-          "type": "identity"
-        },
-        "fill-extrusion-opacity": 0.8
-      }
     }
   ],
   "id": "thn3d9mt9"

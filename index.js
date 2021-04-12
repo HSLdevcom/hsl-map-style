@@ -86,6 +86,12 @@ var components = [
     enabled: false,
     description: "Tulostevärit",
     style: require("./hsl-gl-map-v9-print.json")
+  },
+  {
+    id: "3d",
+    enabled: false,
+    description: "3d",
+    style: require("./hsl-gl-map-v9-base-3d.json")
   }
 ];
 
