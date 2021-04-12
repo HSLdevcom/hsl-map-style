@@ -10,11 +10,11 @@
   "pitch": 0,
   "sources": {
     "vector": {
-      "url": "https://https://digitransit-dev-cdn-origin.azureedge.net/map/v1/digitransit.fi/map/v1/hsl-vector-map/index.json",
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-vector-map/index.json",
       "type": "vector"
     },
     "parkandride": {
-      "url": "https://https://digitransit-dev-cdn-origin.azureedge.net/map/v1/digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
       "type": "vector"
     }
   },

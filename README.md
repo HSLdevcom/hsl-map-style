@@ -81,7 +81,7 @@ Use the exported `generateStyle` function and pass it the layers you want to inc
 import { generateStyle } from "hsl-map-style";
 
 const style = generateStyle({
-  sourcesUrl: 'https://https://digitransit-dev-cdn-origin.azureedge.net/map/v1/digitransit.fi/map/v1/', // <-- You can override the default sources URL
+  sourcesUrl: 'https://digitransit-dev-cdn-origin.azureedge.net/map/v1/', // <-- You can override the default sources URL
   // glyphsUrl: '', <-- The glyphsUrl prop is removed. URL for fonts from HSL Azure storage is used.
   components: {
     // Set each layer you want to include to true
