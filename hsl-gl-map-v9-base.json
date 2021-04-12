@@ -3753,6 +3753,25 @@
         "text-halo-color": "#bee4f8",
         "text-halo-width": 2
       }
+    },
+    {
+      "id": "building-3d",
+      "type": "fill-extrusion",
+      "source": "vector",
+      "source-layer": "building",
+      "minzoom": 14,
+      "paint": {
+        "fill-extrusion-color": "rgba(191, 191, 191, 1)",
+        "fill-extrusion-height": {
+          "property": "render_height",
+          "type": "identity"
+        },
+        "fill-extrusion-base": {
+          "property": "render_min_height",
+          "type": "identity"
+        },
+        "fill-extrusion-opacity": 0.8
+      }
     }
   ],
   "sources": {
