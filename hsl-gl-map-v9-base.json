@@ -2810,7 +2810,7 @@
       "minzoom": 16,
       "layout": {},
       "paint": {
-        "fill-color": "#e2e4e9",
+        "fill-color": "#03FFF8",
         "fill-outline-color": {
           "base": 1,
           "stops": [

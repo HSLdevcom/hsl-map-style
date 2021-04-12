@@ -504,7 +504,7 @@
       "id": "building",
       "ref": "building_shadow",
       "paint": {
-        "fill-color": "#e2e4e9",
+        "fill-color": "#03FFF8",
         "fill-outline-color": {
           "base": 1,
           "stops": [[13, "#dde1e9"], [17, "rgba(194,195,204,1)"]]
