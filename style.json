@@ -2106,7 +2106,7 @@
         "line-round-limit": 1
       },
       "paint": {
-        "line-color": "#FF6319",
+        "line-color": "#CA4300",
         "line-width": {
           "base": 1,
           "stops": [[10, 2], [22, 6]]
