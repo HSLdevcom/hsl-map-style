@@ -1917,7 +1917,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "2550", "4560"],
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -1946,7 +1946,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "2550", "4560"],
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -2067,7 +2067,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "2550", "4560"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
@@ -2080,7 +2080,7 @@
         "line-color": "#fff",
         "line-width": {
           "base": 1,
-          "stops": [[10, 6], [22, 10]]
+          "stops": [[10, 4], [22, 8]]
         },
         "line-blur": 0
       }
@@ -2095,7 +2095,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "2550", "4560"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
@@ -2109,9 +2109,10 @@
         "line-color": "#FF6319",
         "line-width": {
           "base": 1,
-          "stops": [[10, 4], [22, 8]]
+          "stops": [[10, 2], [22, 6]]
         },
-        "line-blur": 0
+        "line-blur": 0,
+        "line-opacity": 1
       }
     },
     {
