@@ -2579,13 +2579,7 @@
             "bridge",
             "tunnel"
           ],
-          [
-            "in",
-            "class",
-            "service",
-            "street",
-            "tertiary"
-          ]
+          ["in", "class", "street", "tertiary"]
         ]
       ],
       "layout": {

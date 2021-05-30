@@ -2125,7 +2125,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "line-color": "#ccc",
@@ -2449,14 +2449,7 @@
             "bridge",
             "tunnel"
           ],
-          [
-            "in",
-            "class",
-            "service",
-            "street",
-            "tertiary",
-            "minor"
-          ]
+          ["in", "class", "street", "tertiary"]
         ]
       ],
       "layout": {
