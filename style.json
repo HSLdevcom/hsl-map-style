@@ -77,10 +77,12 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
-      "filter": ["==", "class", "school"],
-      "paint": {
-        "fill-color": "#f9f4d2"
-      }
+      "filter": [
+        "all",
+        ["==", "$type", "Polygon"],
+        ["in", "class", "university", "school"]
+      ],
+      "paint": { "fill-color": "#f9f4d2" }
     },
     {
       "id": "landuse_park",
@@ -522,7 +524,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
-      "minzoom": 17,
+      "minzoom": 10,
       "layout": {
         "visibility": "visible"
       },
@@ -945,7 +947,6 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1148,7 +1149,8 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "none"
       },
       "paint": {
         "line-color": "#ccc",
@@ -1224,7 +1226,6 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1239,8 +1240,8 @@
         "line-width": {
           "base": 1.55,
           "stops": [
-            [2, 0.25],
-            [20, 30]
+            [0, 1.5],
+            [22, 26]
           ]
         }
       }
@@ -1287,7 +1288,7 @@
           ["in", "class", "primary", "secondary"]
         ]
       ],
-      "layout": { "line-join": "round", "visibility": "none" },
+      "layout": { "line-join": "round", "visibility": "visible" },
       "paint": {
         "line-color": "hsl(0, 0%, 80%)",
         "line-width": {
@@ -2671,7 +2672,6 @@
       "id": "housenum_label",
       "type": "symbol",
       "source": "vector",
-      "minzoom": 17,
       "source-layer": "housenumber",
       "filter": ["==", "$type", "Point"],
       "layout": {
