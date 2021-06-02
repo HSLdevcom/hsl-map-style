@@ -965,7 +965,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
