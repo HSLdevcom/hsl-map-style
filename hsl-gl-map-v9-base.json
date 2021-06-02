@@ -2176,7 +2176,7 @@
       ],
       "layout": {
         "line-join": "round",
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "line-color": "hsl(0, 0%, 80%)",

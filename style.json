@@ -1307,7 +1307,7 @@
           ["in", "class", "primary", "secondary"]
         ]
       ],
-      "layout": { "line-join": "round", "visibility": "none" },
+      "layout": { "line-join": "round", "visibility": "visible" },
       "paint": {
         "line-color": "hsl(0, 0%, 80%)",
         "line-width": {
