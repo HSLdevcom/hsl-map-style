@@ -2092,6 +2092,7 @@
             "type": "line",
             "source": "vector",
             "source-layer": "road",
+            "minzoom": 16,
             "filter": [
                 "all",
                 [

@@ -1136,6 +1136,32 @@
       }
     },
     {
+      "id": "road_service_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["all", ["!in", "brunnel", "bridge", "tunnel"], ["==", "class", "service"]]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#ccc",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [4, 1],
+            [20, 34]
+          ]
+        }
+      }
+    },
+    {
       "id": "road_path_cycleway",
       "minzoom": 15,
       "type": "line",
@@ -1167,10 +1193,38 @@
       }
     },
     {
+      "id": "road_street_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["all", ["!in", "brunnel", "bridge", "tunnel"], ["in", "class", "minor"]]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#ccc",
+        "line-width": {
+          "base": 1.55,
+          "stops": [
+            [4, 1],
+            [20, 54]
+          ]
+        }
+      }
+    },
+    {
       "id": "road_service",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1185,8 +1239,8 @@
         "line-width": {
           "base": 1.55,
           "stops": [
-            [0, 1.5],
-            [22, 26]
+            [2, 0.25],
+            [20, 30]
           ]
         }
       }
@@ -1241,32 +1295,6 @@
           "stops": [
             [6, 1],
             [20, 84]
-          ]
-        }
-      }
-    },
-    {
-      "id": "road_street_case",
-      "type": "line",
-      "source": "vector",
-      "source-layer": "transportation",
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        ["all", ["!in", "brunnel", "bridge", "tunnel"], ["in", "class", "minor"]]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#ccc",
-        "line-width": {
-          "base": 1.55,
-          "stops": [
-            [4, 1],
-            [20, 54]
           ]
         }
       }
@@ -1452,13 +1480,7 @@
         [
           "all",
           ["!in", "brunnel", "bridge", "tunnel"],
-          [
-            "in",
-            "class",
-            "street",
-            "tertiary",
-            "minor"
-          ]
+          ["in", "class", "street", "tertiary", "minor"]
         ]
       ],
       "layout": { "line-cap": "round", "line-join": "round" },

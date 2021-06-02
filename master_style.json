@@ -2236,7 +2236,7 @@
       "type": "line",
       "source": "mapbox://mapbox.mapbox-streets-v7",
       "source-layer": "road",
-      "minzoom": 14,
+      "minzoom": 16,
       "filter": [
         "all",
         [
