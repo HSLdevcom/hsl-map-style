@@ -2,13 +2,13 @@
   "layers": [
     {
       "id": "Stops_rail",
-      "type": "symbol",
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
+      "minzoom": 14,
+      "type": "symbol",
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 14,
       "filter": [
         "==",
         "mode",
@@ -54,13 +54,13 @@
     {
       "id": "Stops case",
       "type": "circle",
+      "minzoom": 13,
+      "maxzoom": 14,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 13,
-      "maxzoom": 14,
       "filter": [
         "!=",
         "mode",
@@ -131,12 +131,12 @@
     {
       "id": "Stops_bus_pins",
       "type": "symbol",
+      "minzoom": 14,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 14,
       "filter": [
         "==",
         "mode",
@@ -181,13 +181,13 @@
     {
       "id": "Stops_bus",
       "type": "circle",
+      "minzoom": 13,
+      "maxzoom": 14,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 13,
-      "maxzoom": 14,
       "filter": [
         "==",
         "mode",
@@ -233,12 +233,12 @@
     {
       "id": "Stops_ferry",
       "type": "symbol",
+      "minzoom": 13,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -294,12 +294,12 @@
     {
       "id": "Stops_ferry_hsl",
       "type": "symbol",
+      "minzoom": 12,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 12,
       "filter": [
         "all",
         [
@@ -355,12 +355,12 @@
     {
       "id": "Stops_tram_pins",
       "type": "symbol",
+      "minzoom": 14,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 14,
       "filter": [
         "==",
         "mode",
@@ -406,13 +406,13 @@
     {
       "id": "Stops_tram",
       "type": "circle",
+      "minzoom": 13,
+      "maxzoom": 14,
       "metadata": {
         "mapbox:group": "1455204550197.1404"
       },
       "source": "stops",
       "source-layer": "stops",
-      "minzoom": 13,
-      "maxzoom": 14,
       "filter": [
         "==",
         "mode",
@@ -504,82 +504,6 @@
           ]
         }
       }
-    },
-    {
-      "id": "Stops_hub",
-      "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "source": "stops",
-      "source-layer": "stops",
-      "minzoom": 13,
-      "maxzoom": 14,
-      "filter": [
-        "!=",
-        "mode",
-        "RAIL"
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-color": "#fff",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [
-            [
-              14,
-              0
-            ],
-            [
-              14.1,
-              2
-            ],
-            [
-              22,
-              20
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "Stops_hub_rail",
-      "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "source": "stops",
-      "source-layer": "stops",
-      "minzoom": 13,
-      "maxzoom": 14,
-      "filter": [
-        "in",
-        "mode",
-        "",
-        "RAIL"
-      ],
-      "paint": {
-        "circle-color": "#fff",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [
-            [
-              14,
-              0
-            ],
-            [
-              14.1,
-              2
-            ],
-            [
-              22,
-              20
-            ]
-          ]
-        }
-      }
     }
   ],
   "sources": {
@@ -589,11 +513,6 @@
     }
   },
   "metadata": {
-    "mapbox:groups": {
-      "1455204550197.1404": {
-        "name": "Stops",
-        "collapsed": true
-      }
-    }
+    "mapbox:groups": {}
   }
 }

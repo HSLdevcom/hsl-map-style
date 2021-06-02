@@ -98,45 +98,17 @@
             ]
           ]
         },
-        "line-blur": 0,
-        "line-opacity": 1
+        "line-blur": 0
       }
     },
     {
       "id": "bus_route_inner",
-      "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
-      "source": "routes",
-      "source-layer": "routes",
-      "filter": [
-        "all",
-        [
-          "!in",
-          "routeId",
-          "2550",
-          "4560"
-        ],
-        [
-          "==",
-          "mode",
-          "BUS"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round",
-        "line-round-limit": 1
-      },
+      "ref": "bus_route",
       "paint": {
-        "line-color": "#3395D4",
+        "line-color": "#3395d4",
         "line-width": {
           "base": 1,
           "stops": [
@@ -245,31 +217,11 @@
     },
     {
       "id": "tram_route_inner",
-      "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
-      "source": "routes",
-      "source-layer": "routes",
-      "filter": [
-        "all",
-        [
-          "==",
-          "mode",
-          "TRAM"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round",
-        "line-round-limit": 1
-      },
+      "ref": "tram_route",
+      "type": "line",
       "paint": {
         "line-color": "#00bb75",
         "line-width": {
@@ -390,36 +342,11 @@
     },
     {
       "id": "trunk_route_inner",
-      "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
-      "source": "routes",
-      "source-layer": "routes",
-      "filter": [
-        "all",
-        [
-          "in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round",
-        "line-round-limit": 1
-      },
+      "ref": "trunk_route",
+      "type": "line",
       "paint": {
         "line-color": "#FF6319",
         "line-width": {
@@ -533,27 +460,10 @@
     },
     {
       "id": "subway",
-      "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
-      "source": "subway",
-      "filter": [
-        "all",
-        [
-          "==",
-          "underground",
-          "false"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "ref": "subway_case",
       "paint": {
         "line-color": "#fff",
         "line-dasharray": [
@@ -673,27 +583,10 @@
     },
     {
       "id": "rail",
-      "type": "line",
       "metadata": {
         "mapbox:group": "1457010660461.3042"
       },
-      "source": "rail",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
+      "ref": "rail_case",
       "paint": {
         "line-color": "#fff",
         "line-dasharray": [
@@ -735,11 +628,6 @@
     }
   },
   "metadata": {
-    "mapbox:groups": {
-      "1457010660461.3042": {
-        "name": "Routes",
-        "collapsed": true
-      }
-    }
+    "mapbox:groups": {}
   }
 }

@@ -65,7 +65,7 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "rail_station_label",
+      "source-layer": "poi",
       "minzoom": 5,
       "filter": [
         "all",
@@ -76,8 +76,13 @@
         ],
         [
           "==",
-          "network",
-          "rail-metro"
+          "class",
+          "railway"
+        ],
+        [
+          "==",
+          "subclass",
+          "subway"
         ]
       ],
       "layout": {
@@ -132,7 +137,7 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "poi_label",
+      "source-layer": "poi",
       "minzoom": 5,
       "filter": [
         "all",
@@ -143,8 +148,13 @@
         ],
         [
           "==",
-          "type",
-          "Bus Station"
+          "class",
+          "bus"
+        ],
+        [
+          "==",
+          "subclass",
+          "bus_station"
         ]
       ],
       "layout": {
@@ -211,7 +221,7 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "rail_station_label",
+      "source-layer": "poi",
       "minzoom": 11,
       "filter": [
         "all",
@@ -230,8 +240,13 @@
           ],
           [
             "==",
-            "network",
-            "rail"
+            "class",
+            "railway"
+          ],
+          [
+            "==",
+            "subclass",
+            "station"
           ]
         ]
       ],
@@ -314,7 +329,7 @@
         "mapbox:group": "1457010208438.9548"
       },
       "source": "vector",
-      "source-layer": "airport_label",
+      "source-layer": "poi",
       "minzoom": 5,
       "filter": [
         "all",
@@ -378,24 +393,15 @@
   ],
   "sources": {
     "parkandride": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
       "type": "vector"
     },
     "vector": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-vector-map/index.json",
-      "type": "vector"
+      "type": "vector",
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-vector-map/index.json"
     }
   },
   "metadata": {
-    "mapbox:groups": {
-      "1457010287588.8713": {
-        "name": "POI-park-and-ride",
-        "collapsed": true
-      },
-      "1457010208438.9548": {
-        "name": "POI–public-transport",
-        "collapsed": true
-      }
-    }
+    "mapbox:groups": {}
   }
 }

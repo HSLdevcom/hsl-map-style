@@ -42,7 +42,6 @@
       },
       "source": "citybike",
       "source-layer": "stations",
-      "minzoom": 13,
       "maxzoom": 14,
       "layout": {
         "visibility": "visible"
@@ -148,16 +147,11 @@
   ],
   "sources": {
     "citybike": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-citybike-map/index.json",
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-citybike-map/index.json",
       "type": "vector"
     }
   },
   "metadata": {
-    "mapbox:groups": {
-      "1457010266398.4177": {
-        "name": "POI-citybikes",
-        "collapsed": true
-      }
-    }
+    "mapbox:groups": {}
   }
 }
