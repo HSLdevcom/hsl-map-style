@@ -747,7 +747,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
-      "minzoom": 17,
+      "minzoom": 16,
       "layout": {
         "visibility": "visible"
       },
