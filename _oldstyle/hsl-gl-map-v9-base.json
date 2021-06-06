@@ -780,7 +780,7 @@
             "type": "line",
             "source": "vector",
             "source-layer": "road",
-            "minzoom": 16,
+            "minzoom": 10,
             "filter": [
                 "all",
                 [
@@ -1629,6 +1629,7 @@
             "type": "line",
             "source": "vector",
             "source-layer": "road",
+            "minzoom": 14,
             "filter": [
                 "all",
                 [
@@ -2092,7 +2093,7 @@
             "type": "line",
             "source": "vector",
             "source-layer": "road",
-            "minzoom": 16,
+            "minzoom": 10,
             "filter": [
                 "all",
                 [

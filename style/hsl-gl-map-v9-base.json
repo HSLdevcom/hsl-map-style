@@ -747,7 +747,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
-      "minzoom": 16,
+      "minzoom": 10,
       "layout": {
         "visibility": "visible"
       },
@@ -1548,7 +1548,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
+      "minzoom": 14,
       "filter": [
         "all",
         [
@@ -2004,7 +2004,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -2484,7 +2484,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 13,
+      "minzoom": 10,
       "filter": [
         "all",
         [
