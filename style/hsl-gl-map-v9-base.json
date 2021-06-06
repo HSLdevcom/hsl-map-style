@@ -1608,7 +1608,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
-      "minzoom": 16,
+      "minzoom": 10,
       "layout": {},
       "paint": {
         "fill-color": "#e2e4e9",
