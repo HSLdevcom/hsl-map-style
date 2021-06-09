@@ -80,7 +80,11 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
-      "filter": ["==", "class", "school"],
+      "filter": [
+        "all",
+        ["==", "$type", "Polygon"],
+        ["in", "class", "university", "school"]
+      ],
       "paint": {
         "fill-color": "#f9f4d2"
       }
@@ -483,7 +487,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
-      "minzoom": 16,
+      "minzoom": 17,
       "layout": {
         "visibility": "visible"
       },
