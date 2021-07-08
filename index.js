@@ -229,6 +229,23 @@ function extendStyle(style, options) {
   });
 
   extendedComponents.forEach((component) => {
+
+    // Logic to add route filter
+    // TODO: Add to it's own function and replace the current filter.
+    if (component.id.includes("routes") || component.id.includes("stops")) {
+      component.style.layers.forEach((l) => {
+        console.log(`${l.id} \n`, l.filter);
+        let f = null;
+        if (l.filter && l.filter[0] === "all") {
+          f = l.filter.concat([["in", "routeId", "2200"]]);
+        } else if (l.filter) {
+          f = ["all", l.filter, ["in", "routeId", "2200"]];
+        } else {
+          f = ["in", "routeId", "2200"];
+        }
+        console.log(f);
+      });
+    }
     if (component.enabled) {
       mergeWith(extendedStyle, component.style, customizer);
     }
