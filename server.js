@@ -13,6 +13,7 @@ const style = require("./index").generateStyle({
     ticket_sales: { enabled: true },
     driver_instructions: { enabled: true },
   },
+  routeFilter: [],
 });
 
 const app = express();

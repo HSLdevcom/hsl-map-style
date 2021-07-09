@@ -229,23 +229,37 @@ function extendStyle(style, options) {
   });
 
   extendedComponents.forEach((component) => {
-
     // Logic to add route filter
-    // TODO: Add to it's own function and replace the current filter.
-    if (component.id.includes("routes") || component.id.includes("stops")) {
-      component.style.layers.forEach((l) => {
-        console.log(`${l.id} \n`, l.filter);
-        let f = null;
-        if (l.filter && l.filter[0] === "all") {
-          f = l.filter.concat([["in", "routeId", "2200"]]);
-        } else if (l.filter) {
-          f = ["all", l.filter, ["in", "routeId", "2200"]];
-        } else {
-          f = ["in", "routeId", "2200"];
+    // Route filter is the list of Jore ids
+    if (options.routeFilter && options.routeFilter.length > 0) {
+      const routeFilterLine = ["in", "routeId"].concat(options.routeFilter);
+
+      // Function to decide how to merge filter with the existing ones.
+      const createFilter = (layer) => {
+        const f = layer.filter;
+        if (f && f[0] === "all") {
+          // Append the filter to the list of existing filters
+          return f.concat([routeFilterLine]);
         }
-        console.log(f);
-      });
+        if (f) {
+          // There was one filter already, create all rule.
+          return ["all", f, routeFilterLine];
+        }
+        if (!layer.ref) {
+          // No existing filter, add new filter if the layer is not ref-layer
+          return routeFilterLine;
+        }
+        return undefined;
+      };
+
+      if (component.id.includes("routes")) {
+        component.style.layers.forEach((l) => {
+          // eslint-disable-next-line no-param-reassign
+          l.filter = createFilter(l);
+        });
+      }
     }
+
     if (component.enabled) {
       mergeWith(extendedStyle, component.style, customizer);
     }
