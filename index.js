@@ -231,8 +231,10 @@ function extendStyle(style, options) {
   extendedComponents.forEach((component) => {
     // Logic to add route filter
     // Route filter is the list of Jore ids
-    if (options.routeFilter && options.routeFilter.length > 0) {
-      const routeFilterLine = ["in", "routeId"].concat(options.routeFilter);
+    const routeFilter =
+      options.routeFilter && options.routeFilter.filter((r) => r !== "");
+    if (routeFilter && routeFilter.length > 0) {
+      const routeFilterLine = ["in", "routeId"].concat(routeFilter);
 
       // Function to decide how to merge filter with the existing ones.
       const createFilter = (layer) => {
