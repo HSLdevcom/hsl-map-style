@@ -358,6 +358,7 @@
           "1020",
           "1030",
           "1040"
+        ],
         [
           "!=",
           "hasRegularDayDepartures",
