@@ -10,7 +10,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -39,7 +39,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -160,7 +160,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
@@ -188,7 +188,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
