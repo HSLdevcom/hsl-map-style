@@ -9,7 +9,11 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": ["!=", "mode", "RAIL"],
+      "filter": [
+        "!=",
+        "mode",
+        "RAIL"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -17,26 +21,20 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1.5], [22, 26]]
-        }
-      }
-    },
-    {
-      "id": "Stops_rail",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "ref": "Stops case rail",
-      "interactive": true,
-      "paint": {
-        "circle-color": "#8c54a2",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
-        },
-        "circle-opacity": {
-          "base": 1,
-          "stops": [[11, 0.6], [14, 1]]
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1.5
+            ],
+            [
+              22,
+              26
+            ]
+          ]
         }
       }
     },
@@ -50,7 +48,11 @@
       "source-layer": "stops",
       "minzoom": 15,
       "interactive": true,
-      "filter": ["==", "mode", "RAIL"],
+      "filter": [
+        "==",
+        "mode",
+        "RAIL"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -58,7 +60,20 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1.5], [22, 26]]
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1.5
+            ],
+            [
+              22,
+              26
+            ]
+          ]
         }
       }
     },
@@ -73,8 +88,24 @@
       "interactive": true,
       "filter": [
         "all",
-        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
-        ["==", "mode", "BUS"]
+        [
+          "!in",
+          "routeId",
+          "1500",
+          "2200",
+          "2510",
+          "2550",
+          "4560",
+          "4570",
+          "1020",
+          "1030",
+          "1040"
+        ],
+        [
+          "==",
+          "mode",
+          "BUS"
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -83,40 +114,33 @@
         "circle-color": "#007ac9",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
         },
         "circle-opacity": {
           "base": 1,
-          "stops": [[11, 0.6], [14, 1]]
-        }
-      }
-    },
-    {
-      "id": "Stops_trunk",
-      "type": "circle",
-      "metadata": {
-        "mapbox:group": "1455204550197.1404"
-      },
-      "source": "stops",
-      "source-layer": "stops",
-      "interactive": true,
-      "filter": [
-        "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
-        [ "==", "mode", "BUS" ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-color": "#FF6319",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
-        },
-        "circle-opacity": {
-          "base": 1,
-          "stops": [[11, 0.6], [14, 1]]
+          "stops": [
+            [
+              11,
+              0.6
+            ],
+            [
+              14,
+              1
+            ]
+          ]
         }
       }
     },
@@ -129,7 +153,11 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": ["==", "mode", "FERRY"],
+      "filter": [
+        "==",
+        "mode",
+        "FERRY"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -137,11 +165,33 @@
         "circle-color": "#00b9e4",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
         },
         "circle-opacity": {
           "base": 1,
-          "stops": [[11, 0.6], [14, 1]]
+          "stops": [
+            [
+              11,
+              0.6
+            ],
+            [
+              14,
+              1
+            ]
+          ]
         }
       }
     },
@@ -154,7 +204,11 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": ["==", "mode", "TRAM"],
+      "filter": [
+        "==",
+        "mode",
+        "TRAM"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -162,11 +216,33 @@
         "circle-color": "#00985f",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
         },
         "circle-opacity": {
           "base": 1,
-          "stops": [[11, 0.6], [14, 1]]
+          "stops": [
+            [
+              11,
+              0.6
+            ],
+            [
+              14,
+              1
+            ]
+          ]
         }
       }
     },
@@ -179,7 +255,11 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": ["==", "mode", "SUBWAY"],
+      "filter": [
+        "==",
+        "mode",
+        "SUBWAY"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -187,11 +267,33 @@
         "circle-color": "#ff6319",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[11.9, 0], [12, 1], [22, 24]]
+          "stops": [
+            [
+              11.9,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              24
+            ]
+          ]
         },
         "circle-opacity": {
           "base": 1,
-          "stops": [[11, 0.6], [14, 1]]
+          "stops": [
+            [
+              11,
+              0.6
+            ],
+            [
+              14,
+              1
+            ]
+          ]
         }
       }
     },
@@ -206,7 +308,20 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[14, 0], [14.1, 2], [22, 20]]
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              14.1,
+              2
+            ],
+            [
+              22,
+              20
+            ]
+          ]
         }
       }
     },
@@ -220,7 +335,12 @@
       "source-layer": "stops",
       "minzoom": 15,
       "interactive": true,
-      "filter": ["in", "mode", "", "RAIL"],
+      "filter": [
+        "in",
+        "mode",
+        "",
+        "RAIL"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -228,7 +348,20 @@
         "circle-color": "#fff",
         "circle-radius": {
           "base": 1.15,
-          "stops": [[14, 0], [14.1, 2], [22, 20]]
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              14.1,
+              2
+            ],
+            [
+              22,
+              20
+            ]
+          ]
         }
       }
     }

@@ -1917,7 +1917,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "2550", "4560"],
+        ["!in", "routeId", "1500","2200","2510","2550","4560","4570","1020","1030","1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -1946,7 +1946,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "2550", "4560"],
+        ["!in", "routeId", "1500","2200","2510","2550","4560","4570","1020","1030","1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -2067,7 +2067,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
@@ -2095,7 +2095,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
       "interactive": true,
@@ -2372,7 +2372,7 @@
         "text-font": ["Gotham Rounded Medium"],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
@@ -2441,7 +2441,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2472,7 +2472,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "bottom",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2503,7 +2503,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Book"],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2571,7 +2571,7 @@
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2601,7 +2601,7 @@
         "text-font": ["Gotham Rounded Book"],
         "text-offset": [0, 0.5],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -2688,7 +2688,7 @@
         ["in", "type", "hamlet", "neighbourhood", "suburb", "town", "village"]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": ["Gotham Rounded Book"],
         "text-max-width": 6,
         "text-size": {
@@ -2711,7 +2711,7 @@
       "maxzoom": 13,
       "filter": ["all", ["==", "$type", "Point"], ["==", "type", "city"]],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": ["Gotham Rounded Medium"],
         "text-max-width": 10,
         "text-size": {
@@ -2740,7 +2740,7 @@
       "maxzoom": 12,
       "filter": ["==", "$type", "Point"],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": ["Gotham Rounded Medium"],
         "text-max-width": 10,
         "text-size": {
@@ -3316,7 +3316,11 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": ["==", "mode", "BUS"],
+      "filter": [
+        "all",
+        ["!in", "routeId", "1500","2200","2510","2550","4560","4570","1020","1030","1040"],
+        ["==", "mode", "BUS"]
+      ],
       "layout": {
         "visibility": "visible"
       },
