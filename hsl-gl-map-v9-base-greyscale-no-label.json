@@ -75,7 +75,7 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["==", "class", "hospital"],
-      "paint": {"fill-color": "rgba(43, 43, 43, 1)"}
+      "paint": {"fill-color": "rgba(10, 10, 10, 1)"}
     },
     {
       "id": "landuse_school",
@@ -95,7 +95,7 @@
       "source-layer": "landuse",
       "filter": ["==", "class", "park"],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(23, 23, 23, 1)"}
+      "paint": {"fill-color": "rgba(16, 16, 16, 1)"}
     },
     {
       "id": "landuse_playground",
@@ -104,7 +104,7 @@
       "source-layer": "landuse",
       "filter": ["==", "type", "playground"],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(51, 51, 51, 1)"}
+      "paint": {"fill-color": "rgba(16, 16, 16, 1)"}
     },
     {
       "id": "landuse_wood",
@@ -198,7 +198,7 @@
       "source-layer": "landuse",
       "filter": ["==", "class", "pitch"],
       "paint": {
-        "fill-color": "rgba(29, 29, 29, 1)",
+        "fill-color": "rgba(19, 19, 19, 1)",
         "fill-outline-color": "rgba(29, 29, 29, 1)"
       }
     },
