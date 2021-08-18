@@ -86,7 +86,19 @@ var components = [
     enabled: false,
     description: "Tulostevärit",
     style: require("./hsl-gl-map-v9-print.json")
-  }
+  },
+  {
+    id: "greyscale",
+    enabled: false,
+    description: "Harmaasävy",
+    style: require("./hsl-gl-map-v9-base-greyscale.json")
+  },
+  {
+    id: "greyscale_no_text",
+    enabled: false,
+    description: "Harmaasävy, ei nimistöä",
+    style: require("./hsl-gl-map-v9-base-greyscale-no-label.json")
+  },
 ];
 
 /**
