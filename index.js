@@ -229,6 +229,39 @@ function extendStyle(style, options) {
   });
 
   extendedComponents.forEach((component) => {
+    // Logic to add route filter
+    // Route filter is the list of Jore ids
+    const routeFilter =
+      options.routeFilter && options.routeFilter.filter((r) => r !== "");
+    if (routeFilter && routeFilter.length > 0) {
+      const routeFilterLine = ["in", "routeId"].concat(routeFilter);
+
+      // Function to decide how to merge filter with the existing ones.
+      const createFilter = (layer) => {
+        const f = layer.filter;
+        if (f && f[0] === "all") {
+          // Append the filter to the list of existing filters
+          return f.concat([routeFilterLine]);
+        }
+        if (f) {
+          // There was one filter already, create all rule.
+          return ["all", f, routeFilterLine];
+        }
+        if (!layer.ref) {
+          // No existing filter, add new filter if the layer is not ref-layer
+          return routeFilterLine;
+        }
+        return undefined;
+      };
+
+      if (component.id.includes("routes")) {
+        component.style.layers.forEach((l) => {
+          // eslint-disable-next-line no-param-reassign
+          l.filter = createFilter(l);
+        });
+      }
+    }
+
     if (component.enabled) {
       mergeWith(extendedStyle, component.style, customizer);
     }
