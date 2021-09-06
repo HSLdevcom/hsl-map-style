@@ -2529,7 +2529,7 @@
         "icon-allow-overlap": true,
         "icon-size": {
           "base": 1.15,
-          "stops": [[15, 0.3], [22, 1]]
+          "stops": [[13, 0.533], [20, 0.8]]
         },
         "icon-ignore-placement": false,
         "icon-anchor": "bottom"
@@ -2555,7 +2555,7 @@
         "icon-allow-overlap": true,
         "icon-size": {
           "base": 1.15,
-          "stops": [[15, 0.4], [22, 1.4]]
+          "stops": [[13, 0.8], [20, 1.2]]
         },
         "icon-ignore-placement": false,
         "icon-anchor": "bottom"
@@ -2581,7 +2581,7 @@
         "icon-allow-overlap": true,
         "icon-size": {
           "base": 1.15,
-          "stops": [[15, 0.4], [22, 1.4]]
+          "stops": [[13, 0.8], [20, 1.2]]
         },
         "icon-ignore-placement": false,
         "icon-anchor": "top"
