@@ -3055,7 +3055,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },
@@ -3077,7 +3077,7 @@
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "TYYPPI", "HSL Automaatti KL", "HSL Automaatti MNL"]
+        ["in", "Tyyppi", "Kertalippuautomaatti", "Monilippuautomaatti"]
       ],
       "layout": {
         "text-optional": true,
@@ -3094,7 +3094,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },
@@ -3116,7 +3116,7 @@
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["==", "TYYPPI", "HKI Automaatti PA"]
+        ["==", "Tyyppi", "Pysäköintiautomaatti"]
       ],
       "layout": {
         "text-optional": true,
@@ -3133,7 +3133,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },
@@ -3152,7 +3152,7 @@
       "source": "ticket-sales",
       "minzoom": 15,
       "interactive": true,
-      "filter": ["all", ["==", "$type", "Point"], ["==", "TYYPPI", "Palvelupiste"]],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "Tyyppi", "Palvelupiste"]],
       "layout": {
         "text-optional": true,
         "text-size": {
@@ -3168,7 +3168,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },

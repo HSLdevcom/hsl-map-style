@@ -49,7 +49,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },
@@ -80,9 +80,9 @@
         ],
         [
           "in",
-          "TYYPPI",
-          "HSL Automaatti KL",
-          "HSL Automaatti MNL"
+          "Tyyppi",
+          "Kertalippuautomaatti",
+          "Monilippuautomaatti"
         ]
       ],
       "layout": {
@@ -114,7 +114,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },
@@ -145,8 +145,8 @@
         ],
         [
           "==",
-          "TYYPPI",
-          "HKI Automaatti PA"
+          "Tyyppi",
+          "Pysäköintiautomaatti"
         ]
       ],
       "layout": {
@@ -178,7 +178,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },
@@ -209,7 +209,7 @@
         ],
         [
           "==",
-          "TYYPPI",
+          "Tyyppi",
           "Palvelupiste"
         ]
       ],
@@ -242,7 +242,7 @@
         "icon-optional": false,
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{Nimi}",
         "text-max-width": 8,
         "icon-ignore-placement": false
       },
