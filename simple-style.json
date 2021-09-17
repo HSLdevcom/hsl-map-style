@@ -2641,6 +2641,7 @@
     },
     {
       "id": "road_street_label",
+      "minzoom": 14,
       "type": "symbol",
       "source": "vector",
       "source-layer": "road_label",
@@ -2676,6 +2677,7 @@
     },
     {
       "id": "road_primary_label",
+      "minzoom": 11,
       "type": "symbol",
       "source": "vector",
       "source-layer": "road_label",
@@ -2785,6 +2787,7 @@
     },
     {
       "id": "road_street_label_fisv",
+      "minzoom": 14,
       "type": "symbol",
       "source": "vector",
       "source-layer": "road_label",
@@ -2820,6 +2823,7 @@
     },
     {
       "id": "road_primary_label_fisv",
+      "minzoom": 11,
       "type": "symbol",
       "source": "vector",
       "source-layer": "road_label",
