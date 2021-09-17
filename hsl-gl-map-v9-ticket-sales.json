@@ -1,17 +1,10 @@
 {
-  "sources": {
-    "ticket-sales": {
-      "data": "https://opendata.arcgis.com/datasets/79fe2db71b254edda68c47d2629a962e_0.geojson",
-      "type": "geojson"
-    }
-  },
   "layers": [
     {
       "id": "poi_label_tickets-sales-point",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -20,54 +13,14 @@
           "Point"
         ],
         [
-          "==",
+          "in",
           "Tyyppi",
-          "Myyntipiste"
+          "Myyntipiste",
+          "myyntipiste"
         ]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-tickets-sales-point",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
+        "icon-image": "icon-tickets-sales-point"
       }
     },
     {
@@ -75,7 +28,6 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -83,54 +35,15 @@
           "$type",
           "Point"
         ],
+        [
           "in",
           "Tyyppi",
           "Kertalippuautomaatti",
           "Monilippuautomaatti"
+        ]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-ticket-machine",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
+        "icon-image": "icon-ticket-machine"
       }
     },
     {
@@ -138,7 +51,6 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -153,48 +65,8 @@
         ]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
         "icon-image": "icon-ticket-machine-parking",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
+        "visibility": "none"
       }
     },
     {
@@ -202,7 +74,6 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "interactive": true,
       "filter": [
         "all",
         [
@@ -217,49 +88,14 @@
         ]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-service-point",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
+        "icon-image": "icon-service-point"
       }
     }
-  ]
+  ],
+  "sources": {
+    "ticket-sales": {
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/f9388fc8a8f848fda3bc584b607afe97_0.geojson",
+      "type": "geojson"
+    }
+  }
 }

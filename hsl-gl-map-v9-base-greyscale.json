@@ -45,7 +45,7 @@
       "type": "geojson"
     },
     "ticket-sales": {
-      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/727c6618a0814f8ba21bb00c9cb34019_0.geojson",
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/f9388fc8a8f848fda3bc584b607afe97_0.geojson",
       "type": "geojson"
     },
     "kuljettajaohjeet": {
@@ -2755,36 +2755,15 @@
       "id": "poi_label_tickets-sales-point",
       "type": "symbol",
       "source": "ticket-sales",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "Tyyppi", "Myyntipiste", "R-kioski"]
+        ["in", "Tyyppi", "Myyntipiste", "myyntipiste"]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {"stops": [[0, 8], [15, 10]]},
-        "text-allow-overlap": false,
         "icon-image": "icon-tickets-sales-point",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "none",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "visibility": "none"
       }
     },
     {
@@ -2795,32 +2774,11 @@
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "TYYPPI", "HSL Automaatti KL", "HSL Automaatti MNL"]
+        ["in", "Tyyppi", "Kertalippuautomaatti", "Monilippuautomaatti"]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {"stops": [[0, 8], [15, 10]]},
-        "text-allow-overlap": false,
         "icon-image": "icon-ticket-machine",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "none",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "visibility": "none"
       }
     },
     {
@@ -2831,32 +2789,11 @@
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["==", "TYYPPI", "HKI Automaatti PA"]
+        ["==", "Tyyppi", "Pysäköintiautomaatti"]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {"stops": [[0, 8], [15, 10]]},
-        "text-allow-overlap": false,
         "icon-image": "icon-ticket-machine-parking",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "none",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "visibility": "none"
       }
     },
     {
@@ -2864,35 +2801,10 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-      "filter": [
-        "all",
-        ["==", "$type", "Point"],
-        ["==", "TYYPPI", "Palvelupiste"]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "Tyyppi", "Palvelupiste"]],
       "layout": {
-        "text-optional": true,
-        "text-size": {"stops": [[0, 8], [15, 10]]},
-        "text-allow-overlap": false,
         "icon-image": "icon-service-point",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "none",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "visibility": "none"
       }
     },
     {
