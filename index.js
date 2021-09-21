@@ -194,7 +194,6 @@ function customizer(objValue, srcValue) {
         if (
           !srcElement.ref &&
           (!srcElement.type ||
-            !srcElement.paint ||
             (srcElement.type !== "background" && !srcElement.source))
         ) {
           // Omit incomplete layer with no matching layer in destination array
