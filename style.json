@@ -2524,35 +2524,69 @@
       "minzoom": 16,
       "filter": ["all", ["==", "$type", "Point"], ["==", "maki", "entrance"]],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [[0, 8], [15, 10]]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-subway-entrance",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": true,
         "visibility": "visible",
-        "text-offset": {
-          "base": 1,
-          "stops": [[15, [0, 0.5]], [22, [0, 3]]]
-        },
-        "icon-optional": false,
+        "icon-image": "icon-subway-entrance",
+        "icon-allow-overlap": true,
         "icon-size": {
           "base": 1.15,
-          "stops": [[15, 0.3], [22, 1]]
+          "stops": [[13, 0.533], [20, 0.8]]
         },
-        "text-anchor": "top",
-        "text-field": "",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "icon-ignore-placement": false,
+        "icon-anchor": "bottom"
       },
       "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
+        "icon-translate": [0, -5.25],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_subway-station_entrance_letter",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "rail_station_label",
+      "minzoom": 17,
+      "filter": ["all", ["==", "$type", "Point"], ["==", "maki", "entrance"], ["has", "ref"]],
+      "layout": {
+        "visibility": "visible",
+        "icon-image": ["concat", "icon-", ["get", "ref"]],
+        "icon-allow-overlap": true,
+        "icon-size": {
+          "base": 1.15,
+          "stops": [[13, 0.8], [20, 1.2]]
+        },
+        "icon-ignore-placement": false,
+        "icon-anchor": "bottom"
+      },
+      "paint": {
+        "icon-translate": [0, -5.25],
+        "icon-opacity": 1
+      }
+    },
+    {
+      "id": "poi_label_subway-station_entrance_accessibility",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1457010208438.9548"
+      },
+      "source": "vector",
+      "source-layer": "rail_station_label",
+      "minzoom": 17,
+      "filter": ["all", ["==", "$type", "Point"], ["==", "maki", "entrance"], ["==", "wheelchair", "yes"]],
+      "layout": {
+        "visibility": "visible",
+        "icon-image": "icon-wheelchair",
+        "icon-allow-overlap": true,
+        "icon-size": {
+          "base": 1.15,
+          "stops": [[13, 0.8], [20, 1.2]]
+        },
+        "icon-ignore-placement": false,
+        "icon-anchor": "top"
+      },
+      "paint": {
         "icon-translate": [0, -5.25],
         "icon-opacity": 1
       }
