@@ -28,7 +28,7 @@
       "type": "geojson"
     },
     "ticket-sales": {
-      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/727c6618a0814f8ba21bb00c9cb34019_0.geojson",
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/f9388fc8a8f848fda3bc584b607afe97_0.geojson",
       "type": "geojson"
     },
     "kuljettajaohjeet": {
@@ -44,8 +44,8 @@
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/style-update/sprite",
-  "glyphs": "https://static.hsldev.com/mapfonts/{fontstack}/{range}.pbf",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
+  "glyphs": "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -2216,7 +2216,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "2550", "4560"],
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -2247,7 +2247,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!in", "routeId", "2550", "4560"],
+        ["!in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["==", "mode", "BUS"],
         ["!=", "hasRegularDayDepartures", false]
       ],
@@ -2382,7 +2382,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
 
@@ -2395,10 +2395,7 @@
         "line-color": "#fff",
         "line-width": {
           "base": 1,
-          "stops": [
-            [10, 6],
-            [22, 10]
-          ]
+          "stops": [[10, 4], [22, 8]]
         },
         "line-blur": 0
       }
@@ -2413,7 +2410,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570"],
+        ["in", "routeId", "1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"],
         ["!=", "hasRegularDayDepartures", false]
       ],
 
@@ -2424,15 +2421,13 @@
         "line-round-limit": 1
       },
       "paint": {
-        "line-color": "#FF6319",
+        "line-color": "#CA4300",
         "line-width": {
           "base": 1,
-          "stops": [
-            [10, 4],
-            [22, 8]
-          ]
+          "stops": [[10, 2], [22, 6]]
         },
-        "line-blur": 0
+        "line-blur": 0,
+        "line-opacity": 1
       }
     },
     {
@@ -3552,42 +3547,14 @@
       "id": "poi_label_tickets-sales-point",
       "type": "symbol",
       "source": "ticket-sales",
-      "minzoom": 16,
-
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "Tyyppi", "Myyntipiste", "R-kioski"]
+        ["in", "Tyyppi", "Myyntipiste", "myyntipiste"]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-tickets-sales-point",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "icon-image": "icon-tickets-sales-point"
       }
     },
     {
@@ -3595,41 +3562,13 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "TYYPPI", "HSL Automaatti KL", "HSL Automaatti MNL"]
+        ["in", "Tyyppi", "Kertalippuautomaatti", "Monilippuautomaatti"]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-ticket-machine",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "icon-image": "icon-ticket-machine"
       }
     },
     {
@@ -3637,41 +3576,14 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["==", "TYYPPI", "HKI Automaatti PA"]
+        ["==", "Tyyppi", "Pysäköintiautomaatti"]
       ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
-        "text-allow-overlap": false,
         "icon-image": "icon-ticket-machine-parking",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "visibility": "none"
       }
     },
     {
@@ -3679,37 +3591,9 @@
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
-
-      "filter": ["all", ["==", "$type", "Point"], ["==", "TYYPPI", "Palvelupiste"]],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "Tyyppi", "Palvelupiste"]],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-service-point",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [0, -5.25],
-        "icon-opacity": 1
+        "icon-image": "icon-service-point"
       }
     },
     {

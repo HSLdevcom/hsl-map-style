@@ -15,40 +15,18 @@
         "RAIL"
       ],
       "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": false,
-        "icon-offset": [
-          0,
-          -6
-        ],
-        "icon-image": "icon-stop-tram-medium",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1,
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": {
+          "base": 1.15,
           "stops": [
-            [
-              13,
-              0.8
-            ],
-            [
-              20,
-              1.2
-            ]
+            [11.9, 0],
+            [12, 1.5],
+            [22, 26]
           ]
-        },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        }
       }
     },
     {
@@ -74,18 +52,16 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1.5
-            ],
-            [
-              22,
-              26
-            ]
+            [11.9, 0],
+            [12, 1],
+            [22, 24]
+          ]
+        },
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [11, 0.6],
+            [14, 1]
           ]
         }
       }
@@ -112,18 +88,9 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1.5
-            ],
-            [
-              22,
-              26
-            ]
+            [11.9, 0],
+            [12, 1.5],
+            [22, 26]
           ]
         }
       }
@@ -189,9 +156,21 @@
       "source": "stops",
       "source-layer": "stops",
       "filter": [
-        "==",
-        "mode",
-        "BUS"
+        "all",
+        [
+          "!in",
+          "routeId",
+          "1500",
+          "2200",
+          "2510",
+          "2550",
+          "4560",
+          "4570",
+          "1020",
+          "1030",
+          "1040"
+        ],
+        ["==", "mode", "BUS"]
       ],
       "layout": {
         "visibility": "visible"
@@ -201,31 +180,16 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
+            [11.9, 0],
+            [12, 1],
+            [22, 24]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [11, 0.6],
+            [14, 1]
           ]
         }
       }
@@ -242,53 +206,40 @@
       "filter": [
         "all",
         [
-          "!in",
-          "nameFi",
-          "Kauppatori",
-          "Katajanokka",
-          "Suomenlinna, päälait"
+          "in",
+          "routeId",
+          "1500",
+          "2200",
+          "2510",
+          "2550",
+          "4560",
+          "4570",
+          "1020",
+          "1030",
+          "1040"
         ],
-        [
-          "==",
-          "mode",
-          "FERRY"
-        ]
+        ["==", "mode", "BUS"]
       ],
       "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": false,
-        "icon-offset": [
-          0,
-          -6
-        ],
-        "icon-image": "icon-stop-hsl_ferry-medium",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1,
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#FF6319",
+        "circle-radius": {
+          "base": 1.15,
           "stops": [
-            [
-              13,
-              0.8
-            ],
-            [
-              20,
-              1.2
-            ]
+            [11.9, 0],
+            [12, 1],
+            [22, 24]
           ]
         },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [11, 0.6],
+            [14, 1]
+          ]
+        }
       }
     },
     {
@@ -316,40 +267,25 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": false,
-        "icon-offset": [
-          0,
-          -6
-        ],
-        "icon-image": "icon-hsl_ferry-16",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 0,
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#00b9e4",
+        "circle-radius": {
+          "base": 1.15,
           "stops": [
-            [
-              13,
-              0.8
-            ],
-            [
-              20,
-              1.2
-            ]
+            [11.9, 0],
+            [12, 1],
+            [22, 24]
           ]
         },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [11, 0.6],
+            [14, 1]
+          ]
+        }
       }
     },
     {
@@ -367,40 +303,25 @@
         "TRAM"
       ],
       "layout": {
-        "visibility": "visible",
-        "text-allow-overlap": true,
-        "icon-offset": [
-          0,
-          -6
-        ],
-        "icon-image": "icon-stop-tram-medium",
-        "text-ignore-placement": true,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": true,
-        "symbol-placement": "point",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1,
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#00985f",
+        "circle-radius": {
+          "base": 1.15,
           "stops": [
-            [
-              13,
-              0.8
-            ],
-            [
-              20,
-              1.2
-            ]
+            [11.9, 0],
+            [12, 1],
+            [22, 24]
           ]
         },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "circle-opacity": {
+          "base": 1,
+          "stops": [
+            [11, 0.6],
+            [14, 1]
+          ]
+        }
       }
     },
     {
@@ -426,31 +347,35 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
+            [11.9, 0],
+            [12, 1],
+            [22, 24]
           ]
         },
         "circle-opacity": {
           "base": 1,
           "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [11, 0.6],
+            [14, 1]
+          ]
+        }
+      }
+    },
+    {
+      "id": "Stops_hub",
+      "metadata": {
+        "mapbox:group": "1455204550197.1404"
+      },
+      "ref": "Stops case",
+      "interactive": true,
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": {
+          "base": 1.15,
+          "stops": [
+            [14, 0],
+            [14.1, 2],
+            [22, 20]
           ]
         }
       }
@@ -476,31 +401,9 @@
         "circle-radius": {
           "base": 1.15,
           "stops": [
-            [
-              12.9,
-              0
-            ],
-            [
-              13,
-              1
-            ],
-            [
-              22,
-              24
-            ]
-          ]
-        },
-        "circle-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              11,
-              0.6
-            ],
-            [
-              14,
-              1
-            ]
+            [14, 0],
+            [14.1, 2],
+            [22, 20]
           ]
         }
       }

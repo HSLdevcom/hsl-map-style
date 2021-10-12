@@ -95,6 +95,8 @@ const style = generateStyle({
     icons: { enabled: true },
     text_fisv: { enabled: true },
   },
+  // optional property to show only listed routes by jore id
+  routeFilter: ["2550", "4570"]
 });
 
 const map = new mapboxgl.Map({

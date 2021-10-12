@@ -99,7 +99,7 @@
         ],
         "visibility": "visible",
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
@@ -204,7 +204,7 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -255,7 +255,7 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "bottom",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -307,7 +307,7 @@
           "Gotham Rounded Book"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -445,7 +445,7 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -502,7 +502,7 @@
           0.5
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -669,7 +669,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Book"
         ],
@@ -715,7 +715,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
@@ -780,7 +780,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
