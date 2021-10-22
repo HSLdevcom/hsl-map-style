@@ -67,7 +67,13 @@ const components = [
     id: "poi",
     enabled: false,
     description: "Joukkoliikenne-POI",
-    style: require("./style/hsl-gl-map-v9-poi.json"),
+    style: require("./style/hsl-gl-map-v9-icon.json"),
+  },
+  {
+    id: "park-and-ride",
+    enabled: false,
+    description: "Liityntäpysäköinti",
+    style: require("./style/hsl-gl-map-v9-park-and-ride.json"),
   },
   {
     id: "ticket_sales",

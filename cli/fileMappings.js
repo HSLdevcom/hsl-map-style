@@ -3,6 +3,7 @@ const reduce = require("lodash/reduce");
 const get = require("lodash/get");
 
 const select = (values, value) => some(values, (val) => val === value);
+const inGroups = (values, value) => some(values, (val) => value.startsWith(val));
 
 /**
  * Map layers to files. FileMappers is a map of file names and the criteria
@@ -17,45 +18,31 @@ const select = (values, value) => some(values, (val) => val === value);
  */
 
 const fileMappers = {
-  routes: (value) => /route|subway|rail/.test(value),
   base: (value) => {
-    const names = [
-      "background",
-      "building",
-      "facilities",
-      "road",
+    const names = ["background", "admin_country"];
+    const groups = [
+      "landuse",
       "water",
-      "waterway",
-      "waterway_case",
       "aeroway",
-      "aeroway_taxiway",
-      "admin_country",
+      "building",
+      "road",
+      "tunnel",
+      "bridge",
     ];
-
-    if (/landuse|road|building|tunnel|bridge/.test(value)) {
+    if (inGroups(groups, value)) {
       return true;
     }
-
     return select(names, value);
   },
-  text: (value) => /label/.test(value),
-  stops: ["stops", "Stops_hub"],
-  poi: [
-    "poi_label_park-and-ride_hub",
-    "poi_label_subway-station",
-    "poi_label_bus-station",
-    "poi_label_railway-station",
-    "poi_label_Aerodrome",
-  ],
-  "driver-instructions": ["poi_bajamaja", "poi_taukotila"],
-  "ticket-sales": [
-    "poi_label_service-point",
-    "poi_label_ticket-machine-parking",
-    "poi_label_ticket-machine",
-    "poi_label_tickets-sales-point",
-  ],
-  citybikes: ["stations", "Stops_citybikes"],
   "municipal-borders": ["municipal_border"],
+  routes: (value) => inGroups(["route"], value),
+  stops: (value) => inGroups(["stops"], value),
+  text: (value) => inGroups(["label"], value),
+  icon: (value) => inGroups(["icon"], value),
+  "park-and-ride": (value) => inGroups(["park-and-ride"], value),
+  "driver-instructions": (value) => inGroups(["kuljettajaohje"], value),
+  "ticket-sales": (value) => inGroups(["ticket-sales"], value),
+  citybikes: (value) => inGroups(["citybike"], value),
 };
 
 function layerToFile(layer) {
