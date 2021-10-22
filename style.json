@@ -212,7 +212,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
-      "maxzoom": 13,
+      "minzoom": 13,
       "filter": ["==", "class", "track"],
       "paint": {
         "fill-color": "#f0c2c2",
