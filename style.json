@@ -220,16 +220,6 @@
       }
     },
     {
-      "id": "landuse_park-and-ride",
-      "type": "fill",
-      "source": "parkandride",
-      "source-layer": "facilities",
-      "paint": {
-        "fill-color": "#007ac9",
-        "fill-opacity": 0.2
-      }
-    },
-    {
       "id": "waterway_case",
       "type": "line",
       "source": "vector",
@@ -254,6 +244,15 @@
           20,
           17
         ]
+      }
+    },
+    {
+      "id": "water_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "water",
+      "paint": {
+        "line-color": "#a6d8f4"
       }
     },
     {
@@ -285,8 +284,7 @@
       "source": "vector",
       "source-layer": "water",
       "paint": {
-        "fill-color": "#bee4f8",
-        "fill-outline-color": "#a6d8f4"
+        "fill-color": "#bee4f8"
       }
     },
     {
@@ -2584,6 +2582,17 @@
         "text-color": "#666",
         "text-halo-color": "#fff",
         "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "landuse_park-and-ride",
+      "type": "fill",
+      "source": "parkandride",
+      "source-layer": "facilities",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#007ac9",
+        "fill-opacity": 0.15
       }
     },
     {
