@@ -1,7 +1,7 @@
 {
   "layers": [
     {
-      "id": "poi_label_tickets-sales-point",
+      "id": "ticket-sales_icon_sales-point",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "poi_label_ticket-machine",
+      "id": "ticket-sales_icon_ticket-machine",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
@@ -47,7 +47,7 @@
       }
     },
     {
-      "id": "poi_label_ticket-machine-parking",
+      "id": "ticket-sales_icon_ticket-machine-parking",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "poi_label_service-point",
+      "id": "ticket-sales_icon_service-point",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,

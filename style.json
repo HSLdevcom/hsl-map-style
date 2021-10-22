@@ -1869,7 +1869,7 @@
       }
     },
     {
-      "id": "bus_route_case",
+      "id": "route_bus_case",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -1894,7 +1894,7 @@
       }
     },
     {
-      "id": "bus_route",
+      "id": "route_bus",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -1920,7 +1920,7 @@
       }
     },
     {
-      "id": "bus_route_inner",
+      "id": "route_bus_inner",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -1941,7 +1941,7 @@
       }
     },
     {
-      "id": "tram_route_case",
+      "id": "route_tram_case",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -1965,7 +1965,7 @@
       }
     },
     {
-      "id": "tram_route",
+      "id": "route_tram",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -1990,7 +1990,7 @@
       }
     },
     {
-      "id": "tram_route_inner",
+      "id": "route_tram_inner",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -2010,7 +2010,7 @@
       }
     },
     {
-      "id": "trunk_route_case",
+      "id": "route_trunk_case",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -2034,7 +2034,7 @@
       }
     },
     {
-      "id": "trunk_route",
+      "id": "route_trunk",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -2059,7 +2059,7 @@
       }
     },
     {
-      "id": "trunk_route_inner",
+      "id": "route_trunk_inner",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -2079,7 +2079,7 @@
       }
     },
     {
-      "id": "ferry_route",
+      "id": "route_ferry",
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
@@ -2104,7 +2104,7 @@
       }
     },
     {
-      "id": "subway_case",
+      "id": "route_subway_case",
       "type": "line",
       "source": "subway",
       "filter": [
@@ -2128,7 +2128,7 @@
       }
     },
     {
-      "id": "subway",
+      "id": "route_subway",
       "type": "line",
       "source": "subway",
       "filter": [
@@ -2153,7 +2153,7 @@
       }
     },
     {
-      "id": "subway_underground",
+      "id": "route_subway_underground",
       "type": "line",
       "source": "subway",
       "filter": [
@@ -2178,7 +2178,7 @@
       }
     },
     {
-      "id": "rail_case",
+      "id": "route_rail_case",
       "type": "line",
       "source": "rail",
       "filter": [
@@ -2202,7 +2202,7 @@
       }
     },
     {
-      "id": "rail",
+      "id": "route_rail",
       "type": "line",
       "source": "rail",
       "filter": [
@@ -2227,7 +2227,7 @@
       }
     },
     {
-      "id": "housenum_label",
+      "id": "label_housenum",
       "type": "symbol",
       "source": "vector",
       "source-layer": "housenumber",
@@ -2248,7 +2248,7 @@
       }
     },
     {
-      "id": "poi_label_general",
+      "id": "label_poi_general",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2299,7 +2299,7 @@
       }
     },
     {
-      "id": "poi_label_park",
+      "id": "label_poi_park",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2327,7 +2327,7 @@
       }
     },
     {
-      "id": "poi_label_harbour",
+      "id": "label__poi_harbour",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2355,7 +2355,7 @@
       }
     },
     {
-      "id": "water_label",
+      "id": "label_water",
       "type": "symbol",
       "source": "vector",
       "source-layer": "water_label",
@@ -2381,7 +2381,7 @@
       }
     },
     {
-      "id": "place_label_island",
+      "id": "label_place_island",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
@@ -2411,7 +2411,7 @@
       }
     },
     {
-      "id": "road_label",
+      "id": "label_road",
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
@@ -2452,7 +2452,7 @@
       }
     },
     {
-      "id": "road_label_fisv",
+      "id": "label_road_fisv",
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
@@ -2493,7 +2493,7 @@
       }
     },
     {
-      "id": "place_label_other",
+      "id": "label_place_other",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
@@ -2524,7 +2524,7 @@
       }
     },
     {
-      "id": "place_label_city",
+      "id": "label_place_city",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
@@ -2556,7 +2556,7 @@
       }
     },
     {
-      "id": "country_label",
+      "id": "label_country",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
@@ -2585,7 +2585,7 @@
       }
     },
     {
-      "id": "landuse_park-and-ride",
+      "id": "park-and-ride_landuse",
       "type": "fill",
       "source": "parkandride",
       "source-layer": "facilities",
@@ -2596,7 +2596,7 @@
       }
     },
     {
-      "id": "poi_label_park-and-ride_hub",
+      "id": "park-and-ride_icon_hub",
       "type": "symbol",
       "source": "parkandride",
       "source-layer": "hubs",
@@ -2612,7 +2612,7 @@
       }
     },
     {
-      "id": "poi_label_subway-station_entrance",
+      "id": "icon_subway-station_entrance",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2641,7 +2641,7 @@
       }
     },
     {
-      "id": "poi_label_subway-station",
+      "id": "icon_subway-station",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2686,7 +2686,7 @@
       }
     },
     {
-      "id": "poi_label_bus-station",
+      "id": "icon_bus-station",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2731,7 +2731,7 @@
       }
     },
     {
-      "id": "poi_label_railway-station",
+      "id": "icon_railway-station",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2778,7 +2778,7 @@
       }
     },
     {
-      "id": "poi_label_aerodrome",
+      "id": "icon_aerodrome",
       "type": "symbol",
       "source": "vector",
       "source-layer": "aerodrome_label",
@@ -2815,7 +2815,7 @@
       }
     },
     {
-      "id": "poi_label_tickets-sales-point",
+      "id": "ticket-sales_icon_sales-point",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
@@ -2829,7 +2829,7 @@
       }
     },
     {
-      "id": "poi_label_ticket-machine",
+      "id": "ticket-sales_icon_ticket-machine",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
@@ -2843,7 +2843,7 @@
       }
     },
     {
-      "id": "poi_label_ticket-machine-parking",
+      "id": "ticket-sales_icon_ticket-machine-parking",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
@@ -2858,7 +2858,7 @@
       }
     },
     {
-      "id": "poi_label_service-point",
+      "id": "ticket-sales_icon_service-point",
       "type": "symbol",
       "source": "ticket-sales",
       "minzoom": 15,
@@ -2868,7 +2868,7 @@
       }
     },
     {
-      "id": "poi_taukotila",
+      "id": "kuljettajaohje_taukotila",
       "type": "symbol",
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
@@ -2904,7 +2904,7 @@
       }
     },
     {
-      "id": "poi_bajamaja",
+      "id": "kuljettajaohje_bajamaja",
       "type": "symbol",
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
@@ -3112,7 +3112,7 @@
       }
     },
     {
-      "id": "stops_citybike_case",
+      "id": "citybike_stops_case",
       "type": "circle",
       "source": "citybike",
       "source-layer": "stations",
@@ -3132,7 +3132,7 @@
       }
     },
     {
-      "id": "stops_citybike",
+      "id": "citybike_stops",
       "type": "circle",
       "source": "citybike",
       "source-layer": "stations",
@@ -3198,7 +3198,7 @@
       }
     },
     {
-      "id": "poi_label_citybike-station",
+      "id": "citybike_icon",
       "type": "symbol",
       "source": "citybike",
       "source-layer": "stations",

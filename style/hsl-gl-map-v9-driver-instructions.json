@@ -1,11 +1,8 @@
 {
   "layers": [
     {
-      "id": "poi_taukotila",
+      "id": "kuljettajaohje_taukotila",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1460634974533.995"
-      },
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
       "minzoom": 8,
@@ -38,7 +35,6 @@
         },
         "text-allow-overlap": false,
         "icon-image": "icon-cafe",
-        "text-ignore-placement": false,
         "text-transform": "none",
         "text-font": [
           "Gotham Rounded Medium"
@@ -53,27 +49,21 @@
         "icon-size": 1,
         "text-anchor": "top",
         "text-field": "{Nimi}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "#666",
+        "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
         "icon-translate": [
           0,
           -5.25
-        ],
-        "icon-opacity": 1
+        ]
       }
     },
     {
-      "id": "poi_bajamaja",
+      "id": "kuljettajaohje_bajamaja",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1460634974533.995"
-      },
       "source": "kuljettajaohjeet",
       "source-layer": "taukotilat",
       "minzoom": 8,
@@ -109,7 +99,6 @@
         },
         "text-allow-overlap": false,
         "icon-image": "icon-bajamaja",
-        "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
         ],
@@ -123,19 +112,16 @@
         "icon-size": 1,
         "text-anchor": "top",
         "text-field": "{facilityIds}",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "#666",
+        "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
         "icon-translate": [
           0,
           -5.25
-        ],
-        "icon-opacity": 1
+        ]
       }
     }
   ],
@@ -144,8 +130,5 @@
       "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuljettajaohjeet.json",
       "type": "geojson"
     }
-  },
-  "metadata": {
-    "mapbox:groups": {}
   }
 }

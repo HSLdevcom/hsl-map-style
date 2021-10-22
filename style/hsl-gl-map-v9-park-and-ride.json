@@ -1,0 +1,44 @@
+{
+  "layers": [
+    {
+      "id": "park-and-ride_landuse",
+      "type": "fill",
+      "source": "parkandride",
+      "source-layer": "facilities",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#007ac9",
+        "fill-opacity": 0.15
+      }
+    },
+    {
+      "id": "park-and-ride_icon_hub",
+      "type": "symbol",
+      "source": "parkandride",
+      "source-layer": "hubs",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
+      "layout": {
+        "icon-image": "icon-park-and-ride",
+        "icon-allow-overlap": false,
+        "icon-size": 1
+      },
+      "paint": {
+        "icon-translate": [
+          0,
+          -5.25
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "parkandride": {
+      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
+      "type": "vector"
+    }
+  }
+}

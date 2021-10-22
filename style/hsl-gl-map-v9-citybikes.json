@@ -1,72 +1,54 @@
 {
   "layers": [
     {
-      "id": "Stops case citybikes",
+      "id": "citybike_stops_case",
       "type": "circle",
-      "metadata": {
-        "mapbox:group": "1457010266398.4177"
-      },
       "source": "citybike",
       "source-layer": "stations",
       "minzoom": 13,
       "maxzoom": 14,
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "circle-color": "#fff",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [
-            [
-              12.9,
-              0
-            ],
-            [
-              13,
-              1.5
-            ],
-            [
-              22,
-              26
-            ]
-          ]
-        }
+        "circle-radius": [
+          "interpolate",
+          [
+            "exponential",
+            1.15
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          1.5,
+          22,
+          26
+        ]
       }
     },
     {
-      "id": "Stops_citybikes",
+      "id": "citybike_stops",
       "type": "circle",
-      "metadata": {
-        "mapbox:group": "1457010266398.4177"
-      },
       "source": "citybike",
       "source-layer": "stations",
+      "minzoom": 13,
       "maxzoom": 14,
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "circle-color": "#fcbc19",
-        "circle-radius": {
-          "base": 1.15,
-          "stops": [
-            [
-              11.9,
-              0
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              22,
-              24
-            ]
-          ]
-        },
+        "circle-radius": [
+          "interpolate",
+          [
+            "exponential",
+            1.15
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          1,
+          22,
+          24
+        ],
         "circle-opacity": {
-          "base": 1,
           "stops": [
             [
               11,
@@ -81,53 +63,19 @@
       }
     },
     {
-      "id": "poi_label_citybike-station",
+      "id": "citybike_icon",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010266398.4177"
-      },
       "source": "citybike",
       "source-layer": "stations",
       "minzoom": 14,
-      "filter": [
-        "==",
-        "$type",
-        "Point"
-      ],
       "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
         "icon-offset": [
           0,
           -6
         ],
-        "icon-image": "icon-citybike_station-medium",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "icon-image": "icon-citybike-station",
         "icon-allow-overlap": false,
-        "symbol-placement": "point",
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
         "icon-size": {
-          "base": 1,
           "stops": [
             [
               13,
@@ -138,10 +86,7 @@
               1.2
             ]
           ]
-        },
-        "text-anchor": "top",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
+        }
       }
     }
   ],
@@ -150,8 +95,5 @@
       "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-citybike-map/index.json",
       "type": "vector"
     }
-  },
-  "metadata": {
-    "mapbox:groups": {}
   }
 }

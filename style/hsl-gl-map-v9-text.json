@@ -1,10 +1,9 @@
 {
   "layers": [
     {
-      "id": "housenum_label",
+      "id": "label_housenum",
       "type": "symbol",
       "source": "vector",
-      "minzoom": 17,
       "source-layer": "housenumber",
       "filter": [
         "==",
@@ -35,138 +34,8 @@
       }
     },
     {
-      "id": "poi_label_general",
+      "id": "label_poi_general",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010362398.355"
-      },
-      "source": "vector",
-      "source-layer": "poi",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "bed and breakfast",
-          "hostel",
-          "hotel",
-          "cinema",
-          "cemetery",
-          "library",
-          "public building",
-          "arts Centre",
-          "mall",
-          "concert hall",
-          "theatre",
-          "hospital",
-          "playground",
-          "kindergarten",
-          "school",
-          "university",
-          "college",
-          "museum",
-          "stadium",
-          "attraction",
-          "transportation",
-          "monument",
-          "theme park",
-          "place of worship",
-          "parliament"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "visibility": "visible",
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
-      }
-    },
-    {
-      "id": "poi_label_sport",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010362398.355"
-      },
-      "source": "vector",
-      "source-layer": "poi_label",
-      "minzoom": 13,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "stadium",
-          "sports centre"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "visibility": "visible",
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
-      }
-    },
-    {
-      "id": "poi_label_park",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1452776685487.2012"
-      },
       "source": "vector",
       "source-layer": "poi",
       "minzoom": 14,
@@ -178,12 +47,72 @@
           "Point"
         ],
         [
-          "all",
-          [
-            "in",
-            "class",
-            "park"
+          "in",
+          "class",
+          "lodging",
+          "cinema",
+          "cemetery",
+          "library",
+          "public_building",
+          "arts_centre",
+          "mall",
+          "theatre",
+          "hospital",
+          "playground",
+          "school",
+          "college",
+          "museum",
+          "stadium",
+          "sports_centre",
+          "attraction",
+          "monument",
+          "theme_park",
+          "place_of_worship"
+        ]
+      ],
+      "layout": {
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              15,
+              10
+            ]
           ]
+        },
+        "text-font": [
+          "Gotham Rounded Medium"
+        ],
+        "text-anchor": "top",
+        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#fff",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "label_poi_park",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "poi",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "in",
+          "class",
+          "park"
         ]
       ],
       "layout": {
@@ -204,76 +133,19 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}",
-        "visibility": "visible"
+        "text-field": "{name}\n{name_sv_nodefault}"
       },
       "paint": {
-        "text-color": "rgba(142,166,109,1)",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-color": "#8ea66d",
+        "text-halo-color": "#fff",
+        "text-halo-width": 1
       }
     },
     {
-      "id": "poi_label_sq",
+      "id": "label__poi_harbour",
       "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1452776685487.2012"
-      },
-      "source": "vector",
-      "source-layer": "transportation_name",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "!in",
-          "name",
-          "Aleksanterinkatu",
-          "Keskuskatu"
-        ],
-        [
-          "==",
-          "$type",
-          "Point"
-        ]
-      ],
-      "layout": {
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              11
-            ]
-          ]
-        },
-        "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Medium Italic"
-        ],
-        "text-anchor": "bottom",
-        "text-field": "{name}",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#999",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
-      }
-    },
-    {
-      "id": "poi_label_harbour",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1452776685487.2012"
-      },
       "source": "vector",
       "source-layer": "poi",
-      "minzoom": 5,
       "filter": [
         "all",
         [
@@ -284,9 +156,7 @@
         [
           "in",
           "class",
-          "ferry_terminal",
-          "harbor",
-          "marina"
+          "harbor"
         ]
       ],
       "layout": {
@@ -307,117 +177,16 @@
           "Gotham Rounded Book"
         ],
         "text-anchor": "top",
-        "text-field": "{name}",
-        "visibility": "visible"
+        "text-field": "{name}\n{name_sv_nodefault}"
       },
       "paint": {
         "text-color": "#888",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-color": "#fff",
+        "text-halo-width": 1
       }
     },
     {
-      "id": "poi_label_subway-station_entrance",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
-      "source": "vector",
-      "source-layer": "poi",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "entrance"
-        ],
-        [
-          "in",
-          "subclass",
-          "subway_entrance"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-subway-entrance",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": true,
-        "visibility": "visible",
-        "text-offset": {
-          "base": 1,
-          "stops": [
-            [
-              15,
-              [
-                0,
-                0.5
-              ]
-            ],
-            [
-              22,
-              [
-                0,
-                3
-              ]
-            ]
-          ]
-        },
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1.15,
-          "stops": [
-            [
-              15,
-              0.3
-            ],
-            [
-              22,
-              1
-            ]
-          ]
-        },
-        "text-anchor": "top",
-        "text-field": "",
-        "text-max-width": 8,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0,
-        "icon-translate": [
-          0,
-          -5.25
-        ],
-        "icon-opacity": 1
-      }
-    },
-    {
-      "id": "water_label",
+      "id": "label_water",
       "type": "symbol",
       "source": "vector",
       "source-layer": "water_label",
@@ -445,22 +214,21 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": "{name}\n{name_sv_nodefault}",
         "visibility": "visible"
       },
       "paint": {
         "text-color": "#39c6ea",
-        "text-halo-width": 1,
         "text-halo-color": "rgba(255,255,255,0.5)",
-        "text-halo-blur": 0
+        "text-halo-width": 1
       }
     },
     {
-      "id": "place_label_island",
+      "id": "label_place_island",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
-      "minzoom": 10,
+      "minzoom": 11,
       "filter": [
         "all",
         [
@@ -470,14 +238,9 @@
         ],
         [
           "in",
-          "type",
+          "class",
           "island",
           "islet"
-        ],
-        [
-          "==",
-          "rank",
-          6
         ]
       ],
       "layout": {
@@ -502,18 +265,16 @@
           0.5
         ],
         "text-anchor": "top",
-        "text-field": "{name}",
-        "visibility": "visible"
+        "text-field": "{name}\n{name_sv_nodefault}"
       },
       "paint": {
         "text-color": "#777",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-blur": 0
+        "text-halo-color": "#fff",
+        "text-halo-width": 1
       }
     },
     {
-      "id": "road_street_label",
+      "id": "label_road",
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
@@ -525,22 +286,23 @@
           "LineString"
         ],
         [
-          "all",
-          [
-            "!in",
-            "name",
-            "Harakan talvipolku",
-            "Suomenlinnan Huoltotunneli"
-          ],
-          [
-            "in",
-            "class",
-            "path",
-            "service",
-            "street",
-            "street_limited",
-            "tertiary"
-          ]
+          "!in",
+          "name",
+          "Harakan talvipolku",
+          "Suomenlinnan Huoltotunneli"
+        ],
+        [
+          "in",
+          "class",
+          "path",
+          "track",
+          "service",
+          "minor",
+          "tertiary",
+          "secondary",
+          "primary",
+          "trunk",
+          "motorway"
         ]
       ],
       "layout": {
@@ -550,42 +312,43 @@
           "Gotham Rounded Medium"
         ],
         "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [
-              10,
-              8
-            ],
-            [
-              20,
-              14
-            ]
-          ]
-        },
-        "text-keep-upright": true,
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1.4
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          8,
+          20,
+          14
+        ],
         "text-rotation-alignment": "map"
       },
       "paint": {
-        "text-color": {
-          "base": 1.4,
-          "stops": [
-            [
-              13,
-              "#999"
-            ],
-            [
-              15,
-              "#333"
-            ]
-          ]
-        },
+        "text-color": [
+          "interpolate",
+          [
+            "exponential",
+            1.4
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          "#999",
+          15,
+          "#333"
+        ],
         "text-halo-color": "rgba(255,255,255,0.85)",
         "text-halo-width": 2
       }
     },
     {
-      "id": "road_primary_label",
+      "id": "label_road_fisv",
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
@@ -597,56 +360,69 @@
           "LineString"
         ],
         [
+          "!in",
+          "name",
+          "Harakan talvipolku",
+          "Suomenlinnan Huoltotunneli"
+        ],
+        [
           "in",
           "class",
-          "motorway",
-          "primary",
+          "path",
+          "track",
+          "service",
+          "minor",
+          "tertiary",
           "secondary",
-          "trunk"
+          "primary",
+          "trunk",
+          "motorway"
         ]
       ],
       "layout": {
         "symbol-placement": "line",
-        "text-field": "{name}",
+        "text-field": "{name}   {name_sv_nodefault}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
         "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [
-              10,
-              8
-            ],
-            [
-              20,
-              14
-            ]
-          ]
-        },
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1.4
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          8,
+          20,
+          14
+        ],
         "text-rotation-alignment": "map"
       },
       "paint": {
-        "text-color": {
-          "base": 1.4,
-          "stops": [
-            [
-              13,
-              "#999"
-            ],
-            [
-              15,
-              "#333"
-            ]
-          ]
-        },
-        "text-halo-color": "rgba(255,255,255,0.75)",
+        "text-color": [
+          "interpolate",
+          [
+            "exponential",
+            1.4
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          "#999",
+          15,
+          "#333"
+        ],
+        "text-halo-color": "rgba(255,255,255,0.85)",
         "text-halo-width": 2
       }
     },
     {
-      "id": "place_label_other",
+      "id": "label_place_other",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
@@ -669,38 +445,38 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": "{name}\n{name_sv_nodefault}",
         "text-font": [
           "Gotham Rounded Book"
         ],
         "text-max-width": 6,
-        "text-size": {
-          "stops": [
-            [
-              10,
-              10
-            ],
-            [
-              16,
-              18
-            ]
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1.2
           ],
-          "base": 1.2
-        }
+          [
+            "zoom"
+          ],
+          10,
+          10,
+          16,
+          18
+        ]
       },
       "paint": {
         "text-color": "#666",
-        "text-halo-color": "rgba(255,255,255,1.00)",
-        "text-halo-width": 1,
-        "text-halo-blur": 0
+        "text-halo-color": "#fff",
+        "text-halo-width": 1
       }
     },
     {
-      "id": "place_label_city",
+      "id": "label_place_city",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
-      "maxzoom": 16,
+      "maxzoom": 13,
       "filter": [
         "all",
         [
@@ -715,53 +491,39 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": "{name}\n{name_sv_nodefault}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "text-max-width": 10,
-        "text-size": {
-          "stops": [
-            [
-              6,
-              10
-            ],
-            [
-              10,
-              16
-            ]
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1.4
           ],
-          "base": 1.4
-        },
+          [
+            "zoom"
+          ],
+          6,
+          10,
+          10,
+          16
+        ],
         "text-transform": "uppercase",
         "text-letter-spacing": 0.125
       },
       "paint": {
-        "text-color": "#333",
-        "text-halo-color": "rgba(255,255,255,1.0)",
-        "text-halo-width": 0.5,
-        "text-halo-blur": 0,
-        "text-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              12,
-              1
-            ],
-            [
-              13,
-              0
-            ]
-          ]
-        }
+        "text-color": "#777",
+        "text-halo-color": "#fff",
+        "text-halo-width": 1.5
       }
     },
     {
-      "id": "country_label",
+      "id": "label_country",
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
-      "maxzoom": 12,
+      "maxzoom": 8,
       "filter": [
         "all",
         [
@@ -784,7 +546,6 @@
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "text-max-width": 10,
         "text-size": {
           "stops": [
             [
@@ -801,226 +562,15 @@
       },
       "paint": {
         "text-color": "#666",
-        "text-halo-color": "hsl(0, 0%, 100%)",
-        "text-halo-width": 1.5,
-        "text-halo-blur": 0
-      }
-    },
-    {
-      "id": "road_street_label_fisv",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "transportation_name",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "all",
-          [
-            "!in",
-            "name",
-            "Harakan talvipolku",
-            "Suomenlinnan Huoltotunneli"
-          ],
-          [
-            "in",
-            "class",
-            "path",
-            "service",
-            "street",
-            "street_limited",
-            "tertiary",
-            "minor"
-          ]
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "text-field": "{name}   {name_sv_nodefault}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [
-              10,
-              8
-            ],
-            [
-              20,
-              14
-            ]
-          ]
-        },
-        "text-keep-upright": true,
-        "text-rotation-alignment": "map"
-      },
-      "paint": {
-        "text-color": {
-          "base": 1.4,
-          "stops": [
-            [
-              13,
-              "#999"
-            ],
-            [
-              15,
-              "#666"
-            ]
-          ]
-        },
-        "text-halo-color": "rgba(255,255,255,0.85)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "road_primary_label_fisv",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "transportation_name",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "in",
-          "class",
-          "motorway",
-          "primary",
-          "secondary",
-          "trunk"
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "text-field": "{name}   {name_sv_nodefault}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "text-letter-spacing": 0.1,
-        "text-size": {
-          "base": 1.4,
-          "stops": [
-            [
-              10,
-              8
-            ],
-            [
-              20,
-              14
-            ]
-          ]
-        },
-        "text-rotation-alignment": "map"
-      },
-      "paint": {
-        "text-color": {
-          "base": 1.4,
-          "stops": [
-            [
-              13,
-              "#999"
-            ],
-            [
-              15,
-              "#666"
-            ]
-          ]
-        },
-        "text-halo-color": "rgba(255,255,255,0.85)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "poi_label_terminal",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "1457010208438.9548"
-      },
-      "source": "vector",
-      "source-layer": "poi_label",
-      "minzoom": 13,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "name",
-          "Makasiiniterminaali",
-          "Katajanokan Terminaali, Helsinki"
-        ],
-        [
-          "in",
-          "type",
-          "ferry terminal",
-          "harbour",
-          "marina"
-        ]
-      ],
-      "layout": {
-        "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": true,
-        "icon-image": "icon-ship_terminal-24",
-        "text-ignore-placement": false,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "icon-allow-overlap": true,
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-optional": false,
-        "icon-size": {
-          "base": 1.4,
-          "stops": [
-            [
-              12,
-              0.6
-            ],
-            [
-              15,
-              1
-            ]
-          ]
-        },
-        "icon-ignore-placement": false
+        "text-halo-color": "#fff",
+        "text-halo-width": 1.5
       }
     }
   ],
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-vector-map/index.json"
+      "url": "http://localhost:8080/map/v1/hsl-vector-map/index.json"
     }
-  },
-  "metadata": {
-    "mapbox:groups": {}
   }
 }

@@ -5,14 +5,12 @@
       "type": "line",
       "source": "borders",
       "layout": {
-        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
         "line-color": "#ccc",
         "line-width": {
-          "base": 1,
           "stops": [
             [
               10,
@@ -24,7 +22,6 @@
             ]
           ]
         },
-        "line-blur": 0,
         "line-dasharray": [
           2,
           2
