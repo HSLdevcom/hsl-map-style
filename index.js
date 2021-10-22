@@ -36,18 +36,26 @@ const components = [
     enabled: false,
     description: "Linjaviivat ilman lähibusseja",
     style: require("./style/hsl-gl-map-v9-regular-routes.json"),
+    dependencies: ["routes"],
   },
   {
     id: "near_bus_routes",
     enabled: false,
     description: "Lähibussi reitit",
     style: require("./style/hsl-gl-map-v9-near-bus-routes.json"),
+    dependencies: ["routes"],
   },
   {
     id: "text",
     enabled: true,
     description: "Tekstit",
     style: require("./style/hsl-gl-map-v9-text.json"),
+  },
+  {
+    id: "poi",
+    enabled: false,
+    description: "Joukkoliikenne-POI",
+    style: require("./style/hsl-gl-map-v9-icon.json"),
   },
   {
     id: "text_sv",
@@ -62,12 +70,6 @@ const components = [
     description: "Kaksikieliset tekstit",
     style: require("./style/hsl-gl-map-v9-text-fisv.json"),
     dependencies: ["text"],
-  },
-  {
-    id: "poi",
-    enabled: false,
-    description: "Joukkoliikenne-POI",
-    style: require("./style/hsl-gl-map-v9-icon.json"),
   },
   {
     id: "park-and-ride",
@@ -98,6 +100,14 @@ const components = [
     enabled: false,
     description: "Pysäkit ilman lähibusseja",
     style: require("./style/hsl-gl-map-v9-regular-stops.json"),
+    dependencies: ["stops"],
+  },
+  {
+    id: "near_bus_stops",
+    enabled: false,
+    description: "Lähibussi pysäkit",
+    style: require("./style/hsl-gl-map-v9-near-bus-stops.json"),
+    dependencies: ["stops"],
   },
   {
     id: "citybikes",
@@ -116,12 +126,6 @@ const components = [
     enabled: false,
     description: "Terminaalit",
     style: require("./style/hsl-gl-map-v9-jore-terminals.json"),
-  },
-  {
-    id: "near_bus_stops",
-    enabled: false,
-    description: "Lähibussi pysäkit",
-    style: require("./style/hsl-gl-map-v9-near-bus-stops.json"),
   },
   {
     id: "ticket_zones",
