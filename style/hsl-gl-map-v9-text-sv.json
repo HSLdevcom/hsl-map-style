@@ -1,76 +1,82 @@
 {
-    "layers": [
-        {
-            "id": "poi_label_general",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "poi_label_park",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "poi_label_sq",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "poi_label_sport",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "poi_label_harbour",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "water_label",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "place_label_island",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "road_street_label",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "road_primary_label",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "place_label_other",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "place_label_city",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        },
-        {
-            "id": "country_label",
-            "layout": {
-                "text-field": "{name_sv}"
-            }
-        }
-    ]
+  "layers": [
+    {
+      "id": "label_poi_general",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_poi_park",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_poi_harbour",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_water",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_place_island",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_road",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_place_other",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_place_city",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_country",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "icon_subway-station",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "icon_bus-station",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "icon_railway-station",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "icon_aerodrome",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    }
+  ]
 }

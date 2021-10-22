@@ -87,7 +87,7 @@
           "Gotham Rounded Medium"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-max-width": 8
       },
       "paint": {
@@ -133,7 +133,7 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}"
+        "text-field": "{name}"
       },
       "paint": {
         "text-color": "#8ea66d",
@@ -142,7 +142,7 @@
       }
     },
     {
-      "id": "label__poi_harbour",
+      "id": "label_poi_harbour",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -177,7 +177,7 @@
           "Gotham Rounded Book"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}"
+        "text-field": "{name}"
       },
       "paint": {
         "text-color": "#888",
@@ -214,7 +214,7 @@
           "Gotham Rounded Medium Italic"
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "visibility": "visible"
       },
       "paint": {
@@ -265,7 +265,7 @@
           0.5
         ],
         "text-anchor": "top",
-        "text-field": "{name}\n{name_sv_nodefault}"
+        "text-field": "{name}"
       },
       "paint": {
         "text-color": "#777",
@@ -348,80 +348,6 @@
       }
     },
     {
-      "id": "label_road_fisv",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "transportation_name",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "!in",
-          "name",
-          "Harakan talvipolku",
-          "Suomenlinnan Huoltotunneli"
-        ],
-        [
-          "in",
-          "class",
-          "path",
-          "track",
-          "service",
-          "minor",
-          "tertiary",
-          "secondary",
-          "primary",
-          "trunk",
-          "motorway"
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "text-field": "{name}   {name_sv_nodefault}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "text-letter-spacing": 0.1,
-        "text-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          8,
-          20,
-          14
-        ],
-        "text-rotation-alignment": "map"
-      },
-      "paint": {
-        "text-color": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          13,
-          "#999",
-          15,
-          "#333"
-        ],
-        "text-halo-color": "rgba(255,255,255,0.85)",
-        "text-halo-width": 2
-      }
-    },
-    {
       "id": "label_place_other",
       "type": "symbol",
       "source": "vector",
@@ -445,7 +371,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Book"
         ],
@@ -491,7 +417,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}\n{name_sv_nodefault}",
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
