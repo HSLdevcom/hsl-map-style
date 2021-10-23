@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Empty Style",
+  "name": "HSL v2.0",
   "metadata": { "maputnik:renderer": "mbgljs" },
   "sources": {
     "vector": {
