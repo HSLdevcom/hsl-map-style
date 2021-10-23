@@ -4,7 +4,7 @@ const mergeWith = require("lodash/mergeWith");
 const cloneDeep = require("lodash/cloneDeep");
 const isPlainObject = require("lodash/isPlainObject");
 
-const BASE_JSON = require("./style/hsl-gl-map-v9-style.json");
+const BASE_JSON = require("./style/hsl-map-template.json");
 
 const replaceableValues = {
   SOURCES_URL: {
@@ -17,110 +17,64 @@ const components = [
     id: "base",
     enabled: true,
     description: "Taustakartta",
-    style: require("./style/hsl-gl-map-v9-base.json"),
+    style: require("./style/hsl-map-style-base.json"),
   },
   {
     id: "municipal_borders",
     enabled: false,
     description: "Kuntarajat",
-    style: require("./style/hsl-gl-map-v9-municipal-borders.json"),
+    style: require("./style/hsl-map-style-municipal-borders.json"),
   },
   {
     id: "routes",
     enabled: false,
     description: "Linjaviivat",
-    style: require("./style/hsl-gl-map-v9-routes.json"),
-  },
-  {
-    id: "regular_routes",
-    enabled: false,
-    description: "Linjaviivat ilman lähibusseja",
-    style: require("./style/hsl-gl-map-v9-regular-routes.json"),
-    dependencies: ["routes"],
-  },
-  {
-    id: "near_bus_routes",
-    enabled: false,
-    description: "Lähibussi reitit",
-    style: require("./style/hsl-gl-map-v9-near-bus-routes.json"),
-    dependencies: ["routes"],
+    style: require("./style/hsl-map-style-routes.json"),
   },
   {
     id: "text",
     enabled: true,
     description: "Tekstit",
-    style: require("./style/hsl-gl-map-v9-text.json"),
+    style: require("./style/hsl-map-style-text.json"),
   },
   {
     id: "poi",
     enabled: false,
     description: "Joukkoliikenne-POI",
-    style: require("./style/hsl-gl-map-v9-icon.json"),
+    style: require("./style/hsl-map-style-icon.json"),
   },
-  {
-    id: "text_sv",
-    enabled: false,
-    description: "Ruotsinkieliset tekstit",
-    style: require("./style/hsl-gl-map-v9-text-sv.json"),
-    dependencies: ["text"],
-  },
-  {
-    id: "text_fisv",
-    enabled: false,
-    description: "Kaksikieliset tekstit",
-    style: require("./style/hsl-gl-map-v9-text-fisv.json"),
-    dependencies: ["text"],
-  },
+
   {
     id: "park-and-ride",
     enabled: false,
     description: "Liityntäpysäköinti",
-    style: require("./style/hsl-gl-map-v9-park-and-ride.json"),
+    style: require("./style/hsl-map-style-park-and-ride.json"),
   },
   {
     id: "ticket_sales",
     enabled: false,
     description: "Lipunmyyntipisteet",
-    style: require("./style/hsl-gl-map-v9-ticket-sales.json"),
+    style: require("./style/hsl-map-style-ticket-sales.json"),
   },
   {
     id: "driver_instructions",
     enabled: false,
     description: "Kuljettajaohjeet",
-    style: require("./style/hsl-gl-map-v9-driver-instructions.json"),
+    style: require("./style/hsl-map-style-driver-instructions.json"),
   },
   {
     id: "stops",
     enabled: false,
     description: "Pysäkit",
-    style: require("./style/hsl-gl-map-v9-stops.json"),
-  },
-  {
-    id: "regular_stops",
-    enabled: false,
-    description: "Pysäkit ilman lähibusseja",
-    style: require("./style/hsl-gl-map-v9-regular-stops.json"),
-    dependencies: ["stops"],
-  },
-  {
-    id: "near_bus_stops",
-    enabled: false,
-    description: "Lähibussi pysäkit",
-    style: require("./style/hsl-gl-map-v9-near-bus-stops.json"),
-    dependencies: ["stops"],
+    style: require("./style/hsl-map-style-stops.json"),
   },
   {
     id: "citybikes",
     enabled: false,
     description: "Kaupunkipyörät",
-    style: require("./style/hsl-gl-map-v9-citybikes.json"),
+    style: require("./style/hsl-map-style-citybikes.json"),
   },
-  {
-    id: "print",
-    enabled: false,
-    description: "Tulostevärit",
-    style: require("./style/hsl-gl-map-v9-print.json"),
-  },
+  // Todo: Convert to the new naming if needed anymore
   {
     id: "jore_terminals",
     enabled: false,
@@ -132,6 +86,55 @@ const components = [
     enabled: false,
     description: "Lippyvyöhykkeet",
     style: require("./style/hsl-gl-map-v9-ticket-zones.json"),
+  },
+  // Themes, which just modifify the previous styles.
+  {
+    id: "text_sv",
+    enabled: false,
+    description: "Ruotsinkieliset tekstit",
+    style: require("./style/hsl-map-theme-text-sv.json"),
+    dependencies: ["text"],
+  },
+  {
+    id: "text_fisv",
+    enabled: false,
+    description: "Kaksikieliset tekstit",
+    style: require("./style/hsl-map-theme-text-fisv.json"),
+    dependencies: ["text"],
+  },
+  {
+    id: "regular_routes",
+    enabled: false,
+    description: "Linjaviivat ilman lähibusseja",
+    style: require("./style/hsl-map-theme-regular-routes.json"),
+    dependencies: ["routes"],
+  },
+  {
+    id: "near_bus_routes",
+    enabled: false,
+    description: "Lähibussi reitit",
+    style: require("./style/hsl-map-theme-near-bus-routes.json"),
+    dependencies: ["routes"],
+  },
+  {
+    id: "regular_stops",
+    enabled: false,
+    description: "Pysäkit ilman lähibusseja",
+    style: require("./style/hsl-map-theme-regular-stops.json"),
+    dependencies: ["stops"],
+  },
+  {
+    id: "near_bus_stops",
+    enabled: false,
+    description: "Lähibussi pysäkit",
+    style: require("./style/hsl-map-theme-near-bus-stops.json"),
+    dependencies: ["stops"],
+  },
+  {
+    id: "print",
+    enabled: false,
+    description: "Tulostevärit",
+    style: require("./style/hsl-map-theme-print.json"),
   },
 ];
 

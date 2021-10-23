@@ -1,0 +1,8 @@
+{
+  "sources": {
+    "stops": {
+      "url": "https://kartat.hsl.fi/jore/tiles/near-bus-stops/index.json",
+      "type": "vector"
+    }
+  }
+}

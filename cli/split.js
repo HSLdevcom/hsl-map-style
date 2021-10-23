@@ -6,7 +6,7 @@ const reduce = require("lodash/reduce");
 const merge = require("lodash/merge");
 const layerToFile = require("./fileMappings");
 
-const FILENAME_PREFIX = "hsl-gl-map-v9-";
+const FILENAME_PREFIX = "hsl-map-";
 
 module.exports = async function(file, dir) {
   const filePath = path.resolve(process.cwd(), file);
@@ -35,7 +35,7 @@ module.exports = async function(file, dir) {
 
   console.log("Writing style wrapper...");
 
-  await writeFile("style.json", styleJson);
+  await writeFile("template.json", styleJson);
 
   console.log("Splitting layers...");
 
@@ -90,7 +90,7 @@ module.exports = async function(file, dir) {
 
   const writePromises = fileGroups.map((styleFile) => {
     console.log("Writing file %s", styleFile.name);
-    return writeFile(`${styleFile.name}.json`, styleFile.content);
+    return writeFile(`style-${styleFile.name}.json`, styleFile.content);
   });
 
   const staticFiles = await fs.readdir(staticPath);
@@ -99,7 +99,7 @@ module.exports = async function(file, dir) {
     writePromises.push(
       fs.copy(
         path.resolve(staticPath, staticFile),
-        path.resolve(outputPath, FILENAME_PREFIX + staticFile)
+        path.resolve(outputPath, `${FILENAME_PREFIX}theme-${staticFile}`)
       )
     );
   });
