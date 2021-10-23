@@ -3,110 +3,85 @@
     {
       "id": "landuse_park",
       "paint": {
-        "fill-color": "rgb(234,242,224)"
+        "fill-color": "#eaf2e0"
       }
     },
     {
       "id": "landuse_wood",
       "paint": {
-        "fill-color": "rgb(227,238,212)"
-      }
-    },
-    {
-      "id": "landuse_athletics",
-      "paint": {
-        "fill-color": "rgb(225,236,211)",
-        "fill-outline-color": "rgb(205,221,185)"
-      }
-    },
-    {
-      "id": "landuse_cemetery",
-      "paint": {
-        "fill-color": "rgb(224,235,210)",
-        "fill-outline-color": "rgb(212,227,195)"
+        "fill-color": "#e3eed4"
       }
     },
     {
       "id": "landuse_grass",
       "paint": {
-        "fill-color": "rgb(223,235,208)"
+        "fill-color": "#dfebd0"
+      }
+    },
+    {
+      "id": "landuse_grass",
+      "paint": {
+        "fill-color": "#d6e5c3"
       }
     },
     {
       "id": "landuse_agriculture",
       "paint": {
-        "fill-color": "rgb(238,244,220)"
+        "fill-color": "#eef4dc"
       }
     },
-
     {
-      "id": "poi_label_general",
+      "id": "landuse_cemetery",
+      "paint": {
+        "fill-color": "#e0ebd2",
+        "fill-outline-color": "#d4e3c3"
+      }
+    },
+    {
+      "id": "landuse_athletics",
+      "paint": {
+        "fill-color": "#e1ecd3",
+        "fill-outline-color": "#cdddb9"
+      }
+    },
+    {
+      "id": "label_poi_general",
       "paint": {
         "text-color": "#000"
       }
     },
     {
-      "id": "poi_label_sq",
+      "id": "label_poi_harbour",
       "paint": {
         "text-color": "#000"
       }
     },
     {
-      "id": "poi_label_sport",
+      "id": "label_place_island",
       "paint": {
         "text-color": "#000"
       }
     },
     {
-      "id": "poi_label_harbour",
+      "id": "label_road",
       "paint": {
         "text-color": "#000"
       }
     },
     {
-      "id": "place_label_island",
+      "id": "label_place_other",
       "paint": {
         "text-color": "#000"
       }
     },
     {
-      "id": "road_street_label",
+      "id": "label_place_city",
       "paint": {
         "text-color": "#000"
       }
     },
     {
-      "id": "road_primary_label",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "road_street_label_fisv",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "road_primary_label_fisv",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "place_label_other",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "place_label_city",
-      "paint": {
-        "text-color": "#000"
-      }
-    },
-    {
-      "id": "country_label",
+      "id": "label_country",
       "paint": {
         "text-color": "#000"
       }
