@@ -2571,7 +2571,7 @@
       }
     },
     {
-      "id": "icon_subway-station_entrance",
+      "id": "subway-entrance_icon",
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
@@ -2585,14 +2585,77 @@
       "layout": {
         "icon-image": "icon-subway-entrance",
         "icon-allow-overlap": true,
+        "icon-anchor": "bottom",
         "icon-size": [
           "interpolate",
           ["exponential", 1.15],
           ["zoom"],
           15,
-          0.3,
-          22,
-          1
+          0.533,
+          20,
+          0.8
+        ]
+      },
+      "paint": {
+        "icon-translate": [0, -5.25]
+      }
+    },
+    {
+      "id": "subway-entrance_letter",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "poi",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["in", "class", "entrance"],
+        ["in", "subclass", "subway_entrance"],
+        ["has", "ref"]
+      ],
+      "layout": {
+        "icon-image": ["concat", "icon-", ["get", "ref"]],
+        "icon-allow-overlap": true,
+        "icon-anchor": "bottom",
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1.15],
+          ["zoom"],
+          13,
+          0.8,
+          20,
+          1.2
+        ]
+      },
+      "paint": {
+        "icon-translate": [0, -5.25]
+      }
+    },
+    {
+      "id": "subway-entrance_accessibility",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "poi",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["in", "class", "entrance"],
+        ["in", "subclass", "subway_entrance"],
+        ["==", "wheelchair", 1]
+      ],
+      "layout": {
+        "icon-image": "icon-wheelchair",
+        "icon-allow-overlap": true,
+        "icon-anchor": "top",
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1.15],
+          ["zoom"],
+          13,
+          0.8,
+          20,
+          1.2
         ]
       },
       "paint": {

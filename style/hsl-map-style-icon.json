@@ -1,55 +1,6 @@
 {
   "layers": [
     {
-      "id": "icon_subway-station_entrance",
-      "type": "symbol",
-      "source": "vector",
-      "source-layer": "poi",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "entrance"
-        ],
-        [
-          "in",
-          "subclass",
-          "subway_entrance"
-        ]
-      ],
-      "layout": {
-        "icon-image": "icon-subway-entrance",
-        "icon-allow-overlap": true,
-        "icon-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.15
-          ],
-          [
-            "zoom"
-          ],
-          15,
-          0.3,
-          22,
-          1
-        ]
-      },
-      "paint": {
-        "icon-translate": [
-          0,
-          -5.25
-        ]
-      }
-    },
-    {
       "id": "icon_subway-station",
       "type": "symbol",
       "source": "vector",

@@ -38,6 +38,12 @@ const components = [
     style: require("./style/hsl-map-style-text.json"),
   },
   {
+    id: "subway-entrance",
+    enabled: false,
+    description: "Metron sisäänkäynnit",
+    style: require("./style/hsl-map-style-subway-entrance.json"),
+  },
+  {
     id: "poi",
     enabled: false,
     description: "Joukkoliikenne-POI",
