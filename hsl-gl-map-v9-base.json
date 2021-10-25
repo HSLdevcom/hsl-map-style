@@ -429,14 +429,24 @@
       }
     },
     {
+      "id": "water_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "water",
+      "layout": {},
+      "paint": {
+        "line-color": "#a6d8f4",
+        "line-width": 2
+      }
+    },
+    {
       "id": "water",
       "type": "fill",
       "source": "vector",
       "source-layer": "water",
       "layout": {},
       "paint": {
-        "fill-color": "#bee4f8",
-        "fill-outline-color": "#a6d8f4"
+        "fill-color": "#bee4f8"
       }
     },
     {
