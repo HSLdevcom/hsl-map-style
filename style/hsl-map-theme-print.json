@@ -19,7 +19,7 @@
       }
     },
     {
-      "id": "landuse_grass",
+      "id": "landuse_scrub",
       "paint": {
         "fill-color": "#d6e5c3"
       }

@@ -336,6 +336,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "aeroway",
+      "minzoom": 11,
       "filter": ["==", "class", "taxiway"],
       "layout": {
         "line-cap": "round",

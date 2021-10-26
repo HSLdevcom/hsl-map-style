@@ -142,6 +142,12 @@ const components = [
     description: "Tulostevärit",
     style: require("./style/hsl-map-theme-print.json"),
   },
+  {
+    id: "greyscale",
+    enabled: false,
+    description: "Harmaasävy",
+    style: require("./style/hsl-map-theme-greyscale.json"),
+  },
 ];
 
 /**
