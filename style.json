@@ -978,10 +978,20 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
+      "minzoom": 13,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "construction", "class"]
+        [
+          "in",
+          "class",
+          "motorway_construction",
+          "trunk_construction",
+          "primary_construction",
+          "secondary_construction",
+          "tertiary_construction",
+          "minor_construction"
+        ]
       ],
       "layout": {
         "line-join": "round"
@@ -2412,7 +2422,7 @@
       }
     },
     {
-      "id": "label_road",
+      "id": "label_road_path_cycleway_track_service",
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
@@ -2420,7 +2430,87 @@
         "all",
         ["==", "$type", "LineString"],
         ["!in", "name", "Harakan talvipolku", "Suomenlinnan Huoltotunneli"],
-        ["in", "class", "path", "track", "service", "minor", "tertiary", "secondary", "primary", "trunk", "motorway"]
+        ["in", "class", "path", "track", "service"]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": ["Gotham Rounded Medium"],
+        "text-letter-spacing": 0.1,
+        "text-size": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          10,
+          8,
+          20,
+          14
+        ],
+        "text-rotation-alignment": "map"
+      },
+      "paint": {
+        "text-color": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          13,
+          "#999",
+          15,
+          "#333"
+        ],
+        "text-halo-color": "rgba(255,255,255,0.85)",
+        "text-halo-width": 2
+      }
+    },
+    {
+      "id": "label_road_street",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "transportation_name",
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["in", "class", "minor", "tertiary"]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": ["Gotham Rounded Medium"],
+        "text-letter-spacing": 0.1,
+        "text-size": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          10,
+          8,
+          20,
+          14
+        ],
+        "text-rotation-alignment": "map"
+      },
+      "paint": {
+        "text-color": [
+          "interpolate",
+          ["exponential", 1.4],
+          ["zoom"],
+          13,
+          "#999",
+          15,
+          "#333"
+        ],
+        "text-halo-color": "rgba(255,255,255,0.85)",
+        "text-halo-width": 2
+      }
+    },
+    {
+      "id": "label_road_primary",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "transportation_name",
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["in", "class", "secondary", "primary", "trunk", "motorway"]
       ],
       "layout": {
         "symbol-placement": "line",

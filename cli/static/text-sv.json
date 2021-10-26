@@ -31,7 +31,19 @@
       }
     },
     {
-      "id": "label_road",
+      "id": "label_road_path_cycleway_track_service",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_road_street",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
+      "id": "label_road_primary",
       "layout": {
         "text-field": "{name_sv}"
       }

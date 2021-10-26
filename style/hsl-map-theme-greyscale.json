@@ -493,7 +493,21 @@
       }
     },
     {
-      "id": "label_road",
+      "id": "label_road_path_cycleway_track_service",
+      "paint": {
+        "text-color": "#333",
+        "text-halo-color": "rgba(0,0,0,1)"
+      }
+    },
+    {
+      "id": "label_road_street",
+      "paint": {
+        "text-color": "#333",
+        "text-halo-color": "rgba(0,0,0,1)"
+      }
+    },
+    {
+      "id": "label_road_primary",
       "paint": {
         "text-color": "#333",
         "text-halo-color": "rgba(0,0,0,1)"

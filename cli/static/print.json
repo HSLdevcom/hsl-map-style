@@ -63,7 +63,19 @@
       }
     },
     {
-      "id": "label_road",
+      "id": "label_road_path_cycleway_track_service",
+      "paint": {
+        "text-color": "#000"
+      }
+    },
+    {
+      "id": "label_road_street",
+      "paint": {
+        "text-color": "#000"
+      }
+    },
+    {
+      "id": "label_road_primary",
       "paint": {
         "text-color": "#000"
       }
