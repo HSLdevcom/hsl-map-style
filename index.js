@@ -148,6 +148,12 @@ const components = [
     description: "Harmaasävy",
     style: require("./style/hsl-map-theme-greyscale.json"),
   },
+  {
+    id: "simplified",
+    enabled: false,
+    description: "Yksinkertaistettu (Reittiopas)",
+    style: require("./style/hsl-map-theme-simplified.json"),
+  },
 ];
 
 /**

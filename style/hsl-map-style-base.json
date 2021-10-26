@@ -163,6 +163,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landcover",
+      "minzoom": 10,
       "filter": [
         "==",
         "class",
@@ -220,6 +221,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
+      "minzoom": 13,
       "filter": [
         "==",
         "class",
@@ -1549,6 +1551,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
+      "minzoom": 14,
       "filter": [
         "all",
         [
@@ -1558,8 +1561,13 @@
         ],
         [
           "in",
-          "construction",
-          "class"
+          "class",
+          "motorway_construction",
+          "trunk_construction",
+          "primary_construction",
+          "secondary_construction",
+          "tertiary_construction",
+          "minor_construction"
         ]
       ],
       "layout": {

@@ -1,0 +1,89 @@
+{
+  "layers": [
+    {
+      "id": "road_service_area",
+      "minzoom": 14
+    },
+    {
+      "id": "building_shadow",
+      "minzoom": 17
+    },
+    {
+      "id": "building",
+      "minzoom": 16
+    },
+    {
+      "id": "tunnel_walk",
+      "minzoom": 17
+    },
+    {
+      "id": "tunnel_cycleway",
+      "minzoom": 16
+    },
+    {
+      "id": "tunnel_street",
+      "minzoom": 13
+    },
+    {
+      "id": "road_path",
+      "minzoom": 15
+    },
+    {
+      "id": "road_path_cycleway_track_service",
+      "minzoom": 15
+    },
+    {
+      "id": "road_street_case",
+      "minzoom": 13
+    },
+    {
+      "id": "road_street",
+      "minzoom": 13
+    },
+    {
+      "id": "bridge_path",
+      "minzoom": 15
+    },
+    {
+      "id": "bridge_path_cycleway_track_service",
+      "minzoom": 15
+    },
+    {
+      "id": "bridge_street",
+      "minzoom": 13
+    },
+    {
+      "id": "label_housenum",
+      "minzoom": 17
+    },
+    {
+      "id": "label_poi_general",
+      "minzoom": 16
+    },
+    {
+      "id": "label_poi_park",
+      "minzoom": 15
+    },
+    {
+      "id": "label_road_path_cycleway_track_service",
+      "minzoom": 15
+    },
+    {
+      "id": "label_road_street",
+      "minzoom": 13
+    },
+    {
+      "id": "label_place_other",
+      "layout": {
+        "text-font": ["Gotham Rounded Medium"]
+      }
+    },
+    {
+      "id": "label_place_city",
+      "paint": {
+        "text-color": "#333",
+        "text-halo-width": 0.5
+      }
+    }
+  ]
+}

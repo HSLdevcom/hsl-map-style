@@ -160,6 +160,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landcover",
+      "minzoom": 10,
       "filter": ["==", "class", "farmland"],
       "paint": {
         "fill-color": "#e3ecc5"
@@ -201,6 +202,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
+      "minzoom": 13,
       "filter": ["==", "class", "pitch"],
       "paint": {
         "fill-color": "#cde0b6",
@@ -978,7 +980,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 13,
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
