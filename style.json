@@ -2371,9 +2371,8 @@
       "id": "label_water",
       "type": "symbol",
       "source": "vector",
-      "source-layer": "water_label",
+      "source-layer": "water_name",
       "minzoom": 5,
-      "filter": ["==", "$type", "Point"],
       "layout": {
         "text-size": {
           "stops": [
