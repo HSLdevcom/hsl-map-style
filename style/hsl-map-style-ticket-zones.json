@@ -1,0 +1,63 @@
+{
+  "layers": [
+    {
+      "id": "ticket-zones_case",
+      "type": "line",
+      "source": "ticketzones",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#333333",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.2
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          4,
+          22,
+          80
+        ],
+        "line-opacity": 0.2
+      }
+    },
+    {
+      "id": "ticket-zones",
+      "type": "line",
+      "source": "ticketzones",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#333333",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.2
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          1,
+          22,
+          6
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "ticketzones": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/ticket-zones.json",
+      "type": "geojson"
+    }
+  }
+}

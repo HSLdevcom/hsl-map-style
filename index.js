@@ -80,18 +80,18 @@ const components = [
     description: "Kaupunkipyörät",
     style: require("./style/hsl-map-style-citybikes.json"),
   },
+  {
+    id: "ticket_zones",
+    enabled: false,
+    description: "Lippyvyöhykkeet",
+    style: require("./style/hsl-map-style-ticket-zones.json"),
+  },
   // Todo: Convert to the new naming if needed anymore
   {
     id: "jore_terminals",
     enabled: false,
     description: "Terminaalit",
     style: require("./style/hsl-gl-map-v9-jore-terminals.json"),
-  },
-  {
-    id: "ticket_zones",
-    enabled: false,
-    description: "Lippyvyöhykkeet",
-    style: require("./style/hsl-gl-map-v9-ticket-zones.json"),
   },
   // Themes, which just modifify the previous styles.
   {

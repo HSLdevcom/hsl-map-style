@@ -37,6 +37,7 @@ const fileMappers = {
   "municipal-borders": ["municipal_border"],
   routes: (value) => inGroups(["route"], value),
   stops: (value) => inGroups(["stops"], value),
+  "ticket-zones": (value) => inGroups(["ticket-zones"], value),
   text: (value) => inGroups(["label"], value),
   "subway-entrance": (value) => inGroups(["subway-entrance"], value),
   icon: (value) => inGroups(["icon"], value),
