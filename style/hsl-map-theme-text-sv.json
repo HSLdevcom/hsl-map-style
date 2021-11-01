@@ -69,19 +69,19 @@
     {
       "id": "icon_subway-station",
       "layout": {
-        "text-field": "{name_sv}"
+        "text-field": "{nameSe}"
       }
     },
     {
       "id": "icon_bus-station",
       "layout": {
-        "text-field": "{name_sv}"
+        "text-field": "{nameSe}"
       }
     },
     {
       "id": "icon_railway-station",
       "layout": {
-        "text-field": "{name_sv}"
+        "text-field": "{nameSe}"
       }
     },
     {

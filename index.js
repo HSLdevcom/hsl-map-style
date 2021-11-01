@@ -86,13 +86,6 @@ const components = [
     description: "Lippyvyöhykkeet",
     style: require("./style/hsl-map-style-ticket-zones.json"),
   },
-  // Todo: Convert to the new naming if needed anymore
-  {
-    id: "jore_terminals",
-    enabled: false,
-    description: "Terminaalit",
-    style: require("./style/hsl-gl-map-v9-jore-terminals.json"),
-  },
   // Themes, which just modifify the previous styles.
   {
     id: "text_sv",
