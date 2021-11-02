@@ -286,7 +286,7 @@
     },
     "vector": {
       "type": "vector",
-      "url": "http://localhost:8080/map/v1/hsl-vector-map/index.json"
+      "url": "http://localhost:8080/map/v1/hsl-vector/index.json"
     }
   }
 }
