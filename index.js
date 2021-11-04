@@ -273,7 +273,7 @@ function extendStyle(style, options) {
         return undefined;
       };
 
-      if (component.id.includes("routes")) {
+      if (component.id.startsWith("route_")) {
         component.style.layers.forEach((l) => {
           // eslint-disable-next-line no-param-reassign
           l.filter = createFilter(l);
