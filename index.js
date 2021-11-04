@@ -63,12 +63,6 @@ const components = [
     style: require("./style/hsl-map-style-ticket-sales.json"),
   },
   {
-    id: "driver_instructions",
-    enabled: false,
-    description: "Kuljettajaohjeet",
-    style: require("./style/hsl-map-style-driver-instructions.json"),
-  },
-  {
     id: "stops",
     enabled: false,
     description: "Pysäkit",

@@ -42,7 +42,6 @@ const fileMappers = {
   "subway-entrance": (value) => inGroups(["subway-entrance"], value),
   icon: (value) => inGroups(["icon"], value),
   "park-and-ride": (value) => inGroups(["park-and-ride"], value),
-  "driver-instructions": (value) => inGroups(["kuljettajaohje"], value),
   "ticket-sales": (value) => inGroups(["ticket-sales"], value),
   citybikes: (value) => inGroups(["citybike"], value),
 };
