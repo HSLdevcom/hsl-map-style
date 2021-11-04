@@ -44,7 +44,7 @@
           0,
           0.5
         ],
-        "icon-image": "icon-bus-station",
+        "icon-image": "icon-terminal-bus",
         "icon-allow-overlap": false,
         "icon-optional": false,
         "icon-size": [
@@ -116,7 +116,7 @@
         "text-anchor": "top",
         "text-field": "{nameFi}",
         "text-max-width": 8,
-        "icon-image": "icon-subway-station",
+        "icon-image": "icon-terminal-subway",
         "icon-allow-overlap": false,
         "icon-optional": false,
         "icon-size": [
@@ -178,7 +178,7 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-rail-station",
+        "icon-image": "icon-terminal-train",
         "text-ignore-placement": false,
         "text-font": [
           "Gotham Rounded Medium"
@@ -253,7 +253,7 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-aerodrome",
+        "icon-image": "icon-terminal-aerodrome",
         "text-font": [
           "Gotham Rounded Medium"
         ],

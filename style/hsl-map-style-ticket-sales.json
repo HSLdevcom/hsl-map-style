@@ -43,7 +43,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "icon-ticket-machine"
+        "icon-image": "icon-tickets-machine"
       }
     },
     {
@@ -65,7 +65,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "icon-ticket-machine-parking",
+        "icon-image": "icon-tickets-machine-parking",
         "visibility": "none"
       }
     },
@@ -88,7 +88,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "icon-service-point"
+        "icon-image": "icon-tickets-service-point"
       }
     }
   ],

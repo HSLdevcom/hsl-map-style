@@ -25,7 +25,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "icon-subway-entrance",
+        "icon-image": "icon-entrance-subway",
         "icon-allow-overlap": true,
         "icon-anchor": "bottom",
         "icon-size": [
@@ -81,7 +81,7 @@
       "layout": {
         "icon-image": [
           "concat",
-          "icon-",
+          "icon-letter-",
           [
             "get",
             "ref"
@@ -141,7 +141,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "icon-wheelchair",
+        "icon-image": "icon-entrance-wheelchair",
         "icon-allow-overlap": true,
         "icon-anchor": "top",
         "icon-size": [

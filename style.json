@@ -48,7 +48,7 @@
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/hsl-routemap-server-openmaptiles/sprite",
   "glyphs": "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -2722,7 +2722,7 @@
         ["in", "subclass", "subway_entrance"]
       ],
       "layout": {
-        "icon-image": "icon-subway-entrance",
+        "icon-image": "icon-entrance-subway",
         "icon-allow-overlap": true,
         "icon-anchor": "bottom",
         "icon-size": [
@@ -2753,7 +2753,7 @@
         ["has", "ref"]
       ],
       "layout": {
-        "icon-image": ["concat", "icon-", ["get", "ref"]],
+        "icon-image": ["concat", "icon-letter-", ["get", "ref"]],
         "icon-allow-overlap": true,
         "icon-anchor": "bottom",
         "icon-size": [
@@ -2784,7 +2784,7 @@
         ["==", "wheelchair", 1]
       ],
       "layout": {
-        "icon-image": "icon-wheelchair",
+        "icon-image": "icon-entrance-wheelchair",
         "icon-allow-overlap": true,
         "icon-anchor": "top",
         "icon-size": [
@@ -2826,7 +2826,7 @@
         "text-anchor": "top",
         "text-max-width": 8,
         "text-offset": [0, 0.5],
-        "icon-image": "icon-bus-station",
+        "icon-image": "icon-terminal-bus",
         "icon-allow-overlap": false,
         "icon-optional": false,
         "icon-size": [
@@ -2871,7 +2871,7 @@
         "text-anchor": "top",
         "text-field": "{nameFi}",
         "text-max-width": 8,
-        "icon-image": "icon-subway-station",
+        "icon-image": "icon-terminal-subway",
         "icon-allow-overlap": false,
         "icon-optional": false,
         "icon-size": [
@@ -2911,7 +2911,7 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-rail-station",
+        "icon-image": "icon-terminal-train",
         "text-ignore-placement": false,
         "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
@@ -2957,7 +2957,7 @@
           ]
         },
         "text-allow-overlap": false,
-        "icon-image": "icon-aerodrome",
+        "icon-image": "icon-terminal-aerodrome",
         "text-font": ["Gotham Rounded Medium"],
         "icon-allow-overlap": false,
         "text-offset": [0, 0.5],
@@ -2999,7 +2999,7 @@
         ["in", "Tyyppi", "Kertalippuautomaatti", "Monilippuautomaatti"]
       ],
       "layout": {
-        "icon-image": "icon-ticket-machine"
+        "icon-image": "icon-tickets-machine"
       }
     },
     {
@@ -3013,7 +3013,7 @@
         ["==", "Tyyppi", "Pysäköintiautomaatti"]
       ],
       "layout": {
-        "icon-image": "icon-ticket-machine-parking",
+        "icon-image": "icon-tickets-machine-parking",
         "visibility": "none"
       }
     },
@@ -3024,7 +3024,7 @@
       "minzoom": 15,
       "filter": ["all", ["==", "$type", "Point"], ["==", "Tyyppi", "Palvelupiste"]],
       "layout": {
-        "icon-image": "icon-service-point"
+        "icon-image": "icon-tickets-service-point"
       }
     },
     {
