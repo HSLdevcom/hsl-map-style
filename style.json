@@ -3198,6 +3198,46 @@
       }
     },
     {
+      "id": "stops_hub",
+      "type": "circle",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 14,
+      "filter": ["!=", "mode", "RAIL"],
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": [
+          "interpolate",
+          ["exponential", 1.15],
+          ["zoom"],
+          14,
+          2,
+          22,
+          20
+        ]
+      }
+    },
+    {
+      "id": "stops_rail_hub",
+      "type": "circle",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 15,
+      "filter": ["==", "mode", "RAIL"],
+      "paint": {
+        "circle-color": "#fff",
+        "circle-radius": [
+          "interpolate",
+          ["exponential", 1.15],
+          ["zoom"],
+          14,
+          2,
+          22,
+          20
+        ]
+      }
+    },
+    {
       "id": "citybike_stops_case",
       "type": "circle",
       "source": "citybike",
@@ -3241,46 +3281,6 @@
             [14, 1]
           ]
         }
-      }
-    },
-    {
-      "id": "stops_hub",
-      "type": "circle",
-      "source": "stops",
-      "source-layer": "stops",
-      "minzoom": 14,
-      "filter": ["!=", "mode", "RAIL"],
-      "paint": {
-        "circle-color": "#fff",
-        "circle-radius": [
-          "interpolate",
-          ["exponential", 1.15],
-          ["zoom"],
-          14,
-          2,
-          22,
-          20
-        ]
-      }
-    },
-    {
-      "id": "stops_rail_hub",
-      "type": "circle",
-      "source": "stops",
-      "source-layer": "stops",
-      "minzoom": 15,
-      "filter": ["==", "mode", "RAIL"],
-      "paint": {
-        "circle-color": "#fff",
-        "circle-radius": [
-          "interpolate",
-          ["exponential", 1.15],
-          ["zoom"],
-          14,
-          2,
-          22,
-          20
-        ]
       }
     },
     {
