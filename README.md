@@ -1,6 +1,142 @@
 # HSL Map Style
 
-This is the main vector style for maps used throughout HSL's internal and external services. It's MapBox-compatible and customizable depending on your needs by toggling the layers.
+This is the main vector style for maps used throughout HSL's internal and external services. It's Mapbox / Maplibre -compatible and customizable depending on your needs by toggling the layers.
+
+## About components
+
+The complete style with all the layers is in file [`style.json`](style.json). The same style splitted in components is under [`style/`](style/) directory. There are also a couple of themes available.
+
+The difference between style and theme component is that a style component defines new layers, but a theme component modifies the existing ones.
+
+
+### Style components
+
+
+| Name                | Desciption                                                          | Enabled by default |
+|---------------------|---------------------------------------------------------------------|:------------------:|
+| `base`              | Base map (landuse, roads, buildings)                                |         x          |
+| `municipal_borders` | Municipal borders near HSL area                                     |                    |
+| `routes`            | Routes of HSL traffic                                               |                    |
+| `text`              | Text labels (roads, places, POIs) in Finnish                        |         x          |
+| `subway_entrance`   | Icons for subway entrances                                          |                    |
+| `poi`               | Icons for HSL terminals and airports                                |                    |
+| `park_and_ride`     | Style for specific parking areas designed for public transportation |                    |
+| `ticket_sales`      | Icons for ticket sales points                                       |                    |
+| `stops`             | Stops of HSL traffic                                                |                    |
+| `citybikes`         | Citybike stations in Helsinki area                                  |                    |
+| `ticket_zones`      | Ticket zones of HSL                                                 |                    |
+
+There're no limits which style components can be enabled or disabled at the same time. 
+
+### Theme components
+
+| Name                | Desciption                                                          | Collides with     |
+|---------------------|---------------------------------------------------------------------|-------------------|
+| `text_sv`           | Shows texts in Swedish                                              | `text_fisv`       |
+| `text_fisv`         | Shows texts in both Finnish and Swedish                             | `text_sv`         |
+| `regular_routes`    | Shows only regular routes (filters near bus routes)                 | `near_bus_routes` |
+| `near_bus_routes`   | Shows only near bus routes                                          | `regular_routes`  |
+| `regular_stops`     | Shows only regular stops (filters near bus stops)                   | `near_bus_stops`  |
+| `near_bus_stops`    | Shows only near bus stops                                           | `regular_stops`   |
+| `print`             | Modifies color scheme better for printing (base map and texts)      | `greyscale`       |
+| `greyscale`         | Modifies color to dark greyscale (base map and texts)               | `print`           |
+| `simplified`        | Adds minzoom values to limit map elements. "Reittiopas style"       |                   |
+
+Multiple themes can be enabled at the same time, but be aware of combinations that collide with each other. Those layers will overwrite style parameters twice, which leads to unexpected results.
+Remember also to enable the corresponding styles when using themes. Theme components just overwrite parameters, if they exist, and do not add any layers. E.g., `stops` style component should be enabled, if you want to use `regular_stops` theme.
+
+### Route filter
+
+Routes can be filtered by their JORE ids. See the syntax below.
+
+### Map server location
+
+`sourcesUrl` parameter helps to manage url configurations. All strings matched by default url value will be replaced with this parameter. The default url is defined in [`index.js`](index.js). The path `/map/v{1|2}/` used by [hsl-map-server](https://github.com/HSLdevcom/hsl-map-server/tree/master) should be excluded from the parameter to make it possible to mix `v1` and `v2`. This is not the optimal situation, though.
+
+
+## How to view HSL map style?
+
+Modify `server.js` and enable right components to get the preferred style. See more about components below.
+
+Install dependencies and start the development server:
+
+```sh
+yarn install
+yarn start
+```
+
+Browse to `http://localhost:3000` to see a basic Mapbox.js map with the HSL map style applied.
+
+## How to use HSL map style in my project?
+
+To use the style in your own project, install it with either yarn or npm from Github. It is not currently published in the npm registry.
+
+Use the exported `generateStyle` function and pass it the layers you want to include in the style:
+
+```javascript
+import { generateStyle } from "hsl-map-style";
+
+const style = generateStyle({
+  sourcesUrl: 'https://digitransit-cdn-origin.azureedge.net/', // <-- You can override the default sources URL.
+  components: {
+    // Set each layer you want to include to true
+    
+    // Styles
+    base: { enabled: true }, // Enabled by default
+    municipal_borders: { enabled: false },
+    routes: { enabled: false },
+    text: { enabled: true }, // Enabled by default
+    subway_entrance: { enabled: false },
+    poi: { enabled: false },
+    park_and_ride: { enabled: false },
+    ticket_sales: { enabled: false },
+    stops: { enabled: false },
+    citybikes: { enabled: false },
+    ticket_zones: { enabled: false },
+
+    // Themes
+    text_sv: { enabled: false },
+    text_fisv: { enabled: false },
+    regular_routes: { enabled: false },
+    near_bus_routes: { enabled: false },
+    regular_stops: { enabled: false },
+    near_bus_stops: { enabled: false },
+    print: { enabled: false },
+    greyscale: { enabled: false },
+    simplified: { enabled: false },
+  },
+
+  // optional property to show only listed routes by jore id
+  routeFilter: ["2550", "4570"]
+});
+
+const map = new mapboxgl.Map({
+  style: style, // <-- add the generated style to your map
+});
+```
+
+Check `index.js` for the updated list of components.
+
+
+## How to develop the style
+
+The syntax of the style is Mapbox / Maplibre Style Specification. See more https://maplibre.org/maplibre-gl-js-docs/style-spec/. The preferred style editor is [Maputnik](https://maputnik.github.io/).
+
+Most likely, the best way to start is to upload [`style.json`](style.json) and make modifications to it. After saving the file, run split tool to copy modifications to the right files under [`style/`](style/)
+
+```bash
+bin/styletool-cli split ./style.json ./style/
+```
+
+### Themes
+
+Themes are not included in `style.json`. They will be copied from [`cli/static`](cli/static), so make modifications there and run split tool.
+
+### New map icons
+
+Use spritezero to add new icons. See more [`spritezero/README.md`](spritezero/README.md)
+
+### 
 
 ## CLI tool
 
@@ -23,7 +159,7 @@ bin/styletool-cli -h
 Split a complete `style.json` file into parts and save the parts in a directory of your choosing:
 
 ```bash
-bin/styletool-cli split ./style.json ./style_parts_dir
+bin/styletool-cli split ./style.json ./style/
 ```
 
 ##### Render
@@ -59,51 +195,3 @@ bin/styletool-cli extract-diff styleA.json styleB.json
 ```
 
 The new file will be created in the same location as the first input file (`styleA.json`) and be named with the prefix `layerdiff_` and the name of the first input file (`layerdiff_styleA.json`). The first input file will be modified.
-
-## How to view HSL map style?
-
-Install dependencies and start the development server:
-
-```sh
-npm install
-npm start
-```
-
-Browse to `http://localhost:3000` to see a basic Mapbox.js map with the HSL map style applied.
-
-## How to use HSL map style in my project?
-
-To use the style in your own project, install it with either yarn or npm from Github. It is not currently published in the npm registry.
-
-Use the exported `generateStyle` function and pass it the layers you want to include in the style:
-
-```javascript
-import { generateStyle } from "hsl-map-style";
-
-const style = generateStyle({
-  sourcesUrl: 'https://digitransit-dev-cdn-origin.azureedge.net/map/v1/', // <-- You can override the default sources URL
-  // glyphsUrl: '', <-- The glyphsUrl prop is removed. URL for fonts from HSL Azure storage is used.
-  components: {
-    // Set each layer you want to include to true
-    routes: { enabled: false },
-    stops: { enabled: false },
-    citybikes: { enabled: false },
-    municipal_borders: { enabled: false },
-    poi: { enabled: false },
-    ticket_sales: { enabled: false },
-    driver_instructions: { enabled: false },
-    icons: { enabled: true },
-    text_fisv: { enabled: true },
-  },
-  // optional property to show only listed routes by jore id
-  routeFilter: ["2550", "4570"]
-});
-
-const map = new mapboxgl.Map({
-  style: style, // <-- add the generated style to your map
-});
-```
-
-Some layers are enabled by default and the layers may change as we develop the style. Check `index.js` for the list of layers.
-
-
