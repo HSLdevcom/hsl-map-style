@@ -5,10 +5,10 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "http://localhost:8080/map/v1/hsl-vector/index.json"
+      "url": "https://digitransit-cdn-origin.azureedge.net/map/v2/hsl-vector-map/index.json"
     },
     "parkandride": {
-      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
+      "url": "https://digitransit-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
       "type": "vector"
     },
     "borders": {
@@ -40,11 +40,11 @@
       "type": "vector"
     },
     "citybike": {
-      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-citybike-map/index.json",
+      "url": "https://digitransit-cdn-origin.azureedge.net/map/v1/hsl-citybike-map/index.json",
       "type": "vector"
     },
     "terminals": {
-      "url": "https://dev.kartat.hsl.fi/jore/tiles/terminals/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/terminals/index.json",
       "type": "vector"
     }
   },

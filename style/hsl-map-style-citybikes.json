@@ -92,7 +92,7 @@
   ],
   "sources": {
     "citybike": {
-      "url": "https://digitransit-dev-cdn-origin.azureedge.net/map/v1/hsl-citybike-map/index.json",
+      "url": "https://digitransit-cdn-origin.azureedge.net/map/v1/hsl-citybike-map/index.json",
       "type": "vector"
     }
   }

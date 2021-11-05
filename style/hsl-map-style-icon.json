@@ -281,12 +281,12 @@
   ],
   "sources": {
     "terminals": {
-      "url": "https://dev.kartat.hsl.fi/jore/tiles/terminals/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/terminals/index.json",
       "type": "vector"
     },
     "vector": {
       "type": "vector",
-      "url": "http://localhost:8080/map/v1/hsl-vector/index.json"
+      "url": "https://digitransit-cdn-origin.azureedge.net/map/v2/hsl-vector-map/index.json"
     }
   }
 }
