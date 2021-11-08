@@ -37,7 +37,7 @@
   ],
   "sources": {
     "parkandride": {
-      "url": "https://digitransit-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
       "type": "vector"
     }
   }

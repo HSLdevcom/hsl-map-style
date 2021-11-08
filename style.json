@@ -5,10 +5,10 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "https://digitransit-cdn-origin.azureedge.net/map/v2/hsl-vector-map/index.json"
+      "url": "https://cdn.digitransit.fi/map/v2/hsl-vector-map/index.json"
     },
     "parkandride": {
-      "url": "https://digitransit-cdn-origin.azureedge.net/map/v1/hsl-parkandride-map/index.json",
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
       "type": "vector"
     },
     "borders": {
@@ -40,7 +40,7 @@
       "type": "vector"
     },
     "citybike": {
-      "url": "https://digitransit-cdn-origin.azureedge.net/map/v1/hsl-citybike-map/index.json",
+      "url": "https://cdn.digitransit.fi/map/v1/hsl-citybike-map/index.json",
       "type": "vector"
     },
     "terminals": {

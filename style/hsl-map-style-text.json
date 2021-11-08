@@ -609,7 +609,7 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "https://digitransit-cdn-origin.azureedge.net/map/v2/hsl-vector-map/index.json"
+      "url": "https://cdn.digitransit.fi/map/v2/hsl-vector-map/index.json"
     }
   }
 }

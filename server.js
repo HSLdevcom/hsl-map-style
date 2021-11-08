@@ -5,7 +5,7 @@ const index = fs.readFileSync("index.html", "utf8");
 
 const style = require("./index").generateStyle({
   components: {
-    sourcesUrl: "https://digitransit-cdn-origin.azureedge.net/",
+    sourcesUrl: "https://cdn.digitransit.fi/",
     components: {
       // Set each layer you want to include to true
       // Styles
