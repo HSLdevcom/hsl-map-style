@@ -38,7 +38,7 @@ const components = [
     style: require("./style/hsl-map-style-text.json"),
   },
   {
-    id: "subway-entrance",
+    id: "subway_entrance",
     enabled: false,
     description: "Metron sisäänkäynnit",
     style: require("./style/hsl-map-style-subway-entrance.json"),
@@ -51,7 +51,7 @@ const components = [
   },
 
   {
-    id: "park-and-ride",
+    id: "park_and_ride",
     enabled: false,
     description: "Liityntäpysäköinti",
     style: require("./style/hsl-map-style-park-and-ride.json"),

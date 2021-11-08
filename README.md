@@ -128,6 +128,15 @@ Most likely, the best way to start is to upload [`style.json`](style.json) and m
 bin/styletool-cli split ./style.json ./style/
 ```
 
+Remember to name new layers logically `id`. The partition of `style.json` to different components is made by the prefix of `id` field. See [`cli/fileMappings.js`](cli/fileMappings.js) how the layers will be picked up.
+
+To add new components and make them to work with the cli tool, do the following steps.
+- add layers to [`style.json`](style.json) and decide the naming
+- make modifications to [`cli/fileMappings.js`](cli/fileMappings.js) so that the right names will be picked up to the right component
+- add new component available in [`index.js`](index.js)
+- run `split` command with the cli tool (you might need to create a dummy file under [`style/`](style/) first, if you're getting errors)
+
+
 ### Themes
 
 Themes are not included in `style.json`. They will be copied from [`cli/static`](cli/static), so make modifications there and run split tool.
