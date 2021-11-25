@@ -4,8 +4,7 @@ const express = require("express");
 const index = fs.readFileSync("index.html", "utf8");
 
 const style = require("./index").generateStyle({
-  components: {
-    sourcesUrl: "https://cdn.digitransit.fi/",
+  sourcesUrl: "https://dev-api.digitransit.fi/",
     components: {
       // Set each layer you want to include to true
       // Styles
@@ -33,7 +32,6 @@ const style = require("./index").generateStyle({
     },
     // optional property to show only listed routes by jore id
     routeFilter: [],
-  },
 });
 
 const app = express();

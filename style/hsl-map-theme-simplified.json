@@ -29,8 +29,12 @@
       "minzoom": 15
     },
     {
-      "id": "road_path_cycleway_track_service",
+      "id": "road_cycleway_track",
       "minzoom": 15
+    },
+    {
+      "id": "road_service",
+      "minzoom": 14
     },
     {
       "id": "road_street_case",
@@ -45,8 +49,12 @@
       "minzoom": 15
     },
     {
-      "id": "bridge_path_cycleway_track_service",
+      "id": "bridge_path_cycleway_track",
       "minzoom": 15
+    },
+    {
+      "id": "bridge_service",
+      "minzoom": 14
     },
     {
       "id": "bridge_street",
