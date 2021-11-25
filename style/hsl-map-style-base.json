@@ -49,20 +49,6 @@
       }
     },
     {
-      "id": "landuse_playground",
-      "type": "fill",
-      "source": "vector",
-      "source-layer": "landuse",
-      "filter": [
-        "==",
-        "class",
-        "playground"
-      ],
-      "paint": {
-        "fill-color": "#f9f4d2"
-      }
-    },
-    {
       "id": "landuse_aeroway",
       "type": "fill",
       "source": "vector",
@@ -156,6 +142,20 @@
       ],
       "paint": {
         "fill-color": "#cbdeb4"
+      }
+    },
+    {
+      "id": "landuse_playground",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "landuse",
+      "filter": [
+        "==",
+        "class",
+        "playground"
+      ],
+      "paint": {
+        "fill-color": "#f9f4d2"
       }
     },
     {
@@ -1078,7 +1078,7 @@
       }
     },
     {
-      "id": "road_path_cycleway_track_service",
+      "id": "road_cycleway_track",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -1108,9 +1108,55 @@
           [
             "in",
             "class",
-            "track",
-            "service"
+            "track"
           ]
+        ],
+        [
+          "!in",
+          "brunnel",
+          "bridge",
+          "tunnel"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.55
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          26
+        ]
+      }
+    },
+    {
+      "id": "road_service",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "in",
+          "class",
+          "service"
         ],
         [
           "!in",
@@ -1415,7 +1461,6 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -1481,7 +1526,6 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -2055,7 +2099,7 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_service_case",
+      "id": "bridge_path_cycleway_track_case",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -2071,8 +2115,7 @@
           "in",
           "class",
           "path",
-          "track",
-          "service"
+          "track"
         ],
         [
           "==",
@@ -2099,7 +2142,7 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_service_bg",
+      "id": "bridge_path_cycleway_track_bg",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -2115,8 +2158,7 @@
           "in",
           "class",
           "path",
-          "track",
-          "service"
+          "track"
         ],
         [
           "==",
@@ -2201,11 +2243,164 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_service",
+      "id": "bridge_path_cycleway_track",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
       "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "any",
+          [
+            "all",
+            [
+              "==",
+              "class",
+              "path"
+            ],
+            [
+              "in",
+              "subclass",
+              "cycleway"
+            ]
+          ],
+          [
+            "in",
+            "class",
+            "track"
+          ]
+        ],
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.55
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1.5,
+          22,
+          26
+        ]
+      }
+    },
+    {
+      "id": "bridge_service_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "in",
+          "class",
+          "path",
+          "track",
+          "service"
+        ],
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ]
+      ],
+      "paint": {
+        "line-color": "#ccc",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.55
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          2.5,
+          22,
+          60
+        ]
+      }
+    },
+    {
+      "id": "bridge_service_bg",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "in",
+          "class",
+          "path",
+          "track",
+          "service"
+        ],
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#f0f1f2",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.55
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          2,
+          22,
+          40
+        ]
+      }
+    },
+    {
+      "id": "bridge_service",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 13,
       "filter": [
         "all",
         [

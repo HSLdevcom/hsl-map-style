@@ -87,16 +87,6 @@
       }
     },
     {
-      "id": "landuse_playground",
-      "type": "fill",
-      "source": "vector",
-      "source-layer": "landuse",
-      "filter": ["==", "class", "playground"],
-      "paint": {
-        "fill-color": "#f9f4d2"
-      }
-    },
-    {
       "id": "landuse_aeroway",
       "type": "fill",
       "source": "vector",
@@ -157,6 +147,16 @@
       ],
       "paint": {
         "fill-color": "#cbdeb4"
+      }
+    },
+    {
+      "id": "landuse_playground",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "landuse",
+      "filter": ["==", "class", "playground"],
+      "paint": {
+        "fill-color": "#f9f4d2"
       }
     },
     {
@@ -718,7 +718,7 @@
       }
     },
     {
-      "id": "road_path_cycleway_track_service",
+      "id": "road_cycleway_track",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -733,8 +733,37 @@
             ["==", "class", "path"],
             ["in", "subclass", "cycleway"]
           ],
-          ["in", "class", "track", "service"]
+          ["in", "class", "track"]
         ],
+        ["!in", "brunnel", "bridge", "tunnel"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.55],
+          ["zoom"],
+          6,
+          1,
+          22,
+          26
+        ]
+      }
+    },
+    {
+      "id": "road_service",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["in", "class", "service"],
         ["!in", "brunnel", "bridge", "tunnel"]
       ],
       "layout": {
@@ -909,7 +938,6 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -948,7 +976,6 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 16,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1271,7 +1298,7 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_service_case",
+      "id": "bridge_path_cycleway_track_case",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -1279,7 +1306,7 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "path", "track", "service"],
+        ["in", "class", "path", "track"],
         ["==", "brunnel", "bridge"]
       ],
       "paint": {
@@ -1296,7 +1323,7 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_service_bg",
+      "id": "bridge_path_cycleway_track_bg",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -1304,7 +1331,7 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "path", "track", "service"],
+        ["in", "class", "path", "track"],
         ["==", "brunnel", "bridge"]
       ],
       "layout": {
@@ -1355,11 +1382,101 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_service",
+      "id": "bridge_path_cycleway_track",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
       "minzoom": 14,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "any",
+          [
+            "all",
+            ["==", "class", "path"],
+            ["in", "subclass", "cycleway"]
+          ],
+          ["in", "class", "track"]
+        ],
+        ["==", "brunnel", "bridge"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.55],
+          ["zoom"],
+          6,
+          1.5,
+          22,
+          26
+        ]
+      }
+    },
+    {
+      "id": "bridge_service_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["in", "class", "path", "track", "service"],
+        ["==", "brunnel", "bridge"]
+      ],
+      "paint": {
+        "line-color": "#ccc",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.55],
+          ["zoom"],
+          6,
+          2.5,
+          22,
+          60
+        ]
+      }
+    },
+    {
+      "id": "bridge_service_bg",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        ["in", "class", "path", "track", "service"],
+        ["==", "brunnel", "bridge"]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#f0f1f2",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.55],
+          ["zoom"],
+          6,
+          2,
+          22,
+          40
+        ]
+      }
+    },
+    {
+      "id": "bridge_service",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 13,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -2303,7 +2420,7 @@
         "text-font": ["Gotham Rounded Book"]
       },
       "paint": {
-        "text-color": "#666",
+        "text-color": "#999",
         "text-opacity": 0.7
       }
     },
@@ -2317,36 +2434,30 @@
         "all",
         ["==", "$type", "Point"],
         [
-          "in",
-          "class",
-          "lodging",
-          "cinema",
-          "cemetery",
-          "library",
-          "public_building",
-          "arts_centre",
-          "mall",
-          "theatre",
-          "hospital",
-          "playground",
-          "school",
-          "college",
-          "museum",
-          "stadium",
-          "sports_centre",
-          "attraction",
-          "monument",
-          "theme_park",
-          "place_of_worship"
+          "any",
+          ["in", "class", "school", "college", "place_of_worship"],
+          [
+            "in",
+            "subclass",
+            "hotel",
+            "cinema",
+            "cemetery",
+            "library",
+            "theatre",
+            "playground",
+            "arts_centre",
+            "museum",
+            "stadium",
+            "sports_centre",
+            "attraction",
+            "monument",
+            "theme_park",
+            "mall"
+          ]
         ]
       ],
       "layout": {
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
+        "text-size": 10,
         "text-font": ["Gotham Rounded Medium"],
         "text-anchor": "top",
         "text-field": "{name}",
@@ -2369,12 +2480,7 @@
         ["in", "class", "park"]
       ],
       "layout": {
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 11]
-          ]
-        },
+        "text-size": 11,
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
@@ -2391,18 +2497,14 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "class", "harbor"]
+        ["in", "class", "harbor", "ferry_terminal"]
       ],
       "layout": {
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 11]
-          ]
-        },
+        "text-size": 11,
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Book"],
         "text-anchor": "top",
@@ -2814,30 +2916,14 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
+        "text-size": 10,
         "text-field": "{nameFi}",
-        "text-allow-overlap": false,
         "text-font": ["Gotham Rounded Medium"],
         "text-anchor": "top",
         "text-max-width": 8,
         "text-offset": [0, 0.5],
         "icon-image": "icon-terminal-bus",
-        "icon-allow-overlap": false,
-        "icon-optional": false,
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          12,
-          0.6,
-          15,
-          1
-        ]
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
@@ -2859,30 +2945,14 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
-        "text-allow-overlap": true,
-        "text-font": ["Gotham Rounded Medium"],
-        "text-offset": [0, 0.5],
-        "text-anchor": "top",
+        "text-size": 10,
         "text-field": "{nameFi}",
+        "text-font": ["Gotham Rounded Medium"],
+        "text-anchor": "top",
         "text-max-width": 8,
+        "text-offset": [0, 0.5],
         "icon-image": "icon-terminal-subway",
-        "icon-allow-overlap": false,
-        "icon-optional": false,
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          12,
-          0.6,
-          15,
-          1
-        ]
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
@@ -2904,31 +2974,14 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-terminal-train",
-        "text-ignore-placement": false,
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "text-offset": [0, 0.75],
-        "icon-optional": false,
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          12,
-          0.6,
-          15,
-          1
-        ],
-        "text-anchor": "top",
+        "text-size": 10,
         "text-field": "{nameFi}",
-        "text-max-width": 8
+        "text-font": ["Gotham Rounded Medium"],
+        "text-anchor": "top",
+        "text-max-width": 8,
+        "text-offset": [0, 0.75],
+        "icon-image": "icon-terminal-train",
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
@@ -2950,22 +3003,14 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 10]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-terminal-aerodrome",
-        "text-font": ["Gotham Rounded Medium"],
-        "icon-allow-overlap": false,
-        "text-offset": [0, 0.5],
-        "icon-optional": false,
-        "icon-size": 0.9,
-        "text-anchor": "top",
+        "text-size": 10,
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-font": ["Gotham Rounded Medium"],
+        "text-anchor": "top",
+        "text-max-width": 8,
+        "text-offset": [0, 0.5],
+        "icon-image": "icon-terminal-aerodrome",
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
@@ -3084,13 +3129,7 @@
           1,
           22,
           24
-        ],
-        "circle-opacity": {
-          "stops": [
-            [11, 0.6], 
-            [14, 1]
-          ]
-        }
+        ]
       }
     },
     {
@@ -3110,13 +3149,7 @@
           1,
           22,
           24
-        ],
-        "circle-opacity": {
-          "stops": [
-            [11, 0.6], 
-            [14, 1]
-          ]
-        }
+        ]
       }
     },
     {
@@ -3136,13 +3169,7 @@
           1,
           22,
           24
-        ],
-        "circle-opacity": {
-          "stops": [
-            [11, 0.6], 
-            [14, 1]
-          ]
-        }
+        ]
       }
     },
     {
@@ -3162,13 +3189,7 @@
           1,
           22,
           24
-        ],
-        "circle-opacity": {
-          "stops": [
-            [11, 0.6], 
-            [14, 1]
-          ]
-        }
+        ]
       }
     },
     {
@@ -3188,13 +3209,7 @@
           1,
           22,
           24
-        ],
-        "circle-opacity": {
-          "stops": [
-            [11, 0.6], 
-            [14, 1]
-          ]
-        }
+        ]
       }
     },
     {
@@ -3274,13 +3289,7 @@
           1,
           22,
           24
-        ],
-        "circle-opacity": {
-          "stops": [
-            [11, 0.6], 
-            [14, 1]
-          ]
-        }
+        ]
       }
     },
     {

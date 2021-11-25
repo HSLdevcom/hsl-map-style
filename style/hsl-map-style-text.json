@@ -29,7 +29,7 @@
         ]
       },
       "paint": {
-        "text-color": "#666",
+        "text-color": "#999",
         "text-opacity": 0.7
       }
     },
@@ -47,42 +47,36 @@
           "Point"
         ],
         [
-          "in",
-          "class",
-          "lodging",
-          "cinema",
-          "cemetery",
-          "library",
-          "public_building",
-          "arts_centre",
-          "mall",
-          "theatre",
-          "hospital",
-          "playground",
-          "school",
-          "college",
-          "museum",
-          "stadium",
-          "sports_centre",
-          "attraction",
-          "monument",
-          "theme_park",
-          "place_of_worship"
+          "any",
+          [
+            "in",
+            "class",
+            "school",
+            "college",
+            "place_of_worship"
+          ],
+          [
+            "in",
+            "subclass",
+            "hotel",
+            "cinema",
+            "cemetery",
+            "library",
+            "theatre",
+            "playground",
+            "arts_centre",
+            "museum",
+            "stadium",
+            "sports_centre",
+            "attraction",
+            "monument",
+            "theme_park",
+            "mall"
+          ]
         ]
       ],
       "layout": {
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
+        "text-size": 10,
         "text-font": [
           "Gotham Rounded Medium"
         ],
@@ -116,18 +110,7 @@
         ]
       ],
       "layout": {
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              11
-            ]
-          ]
-        },
+        "text-size": 11,
         "text-max-width": 8,
         "text-font": [
           "Gotham Rounded Medium Italic"
@@ -146,6 +129,7 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "poi",
+      "minzoom": 14,
       "filter": [
         "all",
         [
@@ -156,22 +140,12 @@
         [
           "in",
           "class",
-          "harbor"
+          "harbor",
+          "ferry_terminal"
         ]
       ],
       "layout": {
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              11
-            ]
-          ]
-        },
+        "text-size": 11,
         "text-max-width": 8,
         "text-font": [
           "Gotham Rounded Book"

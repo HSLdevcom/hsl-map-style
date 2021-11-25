@@ -21,20 +21,8 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
+        "text-size": 10,
         "text-field": "{nameFi}",
-        "text-allow-overlap": false,
         "text-font": [
           "Gotham Rounded Medium"
         ],
@@ -45,22 +33,7 @@
           0.5
         ],
         "icon-image": "icon-terminal-bus",
-        "icon-allow-overlap": false,
-        "icon-optional": false,
-        "icon-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          12,
-          0.6,
-          15,
-          1
-        ]
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
@@ -93,46 +66,19 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": true,
+        "text-size": 10,
+        "text-field": "{nameFi}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
+        "text-anchor": "top",
+        "text-max-width": 8,
         "text-offset": [
           0,
           0.5
         ],
-        "text-anchor": "top",
-        "text-field": "{nameFi}",
-        "text-max-width": 8,
         "icon-image": "icon-terminal-subway",
-        "icon-allow-overlap": false,
-        "icon-optional": false,
-        "icon-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          12,
-          0.6,
-          15,
-          1
-        ]
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
@@ -165,47 +111,19 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-terminal-train",
-        "text-ignore-placement": false,
+        "text-size": 10,
+        "text-field": "{nameFi}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "icon-allow-overlap": false,
+        "text-anchor": "top",
+        "text-max-width": 8,
         "text-offset": [
           0,
           0.75
         ],
-        "icon-optional": false,
-        "icon-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          12,
-          0.6,
-          15,
-          1
-        ],
-        "text-anchor": "top",
-        "text-field": "{nameFi}",
-        "text-max-width": 8
+        "icon-image": "icon-terminal-train",
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
@@ -240,33 +158,19 @@
       ],
       "layout": {
         "text-optional": true,
-        "text-size": {
-          "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              10
-            ]
-          ]
-        },
-        "text-allow-overlap": false,
-        "icon-image": "icon-terminal-aerodrome",
+        "text-size": 10,
+        "text-field": "{name}",
         "text-font": [
           "Gotham Rounded Medium"
         ],
-        "icon-allow-overlap": false,
+        "text-anchor": "top",
+        "text-max-width": 8,
         "text-offset": [
           0,
           0.5
         ],
-        "icon-optional": false,
-        "icon-size": 0.9,
-        "text-anchor": "top",
-        "text-field": "{name}",
-        "text-max-width": 8
+        "icon-image": "icon-terminal-aerodrome",
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "#666",
