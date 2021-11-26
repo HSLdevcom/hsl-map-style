@@ -26,7 +26,7 @@
     },
     {
       "id": "road_path",
-      "minzoom": 15
+      "minzoom": 16
     },
     {
       "id": "road_cycleway_track",
@@ -74,7 +74,7 @@
     },
     {
       "id": "label_road_path_cycleway_track_service",
-      "minzoom": 15
+      "minzoom": 16
     },
     {
       "id": "label_road_street",

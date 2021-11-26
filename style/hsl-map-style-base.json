@@ -86,20 +86,6 @@
       }
     },
     {
-      "id": "landuse_wood",
-      "type": "fill",
-      "source": "vector",
-      "source-layer": "landcover",
-      "filter": [
-        "==",
-        "class",
-        "wood"
-      ],
-      "paint": {
-        "fill-color": "#d0e3b8"
-      }
-    },
-    {
       "id": "landuse_grass",
       "type": "fill",
       "source": "vector",
@@ -117,6 +103,20 @@
           "park",
           "scrub"
         ]
+      ],
+      "paint": {
+        "fill-color": "#ddeacd"
+      }
+    },
+    {
+      "id": "landuse_wood",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "landcover",
+      "filter": [
+        "==",
+        "class",
+        "wood"
       ],
       "paint": {
         "fill-color": "#d0e3b8"
@@ -1025,7 +1025,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 14,
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -1461,6 +1461,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -1526,6 +1527,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -2192,7 +2194,7 @@
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
-      "minzoom": 14,
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -2320,8 +2322,6 @@
         [
           "in",
           "class",
-          "path",
-          "track",
           "service"
         ],
         [
@@ -2364,8 +2364,6 @@
         [
           "in",
           "class",
-          "path",
-          "track",
           "service"
         ],
         [
@@ -2409,26 +2407,9 @@
           "LineString"
         ],
         [
-          "any",
-          [
-            "all",
-            [
-              "==",
-              "class",
-              "path"
-            ],
-            [
-              "in",
-              "subclass",
-              "cycleway"
-            ]
-          ],
-          [
-            "in",
-            "class",
-            "track",
-            "service"
-          ]
+          "in",
+          "class",
+          "service"
         ],
         [
           "==",
