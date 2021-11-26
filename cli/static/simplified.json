@@ -66,11 +66,11 @@
     },
     {
       "id": "label_poi_general",
-      "minzoom": 16
+      "minzoom": 15
     },
     {
       "id": "label_poi_park",
-      "minzoom": 15
+      "minzoom": 14
     },
     {
       "id": "label_road_path_cycleway_track_service",
