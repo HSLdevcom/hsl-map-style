@@ -45,12 +45,36 @@
       "minzoom": 13
     },
     {
+      "id": "bridge_path_case",
+      "minzoom": 15
+    },
+    {
+      "id": "bridge_path_bg",
+      "minzoom": 15
+    },
+    {
       "id": "bridge_path",
+      "minzoom": 15
+    },
+    {
+      "id": "bridge_path_cycleway_track_case",
+      "minzoom": 15
+    },
+    {
+      "id": "bridge_path_cycleway_track_bg",
       "minzoom": 15
     },
     {
       "id": "bridge_path_cycleway_track",
       "minzoom": 15
+    },
+    {
+      "id": "bridge_service_case",
+      "minzoom": 14
+    },
+    {
+      "id": "bridge_service_bg",
+      "minzoom": 14
     },
     {
       "id": "bridge_service",

@@ -1300,7 +1300,7 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_case",
+      "id": "bridge_path_case",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -1308,7 +1308,8 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "path", "track"],
+        ["==", "class", "path"],
+        ["!=", "subclass", "cycleway"],
         ["==", "brunnel", "bridge"]
       ],
       "paint": {
@@ -1325,7 +1326,7 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_bg",
+      "id": "bridge_path_bg",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",
@@ -1333,7 +1334,8 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "path", "track"],
+        ["==", "class", "path"],
+        ["!=", "subclass", "cycleway"],
         ["==", "brunnel", "bridge"]
       ],
       "layout": {
@@ -1384,7 +1386,76 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track",
+      "id": "bridge_cycleway_track_case",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "any",
+          [
+            "all",
+            ["==", "class", "path"],
+            ["in", "subclass", "cycleway"]
+          ],
+          ["in", "class", "track"]
+        ],
+        ["==", "brunnel", "bridge"]
+      ],
+      "paint": {
+        "line-color": "#ccc",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.55],
+          ["zoom"],
+          6,
+          2.5,
+          22,
+          60
+        ]
+      }
+    },
+    {
+      "id": "bridge_cycleway_track_bg",
+      "type": "line",
+      "source": "vector",
+      "source-layer": "transportation",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "any",
+          [
+            "all",
+            ["==", "class", "path"],
+            ["in", "subclass", "cycleway"]
+          ],
+          ["in", "class", "track"]
+        ],
+        ["==", "brunnel", "bridge"]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#f0f1f2",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.55],
+          ["zoom"],
+          6,
+          2,
+          22,
+          40
+        ]
+      }
+    },
+    {
+      "id": "bridge_cycleway_track",
       "type": "line",
       "source": "vector",
       "source-layer": "transportation",

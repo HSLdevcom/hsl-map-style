@@ -331,13 +331,13 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track_case",
+      "id": "bridge_path_case",
       "paint": {
         "line-color": "#444444"
       }
     },
     {
-      "id": "bridge_path_cycleway_track_bg",
+      "id": "bridge_path_bg",
       "paint": {
         "line-color": "#444444"
       }
@@ -349,7 +349,19 @@
       }
     },
     {
-      "id": "bridge_path_cycleway_track",
+      "id": "bridge_cycleway_track_case",
+      "paint": {
+        "line-color": "#444444"
+      }
+    },
+    {
+      "id": "bridge_cycleway_track_bg",
+      "paint": {
+        "line-color": "#444444"
+      }
+    },
+    {
+      "id": "bridge_cycleway_track",
       "paint": {
         "line-color": "#1c1c1c"
       }
