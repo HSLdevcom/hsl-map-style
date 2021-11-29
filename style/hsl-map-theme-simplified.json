@@ -46,26 +46,26 @@
     },
     {
       "id": "bridge_path_case",
-      "minzoom": 15
+      "minzoom": 16
     },
     {
       "id": "bridge_path_bg",
-      "minzoom": 15
+      "minzoom": 16
     },
     {
       "id": "bridge_path",
+      "minzoom": 16
+    },
+    {
+      "id": "bridge_cycleway_track_case",
       "minzoom": 15
     },
     {
-      "id": "bridge_path_cycleway_track_case",
+      "id": "bridge_cycleway_track_bg",
       "minzoom": 15
     },
     {
-      "id": "bridge_path_cycleway_track_bg",
-      "minzoom": 15
-    },
-    {
-      "id": "bridge_path_cycleway_track",
+      "id": "bridge_cycleway_track",
       "minzoom": 15
     },
     {
