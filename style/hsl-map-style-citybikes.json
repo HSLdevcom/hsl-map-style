@@ -80,7 +80,7 @@
   ],
   "sources": {
     "citybike": {
-      "url": "https://cdn.digitransit.fi/map/v1/hsl-citybike-map/index.json",
+      "url": "https://dev-api.digitransit.fi/map/v1/hsl-citybike-map/index.json",
       "type": "vector"
     }
   }

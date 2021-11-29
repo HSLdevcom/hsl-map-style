@@ -8,7 +8,7 @@ const BASE_JSON = require("./style/hsl-map-template.json");
 
 const replaceableValues = {
   SOURCES_URL: {
-    default: "https://cdn.digitransit.fi/",
+    default: "https://dev-api.digitransit.fi/",
   },
 };
 

@@ -190,7 +190,7 @@
     },
     "vector": {
       "type": "vector",
-      "url": "https://cdn.digitransit.fi/map/v2/hsl-vector-map/index.json"
+      "url": "https://dev-api.digitransit.fi/map/v2/hsl-vector-map/index.json"
     }
   }
 }
