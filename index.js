@@ -46,7 +46,7 @@ const components = [
   {
     id: "poi",
     enabled: false,
-    description: "Joukkoliikenne-POI",
+    description: "Terminaalit",
     style: require("./style/hsl-map-style-icon.json"),
   },
 
@@ -80,7 +80,7 @@ const components = [
     description: "Lippyvyöhykkeet",
     style: require("./style/hsl-map-style-ticket-zones.json"),
   },
-  // Themes, which just modifify the previous styles.
+  // Themes, which just modify the previous styles.
   {
     id: "text_sv",
     enabled: false,
@@ -105,7 +105,7 @@ const components = [
   {
     id: "near_bus_routes",
     enabled: false,
-    description: "Lähibussi reitit",
+    description: "Vain lähibussien reitit",
     style: require("./style/hsl-map-theme-near-bus-routes.json"),
     dependencies: ["routes"],
   },
@@ -119,7 +119,7 @@ const components = [
   {
     id: "near_bus_stops",
     enabled: false,
-    description: "Lähibussi pysäkit",
+    description: "Vain lähibussien pysäkit",
     style: require("./style/hsl-map-theme-near-bus-stops.json"),
     dependencies: ["stops"],
   },
