@@ -443,16 +443,38 @@
       "type": "line",
       "source": "subway",
       "filter": [
-        "all",
+        "any",
         [
           "==",
-          "underground",
+          [
+            "string",
+            [
+              "get",
+              "underground"
+            ]
+          ],
           "false"
         ],
         [
-          "!=",
-          "hasRegularDayDepartures",
-          false
+          "all",
+          [
+            "==",
+            [
+              "string",
+              [
+                "get",
+                "underground"
+              ]
+            ],
+            "true"
+          ],
+          [
+            "<",
+            [
+              "zoom"
+            ],
+            11
+          ]
         ]
       ],
       "paint": {
@@ -480,16 +502,38 @@
       "type": "line",
       "source": "subway",
       "filter": [
-        "all",
+        "any",
         [
           "==",
-          "underground",
+          [
+            "string",
+            [
+              "get",
+              "underground"
+            ]
+          ],
           "false"
         ],
         [
-          "!=",
-          "hasRegularDayDepartures",
-          false
+          "all",
+          [
+            "==",
+            [
+              "string",
+              [
+                "get",
+                "underground"
+              ]
+            ],
+            "true"
+          ],
+          [
+            "<",
+            [
+              "zoom"
+            ],
+            11
+          ]
         ]
       ],
       "paint": {
@@ -520,18 +564,11 @@
       "id": "route_subway_underground",
       "type": "line",
       "source": "subway",
+      "minzoom": 11,
       "filter": [
-        "all",
-        [
-          "==",
-          "underground",
-          "true"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
+        "==",
+        "underground",
+        "true"
       ],
       "paint": {
         "line-color": "#FF6319",
