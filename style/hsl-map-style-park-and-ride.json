@@ -6,6 +6,11 @@
       "source": "parkandride",
       "source-layer": "facilities",
       "minzoom": 14,
+      "filter": [
+        "!=",
+        "status",
+        "INACTIVE"
+      ],
       "paint": {
         "fill-color": "#007ac9",
         "fill-opacity": 0.15
@@ -15,12 +20,32 @@
       "id": "park-and-ride_icon_hub",
       "type": "symbol",
       "source": "parkandride",
-      "source-layer": "hubs",
+      "source-layer": "facilities",
       "minzoom": 14,
       "filter": [
-        "==",
-        "$type",
-        "Point"
+        "all",
+        [
+          "!=",
+          [
+            "string",
+            [
+              "get",
+              "status"
+            ]
+          ],
+          "INACTIVE"
+        ],
+        [
+          "in",
+          "CAR",
+          [
+            "string",
+            [
+              "get",
+              "builtCapacity"
+            ]
+          ]
+        ]
       ],
       "layout": {
         "icon-image": "icon-park-and-ride",
