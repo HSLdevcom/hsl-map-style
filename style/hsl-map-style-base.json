@@ -476,6 +476,28 @@
       }
     },
     {
+      "id": "road_bridge_area",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ],
+        [
+          "==",
+          "class",
+          "bridge"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#f7f7f7"
+      }
+    },
+    {
       "id": "building_shadow",
       "type": "fill",
       "source": "vector",
@@ -557,12 +579,25 @@
           "!in",
           "subclass",
           "cycleway",
-          "pedestrian"
+          "pedestrian",
+          "platform"
         ],
         [
           "==",
           "brunnel",
           "tunnel"
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "layer"
+          ],
+          [
+            ">=",
+            "layer",
+            0
+          ]
         ]
       ],
       "layout": {
@@ -681,9 +716,26 @@
           "track"
         ],
         [
+          "!in",
+          "service",
+          "parking_aisle"
+        ],
+        [
           "==",
           "brunnel",
           "tunnel"
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "layer"
+          ],
+          [
+            ">=",
+            "layer",
+            0
+          ]
         ]
       ],
       "paint": {
@@ -1042,13 +1094,26 @@
           "!in",
           "subclass",
           "cycleway",
-          "steps"
+          "steps",
+          "platform"
         ],
         [
           "!in",
           "brunnel",
           "bridge",
           "tunnel"
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "layer"
+          ],
+          [
+            ">=",
+            "layer",
+            0
+          ]
         ]
       ],
       "layout": {
@@ -1157,6 +1222,11 @@
           "in",
           "class",
           "service"
+        ],
+        [
+          "!in",
+          "service",
+          "parking_aisle"
         ],
         [
           "!in",
@@ -1469,6 +1539,18 @@
           "brunnel",
           "bridge",
           "tunnel"
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "layer"
+          ],
+          [
+            ">=",
+            "layer",
+            0
+          ]
         ]
       ],
       "layout": {
@@ -1535,6 +1617,18 @@
           "brunnel",
           "bridge",
           "tunnel"
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "layer"
+          ],
+          [
+            ">=",
+            "layer",
+            0
+          ]
         ]
       ],
       "layout": {
@@ -2422,6 +2516,11 @@
           "service"
         ],
         [
+          "!in",
+          "service",
+          "parking_aisle"
+        ],
+        [
           "==",
           "brunnel",
           "bridge"
@@ -2462,6 +2561,11 @@
           "in",
           "class",
           "service"
+        ],
+        [
+          "!in",
+          "service",
+          "parking_aisle"
         ],
         [
           "==",
@@ -2507,6 +2611,11 @@
           "in",
           "class",
           "service"
+        ],
+        [
+          "!in",
+          "service",
+          "parking_aisle"
         ],
         [
           "==",

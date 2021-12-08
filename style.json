@@ -380,6 +380,20 @@
       }
     },
     {
+      "id": "road_bridge_area",
+      "type": "fill",
+      "source": "vector",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        ["==", "$type", "Polygon"],
+        ["==", "class", "bridge"]
+      ],
+      "paint": {
+        "fill-color": "#f7f7f7"
+      }
+    },
+    {
       "id": "building_shadow",
       "type": "fill",
       "source": "vector",
@@ -425,8 +439,13 @@
         "all",
         ["==", "$type", "LineString"],
         ["==", "class", "path"],
-        ["!in", "subclass", "cycleway", "pedestrian"],
-        ["==", "brunnel", "tunnel"]
+        ["!in", "subclass", "cycleway", "pedestrian", "platform"],
+        ["==", "brunnel", "tunnel"],
+        [
+          "any",
+          ["!has", "layer"],
+          [">=", "layer", 0]
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -496,7 +515,13 @@
         "all",
         ["==", "$type", "LineString"],
         ["in", "class", "service", "track"],
-        ["==", "brunnel", "tunnel"]
+        ["!in", "service", "parking_aisle"],
+        ["==", "brunnel", "tunnel"],
+        [
+          "any",
+          ["!has", "layer"],
+          [">=", "layer", 0]
+        ]
       ],
       "paint": {
         "line-color": "#ccc",
@@ -696,8 +721,13 @@
         "all",
         ["==", "$type", "LineString"],
         ["==", "class", "path"],
-        ["!in", "subclass", "cycleway", "steps"],
-        ["!in", "brunnel", "bridge", "tunnel"]
+        ["!in", "subclass", "cycleway", "steps", "platform"],
+        ["!in", "brunnel", "bridge", "tunnel"],
+        [
+          "any",
+          ["!has", "layer"],
+          [">=", "layer", 0]
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -764,6 +794,7 @@
         "all",
         ["==", "$type", "LineString"],
         ["in", "class", "service"],
+        ["!in", "service", "parking_aisle"],
         ["!in", "brunnel", "bridge", "tunnel"]
       ],
       "layout": {
@@ -936,7 +967,12 @@
         ["==", "$type", "LineString"],
         ["==", "class", "path"],
         ["==", "subclass", "steps"],
-        ["!in", "brunnel", "bridge", "tunnel"]
+        ["!in", "brunnel", "bridge", "tunnel"],
+        [
+          "any",
+          ["!has", "layer"],
+          [">=", "layer", 0]
+        ]
       ],
       "layout": {
         "line-cap": "butt",
@@ -975,7 +1011,12 @@
         ["==", "$type", "LineString"],
         ["==", "class", "path"],
         ["==", "subclass", "steps"],
-        ["!in", "brunnel", "bridge", "tunnel"]
+        ["!in", "brunnel", "bridge", "tunnel"],
+        [
+          "any",
+          ["!has", "layer"],
+          [">=", "layer", 0]
+        ]
       ],
       "layout": {
         "line-cap": "butt",
@@ -1485,6 +1526,7 @@
         "all",
         ["==", "$type", "LineString"],
         ["in", "class", "service"],
+        ["!in", "service", "parking_aisle"],
         ["==", "brunnel", "bridge"]
       ],
       "paint": {
@@ -1510,6 +1552,7 @@
         "all",
         ["==", "$type", "LineString"],
         ["in", "class", "service"],
+        ["!in", "service", "parking_aisle"],
         ["==", "brunnel", "bridge"]
       ],
       "layout": {
@@ -1538,6 +1581,7 @@
         "all",
         ["==", "$type", "LineString"],
         ["in", "class", "service"],
+        ["!in", "service", "parking_aisle"],
         ["==", "brunnel", "bridge"]
       ],
       "layout": {
