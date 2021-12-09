@@ -29,6 +29,7 @@ const style = require("./index").generateStyle({
     print: { enabled: false },
     greyscale: { enabled: false },
     simplified: { enabled: false },
+    "3d": { enabled: false },
   },
   // optional property to show only listed routes by jore id
   routeFilter: [],

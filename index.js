@@ -141,6 +141,12 @@ const components = [
     description: "Yksinkertaistettu (Reittiopas)",
     style: require("./style/hsl-map-theme-simplified.json"),
   },
+  {
+    id: "3d",
+    enabled: false,
+    description: "3D-rakennukset",
+    style: require("./style/hsl-map-theme-3d.json"),
+  },
 ];
 
 /**

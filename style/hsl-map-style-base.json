@@ -502,6 +502,9 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "fill-color": "#c2c3cc",
         "fill-outline-color": {
@@ -541,6 +544,9 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "building",
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "fill-color": "#e2e4e9",
         "fill-outline-color": {
@@ -3404,6 +3410,27 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "building_3d",
+      "type": "fill-extrusion",
+      "source": "vector",
+      "source-layer": "building",
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-extrusion-color": "#dcd9d6",
+        "fill-extrusion-height": {
+          "property": "render_height",
+          "type": "identity"
+        },
+        "fill-extrusion-base": {
+          "property": "render_min_height",
+          "type": "identity"
+        },
+        "fill-extrusion-opacity": 0.8
       }
     },
     {

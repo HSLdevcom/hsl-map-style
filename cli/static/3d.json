@@ -1,0 +1,22 @@
+{
+  "layers": [
+    {
+      "id": "building_shadow",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "building",
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "building_3d",
+      "layout": {
+        "visibility": "visible"
+      }
+    }
+  ]
+}

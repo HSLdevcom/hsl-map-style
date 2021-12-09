@@ -41,6 +41,7 @@ There're no limits which style components can be enabled or disabled at the same
 | `print`             | Modifies color scheme better for printing (base map and texts)      | `greyscale`       |
 | `greyscale`         | Modifies color to dark greyscale (base map and texts)               | `print`           |
 | `simplified`        | Adds minzoom values to limit map elements. "Reittiopas style"       |                   |
+| `3d`                | Renders buildings in 3d                                             |                   |
 
 Multiple themes can be enabled at the same time, but be aware of combinations that collide with each other. Those layers will overwrite style parameters twice, which leads to unexpected results.
 Remember also to enable the corresponding styles when using themes. Theme components just overwrite parameters, if they exist, and do not add any layers. E.g., `stops` style component should be enabled, if you want to use `regular_stops` theme.
@@ -104,6 +105,7 @@ const style = generateStyle({
     print: { enabled: false },
     greyscale: { enabled: false },
     simplified: { enabled: false },
+    "3d": { enabled: false },
   },
 
   // optional property to show only listed routes by jore id
