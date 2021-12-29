@@ -81,7 +81,7 @@
       "type": "fill",
       "source": "vector",
       "source-layer": "landuse",
-      "filter": ["in", "class", "university", "school"],
+      "filter": ["in", "class", "university", "school", "kindergarten"],
       "paint": { 
         "fill-color": "#f9f4d2" 
       }
@@ -371,7 +371,7 @@
         "all",
         ["==", "$type", "Polygon"],
         ["any",
-          ["==", "class", "service"],
+          ["in", "class", "service", "pier"],
           ["in", "subclass", "pedestrian", "platform"]
         ]
       ],

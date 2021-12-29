@@ -42,7 +42,8 @@
         "in",
         "class",
         "university",
-        "school"
+        "school",
+        "kindergarten"
       ],
       "paint": {
         "fill-color": "#f9f4d2"
@@ -459,9 +460,10 @@
         [
           "any",
           [
-            "==",
+            "in",
             "class",
-            "service"
+            "service",
+            "pier"
           ],
           [
             "in",
