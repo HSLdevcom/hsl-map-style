@@ -2,6 +2,10 @@
 
 This is the main vector style for maps used throughout HSL's internal and external services. It's Mapbox / Maplibre -compatible and customizable depending on your needs by toggling the layers.
 
+> **_Note about recent major changes:_** HSL map styles have been changed to use OpenMapTiles schema. New styles are maintained under `development` and `master` -branches.
+> If you're looking old style versions, please check `master-old` -branch for old master branch and `hsl-map-server-v1` for style used by Reittiopas and map servers.
+> Those versions will be not updated anymore, so please migrate to use the new style.
+
 ## About components
 
 The complete style with all the layers is in file [`style.json`](style.json). The same style splitted in components is under [`style/`](style/) directory. There are also a couple of themes available.
