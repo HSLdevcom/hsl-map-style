@@ -12,7 +12,7 @@
       "type": "vector"
     },
     "borders": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuntarajat.json",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/kuntarajat.json",
       "type": "geojson"
     },
     "routes": {
@@ -28,7 +28,7 @@
       "type": "geojson"
     },
     "ticketzones": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/ticket-zones.json",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/ticket-zones.json",
       "type": "geojson"
     },
     "ticket-sales": {
