@@ -52,7 +52,7 @@
       "type": "vector"
     },
     "borders": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/kuntarajat.json",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/kuntarajat.json",
       "type": "geojson"
     },
     "routes": {
