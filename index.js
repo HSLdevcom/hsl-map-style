@@ -259,10 +259,12 @@ function extendStyle(style, options) {
     const routeFilter =
       options.routeFilter && options.routeFilter.filter((r) => r !== "");
     if (routeFilter && routeFilter.length > 0) {
+      // remove duplicates, because the following match-expression cannot handle them
+      const cleanFilter = [...new Set(routeFilter)];
       const routeFilterLine = [
         "match",
         ["string", ["get", "routeId"]],
-        routeFilter,
+        cleanFilter,
         true,
         false,
       ];
