@@ -8,26 +8,48 @@
       "filter": [
         "all",
         [
-          "!in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
+          "match",
+          [
+            "string",
+            [
+              "get",
+              "routeId"
+            ]
+          ],
+          [
+            "1500",
+            "2200",
+            "2510",
+            "2550",
+            "4560",
+            "4570",
+            "1020",
+            "1030",
+            "1040"
+          ],
+          false,
+          true
         ],
         [
           "==",
-          "mode",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
           "BUS"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -59,26 +81,48 @@
       "filter": [
         "all",
         [
-          "!in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
+          "match",
+          [
+            "string",
+            [
+              "get",
+              "routeId"
+            ]
+          ],
+          [
+            "1500",
+            "2200",
+            "2510",
+            "2550",
+            "4560",
+            "4570",
+            "1020",
+            "1030",
+            "1040"
+          ],
+          false,
+          true
         ],
         [
           "==",
-          "mode",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
           "BUS"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -111,26 +155,48 @@
       "filter": [
         "all",
         [
-          "!in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
+          "match",
+          [
+            "string",
+            [
+              "get",
+              "routeId"
+            ]
+          ],
+          [
+            "1500",
+            "2200",
+            "2510",
+            "2550",
+            "4560",
+            "4570",
+            "1020",
+            "1030",
+            "1040"
+          ],
+          false,
+          true
         ],
         [
           "==",
-          "mode",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
           "BUS"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -159,12 +225,24 @@
         "all",
         [
           "==",
-          "mode",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
           "TRAM"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -197,12 +275,24 @@
         "all",
         [
           "==",
-          "mode",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
           "TRAM"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -236,12 +326,24 @@
         "all",
         [
           "==",
-          "mode",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
           "TRAM"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -269,21 +371,48 @@
       "filter": [
         "all",
         [
-          "in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
+          "match",
+          [
+            "string",
+            [
+              "get",
+              "routeId"
+            ]
+          ],
+          [
+            "1500",
+            "2200",
+            "2510",
+            "2550",
+            "4560",
+            "4570",
+            "1020",
+            "1030",
+            "1040"
+          ],
+          true,
+          false
+        ],
+        [
+          "==",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
+          "BUS"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -315,21 +444,48 @@
       "filter": [
         "all",
         [
-          "in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
+          "match",
+          [
+            "string",
+            [
+              "get",
+              "routeId"
+            ]
+          ],
+          [
+            "1500",
+            "2200",
+            "2510",
+            "2550",
+            "4560",
+            "4570",
+            "1020",
+            "1030",
+            "1040"
+          ],
+          true,
+          false
+        ],
+        [
+          "==",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
+          "BUS"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -362,21 +518,48 @@
       "filter": [
         "all",
         [
-          "in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
+          "match",
+          [
+            "string",
+            [
+              "get",
+              "routeId"
+            ]
+          ],
+          [
+            "1500",
+            "2200",
+            "2510",
+            "2550",
+            "4560",
+            "4570",
+            "1020",
+            "1030",
+            "1040"
+          ],
+          true,
+          false
+        ],
+        [
+          "==",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
+          "BUS"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -405,12 +588,24 @@
         "all",
         [
           "==",
-          "mode",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
           "FERRY"
         ],
         [
           "!=",
-          "hasRegularDayDepartures",
+          [
+            "boolean",
+            [
+              "get",
+              "hasRegularDayDepartures"
+            ]
+          ],
           false
         ]
       ],
@@ -567,7 +762,13 @@
       "minzoom": 11,
       "filter": [
         "==",
-        "underground",
+        [
+          "string",
+          [
+            "get",
+            "underground"
+          ]
+        ],
         "true"
       ],
       "paint": {
@@ -598,19 +799,6 @@
       "id": "route_rail_case",
       "type": "line",
       "source": "rail",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
-      ],
       "paint": {
         "line-color": "#8C4799",
         "line-width": [
@@ -635,19 +823,6 @@
       "id": "route_rail",
       "type": "line",
       "source": "rail",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "!=",
-          "hasRegularDayDepartures",
-          false
-        ]
-      ],
       "paint": {
         "line-color": "#fff",
         "line-dasharray": [
