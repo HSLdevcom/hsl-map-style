@@ -259,8 +259,15 @@ function extendStyle(style, options) {
     const routeFilter =
       options.routeFilter && options.routeFilter.filter((r) => r !== "");
     if (routeFilter && routeFilter.length > 0) {
-      const routeFilterLine = ["in", "routeId"].concat(routeFilter);
-
+      // remove duplicates, because the following match-expression cannot handle them
+      const cleanFilter = [...new Set(routeFilter)];
+      const routeFilterLine = [
+        "match",
+        ["string", ["get", "routeId"]],
+        cleanFilter,
+        true,
+        false,
+      ];
       // Function to decide how to merge filter with the existing ones.
       const createFilter = (layer) => {
         const f = layer.filter;
@@ -279,7 +286,7 @@ function extendStyle(style, options) {
         return undefined;
       };
 
-      if (component.id.startsWith("route_")) {
+      if (component.id === "routes") {
         component.style.layers.forEach((l) => {
           // eslint-disable-next-line no-param-reassign
           l.filter = createFilter(l);
