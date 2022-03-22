@@ -86,23 +86,7 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "all",
-        [
-          "!in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
-        ],
-        ["==", "mode", "BUS"]
-      ],
+      "filter": ["all", ["!in", "trunk_route", "1"], ["==", "mode", "BUS"]],
       "layout": {
         "visibility": "visible"
       },
@@ -134,23 +118,7 @@
       "source": "stops",
       "source-layer": "stops",
       "interactive": true,
-      "filter": [
-        "all",
-        [
-          "in",
-          "routeId",
-          "1500",
-          "2200",
-          "2510",
-          "2550",
-          "4560",
-          "4570",
-          "1020",
-          "1030",
-          "1040"
-        ],
-        ["==", "mode", "BUS"]
-      ],
+      "filter": ["all", ["in", "trunk_route", "1"], ["==", "mode", "BUS"]],
       "layout": {
         "visibility": "visible"
       },
