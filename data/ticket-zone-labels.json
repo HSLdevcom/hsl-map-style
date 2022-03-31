@@ -1,0 +1,138 @@
+{
+  "type": "FeatureCollection",
+  "name": "Ticket zone labels",
+  "description": "This file contains a set of predefined points to render ticket labels.",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "A"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.927, 60.19]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.925, 60.258]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.78, 60.202]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.09, 60.213]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "C"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.1794, 60.264]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "C"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.791, 60.323]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "C"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.038, 60.33]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "C"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.63, 60.25]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "D"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.98, 60.415]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "D"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.228, 60.401]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "D"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.331, 60.31]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "D"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.371, 60.18]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Zone": "D"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.5, 60.091]
+      }
+    }
+  ]
+}
