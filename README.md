@@ -16,19 +16,20 @@ The difference between style and theme component is that a style component defin
 ### Style components
 
 
-| Name                | Desciption                                                          | Enabled by default |
-|---------------------|---------------------------------------------------------------------|:------------------:|
-| `base`              | Base map (landuse, roads, buildings)                                |         x          |
-| `municipal_borders` | Municipal borders near HSL area                                     |                    |
-| `routes`            | Routes of HSL traffic                                               |                    |
-| `text`              | Text labels (roads, places, POIs) in Finnish                        |         x          |
-| `subway_entrance`   | Icons for subway entrances                                          |                    |
-| `poi`               | Icons for HSL terminals and airports                                |                    |
-| `park_and_ride`     | Style for specific parking areas designed for public transportation |                    |
-| `ticket_sales`      | Icons for ticket sales points                                       |                    |
-| `stops`             | Stops of HSL traffic                                                |                    |
-| `citybikes`         | Citybike stations in Helsinki area                                  |                    |
-| `ticket_zones`      | Ticket zones of HSL                                                 |                    |
+| Name                 | Desciption                                                          | Enabled by default |
+|----------------------|---------------------------------------------------------------------|:------------------:|
+| `base`               | Base map (landuse, roads, buildings)                                |         x          |
+| `municipal_borders`  | Municipal borders near HSL area                                     |                    |
+| `routes`             | Routes of HSL traffic                                               |                    |
+| `text`               | Text labels (roads, places, POIs) in Finnish                        |         x          |
+| `subway_entrance`    | Icons for subway entrances                                          |                    |
+| `poi`                | Icons for HSL terminals and airports                                |                    |
+| `park_and_ride`      | Style for specific parking areas designed for public transportation |                    |
+| `ticket_sales`       | Icons for ticket sales points                                       |                    |
+| `stops`              | Stops of HSL traffic                                                |                    |
+| `citybikes`          | Citybike stations in Helsinki area                                  |                    |
+| `ticket_zones`       | Ticket zones of HSL                                                 |                    |
+| `ticket_zone_labels` | Fixed ticket zone labels to render zone icons                       |                    |
 
 There're no limits which style components can be enabled or disabled at the same time. 
 
@@ -98,6 +99,7 @@ const style = generateStyle({
     stops: { enabled: false },
     citybikes: { enabled: false },
     ticket_zones: { enabled: false },
+    ticket_zone_labels: { enabled: false },
 
     // Themes
     text_sv: { enabled: false },

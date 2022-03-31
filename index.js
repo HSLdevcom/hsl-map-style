@@ -80,6 +80,12 @@ const components = [
     description: "Lippyvyöhykkeet",
     style: require("./style/hsl-map-style-ticket-zones.json"),
   },
+  {
+    id: "ticket_zone_labels",
+    enabled: false,
+    description: "Lippyvyöhykeiden ikonit",
+    style: require("./style/hsl-map-style-ticket-zone-labels.json"),
+  },
   // Themes, which just modify the previous styles.
   {
     id: "text_sv",

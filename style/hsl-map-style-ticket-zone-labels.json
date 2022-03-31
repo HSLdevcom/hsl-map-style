@@ -1,0 +1,35 @@
+{
+  "layers": [
+    {
+      "id": "ticket-zone-labels",
+      "type": "symbol",
+      "source": "ticketzone-labels",
+      "minzoom": 8,
+      "maxzoom": 13,
+      "layout": {
+        "icon-image": [
+          "concat",
+          "icon-zone-",
+          [
+            "get",
+            "Zone"
+          ]
+        ],
+        "icon-rotation-alignment": "map",
+        "icon-size": 0.7,
+        "icon-padding": 1,
+        "symbol-avoid-edges": false,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-translate-anchor": "viewport"
+      }
+    }
+  ],
+  "sources": {
+    "ticketzone-labels": {
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/ticket-zone-labels.json",
+      "type": "geojson"
+    }
+  }
+}

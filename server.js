@@ -19,6 +19,7 @@ const style = require("./index").generateStyle({
     stops: { enabled: false },
     citybikes: { enabled: false },
     ticket_zones: { enabled: false },
+    ticket_zone_labels: { enabled: false },
     // Themes
     text_sv: { enabled: false },
     text_fisv: { enabled: false },
