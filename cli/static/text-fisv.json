@@ -61,6 +61,12 @@
       }
     },
     {
+      "id": "label_place_town",
+      "layout": {
+        "text-field": "{name}\n{name_sv_nodefault}"
+      }
+    },
+    {
       "id": "label_country",
       "layout": {
         "text-field": "{name}\n{name_sv_nodefault}"

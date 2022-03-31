@@ -55,6 +55,12 @@
       }
     },
     {
+      "id": "label_place_town",
+      "layout": {
+        "text-field": "{name_sv}"
+      }
+    },
+    {
       "id": "label_place_city",
       "layout": {
         "text-field": "{name_sv}"

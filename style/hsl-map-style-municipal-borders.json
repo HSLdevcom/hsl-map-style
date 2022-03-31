@@ -4,6 +4,7 @@
       "id": "municipal_border",
       "type": "line",
       "source": "borders",
+      "minzoom": 7,
       "layout": {
         "line-cap": "round",
         "line-join": "round"

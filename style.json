@@ -2095,6 +2095,7 @@
       "id": "municipal_border",
       "type": "line",
       "source": "borders",
+      "minzoom": 7,
       "layout": {
         "line-cap": "round",
         "line-join": "round"
@@ -2821,11 +2822,11 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "place",
-      "minzoom": 8,
+      "minzoom": 10,
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "class", "hamlet", "neighbourhood", "suburb", "town", "village"]
+        ["in", "class", "hamlet", "neighbourhood", "suburb", "village"]
       ],
       "layout": {
         "text-field": "{name}",
@@ -2839,6 +2840,37 @@
           10,
           16,
           18
+        ]
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#fff",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "label_place_town",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "place",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["==", "class", "town"]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["Gotham Rounded Book"],
+        "text-max-width": 6,
+        "text-size": [
+          "interpolate",
+          ["exponential", 1.2],
+          ["zoom"],
+          10,
+          12,
+          16,
+          20
         ]
       },
       "paint": {

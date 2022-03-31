@@ -557,6 +557,13 @@
       }
     },
     {
+      "id": "label_place_town",
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "rgba(0,0,0,0.7)"
+      }
+    },
+    {
       "id": "label_place_city",
       "paint": {
         "text-color": "#666",

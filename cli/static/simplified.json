@@ -111,6 +111,12 @@
       }
     },
     {
+      "id": "label_place_town",
+      "layout": {
+        "text-font": ["Gotham Rounded Medium"]
+      }
+    },
+    {
       "id": "label_place_city",
       "paint": {
         "text-color": "#333",

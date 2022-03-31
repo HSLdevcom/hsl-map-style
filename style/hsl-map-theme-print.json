@@ -87,6 +87,12 @@
       }
     },
     {
+      "id": "label_place_town",
+      "paint": {
+        "text-color": "#000"
+      }
+    },
+    {
       "id": "label_place_city",
       "paint": {
         "text-color": "#000"
