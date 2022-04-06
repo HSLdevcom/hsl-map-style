@@ -62,7 +62,7 @@
   ],
   "sources": {
     "parkandride": {
-      "url": "https://dev-api.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+      "url": "https://api.digitransit.fi/map/v2/hsl-parkandride-map/index.json",
       "type": "vector"
     }
   }

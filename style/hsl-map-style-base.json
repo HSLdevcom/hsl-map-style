@@ -3484,7 +3484,7 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "https://dev-api.digitransit.fi/map/v2/hsl-vector-map/index.json"
+      "url": "https://api.digitransit.fi/map/v2/hsl-vector-map/index.json"
     }
   }
 }

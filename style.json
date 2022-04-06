@@ -5,10 +5,10 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "https://dev-api.digitransit.fi/map/v2/hsl-vector-map/index.json"
+      "url": "https://api.digitransit.fi/map/v2/hsl-vector-map/index.json"
     },
     "parkandride": {
-      "url": "https://dev-api.digitransit.fi/map/v1/hsl-parkandride-map/index.json",
+      "url": "https://api.digitransit.fi/map/v2/hsl-parkandride-map/index.json",
       "type": "vector"
     },
     "borders": {
@@ -44,7 +44,7 @@
       "type": "vector"
     },
     "citybike": {
-      "url": "https://dev-api.digitransit.fi/map/v1/hsl-citybike-map/index.json",
+      "url": "https://api.digitransit.fi/map/v2/hsl-citybike-map/index.json",
       "type": "vector"
     },
     "terminals": {
@@ -52,7 +52,7 @@
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/hsl-routemap-server-openmaptiles/sprite",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
   "glyphs": "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
