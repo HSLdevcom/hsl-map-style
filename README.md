@@ -136,6 +136,8 @@ Most likely, the best way to start is to upload [`style.json`](style.json) and m
 bin/styletool-cli split ./style.json ./style/
 ```
 
+**Run split command always before commiting modifications to keep style.json and splitted parts in sync!**
+
 Remember to name new layers logically `id`. The partition of `style.json` to different components is made by the prefix of `id` field. See [`cli/fileMappings.js`](cli/fileMappings.js) how the layers will be picked up.
 
 To add new components and make them to work with the cli tool, do the following steps.
@@ -147,7 +149,7 @@ To add new components and make them to work with the cli tool, do the following 
 
 ### Themes
 
-Themes are not included in `style.json`. They will be copied from [`cli/static`](cli/static), so make modifications there and run split tool.
+Themes are not included in `style.json`. They will be copied from [`cli/static`](cli/static), so make modifications there and run split tool. To preview different themes, use `render` command of CLI tool and inspect the generated tile e.g. in Maputnik. (See instructions below.)
 
 ### New map icons
 
@@ -181,7 +183,7 @@ bin/styletool-cli split ./style.json ./style/
 
 ##### Render
 
-Render the parts into one continuous json file. This command is simpler, and uses the same functionality as you would use when using the hsl-map-style module in a Node project. Select the layers you need in `cli/render.js` and run this command:
+Render the parts into one continuous json file. This command is simpler, and uses the same functionality as you would use when using the hsl-map-style module in a Node project. Select the layers and theme you need in `cli/render.js` and run this command:
 
 ```bash
 bin/styletool-cli render
@@ -190,7 +192,7 @@ bin/styletool-cli render
 By default it will output the style to stdout, so you can pipe the output to another command or write it to a file:
 
 ```bash
-bin/styletool-cli render >> style.json
+bin/styletool-cli render > test-style.json
 ```
 
 ##### Match order
