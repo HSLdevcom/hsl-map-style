@@ -29,6 +29,14 @@
       "minzoom": 16
     },
     {
+      "id": "road_path_steps_case",
+      "minzoom": 16
+    },
+    {
+      "id": "road_path_steps",
+      "minzoom": 16
+    },
+    {
       "id": "road_cycleway_track",
       "minzoom": 15
     },

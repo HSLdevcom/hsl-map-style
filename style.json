@@ -2701,6 +2701,7 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
