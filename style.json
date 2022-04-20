@@ -2118,7 +2118,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["match", ["string", ["get", "routeId"]], ["1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"], false, true],
+        ["!=", ["string", ["get", "trunk_route"]], "1"],
         ["==", ["string", ["get", "mode"]], "BUS"],
         ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
       ],
@@ -2143,7 +2143,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["match", ["string", ["get", "routeId"]], ["1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"], false, true],
+        ["!=", ["string", ["get", "trunk_route"]], "1"],
         ["==", ["string", ["get", "mode"]], "BUS"],
         ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
       ],
@@ -2169,7 +2169,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["match", ["string", ["get", "routeId"]], ["1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"], false, true],
+        ["!=", ["string", ["get", "trunk_route"]], "1"],
         ["==", ["string", ["get", "mode"]], "BUS"],
         ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
       ],
@@ -2259,7 +2259,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["match", ["string", ["get", "routeId"]], ["1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"], true, false],
+        ["==", ["string", ["get", "trunk_route"]], "1"],
         ["==", ["string", ["get", "mode"]], "BUS"],
         ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
       ],
@@ -2284,7 +2284,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["match", ["string", ["get", "routeId"]], ["1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"], true, false],
+        ["==", ["string", ["get", "trunk_route"]], "1"],
         ["==", ["string", ["get", "mode"]], "BUS"],
         ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
       ],
@@ -2310,7 +2310,7 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["match", ["string", ["get", "routeId"]], ["1500", "2200", "2510", "2550", "4560", "4570", "1020", "1030", "1040"], true, false],
+        ["==", ["string", ["get", "trunk_route"]], "1"],
         ["==", ["string", ["get", "mode"]], "BUS"],
         ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
       ],
