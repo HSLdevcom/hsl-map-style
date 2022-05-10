@@ -35,18 +35,19 @@ There're no limits which style components can be enabled or disabled at the same
 
 ### Theme components
 
-| Name                | Desciption                                                          | Collides with     |
-|---------------------|---------------------------------------------------------------------|-------------------|
-| `text_sv`           | Shows texts in Swedish                                              | `text_fisv`       |
-| `text_fisv`         | Shows texts in both Finnish and Swedish                             | `text_sv`         |
-| `regular_routes`    | Shows only regular routes (filters near bus routes)                 | `near_bus_routes` |
-| `near_bus_routes`   | Shows only near bus routes                                          | `regular_routes`  |
-| `regular_stops`     | Shows only regular stops (filters near bus stops)                   | `near_bus_stops`  |
-| `near_bus_stops`    | Shows only near bus stops                                           | `regular_stops`   |
-| `print`             | Modifies color scheme better for printing (base map and texts)      | `greyscale`       |
-| `greyscale`         | Modifies color to dark greyscale (base map and texts)               | `print`           |
-| `simplified`        | Adds minzoom values to limit map elements. "Reittiopas style"       |                   |
-| `3d`                | Renders buildings in 3d                                             |                   |
+| Name                          | Desciption                                                       | Collides with     | Enabled by default |
+|-------------------------------|------------------------------------------------------------------|-------------------|:------------------:|
+| `text_sv`                     | Shows texts in Swedish                                           | `text_fisv`       |                    |
+| `text_fisv`                   | Shows texts in both Finnish and Swedish                          | `text_sv`         |                    |
+| `regular_routes`              | Shows only regular routes (filters near bus routes)              | `near_bus_routes` |                    |
+| `near_bus_routes`             | Shows only near bus routes                                       | `regular_routes`  |                    |
+| `routes_with_departures_only` | Shows only routes that are currently used                        |                   |         x          |
+| `regular_stops`               | Shows only regular stops (filters near bus stops)                | `near_bus_stops`  |                    |
+| `near_bus_stops`              | Shows only near bus stops                                        | `regular_stops`   |                    |
+| `print`                       | Modifies color scheme better for printing (base map and texts)   | `greyscale`       |                    |
+| `greyscale`                   | Modifies color to dark greyscale (base map and texts)            | `print`           |                    |
+| `simplified`                  | Adds minzoom values to limit map elements. "Reittiopas style"    |                   |                    |
+| `3d`                          | Renders buildings in 3d                                          |                   |                    |
 
 Multiple themes can be enabled at the same time, but be aware of combinations that collide with each other. Those layers will overwrite style parameters twice, which leads to unexpected results.
 Remember also to enable the corresponding styles when using themes. Theme components just overwrite parameters, if they exist, and do not add any layers. E.g., `stops` style component should be enabled, if you want to use `regular_stops` theme.
@@ -86,7 +87,7 @@ const style = generateStyle({
   sourcesUrl: 'https://cdn.digitransit.fi/', // <-- You can override the default sources URL.
   components: {
     // Set each layer you want to include to true
-    
+
     // Styles
     base: { enabled: true }, // Enabled by default
     municipal_borders: { enabled: false },
@@ -106,6 +107,7 @@ const style = generateStyle({
     text_fisv: { enabled: false },
     regular_routes: { enabled: false },
     near_bus_routes: { enabled: false },
+    routes_with_departures_only: { enabled: true }, // Enabled by default. Doesn't do anything until routes is enabled.
     regular_stops: { enabled: false },
     near_bus_stops: { enabled: false },
     print: { enabled: false },

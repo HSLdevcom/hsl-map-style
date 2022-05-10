@@ -116,6 +116,13 @@ const components = [
     dependencies: ["routes"],
   },
   {
+    id: "routes_with_departures_only",
+    enabled: true,
+    description: "Vain lähtöjä sisältävät reitit",
+    style: require("./style/hsl-map-theme-routes-with-departures-only.json"),
+    dependencies: ["routes"],
+  },
+  {
     id: "regular_stops",
     enabled: false,
     description: "Pysäkit ilman lähibusseja",
@@ -219,6 +226,11 @@ function customizer(objValue, srcValue) {
             isPlainObject(objElement) && objElement.id === srcElement.id
         );
         if (destElement) {
+          // Filter needs to be an union
+          if (srcElement.filter && destElement.filter) {
+            destElement.filter = ["all", destElement.filter, srcElement.filter];
+            delete srcElement.filter; // eslint-disable-line no-param-reassign
+          }
           // Override or add properties to existing layer
           merge(destElement, srcElement);
           return;
