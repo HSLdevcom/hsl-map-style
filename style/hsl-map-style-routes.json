@@ -28,17 +28,6 @@
             ]
           ],
           "BUS"
-        ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
         ]
       ],
       "layout": {
@@ -89,17 +78,6 @@
             ]
           ],
           "BUS"
-        ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
         ]
       ],
       "layout": {
@@ -151,17 +129,6 @@
             ]
           ],
           "BUS"
-        ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
         ]
       ],
       "paint": {
@@ -186,29 +153,15 @@
       "source": "routes",
       "source-layer": "routes",
       "filter": [
-        "all",
+        "==",
         [
-          "==",
+          "string",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
-          ],
-          "TRAM"
+            "get",
+            "mode"
+          ]
         ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
-        ]
+        "TRAM"
       ],
       "layout": {
         "line-cap": "round",
@@ -236,29 +189,15 @@
       "source": "routes",
       "source-layer": "routes",
       "filter": [
-        "all",
+        "==",
         [
-          "==",
+          "string",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
-          ],
-          "TRAM"
+            "get",
+            "mode"
+          ]
         ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
-        ]
+        "TRAM"
       ],
       "layout": {
         "line-cap": "round",
@@ -287,29 +226,15 @@
       "source": "routes",
       "source-layer": "routes",
       "filter": [
-        "all",
+        "==",
         [
-          "==",
+          "string",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
-          ],
-          "TRAM"
+            "get",
+            "mode"
+          ]
         ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
-        ]
+        "TRAM"
       ],
       "paint": {
         "line-color": "#00bb75",
@@ -355,17 +280,6 @@
             ]
           ],
           "BUS"
-        ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
         ]
       ],
       "layout": {
@@ -416,17 +330,6 @@
             ]
           ],
           "BUS"
-        ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
         ]
       ],
       "layout": {
@@ -478,17 +381,6 @@
             ]
           ],
           "BUS"
-        ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
         ]
       ],
       "paint": {
@@ -513,29 +405,15 @@
       "source": "routes",
       "source-layer": "routes",
       "filter": [
-        "all",
+        "==",
         [
-          "==",
+          "string",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
-          ],
-          "FERRY"
+            "get",
+            "mode"
+          ]
         ],
-        [
-          "!=",
-          [
-            "boolean",
-            [
-              "get",
-              "hasRegularDayDepartures"
-            ]
-          ],
-          false
-        ]
+        "FERRY"
       ],
       "layout": {
         "line-cap": "round",
