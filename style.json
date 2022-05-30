@@ -36,8 +36,8 @@
       "type": "geojson"
     },
     "ticket-sales": {
-      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/f9388fc8a8f848fda3bc584b607afe97_0.geojson",
-      "type": "geojson"
+      "data": "https://api.digitransit.fi/map/v2/hsl-ticket-sales-map/index.json",
+      "type": "vector"
     },
     "stops": {
       "url": "https://kartat.hsl.fi/jore/tiles/stops/index.json",
@@ -3163,6 +3163,7 @@
       "id": "ticket-sales_icon_sales-point",
       "type": "symbol",
       "source": "ticket-sales",
+      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": [
         "all",
@@ -3177,6 +3178,7 @@
       "id": "ticket-sales_icon_ticket-machine",
       "type": "symbol",
       "source": "ticket-sales",
+      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": [
         "all",
@@ -3191,6 +3193,7 @@
       "id": "ticket-sales_icon_ticket-machine-parking",
       "type": "symbol",
       "source": "ticket-sales",
+      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": [
         "all",
@@ -3206,6 +3209,7 @@
       "id": "ticket-sales_icon_service-point",
       "type": "symbol",
       "source": "ticket-sales",
+      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": ["all", ["==", "$type", "Point"], ["==", "Tyyppi", "Palvelupiste"]],
       "layout": {
