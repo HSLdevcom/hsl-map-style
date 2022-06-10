@@ -3,7 +3,7 @@
 ## Installation
 
 Requirements:
-- node v8
+- node v16
 - yarn package manager
 
 ```
@@ -18,8 +18,8 @@ yarn install
 # Installation
 sudo apt install librsvg2-bin
 
-# Resize to the size 16x16
-rsvg-convert -w 16 -h 16 -f svg icon.svg > resized-icon.svg.
+# Resize to the size 16x16 (or somewhat similar, depending of the aspect ratio of the icon)
+rsvg-convert -w 16 -h 16 -f svg icon.svg > resized-icon.svg
 
 # The batch process example
 for i in $(find new-icons/*.svg -printf "%f\n"); do rsvg-convert -w 16 -h 16 -f svg new-icons/$i > test-icons/$i; done;
