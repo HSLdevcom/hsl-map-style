@@ -94,12 +94,70 @@
       "source-layer": "stops",
       "minzoom": 13,
       "filter": [
-        "==",
-        "mode",
-        "BUS"
+        "all",
+        [
+          "!",
+          [
+            "get",
+            "isTrunkStop"
+          ]
+        ],
+        [
+          "==",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
+          "BUS"
+        ]
       ],
       "paint": {
         "circle-color": "#007ac9",
+        "circle-radius": [
+          "interpolate",
+          [
+            "exponential",
+            1.15
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          1,
+          22,
+          24
+        ]
+      }
+    },
+    {
+      "id": "stops_trunk",
+      "type": "circle",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "get",
+          "isTrunkStop"
+        ],
+        [
+          "==",
+          [
+            "string",
+            [
+              "get",
+              "mode"
+            ]
+          ],
+          "BUS"
+        ]
+      ],
+      "paint": {
+        "circle-color": "#CA4300",
         "circle-radius": [
           "interpolate",
           [
