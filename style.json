@@ -40,7 +40,11 @@
       "type": "vector"
     },
     "stops": {
-      "url": "https://kartat.hsl.fi/jore/tiles/stops/index.json",
+      "url": "http://localhost:3000/stops/index.json",
+      "type": "vector"
+    },
+    "stops-by-routes": {
+      "url": "http://localhost:3000/stops-by-routes/index.json",
       "type": "vector"
     },
     "citybike": {
@@ -52,7 +56,7 @@
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/MM-398/sprite",
   "glyphs": "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -3222,7 +3226,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["!=", "mode", "RAIL"],
+      "filter": ["!=", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3242,7 +3246,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 15,
-      "filter": ["==", "mode", "RAIL"],
+      "filter": ["==", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3262,7 +3266,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 15,
-      "filter": ["==", "mode", "RAIL"],
+      "filter": ["==", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#8c54a2",
         "circle-radius": [
@@ -3330,7 +3334,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["==", "mode", "FERRY"],
+      "filter": ["==", ["get", "mode"], "FERRY"],
       "paint": {
         "circle-color": "#00b9e4",
         "circle-radius": [
@@ -3350,7 +3354,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["==", "mode", "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "paint": {
         "circle-color": "#00985f",
         "circle-radius": [
@@ -3370,7 +3374,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["==", "mode", "SUBWAY"],
+      "filter": ["==", ["get", "mode"], "SUBWAY"],
       "paint": {
         "circle-color": "#ff6319",
         "circle-radius": [
@@ -3390,7 +3394,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 14,
-      "filter": ["!=", "mode", "RAIL"],
+      "filter": ["!=", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3410,7 +3414,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 15,
-      "filter": ["==", "mode", "RAIL"],
+      "filter": ["==", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3422,6 +3426,41 @@
           22,
           20
         ]
+      }
+    },
+    {
+      "id": "stops_timing_icon",
+      "type": "symbol",
+      "source": "stops-by-routes",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["!=", ["get", "timingStopType"], 0]
+      ],
+      "layout": {
+        "icon-image": ["concat", "icon-time", ["get", "direction"]],
+        "icon-size": 1.2,
+        "icon-allow-overlap": true,
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "stops_start_icon",
+      "type": "symbol",
+      "source": "stops-by-routes",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["==", ["get", "stopIndex"], 1]
+      ],
+      "layout": {
+        "icon-image": ["concat", "icon-direction", ["get", "direction"]],
+        "icon-size": 1.2,
+        "icon-anchor": "bottom",
+        "icon-allow-overlap": true,
+        "visibility": "visible"
       }
     },
     {

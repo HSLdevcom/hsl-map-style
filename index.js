@@ -160,6 +160,12 @@ const components = [
     description: "3D-rakennukset",
     style: require("./style/hsl-map-theme-3d.json"),
   },
+  {
+    id: "driver_info",
+    enabled: false,
+    description: "Kuljettajaohjeet",
+    style: require("./style/hsl-map-theme-driver-info.json"),
+  },
 ];
 
 /**
@@ -286,6 +292,8 @@ function extendStyle(style, options) {
         true,
         false,
       ];
+
+
       // Function to decide how to merge filter with the existing ones.
       const createFilter = (layer) => {
         const f = layer.filter;

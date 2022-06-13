@@ -30,7 +30,9 @@ module.exports = () => {
       greyscale: { enabled: false },
       simplified: { enabled: false },
       "3d": { enabled: false },
+      driver_info: { enabled: false },
     },
+    routeFilter: [],
   });
 
   process.stdout.write(JSON.stringify(styleJson, null, 2));
