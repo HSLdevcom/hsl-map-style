@@ -3,61 +3,103 @@
     {
       "id": "stops_case",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 11
+      }
     },
     {
       "id": "stops_rail_case",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 11
+      }
     },
     {
       "id": "stops_rail",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 10
+      }
     },
     {
       "id": "stops_bus",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 10
+      }
     },
     {
       "id": "stops_trunk",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 10
+      }
     },
     {
       "id": "stops_ferry",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 10
+      }
     },
     {
       "id": "stops_tram",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 10
+      }
     },
     {
       "id": "stops_subway",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 10
+      }
     },
     {
       "id": "stops_hub",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 7
+      }
     },
     {
       "id": "stops_rail_hub",
       "source": "stops-by-routes",
-      "filter": ["==", ["get", "timingStopType"], 0]
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 7
+      }
     },
     {
       "id": "stops_timing_icon",
+      "minzoom": 0,
       "layout": {
         "visibility": "visible"
       }
     },
     {
       "id": "stops_start_icon",
+      "minzoom": 0,
       "layout": {
         "visibility": "visible"
       }

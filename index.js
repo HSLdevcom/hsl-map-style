@@ -6,6 +6,8 @@ const isPlainObject = require("lodash/isPlainObject");
 
 const BASE_JSON = require("./style/hsl-map-template.json");
 
+const ROUTEFILTER_COMPONENTS = ["routes", "stops"];
+
 const replaceableValues = {
   SOURCES_URL: {
     default: "https://api.digitransit.fi/",
@@ -293,7 +295,6 @@ function extendStyle(style, options) {
         false,
       ];
 
-
       // Function to decide how to merge filter with the existing ones.
       const createFilter = (layer) => {
         const f = layer.filter;
@@ -312,7 +313,7 @@ function extendStyle(style, options) {
         return undefined;
       };
 
-      if (component.id === "routes") {
+      if (ROUTEFILTER_COMPONENTS.includes(component.id)) {
         component.style.layers.forEach((l) => {
           // eslint-disable-next-line no-param-reassign
           l.filter = createFilter(l);
