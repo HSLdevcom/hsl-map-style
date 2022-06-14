@@ -2122,8 +2122,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!=", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["!=", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2146,8 +2146,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!=", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["!=", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2171,8 +2171,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!=", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["!=", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "paint": {
         "line-color": "#3395d4",
@@ -2189,7 +2189,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "layout": {
         "line-cap": "round",
         "line-join": "round"
@@ -2209,7 +2209,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -2230,7 +2230,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "paint": {
         "line-color": "#00bb75",
         "line-width": {
@@ -2248,8 +2248,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2272,8 +2272,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2297,8 +2297,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "paint": {
         "line-color": "#FF6319",
@@ -2315,7 +2315,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "FERRY"],
+      "filter": ["==", ["get", "mode"], "FERRY"],
       "layout": {
         "line-cap": "round",
         "line-join": "round"
@@ -2337,10 +2337,10 @@
       "source": "subway",
       "filter": [
         "any",
-        ["==", ["string", ["get", "underground"]], "false"],
+        ["==", ["get", "underground"], "false"],
         [
           "all",
-          ["==", ["string", ["get", "underground"]], "true"],
+          ["==", ["get", "underground"], "true"],
           ["<", ["zoom"], 11]
         ]
       ],
@@ -2365,10 +2365,10 @@
       "source": "subway",
       "filter": [
         "any",
-        ["==", ["string", ["get", "underground"]], "false"],
+        ["==", ["get", "underground"], "false"],
         [
           "all",
-          ["==", ["string", ["get", "underground"]], "true"],
+          ["==", ["get", "underground"], "true"],
           ["<", ["zoom"], 11]
         ]
       ],
@@ -2393,7 +2393,7 @@
       "type": "line",
       "source": "subway",
       "minzoom": 11,
-      "filter": ["==", ["string", ["get", "underground"]], "true"],
+      "filter": ["==", ["get", "underground"], "true"],
       "paint": {
         "line-color": "#FF6319",
         "line-dasharray": [2.3, 1.5],
@@ -2943,8 +2943,8 @@
       "minzoom": 14,
       "filter": [
         "all",
-        ["!=", ["string", ["get", "status"]], "INACTIVE"],
-        ["in", "CAR", ["string", ["get", "builtCapacity"]]]
+        ["!=", ["get", "status"], "INACTIVE"],
+        ["in", "CAR", ["get", "builtCapacity"]]
       ],
       "layout": {
         "icon-image": "icon-park-and-ride",
@@ -3289,7 +3289,7 @@
       "filter": [
         "all",
         ["!", ["get", "isTrunkStop"]],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "mode"], "BUS"]
       ],
       "paint": {
         "circle-color": "#007ac9",
@@ -3313,7 +3313,7 @@
       "filter": [
         "all",
         ["get", "isTrunkStop"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "mode"], "BUS"]
       ],
       "paint": {
         "circle-color": "#CA4300",

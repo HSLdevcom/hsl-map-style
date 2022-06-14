@@ -114,11 +114,8 @@
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]
@@ -156,11 +153,8 @@
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]

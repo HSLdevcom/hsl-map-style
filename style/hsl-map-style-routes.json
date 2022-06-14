@@ -10,22 +10,16 @@
         [
           "!=",
           [
-            "string",
-            [
-              "get",
-              "trunk_route"
-            ]
+            "get",
+            "trunk_route"
           ],
           "1"
         ],
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]
@@ -60,22 +54,16 @@
         [
           "!=",
           [
-            "string",
-            [
-              "get",
-              "trunk_route"
-            ]
+            "get",
+            "trunk_route"
           ],
           "1"
         ],
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]
@@ -111,22 +99,16 @@
         [
           "!=",
           [
-            "string",
-            [
-              "get",
-              "trunk_route"
-            ]
+            "get",
+            "trunk_route"
           ],
           "1"
         ],
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]
@@ -155,11 +137,8 @@
       "filter": [
         "==",
         [
-          "string",
-          [
-            "get",
-            "mode"
-          ]
+          "get",
+          "mode"
         ],
         "TRAM"
       ],
@@ -191,11 +170,8 @@
       "filter": [
         "==",
         [
-          "string",
-          [
-            "get",
-            "mode"
-          ]
+          "get",
+          "mode"
         ],
         "TRAM"
       ],
@@ -228,11 +204,8 @@
       "filter": [
         "==",
         [
-          "string",
-          [
-            "get",
-            "mode"
-          ]
+          "get",
+          "mode"
         ],
         "TRAM"
       ],
@@ -262,22 +235,16 @@
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "trunk_route"
-            ]
+            "get",
+            "trunk_route"
           ],
           "1"
         ],
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]
@@ -312,22 +279,16 @@
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "trunk_route"
-            ]
+            "get",
+            "trunk_route"
           ],
           "1"
         ],
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]
@@ -363,22 +324,16 @@
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "trunk_route"
-            ]
+            "get",
+            "trunk_route"
           ],
           "1"
         ],
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "mode"
-            ]
+            "get",
+            "mode"
           ],
           "BUS"
         ]
@@ -407,11 +362,8 @@
       "filter": [
         "==",
         [
-          "string",
-          [
-            "get",
-            "mode"
-          ]
+          "get",
+          "mode"
         ],
         "FERRY"
       ],
@@ -448,11 +400,8 @@
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "underground"
-            ]
+            "get",
+            "underground"
           ],
           "false"
         ],
@@ -461,11 +410,8 @@
           [
             "==",
             [
-              "string",
-              [
-                "get",
-                "underground"
-              ]
+              "get",
+              "underground"
             ],
             "true"
           ],
@@ -507,11 +453,8 @@
         [
           "==",
           [
-            "string",
-            [
-              "get",
-              "underground"
-            ]
+            "get",
+            "underground"
           ],
           "false"
         ],
@@ -520,11 +463,8 @@
           [
             "==",
             [
-              "string",
-              [
-                "get",
-                "underground"
-              ]
+              "get",
+              "underground"
             ],
             "true"
           ],
@@ -569,11 +509,8 @@
       "filter": [
         "==",
         [
-          "string",
-          [
-            "get",
-            "underground"
-          ]
+          "get",
+          "underground"
         ],
         "true"
       ],
