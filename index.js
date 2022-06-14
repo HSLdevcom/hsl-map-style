@@ -7,7 +7,8 @@ const isPlainObject = require("lodash/isPlainObject");
 
 const BASE_JSON = require("./style/hsl-map-template.json");
 
-const ROUTEFILTER_COMPONENTS = ["routes", "stops"];
+const ROUTEFILTER_COMPONENTS = ["routes", "stops"]; // Components which are filtered by routefilter
+const JORE_SOURCES = ["routes", "stops", "stops-by-routes"]; // Sources which can be queried by date
 
 const replaceableValues = {
   SOURCES_URL: {
@@ -350,6 +351,14 @@ function extendStyle(style, options) {
     }
   });
 
+  if (options.joreDate && Date.parse(options.joreDate)) {
+    const dateString = new Date(options.joreDate).toISOString().split("T")[0]; // convert to YYYY-MM-DD format
+    Object.keys(extendedStyle.sources).forEach((k) => {
+      if (JORE_SOURCES.includes(k)) {
+        extendedStyle.sources[k].url += `?date=${dateString}`;
+      }
+    });
+  }
   return extendedStyle;
 }
 
