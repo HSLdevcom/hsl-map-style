@@ -2,6 +2,7 @@ const forEach = require("lodash/forEach");
 const merge = require("lodash/merge");
 const mergeWith = require("lodash/mergeWith");
 const cloneDeep = require("lodash/cloneDeep");
+const isEmpty = require("lodash/isEmpty");
 const isPlainObject = require("lodash/isPlainObject");
 
 const BASE_JSON = require("./style/hsl-map-template.json");
@@ -280,8 +281,7 @@ function extendStyle(style, options) {
 
   // Logic to add route filter
   // Route filter is the list of Jore ids
-  const routeFilter =
-    options.routeFilter && options.routeFilter.filter((r) => r !== "");
+  const { routeFilter } = options;
 
   let routeFilterLine;
 
@@ -290,15 +290,26 @@ function extendStyle(style, options) {
     // eslint-disable-next-line no-param-reassign
     options.components.stops_with_route_info = { enabled: true };
 
-    // remove duplicates, because the following match-expression cannot handle them
-    const cleanFilter = [...new Set(routeFilter)];
-    routeFilterLine = [
-      "match",
-      ["string", ["get", "routeId"]],
-      cleanFilter,
-      true,
-      false,
-    ];
+    const filters = routeFilter
+      .map((f) => {
+        if (typeof f === "string" && f !== "") {
+          return ["==", ["get", "routeId"], f];
+        }
+        if (f.id && f.direction) {
+          return [
+            "all",
+            ["==", ["get", "routeId"], f.id],
+            ["==", ["get", "direction"], f.direction],
+          ];
+        }
+        if (f.id) {
+          return ["==", ["get", "routeId"], f.id];
+        }
+        return undefined;
+      })
+      .filter((f) => !isEmpty(f)); // Filter invalid filters
+
+    routeFilterLine = ["any", ...filters];
   }
 
   extendedComponents.forEach((component) => {
