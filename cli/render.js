@@ -33,6 +33,7 @@ module.exports = () => {
       driver_info: { enabled: false },
     },
     routeFilter: [],
+    joreDate: null, // defaults to current date in API
   });
 
   process.stdout.write(JSON.stringify(styleJson, null, 2));
