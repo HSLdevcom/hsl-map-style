@@ -1,0 +1,44 @@
+{
+  "layers": [
+    {
+      "id": "stops_case",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_rail_case",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_rail",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_bus",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_trunk",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_ferry",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_tram",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_subway",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_hub",
+      "source": "stops-by-routes"
+    },
+    {
+      "id": "stops_rail_hub",
+      "source": "stops-by-routes"
+    }
+  ]
+}

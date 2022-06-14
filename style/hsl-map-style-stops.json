@@ -371,7 +371,7 @@
         ],
         "icon-size": 1.2,
         "icon-allow-overlap": true,
-        "visibility": "visible"
+        "visibility": "none"
       }
     },
     {
@@ -403,7 +403,7 @@
         "icon-size": 1.2,
         "icon-anchor": "bottom",
         "icon-allow-overlap": true,
-        "visibility": "visible"
+        "visibility": "none"
       }
     }
   ],

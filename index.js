@@ -139,6 +139,14 @@ const components = [
     dependencies: ["stops"],
   },
   {
+    id: "stops_with_route_info",
+    enabled: false,
+    description: "Pysäkit reittitiedoilla",
+    style: require("./style/hsl-map-theme-stops-with-route-info.json"),
+    dependencies: ["stops"],
+    hidden: true, // There should not be any need to enable this manually.
+  },
+  {
     id: "print",
     enabled: false,
     description: "Tulostevärit",
@@ -167,6 +175,7 @@ const components = [
     enabled: false,
     description: "Kuljettajaohjeet",
     style: require("./style/hsl-map-theme-driver-info.json"),
+    dependencies: ["stops"],
   },
 ];
 
@@ -269,6 +278,29 @@ function extendStyle(style, options) {
   const extendedStyle = cloneDeep(style);
   const extendedComponents = cloneDeep(components);
 
+  // Logic to add route filter
+  // Route filter is the list of Jore ids
+  const routeFilter =
+    options.routeFilter && options.routeFilter.filter((r) => r !== "");
+
+  let routeFilterLine;
+
+  if (routeFilter && routeFilter.length > 0) {
+    // Enable route information for stops so that filtering is possible.
+    // eslint-disable-next-line no-param-reassign
+    options.components.stops_with_route_info = { enabled: true };
+
+    // remove duplicates, because the following match-expression cannot handle them
+    const cleanFilter = [...new Set(routeFilter)];
+    routeFilterLine = [
+      "match",
+      ["string", ["get", "routeId"]],
+      cleanFilter,
+      true,
+      false,
+    ];
+  }
+
   extendedComponents.forEach((component) => {
     if (options.components) {
       const componentOptions = options.components[component.id];
@@ -279,46 +311,27 @@ function extendStyle(style, options) {
     }
   });
 
+  // Function to decide how to merge filter with the existing ones.
+  const createFilter = (layer) => {
+    const f = layer.filter;
+    if (f && f[0] === "all") {
+      // Append the filter to the list of existing filters
+      return f.concat([routeFilterLine]);
+    }
+    if (f) {
+      // There was one filter already, create all rule.
+      return ["all", f, routeFilterLine];
+    }
+    // No existing filter, add new filter
+    return routeFilterLine;
+  };
+
   extendedComponents.forEach((component) => {
-    // Logic to add route filter
-    // Route filter is the list of Jore ids
-    const routeFilter =
-      options.routeFilter && options.routeFilter.filter((r) => r !== "");
-    if (routeFilter && routeFilter.length > 0) {
-      // remove duplicates, because the following match-expression cannot handle them
-      const cleanFilter = [...new Set(routeFilter)];
-      const routeFilterLine = [
-        "match",
-        ["string", ["get", "routeId"]],
-        cleanFilter,
-        true,
-        false,
-      ];
-
-      // Function to decide how to merge filter with the existing ones.
-      const createFilter = (layer) => {
-        const f = layer.filter;
-        if (f && f[0] === "all") {
-          // Append the filter to the list of existing filters
-          return f.concat([routeFilterLine]);
-        }
-        if (f) {
-          // There was one filter already, create all rule.
-          return ["all", f, routeFilterLine];
-        }
-        if (!layer.ref) {
-          // No existing filter, add new filter if the layer is not ref-layer
-          return routeFilterLine;
-        }
-        return undefined;
-      };
-
-      if (ROUTEFILTER_COMPONENTS.includes(component.id)) {
-        component.style.layers.forEach((l) => {
-          // eslint-disable-next-line no-param-reassign
-          l.filter = createFilter(l);
-        });
-      }
+    if (routeFilterLine && ROUTEFILTER_COMPONENTS.includes(component.id)) {
+      component.style.layers.forEach((l) => {
+        // eslint-disable-next-line no-param-reassign
+        l.filter = createFilter(l);
+      });
     }
 
     if (component.enabled) {
