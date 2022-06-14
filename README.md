@@ -122,10 +122,11 @@ const style = generateStyle({
     greyscale: { enabled: false },
     simplified: { enabled: false },
     "3d": { enabled: false },
+    driver_info: { enabled: true },
   },
 
   // optional property to filter routes
-  routeFilter: ["2550", { id: "4570", direction: "2 }]
+  routeFilter: ["2550", { id: "4570", direction: "2" }]
 });
 
 const map = new mapboxgl.Map({
