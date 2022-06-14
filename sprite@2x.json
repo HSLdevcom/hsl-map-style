@@ -3,29 +3,43 @@
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 250,
+    "x": 314,
     "y": 0
   },
   "icon-citybike-station2": {
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
+    "x": 280,
+    "y": 96
+  },
+  "icon-direction1": {
+    "height": 48,
+    "pixelRatio": 2,
+    "width": 32,
     "x": 216,
+    "y": 96
+  },
+  "icon-direction2": {
+    "height": 48,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 248,
     "y": 96
   },
   "icon-entrance-lift": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 282,
+    "x": 346,
     "y": 0
   },
   "icon-entrance-stairs": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 314,
-    "y": 0
+    "x": 0,
+    "y": 168
   },
   "icon-entrance-subway": {
     "height": 96,
@@ -38,266 +52,266 @@
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 346,
-    "y": 0
+    "x": 32,
+    "y": 168
   },
   "icon-letter-00": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 0,
+    "x": 64,
     "y": 168
   },
   "icon-letter-A": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 32,
+    "x": 96,
     "y": 168
   },
   "icon-letter-B": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 64,
+    "x": 128,
     "y": 168
   },
   "icon-letter-C": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 96,
+    "x": 160,
     "y": 168
   },
   "icon-letter-D": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 128,
+    "x": 192,
     "y": 168
   },
   "icon-letter-E": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 160,
+    "x": 224,
     "y": 168
   },
   "icon-letter-F": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 192,
+    "x": 256,
     "y": 168
   },
   "icon-letter-G": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 224,
+    "x": 288,
     "y": 168
   },
   "icon-letter-H": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 256,
+    "x": 320,
     "y": 168
   },
   "icon-letter-I": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 288,
+    "x": 352,
     "y": 168
   },
   "icon-letter-J": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 320,
-    "y": 168
+    "x": 0,
+    "y": 200
   },
   "icon-letter-K": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 352,
-    "y": 168
+    "x": 32,
+    "y": 200
   },
   "icon-letter-L": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 0,
+    "x": 64,
     "y": 200
   },
   "icon-letter-M": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 32,
+    "x": 96,
     "y": 200
   },
   "icon-letter-N": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 64,
+    "x": 128,
     "y": 200
   },
   "icon-letter-O": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 96,
+    "x": 160,
     "y": 200
   },
   "icon-letter-P": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 128,
+    "x": 192,
     "y": 200
   },
   "icon-letter-Q": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 160,
+    "x": 224,
     "y": 200
   },
   "icon-letter-R": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 192,
+    "x": 256,
     "y": 200
   },
   "icon-letter-S": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 224,
+    "x": 288,
     "y": 200
   },
   "icon-letter-T": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 256,
+    "x": 320,
     "y": 200
   },
   "icon-letter-U": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 288,
+    "x": 352,
     "y": 200
   },
   "icon-letter-V": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 320,
-    "y": 200
-  },
-  "icon-letter-W": {
-    "height": 32,
-    "pixelRatio": 2,
-    "width": 32,
-    "x": 352,
-    "y": 200
-  },
-  "icon-letter-X": {
-    "height": 32,
-    "pixelRatio": 2,
-    "width": 32,
     "x": 0,
     "y": 232
   },
-  "icon-letter-Y": {
+  "icon-letter-W": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 32,
     "y": 232
   },
-  "icon-letter-Z": {
+  "icon-letter-X": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 64,
     "y": 232
   },
-  "icon-letter-Ä": {
+  "icon-letter-Y": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 96,
     "y": 232
   },
-  "icon-letter-Å": {
+  "icon-letter-Z": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 128,
     "y": 232
   },
-  "icon-letter-Ö": {
+  "icon-letter-Ä": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 160,
     "y": 232
   },
+  "icon-letter-Å": {
+    "height": 32,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 192,
+    "y": 232
+  },
+  "icon-letter-Ö": {
+    "height": 32,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 224,
+    "y": 232
+  },
   "icon-one-way": {
     "height": 22,
     "pixelRatio": 2,
     "width": 32,
-    "x": 208,
+    "x": 336,
     "y": 264
   },
   "icon-park-and-ride": {
     "height": 24,
     "pixelRatio": 2,
     "width": 48,
-    "x": 160,
+    "x": 288,
     "y": 264
   },
   "icon-platform-bus": {
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
-    "x": 248,
+    "x": 312,
     "y": 96
   },
   "icon-platform-train": {
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
-    "x": 280,
+    "x": 344,
     "y": 96
   },
   "icon-platform-tram": {
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
-    "x": 312,
-    "y": 96
+    "x": 154,
+    "y": 0
   },
   "icon-stop-bus": {
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
-    "x": 344,
-    "y": 96
+    "x": 186,
+    "y": 0
   },
   "icon-stop-ferry": {
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
-    "x": 154,
+    "x": 218,
     "y": 0
   },
   "icon-stop-hybrid": {
@@ -311,91 +325,105 @@
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
-    "x": 186,
+    "x": 250,
     "y": 0
   },
   "icon-stop-tram": {
     "height": 44,
     "pixelRatio": 2,
     "width": 32,
-    "x": 218,
+    "x": 282,
     "y": 0
   },
   "icon-terminal-aerodrome": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 192,
+    "x": 256,
     "y": 232
   },
   "icon-terminal-bus": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 224,
+    "x": 288,
     "y": 232
   },
   "icon-terminal-ferry": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 256,
+    "x": 320,
     "y": 232
   },
   "icon-terminal-ship": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 288,
+    "x": 352,
     "y": 232
   },
   "icon-terminal-subway": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
-    "x": 320,
-    "y": 232
-  },
-  "icon-terminal-train": {
-    "height": 32,
-    "pixelRatio": 2,
-    "width": 32,
-    "x": 352,
-    "y": 232
-  },
-  "icon-tickets-machine": {
-    "height": 32,
-    "pixelRatio": 2,
-    "width": 32,
     "x": 0,
     "y": 264
   },
-  "icon-tickets-machine-parking": {
+  "icon-terminal-train": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 32,
     "y": 264
   },
-  "icon-tickets-sales-point": {
+  "icon-tickets-machine": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 64,
     "y": 264
   },
-  "icon-tickets-service-point": {
+  "icon-tickets-machine-parking": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 96,
     "y": 264
   },
-  "icon-wetland": {
+  "icon-tickets-sales-point": {
     "height": 32,
     "pixelRatio": 2,
     "width": 32,
     "x": 128,
+    "y": 264
+  },
+  "icon-tickets-service-point": {
+    "height": 32,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 160,
+    "y": 264
+  },
+  "icon-time1": {
+    "height": 32,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 192,
+    "y": 264
+  },
+  "icon-time2": {
+    "height": 32,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 224,
+    "y": 264
+  },
+  "icon-wetland": {
+    "height": 32,
+    "pixelRatio": 2,
+    "width": 32,
+    "x": 256,
     "y": 264
   },
   "icon-zone-A": {

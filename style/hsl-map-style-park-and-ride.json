@@ -27,11 +27,8 @@
         [
           "!=",
           [
-            "string",
-            [
-              "get",
-              "status"
-            ]
+            "get",
+            "status"
           ],
           "INACTIVE"
         ],
@@ -39,11 +36,8 @@
           "in",
           "CAR",
           [
-            "string",
-            [
-              "get",
-              "builtCapacity"
-            ]
+            "get",
+            "builtCapacity"
           ]
         ]
       ],

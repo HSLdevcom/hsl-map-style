@@ -8,7 +8,10 @@
       "minzoom": 13,
       "filter": [
         "!=",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "RAIL"
       ],
       "paint": {
@@ -37,7 +40,10 @@
       "minzoom": 15,
       "filter": [
         "==",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "RAIL"
       ],
       "paint": {
@@ -66,7 +72,10 @@
       "minzoom": 15,
       "filter": [
         "==",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "RAIL"
       ],
       "paint": {
@@ -94,12 +103,64 @@
       "source-layer": "stops",
       "minzoom": 13,
       "filter": [
-        "==",
-        "mode",
-        "BUS"
+        "all",
+        [
+          "!",
+          [
+            "get",
+            "isTrunkStop"
+          ]
+        ],
+        [
+          "==",
+          [
+            "get",
+            "mode"
+          ],
+          "BUS"
+        ]
       ],
       "paint": {
         "circle-color": "#007ac9",
+        "circle-radius": [
+          "interpolate",
+          [
+            "exponential",
+            1.15
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          1,
+          22,
+          24
+        ]
+      }
+    },
+    {
+      "id": "stops_trunk",
+      "type": "circle",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "get",
+          "isTrunkStop"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "mode"
+          ],
+          "BUS"
+        ]
+      ],
+      "paint": {
+        "circle-color": "#CA4300",
         "circle-radius": [
           "interpolate",
           [
@@ -124,7 +185,10 @@
       "minzoom": 13,
       "filter": [
         "==",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "FERRY"
       ],
       "paint": {
@@ -153,7 +217,10 @@
       "minzoom": 13,
       "filter": [
         "==",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "TRAM"
       ],
       "paint": {
@@ -182,7 +249,10 @@
       "minzoom": 13,
       "filter": [
         "==",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "SUBWAY"
       ],
       "paint": {
@@ -211,7 +281,10 @@
       "minzoom": 14,
       "filter": [
         "!=",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "RAIL"
       ],
       "paint": {
@@ -240,7 +313,10 @@
       "minzoom": 15,
       "filter": [
         "==",
-        "mode",
+        [
+          "get",
+          "mode"
+        ],
         "RAIL"
       ],
       "paint": {
@@ -260,11 +336,78 @@
           20
         ]
       }
+    },
+    {
+      "id": "stops_timing_icon",
+      "type": "symbol",
+      "source": "stops-by-routes",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "!=",
+          [
+            "get",
+            "timingStopType"
+          ],
+          0
+        ]
+      ],
+      "layout": {
+        "icon-image": [
+          "concat",
+          "icon-time",
+          [
+            "get",
+            "direction"
+          ]
+        ],
+        "icon-size": 1.2,
+        "icon-allow-overlap": true,
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "stops_start_icon",
+      "type": "symbol",
+      "source": "stops-by-routes",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "stopIndex"
+          ],
+          1
+        ]
+      ],
+      "layout": {
+        "icon-image": [
+          "concat",
+          "icon-direction",
+          [
+            "get",
+            "direction"
+          ]
+        ],
+        "icon-size": 1.2,
+        "icon-anchor": "bottom",
+        "icon-allow-overlap": true,
+        "visibility": "none"
+      }
     }
   ],
   "sources": {
     "stops": {
       "url": "https://kartat.hsl.fi/jore/tiles/stops/index.json",
+      "type": "vector"
+    },
+    "stops-by-routes": {
+      "url": "https://kartat.hsl.fi/jore/tiles/stops-by-routes/index.json",
       "type": "vector"
     }
   }

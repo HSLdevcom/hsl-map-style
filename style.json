@@ -43,6 +43,10 @@
       "url": "https://kartat.hsl.fi/jore/tiles/stops/index.json",
       "type": "vector"
     },
+    "stops-by-routes": {
+      "url": "https://kartat.hsl.fi/jore/tiles/stops-by-routes/index.json",
+      "type": "vector"
+    },
     "citybike": {
       "url": "https://api.digitransit.fi/map/v2/hsl-citybike-map/index.json",
       "type": "vector"
@@ -2118,8 +2122,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!=", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["!=", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2142,8 +2146,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!=", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["!=", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2167,8 +2171,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["!=", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["!=", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "paint": {
         "line-color": "#3395d4",
@@ -2185,7 +2189,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "layout": {
         "line-cap": "round",
         "line-join": "round"
@@ -2205,7 +2209,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -2226,7 +2230,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "paint": {
         "line-color": "#00bb75",
         "line-width": {
@@ -2244,8 +2248,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2268,8 +2272,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "layout": {
         "line-cap": "round",
@@ -2293,8 +2297,8 @@
       "source-layer": "routes",
       "filter": [
         "all",
-        ["==", ["string", ["get", "trunk_route"]], "1"],
-        ["==", ["string", ["get", "mode"]], "BUS"]
+        ["==", ["get", "trunk_route"], "1"],
+        ["==", ["get", "mode"], "BUS"]
       ],
       "paint": {
         "line-color": "#FF6319",
@@ -2311,7 +2315,7 @@
       "type": "line",
       "source": "routes",
       "source-layer": "routes",
-      "filter": ["==", ["string", ["get", "mode"]], "FERRY"],
+      "filter": ["==", ["get", "mode"], "FERRY"],
       "layout": {
         "line-cap": "round",
         "line-join": "round"
@@ -2333,10 +2337,10 @@
       "source": "subway",
       "filter": [
         "any",
-        ["==", ["string", ["get", "underground"]], "false"],
+        ["==", ["get", "underground"], "false"],
         [
           "all",
-          ["==", ["string", ["get", "underground"]], "true"],
+          ["==", ["get", "underground"], "true"],
           ["<", ["zoom"], 11]
         ]
       ],
@@ -2361,10 +2365,10 @@
       "source": "subway",
       "filter": [
         "any",
-        ["==", ["string", ["get", "underground"]], "false"],
+        ["==", ["get", "underground"], "false"],
         [
           "all",
-          ["==", ["string", ["get", "underground"]], "true"],
+          ["==", ["get", "underground"], "true"],
           ["<", ["zoom"], 11]
         ]
       ],
@@ -2389,7 +2393,7 @@
       "type": "line",
       "source": "subway",
       "minzoom": 11,
-      "filter": ["==", ["string", ["get", "underground"]], "true"],
+      "filter": ["==", ["get", "underground"], "true"],
       "paint": {
         "line-color": "#FF6319",
         "line-dasharray": [2.3, 1.5],
@@ -2939,8 +2943,8 @@
       "minzoom": 14,
       "filter": [
         "all",
-        ["!=", ["string", ["get", "status"]], "INACTIVE"],
-        ["in", "CAR", ["string", ["get", "builtCapacity"]]]
+        ["!=", ["get", "status"], "INACTIVE"],
+        ["in", "CAR", ["get", "builtCapacity"]]
       ],
       "layout": {
         "icon-image": "icon-park-and-ride",
@@ -3222,7 +3226,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["!=", "mode", "RAIL"],
+      "filter": ["!=", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3242,7 +3246,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 15,
-      "filter": ["==", "mode", "RAIL"],
+      "filter": ["==", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3262,7 +3266,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 15,
-      "filter": ["==", "mode", "RAIL"],
+      "filter": ["==", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#8c54a2",
         "circle-radius": [
@@ -3282,9 +3286,37 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["==", "mode", "BUS"],
+      "filter": [
+        "all",
+        ["!", ["get", "isTrunkStop"]],
+        ["==", ["get", "mode"], "BUS"]
+      ],
       "paint": {
         "circle-color": "#007ac9",
+        "circle-radius": [
+          "interpolate",
+          ["exponential", 1.15],
+          ["zoom"],
+          12,
+          1,
+          22,
+          24
+        ]
+      }
+    },
+    {
+      "id": "stops_trunk",
+      "type": "circle",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["get", "isTrunkStop"],
+        ["==", ["get", "mode"], "BUS"]
+      ],
+      "paint": {
+        "circle-color": "#CA4300",
         "circle-radius": [
           "interpolate",
           ["exponential", 1.15],
@@ -3302,7 +3334,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["==", "mode", "FERRY"],
+      "filter": ["==", ["get", "mode"], "FERRY"],
       "paint": {
         "circle-color": "#00b9e4",
         "circle-radius": [
@@ -3322,7 +3354,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["==", "mode", "TRAM"],
+      "filter": ["==", ["get", "mode"], "TRAM"],
       "paint": {
         "circle-color": "#00985f",
         "circle-radius": [
@@ -3342,7 +3374,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 13,
-      "filter": ["==", "mode", "SUBWAY"],
+      "filter": ["==", ["get", "mode"], "SUBWAY"],
       "paint": {
         "circle-color": "#ff6319",
         "circle-radius": [
@@ -3362,7 +3394,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 14,
-      "filter": ["!=", "mode", "RAIL"],
+      "filter": ["!=", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3382,7 +3414,7 @@
       "source": "stops",
       "source-layer": "stops",
       "minzoom": 15,
-      "filter": ["==", "mode", "RAIL"],
+      "filter": ["==", ["get", "mode"], "RAIL"],
       "paint": {
         "circle-color": "#fff",
         "circle-radius": [
@@ -3394,6 +3426,41 @@
           22,
           20
         ]
+      }
+    },
+    {
+      "id": "stops_timing_icon",
+      "type": "symbol",
+      "source": "stops-by-routes",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["!=", ["get", "timingStopType"], 0]
+      ],
+      "layout": {
+        "icon-image": ["concat", "icon-time", ["get", "direction"]],
+        "icon-size": 1.2,
+        "icon-allow-overlap": true,
+        "visibility": "none"
+      }
+    },
+    {
+      "id": "stops_start_icon",
+      "type": "symbol",
+      "source": "stops-by-routes",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["==", ["get", "stopIndex"], 1]
+      ],
+      "layout": {
+        "icon-image": ["concat", "icon-direction", ["get", "direction"]],
+        "icon-size": 1.2,
+        "icon-anchor": "bottom",
+        "icon-allow-overlap": true,
+        "visibility": "none"
       }
     },
     {

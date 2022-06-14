@@ -1,0 +1,108 @@
+{
+  "layers": [
+    {
+      "id": "stops_case",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 9
+      }
+    },
+    {
+      "id": "stops_rail_case",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 9
+      }
+    },
+    {
+      "id": "stops_rail",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 8
+      }
+    },
+    {
+      "id": "stops_bus",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 8
+      }
+    },
+    {
+      "id": "stops_trunk",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 8
+      }
+    },
+    {
+      "id": "stops_ferry",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 8
+      }
+    },
+    {
+      "id": "stops_tram",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 8
+      }
+    },
+    {
+      "id": "stops_subway",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 8
+      }
+    },
+    {
+      "id": "stops_hub",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 5.5
+      }
+    },
+    {
+      "id": "stops_rail_hub",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 5.5
+      }
+    },
+    {
+      "id": "stops_timing_icon",
+      "minzoom": 0,
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "stops_start_icon",
+      "minzoom": 0,
+      "layout": {
+        "visibility": "visible"
+      }
+    }
+  ]
+}

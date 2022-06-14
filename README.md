@@ -48,13 +48,21 @@ There're no limits which style components can be enabled or disabled at the same
 | `greyscale`                   | Modifies color to dark greyscale (base map and texts)            | `print`           |                    |
 | `simplified`                  | Adds minzoom values to limit map elements. "Reittiopas style"    |                   |                    |
 | `3d`                          | Renders buildings in 3d                                          |                   |                    |
+| `driver_info`                 | Show stop info used in driver instruction app (timing and start) |                   |                    |
 
 Multiple themes can be enabled at the same time, but be aware of combinations that collide with each other. Those layers will overwrite style parameters twice, which leads to unexpected results.
 Remember also to enable the corresponding styles when using themes. Theme components just overwrite parameters, if they exist, and do not add any layers. E.g., `stops` style component should be enabled, if you want to use `regular_stops` theme.
 
 ### Route filter
 
-Routes can be filtered by their JORE ids. See the syntax below.
+Routes can be filtered by their JORE ids and directions. Route filter is a list of strings or objects (can also be mixed).
+
+Syntax examples:
+```
+["1500", "2550"] // Shows both routes 1500 and 2550 (both directions)
+[{ id: "1500" }] // Shows the route 1500 (both directions)
+[{ id: "2550", direction: "2" }] // Shows the direction 2 of the route 2550
+```
 
 ### Map server location
 
@@ -114,10 +122,11 @@ const style = generateStyle({
     greyscale: { enabled: false },
     simplified: { enabled: false },
     "3d": { enabled: false },
+    driver_info: { enabled: true },
   },
 
-  // optional property to show only listed routes by jore id
-  routeFilter: ["2550", "4570"]
+  // optional property to filter routes
+  routeFilter: ["2550", { id: "4570", direction: "2" }]
 });
 
 const map = new mapboxgl.Map({
