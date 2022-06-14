@@ -145,7 +145,7 @@ const components = [
     description: "Pysäkit reittitiedoilla",
     style: require("./style/hsl-map-theme-stops-with-route-info.json"),
     dependencies: ["stops"],
-    hidden: true, // There should not be any need to enable this manually.
+    hidden: true, // There should not be any need to enable this manually, so hide it from gui by this parameter.
   },
   {
     id: "print",

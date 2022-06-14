@@ -6,7 +6,7 @@
     "mapbox-groups": {}
   },
   "sources": {},
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/MM-398/sprite",
+  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/sprite",
   "glyphs": "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   "layers": []
 }

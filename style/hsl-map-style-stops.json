@@ -403,11 +403,11 @@
   ],
   "sources": {
     "stops": {
-      "url": "http://localhost:3000/stops/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/stops/index.json",
       "type": "vector"
     },
     "stops-by-routes": {
-      "url": "http://localhost:3000/stops-by-routes/index.json",
+      "url": "https://kartat.hsl.fi/jore/tiles/stops-by-routes/index.json",
       "type": "vector"
     }
   }
