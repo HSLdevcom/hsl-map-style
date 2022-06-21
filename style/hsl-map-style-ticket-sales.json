@@ -98,7 +98,7 @@
   ],
   "sources": {
     "ticket-sales": {
-      "data": "https://api.digitransit.fi/map/v2/hsl-ticket-sales-map/index.json",
+      "url": "https://api.digitransit.fi/map/v2/hsl-ticket-sales-map/index.json",
       "type": "vector"
     }
   }
