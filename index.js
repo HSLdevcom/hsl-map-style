@@ -303,8 +303,18 @@ function extendStyle(style, options) {
             ["==", ["get", "direction"], f.direction],
           ];
         }
+        if (f.idParsed && f.direction) {
+          return [
+            "all",
+            ["==", ["get", "routeIdParsed"], f.idParsed],
+            ["==", ["get", "direction"], f.direction],
+          ];
+        }
         if (f.id) {
           return ["==", ["get", "routeId"], f.id];
+        }
+        if (f.idParsed) {
+          return ["==", ["get", "routeIdParsed"], f.idParsed];
         }
         return undefined;
       })
