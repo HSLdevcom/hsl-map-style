@@ -55,13 +55,14 @@ Remember also to enable the corresponding styles when using themes. Theme compon
 
 ### Route filter
 
-Routes can be filtered by their JORE ids and directions. Route filter is a list of strings or objects (can also be mixed).
+Routes can be filtered by their JORE ids (or parsed ids) and directions. Route filter is a list of strings or objects (can also be mixed).
 
 Syntax examples:
 ```
 ["1500", "2550"] // Shows both routes 1500 and 2550 (both directions)
 [{ id: "1500" }] // Shows the route 1500 (both directions)
 [{ id: "2550", direction: "2" }] // Shows the direction 2 of the route 2550
+[{ idParsed: "20" }] // Shows the route 1020 (friendly name 20). Note! Parsed id shows all variants, also temporary routes!
 ```
 
 ### Date
@@ -130,7 +131,7 @@ const style = generateStyle({
   },
 
   // optional property to filter routes
-  routeFilter: ["2550", { id: "4570", direction: "2" }],
+  routeFilter: ["2550", { id: "4570", direction: "2" }, { idParsed: "20" }],
   // optional property to change the date of routes and stops
   joreDate: "2022-06-01",
 });
