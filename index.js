@@ -188,7 +188,7 @@ const components = [
  * @returns {string}
  */
 function makeAbsoluteUrl(url) {
-  const isAbsoluteUrl = new RegExp("^(?:[a-z]+:)?//", "i");
+  const isAbsoluteUrl = /^(?:[a-z]+:)?\/\//i;
 
   if (isAbsoluteUrl.test(url)) {
     return url;
