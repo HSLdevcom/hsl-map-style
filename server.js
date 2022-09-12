@@ -5,6 +5,13 @@ const index = fs.readFileSync("index.html", "utf8");
 
 const style = require("./index").generateStyle({
   sourcesUrl: "https://dev-api.digitransit.fi/",
+  queryParams: [
+    {
+      url: "https://dev-api.digitransit.fi/",
+      name: "apikey",
+      value: "my-secret-key",
+    },
+  ],
   components: {
     // Set each layer you want to include to true
     // Styles

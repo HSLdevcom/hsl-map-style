@@ -69,10 +69,12 @@ Syntax examples:
 
 By default, currently used routes will be shown. The logic is implemented in the Jore API. API supports `date` query parameter, which can be generated via optional `joreDate` parameter by generateStyle -function (see the example below). The format of the date is tested to work in `YYYY-MM-DD` (the same as API expects the date), but the logic is impelemented to support in theory every supported string format of JavaScript's `Date()` -constructor.
 
-### Map server location
+### Map server location and query strings
 
 `sourcesUrl` parameter helps to manage url configurations. All strings matched by default url value will be replaced with this parameter. The default url is defined in [`index.js`](index.js). The path `/map/v{1|2}/` used by [hsl-map-server](https://github.com/HSLdevcom/hsl-map-server/tree/master) should be excluded from the parameter to make it possible to mix `v1` and `v2`. This is not the optimal situation, though.
 
+
+Query strings, for example apikeys, can be added to url requests. `queryParams` is a list of all parameters. Each one of item should have url pattern (the start of the url where the parameter should be added), name and value. It's possible to give multiple parameters to the same url. Parameters will be generated as a single query string per url.
 
 ## How to view HSL map style?
 
@@ -98,6 +100,15 @@ import { generateStyle } from "hsl-map-style";
 
 const style = generateStyle({
   sourcesUrl: 'https://cdn.digitransit.fi/', // <-- You can override the default sources URL.
+  queryParams: [ // It's possible to add query parameters to urls, for example apikeys.
+    {
+      url: "https://cdn.digitransit.fi/", // Url pattern where the parameter should be added
+      name: "apikey",
+      value: "my-secret-key",
+      // --> &apikey=my-secret-key
+    },
+  ],
+
   components: {
     // Set each layer you want to include to true
 

@@ -231,7 +231,22 @@ function replaceInStyle(style, options) {
     }
   });
 
-  return JSON.parse(replacedStyle);
+  replacedStyle = JSON.parse(replacedStyle);
+
+  if (options.queryParams) {
+    Object.values(replacedStyle.sources).forEach((source) => {
+      const queryString = options.queryParams
+        .filter((param) => source.url.startsWith(makeAbsoluteUrl(param.url)))
+        .map((param) => `${param.name}=${param.value}`)
+        .join("&");
+
+      if (queryString) {
+        source.url += `?${queryString}`; // eslint-disable-line no-param-reassign
+      }
+    });
+  }
+
+  return replacedStyle;
 }
 
 // eslint-disable-next-line consistent-return
