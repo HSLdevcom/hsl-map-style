@@ -235,13 +235,15 @@ function replaceInStyle(style, options) {
 
   if (options.queryParams) {
     Object.values(replacedStyle.sources).forEach((source) => {
-      const queryString = options.queryParams
-        .filter((param) => source.url.startsWith(makeAbsoluteUrl(param.url)))
-        .map((param) => `${param.name}=${param.value}`)
-        .join("&");
+      if (source.url) {
+        const queryString = options.queryParams
+          .filter((param) => source.url.startsWith(makeAbsoluteUrl(param.url)))
+          .map((param) => `${param.name}=${param.value}`)
+          .join("&");
 
-      if (queryString) {
-        source.url += `?${queryString}`; // eslint-disable-line no-param-reassign
+        if (queryString) {
+          source.url += `?${queryString}`; // eslint-disable-line no-param-reassign
+        }
       }
     });
   }
