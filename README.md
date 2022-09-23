@@ -93,19 +93,20 @@ Browse to `http://localhost:3000` to see a basic Mapbox.js map with the HSL map 
 
 To use the style in your own project, install it with either yarn or npm from Github. It is not currently published in the npm registry.
 
-Use the exported `generateStyle` function and pass it the layers you want to include in the style:
+Use the exported `generateStyle` function and pass it the layers you want to include in the style.
+Note! When using Digitransit urls (the default ones), you will be required to use apikey. You can create and manage apikeys on https://portal-api.digitransit.fi/
 
 ```javascript
 import { generateStyle } from "hsl-map-style";
 
 const style = generateStyle({
-  sourcesUrl: 'https://cdn.digitransit.fi/', // <-- You can override the default sources URL.
+  sourcesUrl: 'https://cdn.digitransit.fi/', // <-- You can override the default sources URL. The default is https://api.digitransit.fi/
   queryParams: [ // It's possible to add query parameters to urls, for example apikeys.
     {
       url: "https://cdn.digitransit.fi/", // Url pattern where the parameter should be added
-      name: "apikey",
+      name: "digitransit-subscription-key",
       value: "my-secret-key",
-      // --> &apikey=my-secret-key
+      // --> &digitransit-subscription-key=my-secret-key
     },
   ],
 

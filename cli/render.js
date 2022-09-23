@@ -2,7 +2,14 @@ const style = require("../index");
 
 module.exports = () => {
   const styleJson = style.generateStyle({
-    glyphsUrl: "https://kartat.hsl.fi/",
+    sourcesUrl: "https://api.digitransit.fi/",
+    queryParams: [
+      {
+        url: "https://api.digitransit.fi/",
+        name: "digitransit-subscription-key",
+        value: "my-secret-key",
+      },
+    ],
     components: {
       // Set each layer you want to include to true
       // Styles

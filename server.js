@@ -8,7 +8,7 @@ const style = require("./index").generateStyle({
   queryParams: [
     {
       url: "https://dev-api.digitransit.fi/",
-      name: "apikey",
+      name: "digitransit-subscription-key",
       value: "my-secret-key",
     },
   ],
