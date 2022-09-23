@@ -28,7 +28,7 @@
   ],
   "sources": {
     "ticketzone-labels": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/ticket-zone-labels.json",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/ticket-zone-labels.json",
       "type": "geojson"
     }
   }

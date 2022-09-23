@@ -597,11 +597,11 @@
       "type": "vector"
     },
     "subway": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/subway.geojson",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/subway.geojson",
       "type": "geojson"
     },
     "rail": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/master/data/rail.geojson",
+      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/rail.geojson",
       "type": "geojson"
     }
   }
