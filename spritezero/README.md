@@ -31,4 +31,7 @@ yarn run icons
 ```
 5. Check that new icons are in `sprite.png`
 
-Now the icons should be available through the sprite. (E.g., when the changes are pushed in Github, sprite-url https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/branch-name/sprite should serve the new icons.)
+Now the icons should be available through the sprite.
+
+6. Create a new tag for sprite icons and change sprite url of the style to match the created tag.
+E.g. the initial version of the tagged sprite icons can be used via https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/sprite-v1.0.0/sprite

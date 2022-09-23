@@ -183,9 +183,11 @@ Themes are not included in `style.json`. They will be copied from [`cli/static`]
 
 ### New map icons
 
-Use spritezero to add new icons. See more [`spritezero/README.md`](spritezero/README.md)
+Use spritezero to add new icons. See more [`spritezero/README.md`](spritezero/README.md) Remember to update sprite url to match the new tag.
 
-### 
+### Source data update
+
+A few datasets are hosted via this repository under `data/` folder. To update them, create a new commit, and tag it (e.g. data-v.{date}), rename the tag name on style.json and run split tool.
 
 ## CLI tool
 
