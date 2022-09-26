@@ -106,6 +106,13 @@ const components = [
     dependencies: ["text"],
   },
   {
+    id: "text_en",
+    enabled: false,
+    description: "Englanninkieliset tekstit",
+    style: require("./style/hsl-map-theme-text-en.json"),
+    dependencies: ["text"],
+  },
+  {
     id: "regular_routes",
     enabled: false,
     description: "Linjaviivat ilman lähibusseja",
