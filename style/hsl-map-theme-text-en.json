@@ -1,0 +1,100 @@
+{
+  "layers": [
+    {
+      "id": "label_poi_general",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_poi_park",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_poi_harbour",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_water",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_place_island",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_road_path_cycleway_track_service",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_road_street",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_road_primary",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_place_other",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_place_town",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_place_city",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_country",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "icon_subway-station",
+      "layout": {
+        "text-field": "{nameFi}"
+      }
+    },
+    {
+      "id": "icon_bus-station",
+      "layout": {
+        "text-field": "{nameFi}"
+      }
+    },
+    {
+      "id": "icon_railway-station",
+      "layout": {
+        "text-field": "{nameFi}"
+      }
+    },
+    {
+      "id": "icon_aerodrome",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    }
+  ]
+}

@@ -39,6 +39,7 @@ There're no limits which style components can be enabled or disabled at the same
 |-------------------------------|------------------------------------------------------------------|-------------------|:------------------:|
 | `text_sv`                     | Shows texts in Swedish                                           | `text_fisv`       |                    |
 | `text_fisv`                   | Shows texts in both Finnish and Swedish                          | `text_sv`         |                    |
+| `text_en`                     | Shows texts in English where possible                            | `text_sv, text_fisv`|                    |
 | `regular_routes`              | Shows only regular routes (filters near bus routes)              | `near_bus_routes` |                    |
 | `near_bus_routes`             | Shows only near bus routes                                       | `regular_routes`  |                    |
 | `routes_with_departures_only` | Shows only routes that are currently used                        |                   |         x          |
@@ -130,6 +131,7 @@ const style = generateStyle({
     // Themes
     text_sv: { enabled: false },
     text_fisv: { enabled: false },
+    text_en: { enabled: false },
     regular_routes: { enabled: false },
     near_bus_routes: { enabled: false },
     routes_with_departures_only: { enabled: true }, // Enabled by default. Doesn't do anything until routes is enabled.
