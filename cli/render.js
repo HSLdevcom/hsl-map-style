@@ -28,6 +28,7 @@ module.exports = () => {
       // Themes
       text_sv: { enabled: false },
       text_fisv: { enabled: false },
+      text_en: { enabled: false },
       regular_routes: { enabled: false },
       near_bus_routes: { enabled: false },
       routes_with_departures_only: { enabled: true }, // Enabled by default. Doesn't do anything until routes is enabled
