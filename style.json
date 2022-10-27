@@ -2517,7 +2517,22 @@
       "source-layer": "housenumber",
       "filter": ["==", "$type", "Point"],
       "layout": {
-        "text-field": "{housenumber}",
+        "text-field": [
+          "case",
+            [
+              "to-boolean",
+              ["get", "entrance"]
+            ],
+            [
+              "concat",
+              ["get", "housenumber"],
+              [
+                "coalesce",
+                ["get", "unit"],
+                ["get", "ref"]
+              ]
+        ],
+        ["get", "housenumber"]],
         "text-size": {
           "stops": [
             [15, 8],
