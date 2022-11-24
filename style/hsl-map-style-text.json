@@ -136,10 +136,12 @@
             "museum",
             "stadium",
             "sports_centre",
-            "attraction",
             "monument",
             "theme_park",
-            "mall"
+            "mall",
+            "townhall",
+            "castle",
+            "zoo"
           ]
         ]
       ],
