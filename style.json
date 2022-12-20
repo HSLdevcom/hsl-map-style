@@ -2582,12 +2582,11 @@
         ["==", "$type", "Point"],
         [
           "any",
-          ["in", "class", "school", "college", "place_of_worship"],
+          ["in", "class", "school", "college", "place_of_worship", "swimming"],
           [
             "in",
             "subclass",
             "hotel",
-            "cinema",
             "cemetery",
             "library",
             "theatre",
@@ -2601,7 +2600,9 @@
             "mall",
             "townhall",
             "castle",
-            "zoo"
+            "zoo",
+            "swimming_area",
+            "marketplace"
           ]
         ]
       ],
@@ -2625,7 +2626,7 @@
       "source-layer": "poi",
       "minzoom": 14,
       "filter": ["all",
-        ["==", "$type", "Point"],
+        ["!=", "$type", "Point"],
         ["in", "class", "park"]
       ],
       "layout": {
@@ -2650,7 +2651,7 @@
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "class", "harbor", "ferry_terminal"]
+        ["in", "class", "ferry_terminal"]
       ],
       "layout": {
         "text-size": 11,
@@ -2671,6 +2672,7 @@
       "source": "vector",
       "source-layer": "water_name",
       "minzoom": 5,
+      "filter": ["!=", "class", "swimming_pool"],
       "layout": {
         "text-size": {
           "stops": [
