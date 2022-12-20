@@ -10,9 +10,19 @@ const BASE_JSON = require("./style/hsl-map-template.json");
 const ROUTEFILTER_COMPONENTS = ["routes", "stops"]; // Components which are filtered by routefilter
 const JORE_SOURCES = ["routes", "stops", "stops-by-routes"]; // Sources which can be queried by date
 
-const replaceableValues = {
-  SOURCES_URL: {
+// This object defines values that can be overwrited. The overwrite is done by regex,
+// so the default value has to be exactly the same as defined in style json files.
+const REPLACEABLE_VALUES = {
+  sourcesUrl: {
     default: "https://api.digitransit.fi/",
+  },
+  glyphsUrl: {
+    default:
+      "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
+  },
+  spriteUrl: {
+    default:
+      "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/sprite-v1.0.0/sprite",
   },
 };
 
@@ -206,18 +216,28 @@ function makeAbsoluteUrl(url) {
 
 /**
  * Creates values that replace the defaults in the base style
+ * Possible values come from the keys of REPLACEABLE_VALUES object
  * @param  {Object} options         Received options that are used to create
  *   replacements
  * @return {Object}                 Replacement values that are used to modify the
  *   base style
  */
 function getReplacements(options) {
-  const replacements = {};
+  const keys = Object.keys(REPLACEABLE_VALUES);
 
-  if (options.sourcesUrl) {
-    const sourcesUrl = makeAbsoluteUrl(options.sourcesUrl);
-    replacements.SOURCES_URL = { replacement: sourcesUrl };
-  }
+  // Iterate over replaceable keys, and check if they exist in options.
+  const replacements = keys.reduce((acc, key) => {
+    const replacement = options[key]
+      ? {
+          [key]: {
+            ...REPLACEABLE_VALUES[key],
+            replacement: makeAbsoluteUrl(options[key]),
+          },
+        }
+      : {};
+
+    return { ...acc, ...replacement };
+  }, {});
 
   return replacements;
 }
@@ -228,7 +248,7 @@ function getReplacements(options) {
  * @return {Object}            Modified style
  */
 function replaceInStyle(style, options) {
-  const values = merge(replaceableValues, getReplacements(options));
+  const values = getReplacements(options);
   let replacedStyle = JSON.stringify(style);
 
   forEach(values, (value) => {

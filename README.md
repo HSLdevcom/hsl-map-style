@@ -101,7 +101,9 @@ Note! When using Digitransit urls (the default ones), you will be required to us
 import { generateStyle } from "hsl-map-style";
 
 const style = generateStyle({
-  sourcesUrl: 'https://cdn.digitransit.fi/', // <-- You can override the default sources URL. The default is https://api.digitransit.fi/
+  sourcesUrl: "https://cdn.digitransit.fi/", // <-- You can override the default sources URL. The default is https://api.digitransit.fi/
+  glyphsUrl: "", // Possibility to overwrite fonts url, an empty string does nothing
+  spriteUrl: "", // Possibility to overwrite sprite url
   queryParams: [ // It's possible to add query parameters to urls, for example apikeys.
     {
       url: "https://cdn.digitransit.fi/", // Url pattern where the parameter should be added
