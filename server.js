@@ -4,7 +4,11 @@ const express = require("express");
 const index = fs.readFileSync("index.html", "utf8");
 
 const style = require("./index").generateStyle({
-  sourcesUrl: "https://dev-api.digitransit.fi/",
+  // Urls to replace
+  sourcesUrl: "http://localhost:8080/",
+  glyphsUrl: "",
+  spriteUrl: "",
+
   queryParams: [
     {
       url: "https://dev-api.digitransit.fi/",

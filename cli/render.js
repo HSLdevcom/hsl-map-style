@@ -3,6 +3,9 @@ const style = require("../index");
 module.exports = () => {
   const styleJson = style.generateStyle({
     sourcesUrl: "https://api.digitransit.fi/",
+    glyphsUrl: "",
+    spriteUrl: "",
+
     queryParams: [
       {
         url: "https://api.digitransit.fi/",
