@@ -2582,7 +2582,14 @@
         ["==", "$type", "Point"],
         [
           "any",
-          ["in", "class", "school", "college", "place_of_worship", "swimming"],
+          [
+            "in",
+            "class",
+            "school",
+            "college",
+            "place_of_worship",
+            "swimming"
+          ],
           [
             "in",
             "subclass",
@@ -2602,7 +2609,9 @@
             "castle",
             "zoo",
             "swimming_area",
-            "marketplace"
+            "marketplace",
+            "conference_centre",
+            "pedestrian"
           ]
         ]
       ],
