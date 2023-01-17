@@ -2611,7 +2611,9 @@
             "swimming_area",
             "marketplace",
             "conference_centre",
-            "pedestrian"
+            "pedestrian",
+            "government",
+            "beach"
           ]
         ]
       ],
@@ -2681,7 +2683,10 @@
       "source": "vector",
       "source-layer": "water_name",
       "minzoom": 5,
-      "filter": ["!=", "class", "swimming_pool"],
+      "filter": [
+        "all",
+        ["in", "class", "lake"]
+      ],
       "layout": {
         "text-size": {
           "stops": [
