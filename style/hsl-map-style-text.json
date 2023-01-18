@@ -121,13 +121,13 @@
             "class",
             "school",
             "college",
-            "place_of_worship"
+            "place_of_worship",
+            "swimming"
           ],
           [
             "in",
             "subclass",
             "hotel",
-            "cinema",
             "cemetery",
             "library",
             "theatre",
@@ -141,7 +141,13 @@
             "mall",
             "townhall",
             "castle",
-            "zoo"
+            "zoo",
+            "swimming_area",
+            "marketplace",
+            "conference_centre",
+            "pedestrian",
+            "government",
+            "beach"
           ]
         ]
       ],
@@ -164,12 +170,12 @@
       "id": "label_poi_park",
       "type": "symbol",
       "source": "vector",
-      "source-layer": "poi",
+      "source-layer": "park",
       "minzoom": 14,
       "filter": [
         "all",
         [
-          "==",
+          "!=",
           "$type",
           "Point"
         ],
@@ -210,7 +216,6 @@
         [
           "in",
           "class",
-          "harbor",
           "ferry_terminal"
         ]
       ],
@@ -235,6 +240,14 @@
       "source": "vector",
       "source-layer": "water_name",
       "minzoom": 5,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "lake"
+        ]
+      ],
       "layout": {
         "text-size": {
           "stops": [
