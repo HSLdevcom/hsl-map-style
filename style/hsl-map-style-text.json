@@ -170,7 +170,7 @@
       "id": "label_poi_park",
       "type": "symbol",
       "source": "vector",
-      "source-layer": "poi",
+      "source-layer": "park",
       "minzoom": 14,
       "filter": [
         "all",
