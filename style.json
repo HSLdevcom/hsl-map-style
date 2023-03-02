@@ -56,7 +56,7 @@
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/sprite-v1.0.0/sprite",
+  "sprite": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/sprite",
   "glyphs": "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
