@@ -12,7 +12,7 @@
       "type": "vector"
     },
     "borders": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/kuntarajat.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/kuntarajat.json",
       "type": "geojson"
     },
     "routes": {
@@ -20,19 +20,19 @@
       "type": "vector"
     },
     "subway": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/subway.geojson",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/subway.geojson",
       "type": "geojson"
     },
     "rail": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/rail.geojson",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/rail.geojson",
       "type": "geojson"
     },
     "ticketzones": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/ticket-zones.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zones.json",
       "type": "geojson"
     },
     "ticketzone-labels": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/ticket-zone-labels.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zone-labels.json",
       "type": "geojson"
     },
     "ticket-sales": {
