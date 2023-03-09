@@ -2685,7 +2685,13 @@
       "minzoom": 5,
       "filter": [
         "all",
-        ["in", "class", "lake"]
+        ["in", 
+        "class", 
+        "lake", 
+        "bay",
+        "strait",
+        "cape"
+        ]
       ],
       "layout": {
         "text-size": {
