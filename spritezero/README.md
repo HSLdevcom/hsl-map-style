@@ -33,5 +33,4 @@ yarn run icons
 
 Now the icons should be available through the sprite.
 
-6. Create a new tag for sprite icons and change sprite url of the style to match the created tag.
-E.g. the initial version of the tagged sprite icons can be used via https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/sprite-v1.0.0/sprite
+6. Upload the newest sprite into Karttatuotanto Azure blob storage, overwriting the older sprite files.
