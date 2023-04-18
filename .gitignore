@@ -3,3 +3,4 @@ Gotham Rounded OpenType/
 node_modules/
 master/
 fonts
+.DS_Store
