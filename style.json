@@ -90,8 +90,8 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["in", "class", "university", "school", "kindergarten"],
-      "paint": { 
-        "fill-color": "#f9f4d2" 
+      "paint": {
+        "fill-color": "#f9f4d2"
       }
     },
     {
@@ -241,7 +241,8 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "canal", "river", "stream"]
+        ["in", "class", "canal", "river", "stream"],
+        ["!=", "brunnel", "tunnel"]
       ],
       "layout": {
         "line-cap": "round",
@@ -277,7 +278,8 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "canal", "river", "stream"]
+        ["in", "class", "canal", "river", "stream"],
+        ["!=", "brunnel", "tunnel"]
       ],
       "paint": {
         "line-color": "#bee4f8",
@@ -926,8 +928,8 @@
         ["!=", "ramp", 1],
         ["!in", "brunnel", "bridge", "tunnel"]
       ],
-      "layout": { 
-        "line-join": "round" 
+      "layout": {
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#ccc",
@@ -1173,7 +1175,7 @@
         ["==", "class", "minor"],
         ["!in", "brunnel", "bridge", "tunnel"]
       ],
-      "layout": { 
+      "layout": {
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1685,8 +1687,8 @@
         ["!=", "ramp", 1],
         ["==", "brunnel", "bridge"]
       ],
-      "layout": { 
-        "line-join": "round" 
+      "layout": {
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#ccc",
@@ -1802,7 +1804,7 @@
         ["==", "class", "minor"],
         ["==", "brunnel", "bridge"]
       ],
-      "layout": { 
+      "layout": {
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2350,7 +2352,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           3,
           16,
           12,
@@ -2379,7 +2381,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           2,
           16,
           8,
@@ -2401,7 +2403,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           1,
           16,
           8,
@@ -2420,7 +2422,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           3,
           16,
           12,
@@ -2440,7 +2442,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           2,
           16,
           8,
@@ -2463,7 +2465,7 @@
           "interpolate",
           ["exponential", 1.2],
           ["zoom"],
-          10, 
+          10,
           4,
           22,
           80
@@ -2485,7 +2487,7 @@
           "interpolate",
           ["exponential", 1.2],
           ["zoom"],
-          10, 
+          10,
           1,
           22,
           6
@@ -2685,9 +2687,9 @@
       "minzoom": 5,
       "filter": [
         "all",
-        ["in", 
-        "class", 
-        "lake", 
+        ["in",
+        "class",
+        "lake",
         "bay",
         "strait",
         "cape"
@@ -2933,7 +2935,7 @@
       "source-layer": "place",
       "maxzoom": 13,
       "filter": [
-        "all", 
+        "all",
         ["==", "$type", "Point"],
         ["==", "class", "city"]
       ],

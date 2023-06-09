@@ -267,6 +267,11 @@
           "canal",
           "river",
           "stream"
+        ],
+        [
+          "!=",
+          "brunnel",
+          "tunnel"
         ]
       ],
       "layout": {
@@ -318,6 +323,11 @@
           "canal",
           "river",
           "stream"
+        ],
+        [
+          "!=",
+          "brunnel",
+          "tunnel"
         ]
       ],
       "paint": {
