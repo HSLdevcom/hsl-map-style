@@ -1,14 +1,82 @@
 {
   "layers": [
     {
+      "id": "label_entrance",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "housenumber",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "!=",
+          "entrance",
+          ""
+        ]
+      ],
+      "layout": {
+        "text-field": [
+          "concat",
+          [
+            "get",
+            "housenumber"
+          ],
+          [
+            "coalesce",
+            [
+              "get",
+              "unit"
+            ],
+            [
+              "get",
+              "ref"
+            ]
+          ]
+        ],
+        "text-size": {
+          "stops": [
+            [
+              15,
+              8
+            ],
+            [
+              22,
+              17
+            ]
+          ]
+        },
+        "text-font": [
+          "Gotham Rounded Book"
+        ]
+      },
+      "paint": {
+        "text-color": "#999",
+        "text-opacity": 0.7
+      }
+    },
+    {
       "id": "label_housenum",
       "type": "symbol",
       "source": "vector",
       "source-layer": "housenumber",
+      "minzoom": 14,
       "filter": [
-        "==",
-        "$type",
-        "Point"
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "entrance",
+          ""
+        ]
       ],
       "layout": {
         "text-field": "{housenumber}",
@@ -53,13 +121,13 @@
             "class",
             "school",
             "college",
-            "place_of_worship"
+            "place_of_worship",
+            "swimming"
           ],
           [
             "in",
             "subclass",
             "hotel",
-            "cinema",
             "cemetery",
             "library",
             "theatre",
@@ -68,10 +136,18 @@
             "museum",
             "stadium",
             "sports_centre",
-            "attraction",
             "monument",
             "theme_park",
-            "mall"
+            "mall",
+            "townhall",
+            "castle",
+            "zoo",
+            "swimming_area",
+            "marketplace",
+            "conference_centre",
+            "pedestrian",
+            "government",
+            "beach"
           ]
         ]
       ],
@@ -94,12 +170,12 @@
       "id": "label_poi_park",
       "type": "symbol",
       "source": "vector",
-      "source-layer": "poi",
+      "source-layer": "park",
       "minzoom": 14,
       "filter": [
         "all",
         [
-          "==",
+          "!=",
           "$type",
           "Point"
         ],
@@ -140,7 +216,6 @@
         [
           "in",
           "class",
-          "harbor",
           "ferry_terminal"
         ]
       ],
@@ -165,6 +240,17 @@
       "source": "vector",
       "source-layer": "water_name",
       "minzoom": 5,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "lake",
+          "bay",
+          "strait",
+          "cape"
+        ]
+      ],
       "layout": {
         "text-size": {
           "stops": [

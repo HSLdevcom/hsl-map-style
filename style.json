@@ -12,7 +12,7 @@
       "type": "vector"
     },
     "borders": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/kuntarajat.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/kuntarajat.json",
       "type": "geojson"
     },
     "routes": {
@@ -20,19 +20,19 @@
       "type": "vector"
     },
     "subway": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/subway.geojson",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/subway.geojson",
       "type": "geojson"
     },
     "rail": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/rail.geojson",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/rail.geojson",
       "type": "geojson"
     },
     "ticketzones": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/ticket-zones.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zones.json",
       "type": "geojson"
     },
     "ticketzone-labels": {
-      "data": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/data-v2022.09.23/data/ticket-zone-labels.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zone-labels.json",
       "type": "geojson"
     },
     "ticket-sales": {
@@ -56,7 +56,7 @@
       "type": "vector"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/HSLdevcom/hsl-map-style/sprite-v1.0.0/sprite",
+  "sprite": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/sprite",
   "glyphs": "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -90,8 +90,8 @@
       "source": "vector",
       "source-layer": "landuse",
       "filter": ["in", "class", "university", "school", "kindergarten"],
-      "paint": { 
-        "fill-color": "#f9f4d2" 
+      "paint": {
+        "fill-color": "#f9f4d2"
       }
     },
     {
@@ -241,7 +241,8 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "canal", "river", "stream"]
+        ["in", "class", "canal", "river", "stream"],
+        ["!=", "brunnel", "tunnel"]
       ],
       "layout": {
         "line-cap": "round",
@@ -277,7 +278,8 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "canal", "river", "stream"]
+        ["in", "class", "canal", "river", "stream"],
+        ["!=", "brunnel", "tunnel"]
       ],
       "paint": {
         "line-color": "#bee4f8",
@@ -926,8 +928,8 @@
         ["!=", "ramp", 1],
         ["!in", "brunnel", "bridge", "tunnel"]
       ],
-      "layout": { 
-        "line-join": "round" 
+      "layout": {
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#ccc",
@@ -1173,7 +1175,7 @@
         ["==", "class", "minor"],
         ["!in", "brunnel", "bridge", "tunnel"]
       ],
-      "layout": { 
+      "layout": {
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1685,8 +1687,8 @@
         ["!=", "ramp", 1],
         ["==", "brunnel", "bridge"]
       ],
-      "layout": { 
-        "line-join": "round" 
+      "layout": {
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#ccc",
@@ -1802,7 +1804,7 @@
         ["==", "class", "minor"],
         ["==", "brunnel", "bridge"]
       ],
-      "layout": { 
+      "layout": {
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2350,7 +2352,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           3,
           16,
           12,
@@ -2379,7 +2381,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           2,
           16,
           8,
@@ -2401,7 +2403,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           1,
           16,
           8,
@@ -2420,7 +2422,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           3,
           16,
           12,
@@ -2440,7 +2442,7 @@
           "interpolate",
           ["exponential", 1.4],
           ["zoom"],
-          11, 
+          11,
           2,
           16,
           8,
@@ -2463,7 +2465,7 @@
           "interpolate",
           ["exponential", 1.2],
           ["zoom"],
-          10, 
+          10,
           4,
           22,
           80
@@ -2485,7 +2487,7 @@
           "interpolate",
           ["exponential", 1.2],
           ["zoom"],
-          10, 
+          10,
           1,
           22,
           6
@@ -2511,11 +2513,51 @@
       }
     },
     {
+      "id": "label_entrance",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "housenumber",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["!=", "entrance", ""]
+      ],
+      "layout": {
+        "text-field":
+          [
+            "concat",
+            ["get", "housenumber"],
+            [
+              "coalesce",
+              ["get", "unit"],
+              ["get", "ref"]
+            ]
+        ],
+        "text-size": {
+          "stops": [
+            [15, 8],
+            [22, 17]
+          ]
+        },
+        "text-font": ["Gotham Rounded Book"]
+      },
+      "paint": {
+        "text-color": "#999",
+        "text-opacity": 0.7
+      }
+    },
+    {
       "id": "label_housenum",
       "type": "symbol",
       "source": "vector",
       "source-layer": "housenumber",
-      "filter": ["==", "$type", "Point"],
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        ["==", "entrance", ""]
+      ],
       "layout": {
         "text-field": "{housenumber}",
         "text-size": {
@@ -2542,12 +2584,18 @@
         ["==", "$type", "Point"],
         [
           "any",
-          ["in", "class", "school", "college", "place_of_worship"],
+          [
+            "in",
+            "class",
+            "school",
+            "college",
+            "place_of_worship",
+            "swimming"
+          ],
           [
             "in",
             "subclass",
             "hotel",
-            "cinema",
             "cemetery",
             "library",
             "theatre",
@@ -2556,10 +2604,18 @@
             "museum",
             "stadium",
             "sports_centre",
-            "attraction",
             "monument",
             "theme_park",
-            "mall"
+            "mall",
+            "townhall",
+            "castle",
+            "zoo",
+            "swimming_area",
+            "marketplace",
+            "conference_centre",
+            "pedestrian",
+            "government",
+            "beach"
           ]
         ]
       ],
@@ -2580,10 +2636,10 @@
       "id": "label_poi_park",
       "type": "symbol",
       "source": "vector",
-      "source-layer": "poi",
+      "source-layer": "park",
       "minzoom": 14,
       "filter": ["all",
-        ["==", "$type", "Point"],
+        ["!=", "$type", "Point"],
         ["in", "class", "park"]
       ],
       "layout": {
@@ -2608,7 +2664,7 @@
       "filter": [
         "all",
         ["==", "$type", "Point"],
-        ["in", "class", "harbor", "ferry_terminal"]
+        ["in", "class", "ferry_terminal"]
       ],
       "layout": {
         "text-size": 11,
@@ -2629,6 +2685,16 @@
       "source": "vector",
       "source-layer": "water_name",
       "minzoom": 5,
+      "filter": [
+        "all",
+        ["in",
+        "class",
+        "lake",
+        "bay",
+        "strait",
+        "cape"
+        ]
+      ],
       "layout": {
         "text-size": {
           "stops": [
@@ -2869,7 +2935,7 @@
       "source-layer": "place",
       "maxzoom": 13,
       "filter": [
-        "all", 
+        "all",
         ["==", "$type", "Point"],
         ["==", "class", "city"]
       ],
