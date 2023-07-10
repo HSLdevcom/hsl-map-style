@@ -402,6 +402,7 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -412,8 +413,7 @@
         [
           "in",
           "class",
-          "minor",
-          "tertiary"
+          "minor"
         ]
       ],
       "layout": {
@@ -473,6 +473,7 @@
         [
           "in",
           "class",
+          "tertiary",
           "secondary",
           "primary",
           "trunk",

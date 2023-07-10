@@ -2791,10 +2791,11 @@
       "type": "symbol",
       "source": "vector",
       "source-layer": "transportation_name",
+      "minzoom": 10,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "minor", "tertiary"]
+        ["in", "class", "minor"]
       ],
       "layout": {
         "symbol-placement": "line",
@@ -2834,7 +2835,7 @@
       "filter": [
         "all",
         ["==", "$type", "LineString"],
-        ["in", "class", "secondary", "primary", "trunk", "motorway"]
+        ["in", "class", "tertiary", "secondary", "primary", "trunk", "motorway"]
       ],
       "layout": {
         "symbol-placement": "line",
