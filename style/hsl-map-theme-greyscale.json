@@ -305,7 +305,7 @@
       "paint": {
         "line-color": "#121212"
       }
-    },    
+    },
     {
       "id": "road_motorway",
       "paint": {
@@ -515,7 +515,14 @@
       }
     },
     {
-      "id": "label_water",
+      "id": "label_water_point",
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "rgba(0,0,0,0.7)"
+      }
+    },
+    {
+      "id": "label_water_line",
       "paint": {
         "text-color": "#666",
         "text-halo-color": "rgba(0,0,0,0.7)"
