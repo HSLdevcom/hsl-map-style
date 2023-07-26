@@ -2680,33 +2680,64 @@
       }
     },
     {
-      "id": "label_water",
+      "id": "label_water_point",
       "type": "symbol",
       "source": "vector",
       "source-layer": "water_name",
       "minzoom": 5,
       "filter": [
         "all",
-        ["in",
-        "class",
-        "lake",
-        "bay",
-        "strait",
-        "cape"
+        ["==", "$type", "Point"],
+        [
+          "in",
+          "class",
+          "water",
+          "lake",
+          "bay",
+          "strait",
+          "cape"
         ]
       ],
       "layout": {
-        "text-size": {
-          "stops": [
-            [0, 8],
-            [15, 11]
-          ]
-        },
+        "text-size": ["interpolate", ["linear"], ["zoom"], 0, 8, 15, 11],
+        "text-max-width": 8,
+        "text-font": ["Gotham Rounded Medium Italic"],
+        "text-anchor": "top",
+        "text-field": "{name}"
+      },
+      "paint": {
+        "text-color": "#39c6ea",
+        "text-halo-color": "rgba(255,255,255,0.5)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "label_water_line",
+      "type": "symbol",
+      "source": "vector",
+      "source-layer": "water_name",
+      "minzoom": 5,
+      "filter": [
+        "all",
+        ["==", "$type", "LineString"],
+        [
+          "in",
+          "class",
+          "water",
+          "lake",
+          "bay",
+          "strait",
+          "cape"
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line-center",
+        "text-size": ["interpolate", ["linear"], ["zoom"], 0, 8, 15, 11],
         "text-max-width": 8,
         "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
         "text-field": "{name}",
-        "visibility": "visible"
+        "text-rotation-alignment": "viewport"
       },
       "paint": {
         "text-color": "#39c6ea",

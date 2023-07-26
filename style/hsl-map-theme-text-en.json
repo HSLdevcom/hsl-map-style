@@ -19,7 +19,13 @@
       }
     },
     {
-      "id": "label_water",
+      "id": "label_water_point",
+      "layout": {
+        "text-field": "{name_en}"
+      }
+    },
+    {
+      "id": "label_water_line",
       "layout": {
         "text-field": "{name_en}"
       }
