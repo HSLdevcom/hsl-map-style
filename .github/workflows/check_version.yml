@@ -1,0 +1,17 @@
+name: Check version
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  check_version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check if version has been updated
+      id: check
+      uses: EndBug/version-check@v2
+    - name: Fail if not changed when unchanged
+      if: steps.check.outputs.changed == 'false'
+      run: 'echo "No version number change found. Run yarn version -command to upgrade version before merge can be completed." && exit 1'
