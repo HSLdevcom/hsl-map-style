@@ -31,7 +31,7 @@ The difference between style and theme component is that a style component defin
 | `ticket_zones`       | Ticket zones of HSL                                                 |                    |
 | `ticket_zone_labels` | Fixed ticket zone labels to render zone icons                       |                    |
 
-There're no limits which style components can be enabled or disabled at the same time. 
+There're no limits which style components can be enabled or disabled at the same time.
 
 ### Theme components
 
@@ -192,6 +192,20 @@ Use spritezero to add new icons. See more [`spritezero/README.md`](spritezero/RE
 ### Source data update
 
 A few datasets are hosted via this repository under `data/` folder. To update them, create a new commit, and tag it (e.g. data-v.{date}), rename the tag name on style.json and run split tool.
+
+## Versioning
+
+Github Actions are configured so that version upgrade is needed on `package.json` before merge can be done. That helps package managers to find the newer version of the style.
+
+To do the version release, run on dev branch before PR: (choose the right command depending on how big changes made to style)
+
+```
+yarn version --patch
+# or
+yarn version --minor
+# or
+yarn version --major
+```
 
 ## CLI tool
 
