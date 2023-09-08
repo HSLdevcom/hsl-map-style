@@ -2313,6 +2313,63 @@
       }
     },
     {
+      "id": "route_lrail_case",
+      "type": "line",
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": ["==", ["get", "mode"], "L_RAIL"],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "stops": [
+            [10, 4],
+            [22, 8]
+          ]
+        }
+      }
+    },
+    {
+      "id": "route_lrail",
+      "type": "line",
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": ["==", ["get", "mode"], "L_RAIL"],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "line-round-limit": 1
+      },
+      "paint": {
+        "line-color": "#00b3aa",
+        "line-width": {
+          "stops": [
+            [10, 2],
+            [22, 6]
+          ]
+        }
+      }
+    },
+    {
+      "id": "route_lrail_inner",
+      "type": "line",
+      "source": "routes",
+      "source-layer": "routes",
+      "filter": ["==", ["get", "mode"], "L_RAIL"],
+      "paint": {
+        "line-color": "#30bfb6",
+        "line-width": {
+          "stops": [
+            [10, 0.5],
+            [22, 2]
+          ]
+        }
+      }
+    },
+    {
       "id": "route_ferry",
       "type": "line",
       "source": "routes",
@@ -3455,6 +3512,26 @@
       "filter": ["==", ["get", "mode"], "TRAM"],
       "paint": {
         "circle-color": "#00985f",
+        "circle-radius": [
+          "interpolate",
+          ["exponential", 1.15],
+          ["zoom"],
+          12,
+          1,
+          22,
+          24
+        ]
+      }
+    },
+    {
+      "id": "stops_lrail",
+      "type": "circle",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": ["==", ["get", "mode"], "L_RAIL"],
+      "paint": {
+        "circle-color": "#00b2a9",
         "circle-radius": [
           "interpolate",
           ["exponential", 1.15],

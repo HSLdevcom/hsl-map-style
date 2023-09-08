@@ -64,6 +64,15 @@
       }
     },
     {
+      "id": "stops_lrail",
+      "source": "stops-by-routes",
+      "minzoom": 0,
+      "filter": ["==", ["get", "timingStopType"], 0],
+      "paint": {
+        "circle-radius": 8
+      }
+    },
+    {
       "id": "stops_subway",
       "source": "stops-by-routes",
       "minzoom": 0,

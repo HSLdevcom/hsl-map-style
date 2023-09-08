@@ -242,6 +242,38 @@
       }
     },
     {
+      "id": "stops_lrail",
+      "type": "circle",
+      "source": "stops",
+      "source-layer": "stops",
+      "minzoom": 13,
+      "filter": [
+        "==",
+        [
+          "get",
+          "mode"
+        ],
+        "L_RAIL"
+      ],
+      "paint": {
+        "circle-color": "#00b2a9",
+        "circle-radius": [
+          "interpolate",
+          [
+            "exponential",
+            1.15
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          1,
+          22,
+          24
+        ]
+      }
+    },
+    {
       "id": "stops_subway",
       "type": "circle",
       "source": "stops",

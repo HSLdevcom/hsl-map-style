@@ -25,6 +25,18 @@
       "filter": ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
     },
     {
+      "id": "route_lrail_case",
+      "filter": ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
+    },
+    {
+      "id": "route_lrail",
+      "filter": ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
+    },
+    {
+      "id": "route_lrail_inner",
+      "filter": ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
+    },
+    {
       "id": "route_trunk_case",
       "filter": ["!=", ["boolean", ["get", "hasRegularDayDepartures"]], false]
     },
