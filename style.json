@@ -2344,7 +2344,7 @@
         "line-round-limit": 1
       },
       "paint": {
-        "line-color": "#00b3aa",
+        "line-color": "#007E79",
         "line-width": {
           "stops": [
             [10, 2],
@@ -2360,7 +2360,7 @@
       "source-layer": "routes",
       "filter": ["==", ["get", "mode"], "L_RAIL"],
       "paint": {
-        "line-color": "#30bfb6",
+        "line-color": "#329793",
         "line-width": {
           "stops": [
             [10, 0.5],

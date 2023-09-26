@@ -406,7 +406,7 @@
         "line-round-limit": 1
       },
       "paint": {
-        "line-color": "#00b3aa",
+        "line-color": "#007E79",
         "line-width": {
           "stops": [
             [
@@ -435,7 +435,7 @@
         "L_RAIL"
       ],
       "paint": {
-        "line-color": "#30bfb6",
+        "line-color": "#329793",
         "line-width": {
           "stops": [
             [
