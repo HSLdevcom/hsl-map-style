@@ -2108,8 +2108,24 @@
         [
           "all",
           [
-            "!has",
-            "service"
+            "any",
+            [
+              "!has",
+              "service"
+            ],
+            [
+              "all",
+              [
+                "==",
+                "service",
+                "crossover"
+              ],
+              [
+                "==",
+                "subclass",
+                "light_rail"
+              ]
+            ]
           ],
           [
             "!=",
