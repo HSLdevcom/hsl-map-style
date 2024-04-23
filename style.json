@@ -1301,10 +1301,31 @@
         ["==", "class", "transit"],
         [
           "all",
-          ["!has", "service"],
+          [
+            "any",
+            ["!has", "service"],
+            [
+              "all",
+              [
+                "==",
+                "service",
+                "crossover"
+              ],
+              [
+                "==",
+                "subclass",
+                "light_rail"
+              ]
+            ]
+          ],
           ["!=", "subclass", "tram"]
         ],
-        ["!in", "brunnel", "tunnel", "bridge"]
+        [
+          "!in",
+          "brunnel",
+          "tunnel",
+          "bridge"
+        ]
       ],
       "paint": {
         "line-color": "#bbb",
