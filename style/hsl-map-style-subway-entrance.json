@@ -170,7 +170,7 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "https://api.digitransit.fi/map/v2/hsl-vector-map/index.json"
+      "url": "https://api.digitransit.fi/map/v3/hsl-vector-map/index.json"
     }
   }
 }
