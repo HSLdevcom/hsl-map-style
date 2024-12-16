@@ -5,10 +5,10 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "https://api.digitransit.fi/map/v2/hsl-vector-map/index.json"
+      "url": "https://api.digitransit.fi/map/v3/hsl-vector-map/index.json"
     },
     "parkandride": {
-      "url": "https://api.digitransit.fi/map/v2/hsl-parkandride-map/index.json",
+      "url": "https://api.digitransit.fi/map/v3/hsl/fi/vehicleParking/tilejson.json",
       "type": "vector"
     },
     "borders": {
@@ -36,8 +36,8 @@
       "type": "geojson"
     },
     "ticket-sales": {
-      "url": "https://api.digitransit.fi/map/v2/hsl-ticket-sales-map/index.json",
-      "type": "vector"
+      "data": "https://data-hslhrt.opendata.arcgis.com/datasets/f9388fc8a8f848fda3bc584b607afe97_0.geojson",
+      "type": "geojson"
     },
     "stops": {
       "url": "https://kartat.hsl.fi/jore/tiles/stops/index.json",
@@ -48,7 +48,7 @@
       "type": "vector"
     },
     "citybike": {
-      "url": "https://api.digitransit.fi/map/v2/hsl-citybike-map/index.json",
+      "url": "https://api.digitransit.fi/map/v3/hsl/fi/rentalStations/tilejson.json",
       "type": "vector"
     },
     "terminals": {
@@ -3100,28 +3100,12 @@
       }
     },
     {
-      "id": "park-and-ride_landuse",
-      "type": "fill",
-      "source": "parkandride",
-      "source-layer": "facilities",
-      "minzoom": 14,
-      "filter": ["!=", "status", "INACTIVE"],
-      "paint": {
-        "fill-color": "#007ac9",
-        "fill-opacity": 0.15
-      }
-    },
-    {
       "id": "park-and-ride_icon_hub",
       "type": "symbol",
       "source": "parkandride",
-      "source-layer": "facilities",
+      "source-layer": "vehicleParking",
       "minzoom": 14,
-      "filter": [
-        "all",
-        ["!=", ["get", "status"], "INACTIVE"],
-        ["in", "CAR", ["get", "builtCapacity"]]
-      ],
+      "filter": ["==", ["get", "carPlaces"], true],
       "layout": {
         "icon-image": "icon-park-and-ride",
         "icon-allow-overlap": false,
@@ -3343,7 +3327,6 @@
       "id": "ticket-sales_icon_sales-point",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": [
         "all",
@@ -3358,7 +3341,6 @@
       "id": "ticket-sales_icon_ticket-machine",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": [
         "all",
@@ -3373,7 +3355,6 @@
       "id": "ticket-sales_icon_ticket-machine-parking",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": [
         "all",
@@ -3389,7 +3370,6 @@
       "id": "ticket-sales_icon_service-point",
       "type": "symbol",
       "source": "ticket-sales",
-      "source-layer": "ticket-sales",
       "minzoom": 15,
       "filter": ["all", ["==", "$type", "Point"], ["==", "Tyyppi", "Palvelupiste"]],
       "layout": {
@@ -3663,7 +3643,7 @@
       "id": "citybike_stops_case",
       "type": "circle",
       "source": "citybike",
-      "source-layer": "stations",
+      "source-layer": "rentalStations",
       "minzoom": 13,
       "maxzoom": 14,
       "paint": {
@@ -3683,7 +3663,7 @@
       "id": "citybike_stops",
       "type": "circle",
       "source": "citybike",
-      "source-layer": "stations",
+      "source-layer": "rentalStations",
       "minzoom": 13,
       "maxzoom": 14,
       "paint": {
@@ -3703,7 +3683,7 @@
       "id": "citybike_icon",
       "type": "symbol",
       "source": "citybike",
-      "source-layer": "stations",
+      "source-layer": "rentalStations",
       "minzoom": 14,
       "layout": {
         "icon-offset": [0, -6],

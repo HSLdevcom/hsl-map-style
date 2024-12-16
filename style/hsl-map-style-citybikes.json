@@ -4,7 +4,7 @@
       "id": "citybike_stops_case",
       "type": "circle",
       "source": "citybike",
-      "source-layer": "stations",
+      "source-layer": "rentalStations",
       "minzoom": 13,
       "maxzoom": 14,
       "paint": {
@@ -29,7 +29,7 @@
       "id": "citybike_stops",
       "type": "circle",
       "source": "citybike",
-      "source-layer": "stations",
+      "source-layer": "rentalStations",
       "minzoom": 13,
       "maxzoom": 14,
       "paint": {
@@ -54,7 +54,7 @@
       "id": "citybike_icon",
       "type": "symbol",
       "source": "citybike",
-      "source-layer": "stations",
+      "source-layer": "rentalStations",
       "minzoom": 14,
       "layout": {
         "icon-offset": [
@@ -80,7 +80,7 @@
   ],
   "sources": {
     "citybike": {
-      "url": "https://api.digitransit.fi/map/v2/hsl-citybike-map/index.json",
+      "url": "https://api.digitransit.fi/map/v3/hsl/fi/rentalStations/tilejson.json",
       "type": "vector"
     }
   }
