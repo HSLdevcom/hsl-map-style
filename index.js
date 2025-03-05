@@ -253,8 +253,17 @@ function replaceInStyle(style, options) {
 
   forEach(values, (value) => {
     if (value.replacement) {
-      const replaceableRegexp = new RegExp(value.default, "g");
-      replacedStyle = replacedStyle.replace(replaceableRegexp, value.replacement);
+      if (Array.isArray(value.replacement)) {
+        /* Full replacement of a selected source URL.
+           This condition expects replacements like this: [fullReplacementUrl, fullReplacementTarget] in order to fully replace the source url instead of using RegExp */
+        const parsedReplacedStyle = JSON.parse(replacedStyle);
+        const [fullReplacementUrl, fullReplacementTarget] = value.replacement;
+        parsedReplacedStyle.sources[fullReplacementTarget].url = fullReplacementUrl;
+        replacedStyle = JSON.stringify(parsedReplacedStyle);
+      } else {
+        const replaceableRegexp = new RegExp(value.default, "g");
+        replacedStyle = replacedStyle.replace(replaceableRegexp, value.replacement);
+      }
     }
   });
 
