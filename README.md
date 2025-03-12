@@ -102,6 +102,7 @@ import { generateStyle } from "hsl-map-style";
 
 const style = generateStyle({
   sourcesUrl: "https://cdn.digitransit.fi/", // <-- You can override the default sources URL. The default is https://api.digitransit.fi/
+  // OR sourcesUrl: ["https://cdn.digitransit.fi/", "vector"], // <---- [{ HOST_URL }, { SOURCE_NAME }] Use this to replace the specified source URL as a whole instead of only the hostname
   glyphsUrl: "", // Possibility to overwrite fonts url, an empty string does nothing
   spriteUrl: "", // Possibility to overwrite sprite url
   queryParams: [ // It's possible to add query parameters to urls, for example apikeys.
