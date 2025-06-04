@@ -11,7 +11,7 @@
     "watch": "nodemon --watch . -e js,json,html server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "hsldevcom",
   "devDependencies": {
     "commander": "^11.0.0",
     "eslint": "^8.30.0",
