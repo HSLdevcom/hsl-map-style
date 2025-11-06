@@ -10,20 +10,7 @@
       },
       "paint": {
         "line-color": "#333333",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          4,
-          22,
-          80
-        ],
+        "line-width": ["interpolate", ["exponential", 1.2], ["zoom"], 10, 4, 22, 80],
         "line-opacity": 0.2
       }
     },
@@ -37,20 +24,7 @@
       },
       "paint": {
         "line-color": "#333333",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          1,
-          22,
-          6
-        ]
+        "line-width": ["interpolate", ["exponential", 1.2], ["zoom"], 10, 1, 22, 6]
       }
     }
   ],
