@@ -21,7 +21,7 @@ const REPLACEABLE_VALUES = {
       "https://hslstoragestatic.azureedge.net/mapfonts/{fontstack}/{range}.pbf",
   },
   spriteUrl: {
-    default: "https://hslstoragekarttatuotanto.z6.web.core.windows.net/sprite",
+    default: "https://hslstoragekarttatuotanto.z6.web.core.windows.net/sprite-e",
   },
 };
 
