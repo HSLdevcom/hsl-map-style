@@ -6,53 +6,20 @@
       "source": "vector",
       "source-layer": "housenumber",
       "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "!=",
-          "entrance",
-          ""
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["!=", "entrance", ""]],
       "layout": {
         "text-field": [
           "concat",
-          [
-            "get",
-            "housenumber"
-          ],
-          [
-            "coalesce",
-            [
-              "get",
-              "unit"
-            ],
-            [
-              "get",
-              "ref"
-            ]
-          ]
+          ["get", "housenumber"],
+          ["coalesce", ["get", "unit"], ["get", "ref"]]
         ],
         "text-size": {
           "stops": [
-            [
-              15,
-              8
-            ],
-            [
-              22,
-              17
-            ]
+            [15, 8],
+            [22, 17]
           ]
         },
-        "text-font": [
-          "Gotham Rounded Book"
-        ]
+        "text-font": ["Gotham Rounded Book"]
       },
       "paint": {
         "text-color": "#999",
@@ -65,36 +32,16 @@
       "source": "vector",
       "source-layer": "housenumber",
       "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "entrance",
-          ""
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "entrance", ""]],
       "layout": {
         "text-field": "{housenumber}",
         "text-size": {
           "stops": [
-            [
-              15,
-              8
-            ],
-            [
-              22,
-              17
-            ]
+            [15, 8],
+            [22, 17]
           ]
         },
-        "text-font": [
-          "Gotham Rounded Book"
-        ]
+        "text-font": ["Gotham Rounded Book"]
       },
       "paint": {
         "text-color": "#999",
@@ -109,21 +56,10 @@
       "minzoom": 14,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
+        ["==", "$type", "Point"],
         [
           "any",
-          [
-            "in",
-            "class",
-            "school",
-            "college",
-            "place_of_worship",
-            "swimming"
-          ],
+          ["in", "class", "school", "college", "place_of_worship", "swimming"],
           [
             "in",
             "subclass",
@@ -153,9 +89,7 @@
       ],
       "layout": {
         "text-size": 10,
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "text-anchor": "top",
         "text-field": "{name}",
         "text-max-width": 8
@@ -172,25 +106,11 @@
       "source": "vector",
       "source-layer": "park",
       "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "!=",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "park"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["in", "class", "park"]],
       "layout": {
         "text-size": 11,
         "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Medium Italic"
-        ],
+        "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
         "text-field": "{name}"
       },
@@ -206,25 +126,11 @@
       "source": "vector",
       "source-layer": "poi",
       "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "ferry_terminal"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["in", "class", "ferry_terminal"]],
       "layout": {
         "text-size": 11,
         "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Book"
-        ],
+        "text-font": ["Gotham Rounded Book"],
         "text-anchor": "top",
         "text-field": "{name}"
       },
@@ -242,39 +148,13 @@
       "minzoom": 5,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "water",
-          "lake",
-          "bay",
-          "strait",
-          "cape"
-        ]
+        ["==", "$type", "Point"],
+        ["in", "class", "water", "lake", "bay", "strait", "cape"]
       ],
       "layout": {
-        "text-size": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          0,
-          8,
-          15,
-          11
-        ],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 0, 8, 15, 11],
         "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Medium Italic"
-        ],
+        "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
         "text-field": "{name}"
       },
@@ -292,40 +172,14 @@
       "minzoom": 5,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "in",
-          "class",
-          "water",
-          "lake",
-          "bay",
-          "strait",
-          "cape"
-        ]
+        ["==", "$type", "LineString"],
+        ["in", "class", "water", "lake", "bay", "strait", "cape"]
       ],
       "layout": {
         "symbol-placement": "line-center",
-        "text-size": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          0,
-          8,
-          15,
-          11
-        ],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 0, 8, 15, 11],
         "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Medium Italic"
-        ],
+        "text-font": ["Gotham Rounded Medium Italic"],
         "text-anchor": "top",
         "text-field": "{name}",
         "text-rotation-alignment": "viewport"
@@ -344,39 +198,19 @@
       "minzoom": 11,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "island",
-          "islet"
-        ]
+        ["==", "$type", "Point"],
+        ["in", "class", "island", "islet"]
       ],
       "layout": {
         "text-size": {
           "stops": [
-            [
-              0,
-              8
-            ],
-            [
-              15,
-              11
-            ]
+            [0, 8],
+            [15, 11]
           ]
         },
         "text-max-width": 8,
-        "text-font": [
-          "Gotham Rounded Book"
-        ],
-        "text-offset": [
-          0,
-          0.5
-        ],
+        "text-font": ["Gotham Rounded Book"],
+        "text-offset": [0, 0.5],
         "text-anchor": "top",
         "text-field": "{name}"
       },
@@ -394,58 +228,23 @@
       "minzoom": 15,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "!in",
-          "name",
-          "Harakan talvipolku",
-          "Suomenlinnan Huoltotunneli"
-        ],
-        [
-          "in",
-          "class",
-          "path",
-          "track",
-          "service"
-        ]
+        ["==", "$type", "LineString"],
+        ["!in", "name", "Harakan talvipolku", "Suomenlinnan Huoltotunneli"],
+        ["in", "class", "path", "track", "service"]
       ],
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "text-letter-spacing": 0.1,
-        "text-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          8,
-          20,
-          14
-        ],
+        "text-size": ["interpolate", ["exponential", 1.4], ["zoom"], 10, 8, 20, 14],
         "text-rotation-alignment": "map"
       },
       "paint": {
         "text-color": [
           "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
+          ["exponential", 1.4],
+          ["zoom"],
           13,
           "#999",
           15,
@@ -461,52 +260,20 @@
       "source": "vector",
       "source-layer": "transportation_name",
       "minzoom": 10,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "in",
-          "class",
-          "minor"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "LineString"], ["in", "class", "minor"]],
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "text-letter-spacing": 0.1,
-        "text-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          8,
-          20,
-          14
-        ],
+        "text-size": ["interpolate", ["exponential", 1.4], ["zoom"], 10, 8, 20, 14],
         "text-rotation-alignment": "map"
       },
       "paint": {
         "text-color": [
           "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
+          ["exponential", 1.4],
+          ["zoom"],
           13,
           "#999",
           15,
@@ -523,54 +290,22 @@
       "source-layer": "transportation_name",
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "in",
-          "class",
-          "tertiary",
-          "secondary",
-          "primary",
-          "trunk",
-          "motorway"
-        ]
+        ["==", "$type", "LineString"],
+        ["in", "class", "tertiary", "secondary", "primary", "trunk", "motorway"]
       ],
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "text-letter-spacing": 0.1,
-        "text-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          8,
-          20,
-          14
-        ],
+        "text-size": ["interpolate", ["exponential", 1.4], ["zoom"], 10, 8, 20, 14],
         "text-rotation-alignment": "map"
       },
       "paint": {
         "text-color": [
           "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
+          ["exponential", 1.4],
+          ["zoom"],
           13,
           "#999",
           15,
@@ -588,40 +323,14 @@
       "minzoom": 10,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "in",
-          "class",
-          "hamlet",
-          "neighbourhood",
-          "suburb",
-          "village"
-        ]
+        ["==", "$type", "Point"],
+        ["in", "class", "hamlet", "neighbourhood", "suburb", "village"]
       ],
       "layout": {
         "text-field": "{name}",
-        "text-font": [
-          "Gotham Rounded Book"
-        ],
+        "text-font": ["Gotham Rounded Book"],
         "text-max-width": 6,
-        "text-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          10,
-          16,
-          18
-        ]
+        "text-size": ["interpolate", ["exponential", 1.2], ["zoom"], 10, 10, 16, 18]
       },
       "paint": {
         "text-color": "#666",
@@ -635,39 +344,12 @@
       "source": "vector",
       "source-layer": "place",
       "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "class",
-          "town"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "class", "town"]],
       "layout": {
         "text-field": "{name}",
-        "text-font": [
-          "Gotham Rounded Book"
-        ],
+        "text-font": ["Gotham Rounded Book"],
         "text-max-width": 6,
-        "text-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          12,
-          16,
-          20
-        ]
+        "text-size": ["interpolate", ["exponential", 1.2], ["zoom"], 10, 12, 16, 20]
       },
       "paint": {
         "text-color": "#666",
@@ -681,38 +363,11 @@
       "source": "vector",
       "source-layer": "place",
       "maxzoom": 13,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "class",
-          "city"
-        ]
-      ],
+      "filter": ["all", ["==", "$type", "Point"], ["==", "class", "city"]],
       "layout": {
         "text-field": "{name}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
-        "text-size": [
-          "interpolate",
-          [
-            "exponential",
-            1.4
-          ],
-          [
-            "zoom"
-          ],
-          6,
-          10,
-          10,
-          16
-        ],
+        "text-font": ["Gotham Rounded Medium"],
+        "text-size": ["interpolate", ["exponential", 1.4], ["zoom"], 6, 10, 10, 16],
         "text-transform": "uppercase",
         "text-letter-spacing": 0.125
       },
@@ -730,36 +385,17 @@
       "maxzoom": 8,
       "filter": [
         "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "class",
-          "country"
-        ],
-        [
-          "has",
-          "iso_a2"
-        ]
+        ["==", "$type", "Point"],
+        ["==", "class", "country"],
+        ["has", "iso_a2"]
       ],
       "layout": {
         "text-field": "{name}",
-        "text-font": [
-          "Gotham Rounded Medium"
-        ],
+        "text-font": ["Gotham Rounded Medium"],
         "text-size": {
           "stops": [
-            [
-              3,
-              10
-            ],
-            [
-              8,
-              30
-            ]
+            [3, 10],
+            [8, 30]
           ]
         },
         "text-transform": "uppercase"
