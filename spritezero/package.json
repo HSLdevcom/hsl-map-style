@@ -7,6 +7,12 @@
     "@mapbox/spritezero-cli": "^2.1.0"
   },
   "resolutions": {
-    "@mapbox/spritezero-cli/@mapbox/spritezero": "^8.0.0"
+    "@mapbox/spritezero-cli/@mapbox/spritezero": "^8.0.0",
+    "braces": "^3.0.3",
+    "js-yaml": "^4.1.1",
+    "minimatch": "^3.1.5",
+    "nth-check": "^2.0.1",
+    "semver": "^7.5.3",
+    "tar": "^6.1.11"
   }
 }
