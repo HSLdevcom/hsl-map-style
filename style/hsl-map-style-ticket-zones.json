@@ -10,20 +10,7 @@
       },
       "paint": {
         "line-color": "#333333",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          4,
-          22,
-          80
-        ],
+        "line-width": ["interpolate", ["exponential", 1.2], ["zoom"], 10, 4, 22, 80],
         "line-opacity": 0.2
       }
     },
@@ -37,26 +24,13 @@
       },
       "paint": {
         "line-color": "#333333",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          1,
-          22,
-          6
-        ]
+        "line-width": ["interpolate", ["exponential", 1.2], ["zoom"], 10, 1, 22, 6]
       }
     }
   ],
   "sources": {
     "ticketzones": {
-      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zones.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zones-zone-e.json",
       "type": "geojson"
     }
   }
