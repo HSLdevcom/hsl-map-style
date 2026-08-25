@@ -7,14 +7,7 @@
       "minzoom": 8,
       "maxzoom": 13,
       "layout": {
-        "icon-image": [
-          "concat",
-          "icon-zone-",
-          [
-            "get",
-            "Zone"
-          ]
-        ],
+        "icon-image": ["concat", "icon-zone-", ["get", "Zone"]],
         "icon-rotation-alignment": "map",
         "icon-size": 0.7,
         "icon-padding": 1,
@@ -28,7 +21,7 @@
   ],
   "sources": {
     "ticketzone-labels": {
-      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zone-labels.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zone-labels-zone-e.json",
       "type": "geojson"
     }
   }

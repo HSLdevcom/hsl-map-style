@@ -28,11 +28,11 @@
       "type": "geojson"
     },
     "ticketzones": {
-      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zones.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zones-zone-e.json",
       "type": "geojson"
     },
     "ticketzone-labels": {
-      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zone-labels.json",
+      "data": "https://hslstoragekarttatuotanto.z6.web.core.windows.net/ticket-zone-labels-zone-e.json",
       "type": "geojson"
     },
     "ticket-sales": {
