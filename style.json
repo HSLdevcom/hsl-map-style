@@ -2345,7 +2345,11 @@
         "text-field": [
           "concat",
           ["get", "housenumber"],
-          ["coalesce", ["get", "unit"], ["get", "ref"]]
+          ["case",
+            ["any", ["has", "unit"], ["has", "ref"]],
+            ["concat", " ", ["coalesce", ["get", "unit"], ["get", "ref"]]], 
+            ""
+          ]
         ],
         "text-size": {
           "stops": [
@@ -2368,7 +2372,15 @@
       "minzoom": 14,
       "filter": ["all", ["==", "$type", "Point"], ["==", "entrance", ""]],
       "layout": {
-        "text-field": "{housenumber}",
+        "text-field": [
+          "concat",
+          ["get", "housenumber"],
+          ["case",
+            ["has", "unit"],
+            ["concat", " ", ["get", "unit"]],
+            ""
+          ]
+        ],
         "text-size": {
           "stops": [
             [15, 8],
