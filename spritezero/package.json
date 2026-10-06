@@ -1,5 +1,8 @@
 {
   "name": "spritezero-run",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "icons": "spritezero ../sprite ../map-icons && spritezero --ratio=2 ../sprite@2x ../map-icons && spritezero --ratio=3 ../sprite@3x ../map-icons"
   },
@@ -7,12 +10,12 @@
     "@mapbox/spritezero-cli": "^2.1.0"
   },
   "resolutions": {
-    "@mapbox/spritezero-cli/@mapbox/spritezero": "^8.0.0",
+    "@mapbox/spritezero-cli/@mapbox/spritezero": "^8.0.3",
     "braces": "^3.0.3",
-    "js-yaml": "^4.1.1",
     "minimatch": "^3.1.5",
+    "minimatch/brace-expansion": "1.1.18",
     "nth-check": "^2.0.1",
     "semver": "^7.5.3",
-    "tar": "^7.5.10"
+    "**/mapnik/@mapbox/node-pre-gyp/tar": "^7.5.21"
   }
 }
