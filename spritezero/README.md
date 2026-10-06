@@ -3,7 +3,7 @@
 ## Installation
 
 Requirements:
-- node v16
+- Node.js v20
 - yarn package manager
 
 ```
